@@ -32,18 +32,6 @@
       },
       "tags": []
     },
-    "alert-message": {
-      "root": "libs/web-components/alert-message",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/alert-message/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "angular-components": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -146,45 +134,6 @@
       },
       "tags": []
     },
-    "app-bar": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/app-bar",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/app-bar/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "app-card": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/app-card",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/app-card/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "autocomplete": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/autocomplete",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/autocomplete/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "avatar": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -214,19 +163,6 @@
       },
       "tags": []
     },
-    "badge": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/badge",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/badge/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "banner": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -255,19 +191,6 @@
       },
       "tags": []
     },
-    "brand-card": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/brand-card",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/brand-card/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "breadcrumb": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -288,45 +211,6 @@
         }
       },
       "tags": []
-    },
-    "button-toggle": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/button-toggle",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/button-toggle/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "button-toggle-group": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/button-toggle-group",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/button-toggle-group/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "card": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/card",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/card/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "changelog": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
@@ -376,83 +260,6 @@
         }
       },
       "tags": []
-    },
-    "charts": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/charts",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/charts/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "checkbox": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/checkbox",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/checkbox/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "chip": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/chip",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/chip/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "circular-progress": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/circular-progress",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/circular-progress/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "data-table": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/data-table",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/data-table/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "dialog": {
-      "root": "libs/web-components/dialog",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/dialog/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "entity-menu": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
@@ -512,56 +319,6 @@
         }
       },
       "tags": []
-    },
-    "expansion-panel": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/expansion-panel",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/expansion-panel/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "fab": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/fab",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/fab/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "fds-filter-tree": {
-      "root": "libs/web-components/filter-tree",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/filter-tree/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "fds-global-search": {
-      "root": "libs/web-components/global-search",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/global-search/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "fds-test-app": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
@@ -816,106 +573,6 @@
       },
       "tags": []
     },
-    "guided-tour": {
-      "root": "libs/web-components/guided-tour",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/guided-tour/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "icon": {
-      "root": "libs/web-components/icon",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/icon/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "icon-button": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/icon-button",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/icon-button/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "launchpad": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/launchpad",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/launchpad/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "linear-progress": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/linear-progress",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/linear-progress/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "list": {
-      "root": "libs/web-components/list",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/list/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "menu": {
-      "root": "libs/web-components/menu",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/menu/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "menu-trigger": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/menu-trigger",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/menu-trigger/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "multiselect-tags": {
       "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -974,19 +631,6 @@
         }
       },
       "tags": []
-    },
-    "radio": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/radio",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/radio/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "repeater": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
@@ -1065,44 +709,6 @@
       },
       "tags": []
     },
-    "select": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/select",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/select/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "sidenav": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/sidenav",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/sidenav/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "skeleton": {
-      "root": "libs/web-components/skeleton",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/skeleton/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "skeleton-text": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -1131,19 +737,6 @@
       },
       "tags": []
     },
-    "slider": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/slider",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/slider/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "status-steps": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -1167,32 +760,6 @@
         }
       },
       "tags": []
-    },
-    "stepper": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/stepper",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/stepper/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "switch": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/switch",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/switch/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "table": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
@@ -1221,19 +788,6 @@
         }
       },
       "tags": []
-    },
-    "tabs": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/tabs",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/tabs/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "test": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
@@ -1409,32 +963,6 @@
       },
       "tags": []
     },
-    "textarea": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/textarea",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/textarea/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "textfield": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/textfield",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/textfield/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
     "toaster": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
@@ -1462,19 +990,6 @@
         }
       },
       "tags": []
-    },
-    "user-profile": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/user-profile",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/user-profile/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
     },
     "user-profile-menu": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
@@ -1566,104 +1081,7 @@
       },
       "tags": []
     },
-    "wc-account-card": {
-      "root": "libs/web-components/account-card",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/account-card/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "wc-avatar": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/avatar",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/avatar/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "wc-divider": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "projectType": "library",
-      "root": "libs/web-components/divider",
-      "sourceRoot": "libs/web-components/divider",
-      "prefix": "fds",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/divider/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "wc-logo": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "projectType": "library",
-      "root": "libs/web-components/logo",
-      "sourceRoot": "libs/web-components/logo",
-      "prefix": "fds",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/logo/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "wc-search-input": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "projectType": "library",
-      "root": "libs/web-components/search-input",
-      "sourceRoot": "libs/web-components/search-input",
-      "prefix": "fds",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/search-input/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "wc-wizard": {
-      "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-      "root": "libs/web-components/wizard",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/wizard/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
-    "wc:breadcrumb": {
-      "root": "libs/web-components/breadcrumb",
-      "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["libs/web-components/breadcrumb/src/**/*.ts"]
-          }
-        }
-      },
-      "tags": ["web-components"]
-    },
+   
     "wizard": {
       "$schema": "../../../node_modules/nx/schemas/project-schema.json",
       "projectType": "library",
