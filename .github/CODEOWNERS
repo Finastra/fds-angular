@@ -29,7 +29,4 @@
 /libs/angular-components/vector-map/               @rbordeanu
 /libs/angular-components/wizard/                   @rbordeanu
 
-# Web components owners
-/libs/web-components    @bcldvd @ttalbot
-/.storybook             @bcldvd @ttalbot
 
