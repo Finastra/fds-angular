@@ -1,12 +1,6 @@
 name: Angular PR CI
 on:
-  pull_request:
-    paths:
-      - 'apps/angular-test-app/**'
-      - 'themes/angular-theme/**'
-      - 'libs/angular-components/**'
-      - 'package.json'
-      - 'angular.json'
+  pull_request
 
 jobs:
   build:
