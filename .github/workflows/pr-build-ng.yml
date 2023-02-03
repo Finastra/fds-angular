@@ -67,9 +67,6 @@ jobs:
         with:
           name: 'angular-components'
           path: './dist/libs/angular-components'
-        # Fds build
-      - name: Build Fds test App
-        run: npm run build:fds-test-app -- --prod
         # Deploy
       - name: Deploy angular test app to Netlify
         uses: nwtgck/actions-netlify@v1.1
