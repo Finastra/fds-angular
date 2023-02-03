@@ -1,6 +1,5 @@
 name: Angular PR CI
-on:
-  pull_request
+on: pull_request
 
 jobs:
   build:
