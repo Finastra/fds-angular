@@ -72,14 +72,6 @@ jobs:
         with:
           name: 'angular-app'
           path: './dist/apps/angular-test-app'
-        # Fds Build
-      - name: Build fds test App
-        run: npm run build:fds-test-app -- --prod
-      - name: Upload fds Test App Artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: 'fds-app'
-          path: './dist/apps/fds-test-app'
 
   release:
     needs: build
