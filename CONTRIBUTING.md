@@ -95,6 +95,6 @@ When your issue is validated and you are assigned to it, you can start with thos
 > git push -u origin bugfix/meaningful-name
 ```
 
-- In GitHub send a pull request to master
+- In GitHub send a pull request to main
 
 That's it, thank you for your contribution!

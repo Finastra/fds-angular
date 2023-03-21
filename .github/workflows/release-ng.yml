@@ -1,7 +1,7 @@
 on:
   pull_request:
     branches:
-      - 'master'
+      - 'main'
     types: [closed]
     paths:
       - 'libs/angular-components/CHANGELOG.md'
@@ -33,7 +33,7 @@ jobs:
       - name: NX Setup
         shell: bash
         run: |
-          git fetch origin master
+          git fetch origin main
           git checkout -qf FETCH_HEAD
         # Setup
       - name: Install Dependencies
@@ -44,11 +44,11 @@ jobs:
       - name: Content list
         uses: enricomarino/actions@v2
       - name: Lint affected files
-        run: npm run affected:lint -- --base=origin/master --parallel
+        run: npm run affected:lint -- --base=origin/main --parallel
       - name: Check formatting
-        run: npm run format:check -- --base=origin/master --parallel
+        run: npm run format:check -- --base=origin/main --parallel
       - name: Run affected unit tests
-        run: npm run affected:test -- --base=origin/master --parallel
+        run: npm run affected:test -- --base=origin/main --parallel
 
         # Angular Build
       - name: Build Test App
@@ -137,7 +137,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: './dist/apps/angular-test-app'
-          production-branch: master
+          production-branch: main
           production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy from GitHub Actions'

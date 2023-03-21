@@ -72,7 +72,7 @@ jobs:
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: './dist/apps/angular-test-app'
-          production-branch: master
+          production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: 'Deploy angular app from GitHub Actions'
           enable-pull-request-comment: false
