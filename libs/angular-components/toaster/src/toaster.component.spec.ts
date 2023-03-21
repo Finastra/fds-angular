@@ -12,14 +12,12 @@ describe('ToasterComponent', () => {
   let component: ToasterComponent;
   let fixture: ComponentFixture<ToasterComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [MatIconModule],
-        declarations: [ToasterComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [MatIconModule],
+      declarations: [ToasterComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(ToasterComponent);

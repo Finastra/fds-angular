@@ -8,13 +8,11 @@ describe('GlobalSearchOverlayComponent', () => {
   let component: GlobalSearchOverlayComponent;
   let fixture: ComponentFixture<GlobalSearchOverlayComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [GlobalSearchModule]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [GlobalSearchModule]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(GlobalSearchOverlayComponent);

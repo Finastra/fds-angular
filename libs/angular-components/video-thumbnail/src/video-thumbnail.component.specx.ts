@@ -7,15 +7,13 @@ describe('VideoThumbnailModule', () => {
   let component: VideoThumbnailComponent;
   let fixture: ComponentFixture<VideoThumbnailComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [MatIconModule],
-        declarations: [VideoThumbnailComponent],
-        teardown: { destroyAfterEach: false }
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [MatIconModule],
+      declarations: [VideoThumbnailComponent],
+      teardown: { destroyAfterEach: false }
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(VideoThumbnailComponent);

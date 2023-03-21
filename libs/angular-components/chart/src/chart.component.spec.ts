@@ -314,9 +314,7 @@ describe('Chart Component', () => {
     component.ngAfterViewInit();
     component.chart.ngAfterContentInit();
     fixture.detectChanges();
-    expect(component.chart.layout.legend).toStrictEqual(
-      LegendPositionConvertion[LegendPosition.horizontalBottomCenter]
-    );
+    expect(component.chart.layout.legend).toStrictEqual(LegendPositionConvertion[LegendPosition.horizontalBottomCenter]);
   });
 
   it('should change revision', fakeAsync(() => {

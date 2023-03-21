@@ -201,10 +201,7 @@ export class ToasterContainerRegistry {
   providedIn: 'root'
 })
 export class ToasterService {
-  constructor(
-    @Inject(TOASTER_CONFIG) private globalConfig: ToasterConfig,
-    private containerRegistry: ToasterContainerRegistry
-  ) {}
+  constructor(@Inject(TOASTER_CONFIG) private globalConfig: ToasterConfig, private containerRegistry: ToasterContainerRegistry) {}
 
   /**
    * Shows toast with message and user config.

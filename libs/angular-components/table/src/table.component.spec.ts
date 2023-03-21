@@ -19,28 +19,26 @@ describe('UxgTableModule', () => {
   let component: TableComponent;
   let fixture: ComponentFixture<TableComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [
-          CommonModule,
-          DragDropModule,
-          MatTableModule,
-          MatPaginatorModule,
-          CdkTableModule,
-          MatSortModule,
-          MatIconModule,
-          MatFormFieldModule,
-          MatProgressSpinnerModule,
-          MatButtonModule,
-          MatCheckboxModule,
-          MatInputModule,
-          FormsModule
-        ],
-        declarations: [TableComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [
+        CommonModule,
+        DragDropModule,
+        MatTableModule,
+        MatPaginatorModule,
+        CdkTableModule,
+        MatSortModule,
+        MatIconModule,
+        MatFormFieldModule,
+        MatProgressSpinnerModule,
+        MatButtonModule,
+        MatCheckboxModule,
+        MatInputModule,
+        FormsModule
+      ],
+      declarations: [TableComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(TableComponent);

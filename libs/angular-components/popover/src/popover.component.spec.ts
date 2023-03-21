@@ -8,14 +8,12 @@ describe('PopoverModule', () => {
   let component: PopoverComponent;
   let fixture: ComponentFixture<PopoverComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [CommonModule, MatMenuModule],
-        declarations: [PopoverComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [CommonModule, MatMenuModule],
+      declarations: [PopoverComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PopoverComponent);

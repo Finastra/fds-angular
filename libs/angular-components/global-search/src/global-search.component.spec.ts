@@ -7,13 +7,11 @@ describe('UxgGlobalSearch', () => {
   let component: UxgGlobalSearch;
   let fixture: ComponentFixture<UxgGlobalSearch>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [GlobalSearchModule]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [GlobalSearchModule]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UxgGlobalSearch);

@@ -1,13 +1,4 @@
-import {
-  Component,
-  OnInit,
-  ComponentFactory,
-  Input,
-  ViewChild,
-  ViewContainerRef,
-  ComponentRef,
-  ViewEncapsulation
-} from '@angular/core';
+import { Component, OnInit, ComponentFactory, Input, ViewChild, ViewContainerRef, ComponentRef, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'uxg-component-repeater',

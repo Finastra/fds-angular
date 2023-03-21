@@ -26,11 +26,7 @@ export class UxgWizardButtonComponent {
 
   @Output('uxgWizardButtonClicked') wasClicked = new EventEmitter<string>(false);
 
-  constructor(
-    public navService: WizardNavigationService,
-    public buttonService: ButtonHubService,
-    public media: MediaObserver
-  ) {}
+  constructor(public navService: WizardNavigationService, public buttonService: ButtonHubService, public media: MediaObserver) {}
 
   private checkDefaultType(value: UxgWizardButtonType, type: string) {
     return value === type;

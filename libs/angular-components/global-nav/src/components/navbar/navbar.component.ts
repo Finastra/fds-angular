@@ -1,14 +1,4 @@
-import {
-  Component,
-  OnInit,
-  OnDestroy,
-  Output,
-  EventEmitter,
-  Input,
-  TemplateRef,
-  OnChanges,
-  SimpleChanges
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, Output, EventEmitter, Input, TemplateRef, OnChanges, SimpleChanges } from '@angular/core';
 import { NavigationNode } from '../../services/navigation.model';
 import { Breadcrumb } from '@finastra/angular-components/breadcrumb';
 

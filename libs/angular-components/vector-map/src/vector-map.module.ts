@@ -11,15 +11,7 @@ import { PlotlyViaCDNModule, PlotlyService } from 'angular-plotly.js';
 import { LazyloadScriptService } from '@finastra/angular-components/core';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    MatTooltipModule,
-    FlexLayoutModule,
-    MatSelectModule,
-    MatFormFieldModule,
-    MatInputModule,
-    PlotlyViaCDNModule
-  ],
+  imports: [CommonModule, MatTooltipModule, FlexLayoutModule, MatSelectModule, MatFormFieldModule, MatInputModule, PlotlyViaCDNModule],
   declarations: [VectorMapComponent],
   exports: [VectorMapComponent]
 })

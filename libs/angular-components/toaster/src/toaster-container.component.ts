@@ -22,12 +22,7 @@ const voidState = style({
       [toast]="toast"
     ></uxg-toaster>
   `,
-  animations: [
-    trigger('fadeIn', [
-      transition(':enter', [voidState, animate(100)]),
-      transition(':leave', [animate(100, voidState)])
-    ])
-  ]
+  animations: [trigger('fadeIn', [transition(':enter', [voidState, animate(100)]), transition(':leave', [animate(100, voidState)])])]
 })
 export class ToasterContainerComponent implements OnInit, OnDestroy {
   @Input()

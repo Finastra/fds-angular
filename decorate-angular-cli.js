@@ -29,9 +29,7 @@ let output;
 try {
   output = require('@nrwl/workspace').output;
 } catch (e) {
-  console.warn(
-    'Angular CLI could not be decorated to enable computation caching. Please ensure @nrwl/workspace is installed.'
-  );
+  console.warn('Angular CLI could not be decorated to enable computation caching. Please ensure @nrwl/workspace is installed.');
   process.exit(0);
 }
 

@@ -7,14 +7,12 @@ describe('PopoverDemoComponent', () => {
   let component: PopoverDemoComponent;
   let fixture: ComponentFixture<PopoverDemoComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [PopoverModule],
-        declarations: [PopoverDemoComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [PopoverModule],
+      declarations: [PopoverDemoComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(PopoverDemoComponent);

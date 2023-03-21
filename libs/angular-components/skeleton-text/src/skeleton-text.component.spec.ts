@@ -6,13 +6,11 @@ describe('SkeletonTextModule', () => {
   let component: SkeletonTextComponent;
   let fixture: ComponentFixture<SkeletonTextComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [SkeletonTextComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [SkeletonTextComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SkeletonTextComponent);

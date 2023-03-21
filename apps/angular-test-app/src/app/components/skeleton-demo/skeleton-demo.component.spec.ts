@@ -7,14 +7,12 @@ describe('SkeletonDemoComponent', () => {
   let component: SkeletonDemoComponent;
   let fixture: ComponentFixture<SkeletonDemoComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [SkeletonTextModule, MatCardModule],
-        declarations: [SkeletonDemoComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [SkeletonTextModule, MatCardModule],
+      declarations: [SkeletonDemoComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(SkeletonDemoComponent);

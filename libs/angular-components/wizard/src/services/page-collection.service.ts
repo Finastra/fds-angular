@@ -32,9 +32,7 @@ export class PageCollectionService {
   }
 
   public getPageById(id: string): UxgWizardPageComponent {
-    const foundPages: UxgWizardPageComponent[] = this.pages
-      ? this.pages.filter((page: UxgWizardPageComponent) => id === page.id)
-      : [];
+    const foundPages: UxgWizardPageComponent[] = this.pages ? this.pages.filter((page: UxgWizardPageComponent) => id === page.id) : [];
     return this.checkResults(foundPages, id);
   }
 
@@ -108,10 +106,7 @@ export class PageCollectionService {
     return pages.slice(start, end);
   }
 
-  public getPageRangeFromPages(
-    page: UxgWizardPageComponent,
-    otherPage: UxgWizardPageComponent
-  ): UxgWizardPageComponent[] {
+  public getPageRangeFromPages(page: UxgWizardPageComponent, otherPage: UxgWizardPageComponent): UxgWizardPageComponent[] {
     const pageIndex = this.getPageIndex(page);
     const otherPageIndex = this.getPageIndex(otherPage);
     let startIndex: number;

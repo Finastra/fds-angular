@@ -13,10 +13,7 @@ export interface FilterGroupDialogData {
 })
 export class FilterGroupDialogComponent implements OnInit {
   filterName!: FormControl;
-  constructor(
-    public dialogRef: MatDialogRef<FilterGroupDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: FilterGroupDialogData
-  ) {}
+  constructor(public dialogRef: MatDialogRef<FilterGroupDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: FilterGroupDialogData) {}
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -36,10 +33,6 @@ export class FilterGroupDialogComponent implements OnInit {
   }
 
   getErrorMessage() {
-    return this.filterName.hasError('required')
-      ? 'Name is required'
-      : this.filterName.hasError('nameExists')
-      ? 'Name already exists'
-      : '';
+    return this.filterName.hasError('required') ? 'Name is required' : this.filterName.hasError('nameExists') ? 'Name already exists' : '';
   }
 }

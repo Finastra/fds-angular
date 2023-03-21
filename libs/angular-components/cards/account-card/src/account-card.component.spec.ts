@@ -9,14 +9,12 @@ describe('AccountCardModule', () => {
   let component: AccountCardComponent;
   let fixture: ComponentFixture<AccountCardComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [MatCardModule, MatDividerModule, MatIconModule],
-        declarations: [AccountCardComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [MatCardModule, MatDividerModule, MatIconModule],
+      declarations: [AccountCardComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AccountCardComponent);
