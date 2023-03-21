@@ -1,14 +1,4 @@
-import {
-  Component,
-  OnInit,
-  OnChanges,
-  Input,
-  Output,
-  Inject,
-  forwardRef,
-  ChangeDetectorRef,
-  SimpleChanges
-} from '@angular/core';
+import { Component, OnInit, OnChanges, Input, Output, Inject, forwardRef, ChangeDetectorRef, SimpleChanges } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationNode } from '../../services/navigation.model';
 import { EventEmitter } from '@angular/core';

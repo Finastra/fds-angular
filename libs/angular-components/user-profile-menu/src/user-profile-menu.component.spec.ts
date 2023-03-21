@@ -6,13 +6,11 @@ describe('UxgUserProfileMenuComponent', () => {
   let component: UxgUserProfileMenuComponent;
   let fixture: ComponentFixture<UxgUserProfileMenuComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [UxgUserProfileMenuModule]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [UxgUserProfileMenuModule]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UxgUserProfileMenuComponent);

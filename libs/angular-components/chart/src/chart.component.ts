@@ -216,10 +216,7 @@ export class ChartComponent implements OnInit, OnDestroy, OnChanges, AfterConten
                   });
                 });
                 this.traces?.forEach((t) => {
-                  if (
-                    (t.dimensionName !== trace?.dimensionName || t.measureName !== trace?.measureName) &&
-                    t.selectedPoints?.length === 0
-                  )
+                  if ((t.dimensionName !== trace?.dimensionName || t.measureName !== trace?.measureName) && t.selectedPoints?.length === 0)
                     delete t.selectedPoints;
                 });
               }
@@ -324,17 +321,11 @@ export class ChartComponent implements OnInit, OnDestroy, OnChanges, AfterConten
     tmpContent.style.display = 'none';
     themeContent.appendChild(tmpContent);
 
-    const globalStyled: CSSStyleDeclaration = window.getComputedStyle(
-      this.document.body.getElementsByTagName('chart-font')[0]
-    );
+    const globalStyled: CSSStyleDeclaration = window.getComputedStyle(this.document.body.getElementsByTagName('chart-font')[0]);
     tmpContent.className = 'chart-font-legend';
-    const legendStyled: CSSStyleDeclaration = window.getComputedStyle(
-      this.document.body.getElementsByTagName('chart-font')[0]
-    );
+    const legendStyled: CSSStyleDeclaration = window.getComputedStyle(this.document.body.getElementsByTagName('chart-font')[0]);
     tmpContent.className = 'chart-font-axis';
-    const axisStyled: CSSStyleDeclaration = window.getComputedStyle(
-      this.document.body.getElementsByTagName('chart-font')[0]
-    );
+    const axisStyled: CSSStyleDeclaration = window.getComputedStyle(this.document.body.getElementsByTagName('chart-font')[0]);
     this._defaultLayout = {
       hovermode: 'closest',
       clickmode: 'event',

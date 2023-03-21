@@ -1,12 +1,4 @@
-import {
-  Component,
-  Input,
-  OnDestroy,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Attribute
-} from '@angular/core';
+import { Component, Input, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef, Attribute } from '@angular/core';
 import { Breadcrumb } from './breadcrumb';
 import { Router } from '@angular/router';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
@@ -61,10 +53,7 @@ export class UxgBreadcrumbComponent implements OnDestroy {
     private breakpointObserver: BreakpointObserver,
     private cd: ChangeDetectorRef
   ) {
-    combineLatest([
-      this.breakpointObserver.observe([Breakpoints.HandsetPortrait]).pipe(map((result) => result.matches)),
-      this.breadcrumbs$
-    ])
+    combineLatest([this.breakpointObserver.observe([Breakpoints.HandsetPortrait]).pipe(map((result) => result.matches)), this.breadcrumbs$])
       .pipe(
         map(([isMobile, breadcrumbs]) => {
           return isMobile && breadcrumbs && breadcrumbs.length > 2;

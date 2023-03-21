@@ -11,12 +11,7 @@ import { ToasterContainerOverlayService, ToasterContainerRegistry, ToasterServic
 @NgModule({
   imports: [CommonModule, MatIconModule, MatButtonModule, FlexLayoutModule],
   declarations: [ToasterContainerComponent, ToasterComponent],
-  providers: [
-    ToasterService,
-    ToasterContainerOverlayService,
-    ToasterContainerRegistry,
-    { provide: TOASTER_CONFIG, useValue: {} }
-  ],
+  providers: [ToasterService, ToasterContainerOverlayService, ToasterContainerRegistry, { provide: TOASTER_CONFIG, useValue: {} }],
   exports: [ToasterComponent]
 })
 export class ToasterModule {}

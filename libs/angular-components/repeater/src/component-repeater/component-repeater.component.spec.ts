@@ -30,9 +30,7 @@ describe('ComponentRepeaterComponent', () => {
     }).compileComponents();
     fixture = TestBed.createComponent(ComponentRepeaterComponent);
     component = fixture.componentInstance;
-    componentFactoryResolver = fixture.debugElement.injector.get<ComponentFactoryResolver>(
-      ComponentFactoryResolver as any
-    );
+    componentFactoryResolver = fixture.debugElement.injector.get<ComponentFactoryResolver>(ComponentFactoryResolver as any);
 
     fixture.detectChanges();
   });

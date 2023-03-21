@@ -3,8 +3,8 @@
 <h2>Toaster demo</h2>
 <div class="demo-component">
   <p>
-    You can change the default settings for the toaster below and click on the `Display toaster` button to generate a
-    toaster with the displayed config.
+    You can change the default settings for the toaster below and click on the `Display toaster` button to generate a toaster with the
+    displayed config.
   </p>
   <div class="config">
     <mat-form-field>
@@ -24,9 +24,7 @@
       <mat-label>Toaster display duration (ms)</mat-label>
       <input matInput type="number" [(ngModel)]="toasterDuration" />
     </mat-form-field>
-    <mat-checkbox [labelPosition]="'before'" [(ngModel)]="toasterDestroyByClick"
-      >Destroy toaster by clicking on it</mat-checkbox
-    >
+    <mat-checkbox [labelPosition]="'before'" [(ngModel)]="toasterDestroyByClick">Destroy toaster by clicking on it</mat-checkbox>
   </div>
   <p>
     <button mat-flat-button color="primary" (click)="displayToaster()">Display toaster</button>
@@ -41,8 +39,8 @@
 <h3>Usage</h3>
 <p>Import <code>ToasterModule</code> to your app module.</p>
 <p>
-  Calling <code>ToasterService.show(...)</code> will render new toast and return <code>ToasterRef</code> with help of
-  which you may close newly created toast by calling <code>close</code> method.
+  Calling <code>ToasterService.show(...)</code> will render new toast and return <code>ToasterRef</code> with help of which you may close
+  newly created toast by calling <code>close</code> method.
 </p>
 <p>
   <code>
@@ -66,9 +64,7 @@
     </tr>
     <tr>
       <td>duration</td>
-      <td>
-        the time after which the toast will be destroyed. `0` means endless toast, that may be destroyed by click only.
-      </td>
+      <td>the time after which the toast will be destroyed. `0` means endless toast, that may be destroyed by click only.</td>
       <td>Default is 5000 ms</td>
     </tr>
     <tr>

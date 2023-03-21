@@ -4,43 +4,16 @@
       <mat-icon>clear</mat-icon>
     </button>
   </div>
-  <div
-    fxFlex="30"
-    fxFlex.lt-lg="20"
-    fxFlex.xs="15"
-    fxLayout="row"
-    [@slideContent]="animationState"
-    class="uxg-global-search-input-area"
-  >
+  <div fxFlex="30" fxFlex.lt-lg="20" fxFlex.xs="15" fxLayout="row" [@slideContent]="animationState" class="uxg-global-search-input-area">
     <mat-form-field floatLabel="never" class="uxg-global-search-input">
       <mat-icon #searchIcon color="primary" matPrefix class="uxg-global-search-icon">search</mat-icon>
-      <input
-        matInput
-        #searchInput
-        type="search"
-        placeholder="Search"
-        autocomplete="off"
-        spellcheck="false"
-        aria-label="Global search"
-      />
+      <input matInput #searchInput type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Global search" />
     </mat-form-field>
   </div>
   <ng-container *ngIf="results$ | async as results; else emptySearch">
     <ng-container *ngIf="results.length; else empty">
-      <div
-        fxFlex="65"
-        fxFlex.lt-lg="75"
-        fxFlex.xs="80"
-        fxLayout
-        fxLayout.lt-lg="column"
-        class="uxg-global-search-container-parent"
-      >
-        <div
-          fxLayout="column"
-          fxFlex="{{ showFilter ? '70' : 'auto' }}"
-          fxFlex.lt-lg="auto"
-          class="uxg-global-search-results-container"
-        >
+      <div fxFlex="65" fxFlex.lt-lg="75" fxFlex.xs="80" fxLayout fxLayout.lt-lg="column" class="uxg-global-search-container-parent">
+        <div fxLayout="column" fxFlex="{{ showFilter ? '70' : 'auto' }}" fxFlex.lt-lg="auto" class="uxg-global-search-results-container">
           <!-- results status area -->
           <ng-container [ngTemplateOutlet]="resultStatusTemplate"></ng-container>
           <div class="uxg-global-search-results-counter">
@@ -61,9 +34,7 @@
                 <div class="uxg-global-search-result-group-container" [fxLayout]="itemsLayout">
                   <div *ngFor="let result of resultGroup.value; let last = last">
                     <div class="uxg-global-search-result-item" (click)="onItemClick(result)">
-                      <ng-container
-                        *ngTemplateOutlet="resultItemTemplate || defaultTemplate; context: { $implicit: result }"
-                      >
+                      <ng-container *ngTemplateOutlet="resultItemTemplate || defaultTemplate; context: { $implicit: result }">
                       </ng-container>
                     </div>
                     <mat-divider [inset]="true" *ngIf="itemDivider && !last"></mat-divider>
@@ -77,19 +48,10 @@
         <!-- filter area -->
         <ng-container *ngIf="groupBy && showFilter">
           <mat-divider fxHide.lt-lg [vertical]="true"></mat-divider>
-          <div
-            fxLayout="column"
-            fxLayout.lt-lg="row wrap"
-            fxFlexOrder.lt-lg="-1"
-            class="uxg-global-search-results-filter"
-          >
+          <div fxLayout="column" fxLayout.lt-lg="row wrap" fxFlexOrder.lt-lg="-1" class="uxg-global-search-results-filter">
             <h5 class="uxg-h5">Filter results by</h5>
             <ng-container *ngFor="let resultGroup of results">
-              <mat-checkbox
-                color="primary"
-                [checked]="resultGroup.selected ?? false"
-                (change)="toggleFilter(resultGroup)"
-              >
+              <mat-checkbox color="primary" [checked]="resultGroup.selected ?? false" (change)="toggleFilter(resultGroup)">
                 {{ resultGroup.key }} ({{ resultGroup.value.length }})
               </mat-checkbox>
             </ng-container>

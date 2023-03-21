@@ -10,14 +10,12 @@ describe('EntityMenuModule', () => {
   let component: EntityMenuComponent;
   let fixture: ComponentFixture<EntityMenuComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [MatButtonModule, MatIconModule, MatCardModule, MatMenuModule],
-        declarations: [EntityMenuComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [MatButtonModule, MatIconModule, MatCardModule, MatMenuModule],
+      declarations: [EntityMenuComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(EntityMenuComponent);

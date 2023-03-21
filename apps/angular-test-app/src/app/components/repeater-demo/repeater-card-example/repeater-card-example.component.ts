@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  Input,
-  ChangeDetectorRef,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  OnChanges
-} from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, ViewEncapsulation, ChangeDetectionStrategy, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'ffdc-repeater-card-example',

@@ -4,23 +4,21 @@ import { LazyloadScriptService } from '@finastra/angular-components/core';
 import { of } from 'rxjs';
 
 describe('ChartModule', () => {
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [ChartModule],
-        providers: [
-          {
-            provide: LazyloadScriptService,
-            useValue: {
-              load: () => {
-                return of((global as any).Plotly);
-              }
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [ChartModule],
+      providers: [
+        {
+          provide: LazyloadScriptService,
+          useValue: {
+            load: () => {
+              return of((global as any).Plotly);
             }
           }
-        ]
-      }).compileComponents();
-    })
-  );
+        }
+      ]
+    }).compileComponents();
+  }));
 
   it('should create', () => {
     expect(ChartModule).toBeDefined();

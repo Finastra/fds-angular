@@ -48,9 +48,7 @@
 <ng-template #linkItem let-breadcrumbItem="item">
   <li [class]="breadcrumbItem.itemClass">
     <ng-container *ngIf="breadcrumbItem.url">
-      <a [routerLink]="breadcrumbItem.url" [queryParamsHandling]="breadcrumbItem.queryParamsHandling">{{
-        breadcrumbItem.label
-      }}</a>
+      <a [routerLink]="breadcrumbItem.url" [queryParamsHandling]="breadcrumbItem.queryParamsHandling">{{ breadcrumbItem.label }}</a>
     </ng-container>
     <ng-container *ngIf="!breadcrumbItem.url">
       {{ breadcrumbItem.label }}

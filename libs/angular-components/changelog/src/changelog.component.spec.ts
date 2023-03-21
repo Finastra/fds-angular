@@ -5,13 +5,11 @@ describe('UXGChangelogComponent', () => {
   let component: UXGChangelogComponent;
   let fixture: ComponentFixture<UXGChangelogComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [UXGChangelogComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [UXGChangelogComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(UXGChangelogComponent);

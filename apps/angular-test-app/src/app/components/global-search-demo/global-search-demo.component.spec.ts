@@ -10,14 +10,12 @@ describe('GlobalSearchDemoComponent', () => {
   let component: GlobalSearchDemoComponent;
   let fixture: ComponentFixture<GlobalSearchDemoComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        imports: [MatIconModule, MatSnackBarModule, GlobalSearchModule, MatCardModule],
-        declarations: [GlobalSearchDemoComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      imports: [MatIconModule, MatSnackBarModule, GlobalSearchModule, MatCardModule],
+      declarations: [GlobalSearchDemoComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(GlobalSearchDemoComponent);

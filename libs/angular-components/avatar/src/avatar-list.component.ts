@@ -1,13 +1,4 @@
-import {
-  AfterContentInit,
-  Component,
-  ContentChildren,
-  QueryList,
-  ElementRef,
-  Renderer2,
-  Input,
-  Attribute
-} from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, QueryList, ElementRef, Renderer2, Input, Attribute } from '@angular/core';
 import { AvatarComponent } from './avatar.component';
 
 @Component({
@@ -20,11 +11,7 @@ export class AvatarListComponent implements AfterContentInit {
 
   extra!: number;
 
-  constructor(
-    @Attribute('dense') public dense: any,
-    @Attribute('large') public large: any,
-    private renderer: Renderer2
-  ) {}
+  constructor(@Attribute('dense') public dense: any, @Attribute('large') public large: any, private renderer: Renderer2) {}
 
   ngAfterContentInit() {
     this.avatars.forEach((avatar, i) => {

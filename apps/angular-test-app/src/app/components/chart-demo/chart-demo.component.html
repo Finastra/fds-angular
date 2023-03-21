@@ -1,10 +1,5 @@
 <div class="row">
-  <uxg-chart
-    [multiSelect]="true"
-    (onClick)="onClick($event)"
-    (onSelected)="onSelected($event)"
-    (onDoubleClick)="onDoubleClick($event)"
-  >
+  <uxg-chart [multiSelect]="true" (onClick)="onClick($event)" (onSelected)="onSelected($event)" (onDoubleClick)="onDoubleClick($event)">
     <uxg-legend [position]="legendPosition"></uxg-legend>
     <uxg-trace
       *ngFor="let trace of traces"
@@ -15,12 +10,7 @@
       [type]="trace.type"
     ></uxg-trace>
   </uxg-chart>
-  <uxg-chart
-    [multiSelect]="true"
-    (onClick)="onClick($event)"
-    (onSelected)="onSelected($event)"
-    (onDoubleClick)="onDoubleClick($event)"
-  >
+  <uxg-chart [multiSelect]="true" (onClick)="onClick($event)" (onSelected)="onSelected($event)" (onDoubleClick)="onDoubleClick($event)">
     <uxg-legend [position]="legendPosition"></uxg-legend>
     <uxg-trace
       *ngFor="let trace of traces2"

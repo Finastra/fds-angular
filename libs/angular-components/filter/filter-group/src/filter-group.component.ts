@@ -217,10 +217,7 @@ export class FilterGroupComponent implements AfterViewInit, OnDestroy {
       this.setState(this.activeFilter);
       if (this.savedFilters.length) {
         for (let i = 0; i < this.savedFilters.length; i++)
-          if (
-            this.savedFilters[i].isSelected === true &&
-            !this.checkListEquality(this.savedFilters[i].filterState, this.activeFilter)
-          ) {
+          if (this.savedFilters[i].isSelected === true && !this.checkListEquality(this.savedFilters[i].filterState, this.activeFilter)) {
             this.savedFilters[i].isSelected = false;
             break;
           }
@@ -253,10 +250,7 @@ export class FilterGroupComponent implements AfterViewInit, OnDestroy {
   }
 
   checkIsActive(): boolean {
-    if (
-      this.selectedData.some((data) => data.selectedData.length) &&
-      this.activeFilter.some((data) => data.selectedData.length)
-    ) {
+    if (this.selectedData.some((data) => data.selectedData.length) && this.activeFilter.some((data) => data.selectedData.length)) {
       return this.checkListEquality(this.activeFilter, this.selectedData);
     }
     return false;

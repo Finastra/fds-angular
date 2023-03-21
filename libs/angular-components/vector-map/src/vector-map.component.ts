@@ -253,9 +253,7 @@ export class VectorMapComponent implements OnInit, OnDestroy, OnChanges {
   onPlotClick({ points: [point] }: { points: Array<any> }) {
     const clickedCountry = this.countries[point.pointIndex];
 
-    this.click.emit(
-      this.getData().find(({ name, code }) => name === clickedCountry.name || code === clickedCountry.code)
-    );
+    this.click.emit(this.getData().find(({ name, code }) => name === clickedCountry.name || code === clickedCountry.code));
   }
 
   onViewChange($event: any) {

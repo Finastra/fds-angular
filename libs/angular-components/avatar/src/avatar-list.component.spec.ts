@@ -6,13 +6,11 @@ describe('AvatarListComponent', () => {
   let component: AvatarListComponent;
   let fixture: ComponentFixture<AvatarListComponent>;
 
-  beforeEach(
-    waitForAsync(() => {
-      TestBed.configureTestingModule({
-        declarations: [AvatarListComponent]
-      }).compileComponents();
-    })
-  );
+  beforeEach(waitForAsync(() => {
+    TestBed.configureTestingModule({
+      declarations: [AvatarListComponent]
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(AvatarListComponent);

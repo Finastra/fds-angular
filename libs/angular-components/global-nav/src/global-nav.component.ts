@@ -1,14 +1,4 @@
-import {
-  Component,
-  OnInit,
-  OnDestroy,
-  Input,
-  EventEmitter,
-  Output,
-  TemplateRef,
-  OnChanges,
-  SimpleChanges
-} from '@angular/core';
+import { Component, OnInit, OnDestroy, Input, EventEmitter, Output, TemplateRef, OnChanges, SimpleChanges } from '@angular/core';
 import { NavigationNode } from './services/navigation.model';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';

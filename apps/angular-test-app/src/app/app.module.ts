@@ -65,10 +65,7 @@ import { UXGChangelogModule } from '@finastra/angular-components/changelog';
 import { UxgBreadcrumbModule } from '@finastra/angular-components/breadcrumb';
 import { ToasterModule } from '@finastra/angular-components/toaster';
 import { VideoThumbnailModule } from '@finastra/angular-components/video-thumbnail';
-import {
-  VideoThumbnailDemoComponent,
-  VideoDialogComponent
-} from './components/video-thumbnail/video-thumbnail.component';
+import { VideoThumbnailDemoComponent, VideoDialogComponent } from './components/video-thumbnail/video-thumbnail.component';
 import { StatusStepsDemoComponent } from './components/status-steps-demo/status-steps-demo.component';
 import { StatusStepperModule } from '@finastra/angular-components/status-stepper';
 

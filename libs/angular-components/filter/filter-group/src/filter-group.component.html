@@ -23,18 +23,10 @@
           >
             {{ filter.title }}
           </div>
-          <div
-            *ngIf="!filter.selectedData.length"
-            matBadge="All"
-            matBadgeSize="small"
-            class="uxg-group-filter uxg-side-badge"
-          >
+          <div *ngIf="!filter.selectedData.length" matBadge="All" matBadgeSize="small" class="uxg-group-filter uxg-side-badge">
             {{ filter.title }}
           </div>
-          <div
-            *ngIf="filter.selectedData.length && filter.selectedData[0].value"
-            class="uxg-group-filter uxg-side-badge"
-          >
+          <div *ngIf="filter.selectedData.length && filter.selectedData[0].value" class="uxg-group-filter uxg-side-badge">
             {{ filter.title }}<span class="filter-value">{{ filter.selectedData[0].label }}</span>
           </div>
           <mat-divider *ngIf="checkDivider(i)" class="filter-divider" vertical></mat-divider>
