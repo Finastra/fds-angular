@@ -1,7 +1,7 @@
 const { exec } = require('child_process');
 const chalk = require('chalk');
 
-const forbiddenBranches = ['master'];
+const forbiddenBranches = ['master', 'main'];
 
 const main = async () => {
   const branchName = await getGitBranch();
