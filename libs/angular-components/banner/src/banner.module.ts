@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BannerComponent } from './banner.component';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatLegacyTooltipModule as MatTooltipModule } from '@angular/material/legacy-tooltip';
 import { CommonModule } from '@angular/common';
 
 @NgModule({

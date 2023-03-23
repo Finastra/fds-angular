@@ -1,0 +1,21 @@
+{
+  "name": "changelog",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/angular-components/changelog",
+  "prefix": "finastra",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/angular-components/changelog/src/**/*.ts", "libs/angular-components/changelog/src/**/*.html"]
+      }
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "tags": []
+}

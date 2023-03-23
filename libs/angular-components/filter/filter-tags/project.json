@@ -1,0 +1,31 @@
+{
+  "name": "filter-tags",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/angular-components/filter/filter-tags",
+  "prefix": "finastra",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular-components/filter/filter-tags/src/**/*.ts",
+          "libs/angular-components/filter/filter-tags/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/angular-components/filter/filter-tags/jest.config.ts"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-tags"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "tags": []
+}

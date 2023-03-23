@@ -1,0 +1,31 @@
+{
+  "name": "user-profile-menu",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/angular-components/user-profile-menu",
+  "prefix": "finastra",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/angular-components/user-profile-menu/src/**/*.ts",
+          "libs/angular-components/user-profile-menu/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/angular-components/user-profile-menu/jest.config.ts"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/user-profile-menu"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "tags": []
+}

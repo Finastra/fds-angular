@@ -1,0 +1,24 @@
+{
+  "name": "status-steps",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/angular-components/status-steps/src",
+  "prefix": "finastra",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/angular-components/status-steps/src/**/*.ts", "libs/angular-components/status-steps/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/status-steps"],
+      "options": {
+        "jestConfig": "libs/angular-components/status-steps/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

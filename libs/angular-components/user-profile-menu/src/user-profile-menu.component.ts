@@ -13,7 +13,7 @@ import { UxgUserProfilePanelActionsDirective } from './user-profile-panel-action
 import { UxgUserProfilePanelContentDirective } from './user-profile-panel-content.directive';
 import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-details.directive';
 import { DefaultGravatar, AvatarColor } from '@finastra/angular-components/avatar';
-import { MatMenuTrigger } from '@angular/material/menu';
+import { MatLegacyMenuTrigger as MatMenuTrigger } from '@angular/material/legacy-menu';
 import { HeaderType } from './header-type';
 @Component({
   selector: 'uxg-user-profile-menu',

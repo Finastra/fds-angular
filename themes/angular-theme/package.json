@@ -8,7 +8,10 @@
     "url": "https://github.com/finastra/finastra-design-system.git",
     "directory": "themes/angular-theme"
   },
+  "dependencies": {
+    "@finastra/fds-tokens": "1.7.0"
+  },
   "peerDependencies": {
-    "@angular/material": "^14.1.0"
+    "@angular/material": "^15.2.3"
   }
 }
