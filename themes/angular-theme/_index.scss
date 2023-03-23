@@ -1,16 +1,25 @@
-@forward './lib/core/style/spacing';
 @use '@angular/material' as mat;
-@use './lib/core/theming/palette';
+@use '@finastra/fds-theme/color/mixins' as fds;
+@use '@finastra/fds-theme/scheme' as scheme;
 
-@import './lib/avatar/avatar-base';
-@import './lib/button/button-base';
+@use './lib/core/theming/palette';
+@forward './lib/core/style/spacing';
+
+@use './lib/avatar/avatar-theme' as avatar;
+@use './lib/icon/icon-theme' as icon;
+
+@import './lib/avatar/avatar';
+@import './lib/button/button';
+@import './lib/icon/icon';
+
 
 @include mat.core();
 
+
 $dark-theme: mat.define-dark-theme((
  color: (
-   primary: mat.define-palette(palette.$primary-dark-palette),
-   accent: mat.define-palette(palette.$secondary-dark-palette),
+    primary: mat.define-palette(palette.$primary-dark-palette),
+    accent: mat.define-palette(palette.$secondary-dark-palette),
  ),
   typography: mat.define-typography-config()
 ));
@@ -18,12 +27,23 @@ $dark-theme: mat.define-dark-theme((
 $light-theme: mat.define-light-theme((
  color: (
     primary: mat.define-palette(palette.$primary-light-palette),
-   accent: mat.define-palette(palette.$secondary-dark-palette),
+    accent: mat.define-palette(palette.$secondary-light-palette),
  )
 ));
 
 @include mat.all-component-themes($light-theme);
+:root {
+  @include fds.custom-properties(scheme.light());
+}
+@include icon.color();
+@include avatar.color();
 
 @media (prefers-color-scheme: dark) {
   @include mat.all-component-colors($dark-theme);
+  :root {
+    @include fds.custom-properties(scheme.dark());
+  }
+  @include icon.color();
+  @include avatar.color();
 }
+

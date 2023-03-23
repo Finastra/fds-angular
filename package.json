@@ -180,6 +180,7 @@
     "npm": "9.5.0"
   },
   "dependencies": {
+    "@finastra/fds-theme": "^1.7.0",
     "@finastra/fds-tokens": "^1.7.0"
   }
 }
