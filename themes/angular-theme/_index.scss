@@ -15,6 +15,17 @@ $primary-light-palette: (
   )
 );
 
+$secondary-light-palette: (
+  100: map.get(light.$tokens, secondary),
+  500: map.get(light.$tokens, secondary),
+  700: map.get(light.$tokens, secondary),
+  contrast: (
+    100: map.get(light.$tokens, on-secondary),
+    500: map.get(light.$tokens, on-secondary),
+    700: map.get(light.$tokens, on-secondary),
+  )
+);
+
 $primary-dark-palette: (
   100: map.get(dark.$tokens, primary),
   500: map.get(dark.$tokens, primary),
@@ -26,13 +37,24 @@ $primary-dark-palette: (
   )
 );
 
+$secondary-dark-palette: (
+  100: map.get(dark.$tokens, secondary),
+  500: map.get(dark.$tokens, secondary),
+  700: map.get(dark.$tokens, secondary),
+  contrast: (
+    100: map.get(dark.$tokens, on-secondary),
+    500: map.get(dark.$tokens, on-secondary),
+    700: map.get(dark.$tokens, on-secondary),
+  )
+);
+
 @include mat.core();
 
 // Define a dark theme
 $dark-theme: mat.define-dark-theme((
  color: (
    primary: mat.define-palette($primary-dark-palette),
-   accent: mat.define-palette(mat.$blue-grey-palette),
+   accent: mat.define-palette($secondary-dark-palette),
  ),
   // Only include `typography` and `density` in the default dark theme.
   typography: mat.define-typography-config(),
@@ -43,7 +65,7 @@ $dark-theme: mat.define-dark-theme((
 $light-theme: mat.define-light-theme((
  color: (
     primary: mat.define-palette($primary-light-palette),
-   accent: mat.define-palette(mat.$pink-palette),
+   accent: mat.define-palette($secondary-dark-palette),
  ),
 ));
 
