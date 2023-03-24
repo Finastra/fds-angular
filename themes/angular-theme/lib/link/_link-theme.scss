@@ -1,13 +1,12 @@
-@mixin theme($theme) {
-  $primary: map-get($theme, primary);
-  $accent: map-get($theme, accent);
+@use '@finastra/fds-theme/color' as fds;
 
+@mixin color() {
   .uxg-link {
-    color: map-get($primary, default);
+    @include fds.color(primary);
     text-decoration: underline;
 
     &:hover {
-      color: map-get($accent, default);
+      @include fds.color(secondary);
     }
   }
 }

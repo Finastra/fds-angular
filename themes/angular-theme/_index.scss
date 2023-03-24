@@ -7,10 +7,9 @@
 
 @use './lib/avatar/avatar-theme' as avatar;
 @use './lib/icon/icon-theme' as icon;
+@use './lib/link/link-theme' as link;
 
-@import './lib/avatar/avatar';
-@import './lib/button/button';
-@import './lib/icon/icon';
+@import './base';
 
 
 @include mat.core();
@@ -35,15 +34,14 @@ $light-theme: mat.define-light-theme((
 :root {
   @include fds.custom-properties(scheme.light());
 }
-@include icon.color();
 @include avatar.color();
+@include icon.color();
+@include link.color();
 
 @media (prefers-color-scheme: dark) {
   @include mat.all-component-colors($dark-theme);
   :root {
     @include fds.custom-properties(scheme.dark());
   }
-  @include icon.color();
-  @include avatar.color();
 }
 
