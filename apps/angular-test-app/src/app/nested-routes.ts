@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+import { AvatarDemoComponent } from './components/avatar-demo/avatar-demo.component';
 import { FoundationsDemoComponent } from './components/foundations-demo/foundations-demo.component';
 import { UiElementsDemoComponent } from './components/ui-elements-demo/ui-elements-demo.component';
 
@@ -11,10 +12,10 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'ui-elements', component: UiElementsDemoComponent, data: { title: 'UI Elements' } }
       // { path: 'theme-builder', component: ThemeBuilderComponent, data: { title: 'Theme Builder' } }
     ]
-  }
-  // {
-  //   title: 'Components',
-  //   routes: [
+  },
+  {
+    title: 'Components',
+    routes: [
   //     { path: 'chart', component: ChartDemoComponent, data: { title: 'Chart' } },
   //     { path: 'filter-panel', component: FilterPanelDemoComponent, data: { title: 'Filter' } },
   //     { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search' } },
@@ -26,7 +27,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
   //     { path: 'wizard', component: WizardDemoComponent, data: { title: 'Wizard' } },
   //     { path: 'entity-menu', component: EntityMenuDemoComponent, data: { title: 'Entity Menu' } },
   //     { path: 'global-nav', component: GlobalNavDemoComponent, data: { title: 'Global Nav' } },
-  //     { path: 'avatar', component: AvatarDemoComponent, data: { title: 'Avatar' } },
+      { path: 'avatar', component: AvatarDemoComponent, data: { title: 'Avatar' } },
   //     { path: 'expandable-table', component: ExpandableTableDemoComponent, data: { title: 'Expandable Table' } },
   //     {
   //       path: 'user-profile-menu',
@@ -41,8 +42,8 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
   //     { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster' } },
   //     { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail' } },
   //     { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } }
-  //   ]
-  // }
+    ]
+  }
 ].map((groups) => {
   groups.routes = groups.routes.sort((a: any, b: any) => a.data.title.localeCompare(b.data.title));
   return groups;

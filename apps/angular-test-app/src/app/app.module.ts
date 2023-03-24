@@ -10,7 +10,7 @@ import { MaterialModule } from './material.module';
 // import { RepeaterCardExampleComponent } from './components/repeater-demo/repeater-card-example/repeater-card-example.component';
 // import { RepeaterCardAdvancedExampleComponent } from './components/repeater-demo/repeater-card-advanced-example/repeater-card-advanced-example.component';
 // import { RepeaterCardChartExampleComponent } from './components/repeater-demo/repeater-card-chart-example/repeater-card-chart-example.component';
-// import { AvatarDemoComponent } from './components/avatar-demo/avatar-demo.component';
+import { AvatarDemoComponent } from './components/avatar-demo/avatar-demo.component';
 // import { ChartDemoComponent } from './components/chart-demo/chart-demo.component';
 // import { ExpandableTableDemoComponent } from './components/expandable-table-demo/expandable-table-demo.component';
 // import { FilterPanelDemoComponent } from './components/filter-panel-demo/filter-panel-demo.component';
@@ -47,7 +47,7 @@ import { UiElementsDemoComponent } from './components/ui-elements-demo/ui-elemen
 // import { MultiselectTagsModule } from '@finastra/angular-components/filter/multiselect-tags';
 // import { VectorMapModule } from '@finastra/angular-components/vector-map';
 // import { ChartModule } from '@finastra/angular-components/chart';
-// import { AvatarModule } from '@finastra/angular-components/avatar';
+import { AvatarModule } from '@finastra/angular-components/avatar';
 // import { ExpandableTableModule } from '@finastra/angular-components/expandable-table';
 // import { PaletteModule } from '@finastra/angular-components/core';
 // import { SkeletonTextModule } from '@finastra/angular-components/skeleton-text';
@@ -71,7 +71,7 @@ import { UiElementsDemoComponent } from './components/ui-elements-demo/ui-elemen
 
 @NgModule({
   declarations: [
-    // AvatarDemoComponent,
+    AvatarDemoComponent,
     // ChartDemoComponent,
     // ExpandableTableDemoComponent,
     // FilterPanelDemoComponent,
@@ -131,7 +131,7 @@ import { UiElementsDemoComponent } from './components/ui-elements-demo/ui-elemen
     // SkeletonTextModule,
     // ExpandableTableModule,
     // MultiselectTagsModule,
-    // AvatarModule,
+    AvatarModule,
     // UxgUserProfileMenuModule,
     // BannerModule,
     // GlobalNavModule,
