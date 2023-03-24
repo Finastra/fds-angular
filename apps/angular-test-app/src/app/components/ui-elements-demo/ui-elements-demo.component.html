@@ -342,105 +342,105 @@
 <div class="block-test">
   <h3 class="uxg-h3">Chips</h3>
   <div class="example-row chip-states-test">
-      <mat-chip-listbox>
-        <mat-chip>Simple</mat-chip>
-        <mat-chip disabled>Disabled</mat-chip>
-        <mat-chip selected>Selected</mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip>Simple</mat-chip>
+      <mat-chip disabled>Disabled</mat-chip>
+      <mat-chip selected>Selected</mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-density-test">
-      <mat-chip-listbox>
-        <mat-chip large>Large</mat-chip>
-        <mat-chip>Default</mat-chip>
-        <mat-chip dense>Dense</mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip large>Large</mat-chip>
+      <mat-chip>Default</mat-chip>
+      <mat-chip dense>Dense</mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-dense-test">
-      <mat-chip-listbox>
-        <mat-chip dense>Dense</mat-chip>
-        <mat-chip disabled dense>Disabled</mat-chip>
-        <mat-chip selected dense>Selected</mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip dense>Dense</mat-chip>
+      <mat-chip disabled dense>Disabled</mat-chip>
+      <mat-chip selected dense>Selected</mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-icon-test">
-      <mat-chip-listbox>
-        <mat-chip>
-          <mat-icon matChipAvatar>check</mat-icon>
-          Icon
-        </mat-chip>
-        <mat-chip>
-          After
-          <mat-icon matChipTrailingIcon>star</mat-icon>
-        </mat-chip>
-        <mat-chip disabled>
-          <mat-icon matChipAvatar>public</mat-icon>
-          Disabled
-        </mat-chip>
-        <mat-chip selected>
-          <mat-icon matChipAvatar>check</mat-icon>
-          Selected
-        </mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip>
+        <mat-icon matChipAvatar>check</mat-icon>
+        Icon
+      </mat-chip>
+      <mat-chip>
+        After
+        <mat-icon matChipTrailingIcon>star</mat-icon>
+      </mat-chip>
+      <mat-chip disabled>
+        <mat-icon matChipAvatar>public</mat-icon>
+        Disabled
+      </mat-chip>
+      <mat-chip selected>
+        <mat-icon matChipAvatar>check</mat-icon>
+        Selected
+      </mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-icon-dense-test">
-      <mat-chip-listbox>
-        <mat-chip dense>
-          <mat-icon matChipAvatar>check</mat-icon>
-          Dense icon
-        </mat-chip>
-        <mat-chip dense disabled>
-          <mat-icon matChipAvatar>check</mat-icon>
-          Disabled
-        </mat-chip>
-        <mat-chip dense selected>
-          <mat-icon matChipAvatar>check</mat-icon>
-          Selected
-        </mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip dense>
+        <mat-icon matChipAvatar>check</mat-icon>
+        Dense icon
+      </mat-chip>
+      <mat-chip dense disabled>
+        <mat-icon matChipAvatar>check</mat-icon>
+        Disabled
+      </mat-chip>
+      <mat-chip dense selected>
+        <mat-icon matChipAvatar>check</mat-icon>
+        Selected
+      </mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-removable-test">
-      <mat-chip-listbox>
-        <mat-chip removable>
-          <span>Removable</span>
-          <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip>
-        <mat-chip removable selected>
-          Selected
-          <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip>
-        <mat-chip removable dense>
-          Dense
-          <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip>
-        <mat-chip removable dense selected>
-          <span>Dense selected</span>
-          <mat-icon matChipRemove>cancel</mat-icon>
-        </mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip removable>
+        <span>Removable</span>
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <mat-chip removable selected>
+        Selected
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <mat-chip removable dense>
+        Dense
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+      <mat-chip removable dense selected>
+        <span>Dense selected</span>
+        <mat-icon matChipRemove>cancel</mat-icon>
+      </mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-avatar-test">
-      <mat-chip-listbox>
-        <mat-chip>
-          <mat-chip-avatar>C</mat-chip-avatar>
-          Chester Young
-        </mat-chip>
-        <mat-chip selected>
-          <img src="https://randomuser.me/api/portraits/men/5.jpg" matChipAvatar />
-          Jerry Gilmer
-        </mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox>
+      <mat-chip>
+        <mat-chip-avatar>C</mat-chip-avatar>
+        Chester Young
+      </mat-chip>
+      <mat-chip selected>
+        <img src="https://randomuser.me/api/portraits/men/5.jpg" matChipAvatar />
+        Jerry Gilmer
+      </mat-chip>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-toggle-test">
-      <mat-chip-listbox multiple="true">
-        <mat-chip (click)="chip1.selected ? chip1.deselect() : chip1.select()" #chip1="matChip">
-          <mat-icon matChipAvatar>language</mat-icon>
-          Public
-        </mat-chip>
-        <mat-chip (click)="chip2.selected ? chip2.deselect() : chip2.select()" #chip2="matChip">
-          <mat-icon matChipAvatar>group</mat-icon>
-          Shared
-        </mat-chip>
-      </mat-chip-listbox>
+    <mat-chip-listbox multiple="true">
+      <mat-chip (click)="chip1.selected ? chip1.deselect() : chip1.select()" #chip1="matChip">
+        <mat-icon matChipAvatar>language</mat-icon>
+        Public
+      </mat-chip>
+      <mat-chip (click)="chip2.selected ? chip2.deselect() : chip2.select()" #chip2="matChip">
+        <mat-icon matChipAvatar>group</mat-icon>
+        Shared
+      </mat-chip>
+    </mat-chip-listbox>
   </div>
 </div>
 

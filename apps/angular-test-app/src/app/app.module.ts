@@ -91,7 +91,7 @@ import { AvatarModule } from '@finastra/angular-components/avatar';
     // UserProfileMenuDemoComponentComponent,
     // VectorMapDemoComponent,
     // WizardDemoComponent,
-    AppComponent,
+    AppComponent
     // BannerDemoComponent,
     // GlobalNavDemoComponent,
     // AccountCardDemoComponent,
@@ -131,7 +131,7 @@ import { AvatarModule } from '@finastra/angular-components/avatar';
     // SkeletonTextModule,
     // ExpandableTableModule,
     // MultiselectTagsModule,
-    AvatarModule,
+    AvatarModule
     // UxgUserProfileMenuModule,
     // BannerModule,
     // GlobalNavModule,
@@ -146,9 +146,7 @@ import { AvatarModule } from '@finastra/angular-components/avatar';
     // VideoThumbnailModule,
     // StatusStepperModule
   ],
-  providers: [
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}}
-  ],
+  providers: [{ provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } }],
   exports: [],
   bootstrap: [AppComponent]
 })
