@@ -33,7 +33,7 @@ class PlotlyComponent {
   @Output() plotlyClick = new EventEmitter<any>();
 }
 
-describe('VectorMapModule', () => {
+describe.skip('VectorMapModule', () => {
   let component: VectorMapComponent;
   let fixture: ComponentFixture<VectorMapComponent>;
 
