@@ -1,7 +1,7 @@
 <div class="filter-tags-container">
   <mat-chip-listbox #chipList aria-label="Tags selection">
     <ng-container *ngFor="let tag of selectedData | slice: 0:displayMax">
-      <mat-chip 
+      <mat-chip
         [attr.standard]="standard === '' || null"
         [attr.dense]="standard === '' ? null : ''"
         highlighted
