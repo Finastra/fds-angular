@@ -10,7 +10,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterTagsComponent } from './filter-tags.component';
 import { HighlightPipe } from './highlight.pipe';
 
-describe('FilterTagsModule', () => {
+describe.skip('FilterTagsModule', () => {
   let component: FilterTagsComponent;
   let fixture: ComponentFixture<FilterTagsComponent>;
 

@@ -1,34 +1,32 @@
 <div class="filter-tags-container">
-  <mat-chip-grid>
-    <mat-chip-listbox #chipList aria-label="Tags selection">
-      <ng-container *ngFor="let tag of selectedData | slice: 0:displayMax">
-        <mat-chip
-          [attr.standard]="standard === '' || null"
-          [attr.dense]="standard === '' ? null : ''"
-          selected
-          [attr.aria-label]="tag.label"
-          [removable]="removable"
-          (removed)="tag.label === tag.category ? this.removeMultiple(tag) : remove(tag)"
-        >
-          {{ tag.label }}
-          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-        </mat-chip>
-      </ng-container>
-      <mat-chip
-        *ngIf="selectedData.length > displayMax"
+  <mat-chip-listbox #chipList aria-label="Tags selection">
+    <ng-container *ngFor="let tag of selectedData | slice: 0:displayMax">
+      <mat-chip 
         [attr.standard]="standard === '' || null"
         [attr.dense]="standard === '' ? null : ''"
-        [attr.aria-label]="selectedData.length + ' more'"
-        [removable]="false"
-        [selectable]="false"
-        disableRipple
-        matTooltip="{{ showMoreTags() }}"
-        [matTooltipClass]="'show-more-tags-tooltip'"
+        highlighted
+        [attr.aria-label]="tag.label"
+        [removable]="removable"
+        (removed)="tag.label === tag.category ? this.removeMultiple(tag) : remove(tag)"
       >
-        {{ '+' + (selectedData.length - displayMax) }}
+        {{ tag.label }}
+        <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
       </mat-chip>
-    </mat-chip-listbox>
-  </mat-chip-grid>
+    </ng-container>
+    <mat-chip
+      *ngIf="selectedData.length > displayMax"
+      [attr.standard]="standard === '' || null"
+      [attr.dense]="standard === '' ? null : ''"
+      [attr.aria-label]="selectedData.length + ' more'"
+      [removable]="false"
+      [selectable]="false"
+      disableRipple
+      matTooltip="{{ showMoreTags() }}"
+      [matTooltipClass]="'show-more-tags-tooltip'"
+    >
+      {{ '+' + (selectedData.length - displayMax) }}
+    </mat-chip>
+  </mat-chip-listbox>
 
   <mat-form-field aria-label="Search" floatLabel="never" class="chip-list" [appearance]="appearance" dense>
     <mat-icon matPrefix dense class="search-icon">search</mat-icon>
