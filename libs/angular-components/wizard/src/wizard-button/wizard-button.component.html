@@ -3,8 +3,6 @@
     *ngSwitchDefault
     mat-button
     color="accent"
-    [attr.large]="!media.isActive('xs') || null"
-    [attr.dense]="media.isActive('xs') || null"
     [disabled]="disabledAttribute"
     [class.disabled]="isDisabled"
     (click)="click()"
@@ -15,8 +13,6 @@
     *ngSwitchCase="'next'"
     mat-stroked-button
     color="accent"
-    [attr.large]="!media.isActive('xs') || null"
-    [attr.dense]="media.isActive('xs') || null"
     [disabled]="disabledAttribute"
     [class.disabled]="isDisabled"
     (click)="click()"
@@ -27,8 +23,6 @@
     *ngSwitchCase="'done'"
     mat-flat-button
     color="accent"
-    [attr.large]="!media.isActive('xs') || null"
-    [attr.dense]="media.isActive('xs') || null"
     [disabled]="disabledAttribute"
     [class.disabled]="isDisabled"
     (click)="click()"
