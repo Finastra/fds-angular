@@ -1,9 +1,5 @@
 import { Component, Input, TemplateRef, ViewChild } from '@angular/core';
-import {
-  MatMenuTrigger,
-  MenuPositionX,
-  MenuPositionY
-} from '@angular/material/menu';
+import { MatMenuTrigger, MenuPositionX, MenuPositionY } from '@angular/material/menu';
 
 @Component({
   selector: 'uxg-popover',

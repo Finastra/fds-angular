@@ -63,15 +63,7 @@ describe('VectorMapModule', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [
-        CommonModule,
-        MatTooltipModule,
-        MatSelectModule,
-        MatFormFieldModule,
-        MatInputModule,
-        PaletteModule,
-        NoopAnimationsModule
-      ],
+      imports: [CommonModule, MatTooltipModule, MatSelectModule, MatFormFieldModule, MatInputModule, PaletteModule, NoopAnimationsModule],
       declarations: [VectorMapComponent, PlotlyComponent]
     }).compileComponents();
   }));

@@ -8,13 +8,11 @@ import {
   Input,
   OnDestroy,
   Output,
-  QueryList, ViewChild, ViewEncapsulation
+  QueryList,
+  ViewChild,
+  ViewEncapsulation
 } from '@angular/core';
-import {
-  MatDialog,
-  MatDialogConfig,
-  MatDialogRef
-} from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
 import { MatExpansionPanel } from '@angular/material/expansion';
 import { Subscription } from 'rxjs';
 import { FilterGroupDialogComponent } from './filter-group-dialog/filter-group-dialog.component';

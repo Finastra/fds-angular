@@ -1,5 +1,12 @@
 import {
-  Attribute, ChangeDetectionStrategy, Component, ContentChild, Input, TemplateRef, ViewChild, ViewEncapsulation
+  Attribute,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+  Input,
+  TemplateRef,
+  ViewChild,
+  ViewEncapsulation
 } from '@angular/core';
 import { MatMenuTrigger } from '@angular/material/menu';
 import { AvatarColor, DefaultGravatar } from '@finastra/angular-components/avatar';
