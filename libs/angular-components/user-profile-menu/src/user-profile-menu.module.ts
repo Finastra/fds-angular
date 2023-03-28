@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { MatDividerModule } from '@angular/material/divider';
-import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { AvatarModule } from '@finastra/angular-components/avatar';
 
-import { UxgUserProfilePanelComponent } from './user-profile-panel.component';
+import { UxgUserProfileMenuComponent } from './user-profile-menu.component';
 import { UxgUserProfilePanelActionsDirective } from './user-profile-panel-actions.directive';
 import { UxgUserProfilePanelContentDirective } from './user-profile-panel-content.directive';
 import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-details.directive';
-import { UxgUserProfileMenuComponent } from './user-profile-menu.component';
+import { UxgUserProfilePanelComponent } from './user-profile-panel.component';
 
 @NgModule({
   imports: [CommonModule, AvatarModule, MatDividerModule, MatMenuModule],

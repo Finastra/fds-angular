@@ -1,21 +1,20 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatIconModule } from '@angular/material/icon';
-import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
-import { MatDividerModule } from '@angular/material/divider';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatBadgeModule } from '@angular/material/badge';
-import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacyDialogModule as MatDialogModule } from '@angular/material/legacy-dialog';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatDialogModule } from '@angular/material/dialog';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 
+import { ClickOutsideModule } from '@finastra/angular-components/core';
+import { FilterGroupDialogComponent } from './filter-group-dialog/filter-group-dialog.component';
 import { FilterGroupComponent } from './filter-group.component';
 import { UxgFilter } from './filter.directive';
-import { FilterGroupDialogComponent } from './filter-group-dialog/filter-group-dialog.component';
-import { ClickOutsideModule } from '@finastra/angular-components/core';
 
 @NgModule({
   declarations: [FilterGroupComponent, UxgFilter, FilterGroupDialogComponent],
@@ -30,7 +29,6 @@ import { ClickOutsideModule } from '@finastra/angular-components/core';
     MatChipsModule,
     MatFormFieldModule,
     MatInputModule,
-    FlexLayoutModule,
     MatDialogModule,
     FormsModule,
     ClickOutsideModule

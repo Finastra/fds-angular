@@ -8,20 +8,18 @@ import {
   Input,
   OnDestroy,
   Output,
-  QueryList,
-  ViewEncapsulation,
-  ViewChild
+  QueryList, ViewChild, ViewEncapsulation
 } from '@angular/core';
 import {
-  MatLegacyDialog as MatDialog,
-  MatLegacyDialogConfig as MatDialogConfig,
-  MatLegacyDialogRef as MatDialogRef
-} from '@angular/material/legacy-dialog';
+  MatDialog,
+  MatDialogConfig,
+  MatDialogRef
+} from '@angular/material/dialog';
+import { MatExpansionPanel } from '@angular/material/expansion';
 import { Subscription } from 'rxjs';
 import { FilterGroupDialogComponent } from './filter-group-dialog/filter-group-dialog.component';
 import { UxgFilter } from './filter.directive';
 import { UXGFilterChanges } from './filter.models';
-import { MatExpansionPanel } from '@angular/material/expansion';
 
 export interface FilterGroupComponentData {
   title: string;

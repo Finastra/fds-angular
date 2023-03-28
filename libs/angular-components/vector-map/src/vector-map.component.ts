@@ -10,7 +10,7 @@ import {
   SimpleChanges,
   ViewChild
 } from '@angular/core';
-import { LegacyTooltipComponent as TooltipComponent } from '@angular/material/legacy-tooltip';
+import { TooltipComponent } from '@angular/material/tooltip';
 import {
   ColorScale,
   LazyloadScriptService,

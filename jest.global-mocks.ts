@@ -18,5 +18,5 @@ Object.defineProperty(window, 'matchMedia', {
   }))
 });
 
-(global as any).Plotly = require('plotly.js/dist/plotly.js');
+// (global as any).Plotly = require('plotly.js/dist/plotly.js');
 (window.URL as any).createObjectURL = jest.fn();

@@ -1,6 +1,6 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
+import { NgModule } from '@angular/core';
+import { MatMenuModule } from '@angular/material/menu';
 
 import { PopoverComponent } from './popover.component';
 

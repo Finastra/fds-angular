@@ -1,17 +1,8 @@
 import {
-  Component,
-  OnInit,
-  OnDestroy,
-  OnChanges,
-  SimpleChanges,
-  Input,
-  Output,
-  EventEmitter,
-  forwardRef,
-  ChangeDetectionStrategy
+  Component, forwardRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { MatLegacySelectChange as MatSelectChange } from '@angular/material/legacy-select';
+import { MatSelectChange } from '@angular/material/select';
 
 @Component({
   selector: 'ffdc-field-matcher',

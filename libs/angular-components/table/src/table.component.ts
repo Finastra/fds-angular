@@ -11,9 +11,9 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { MatLegacyCheckboxChange as MatCheckboxChange } from '@angular/material/legacy-checkbox';
-import { MatLegacyPaginator as MatPaginator, LegacyPageEvent as PageEvent } from '@angular/material/legacy-paginator';
-import { MatLegacyTable as MatTable } from '@angular/material/legacy-table';
+import { MatCheckboxChange } from '@angular/material/checkbox';
+import { MatPaginator, PageEvent } from '@angular/material/paginator';
+import { MatTable } from '@angular/material/table';
 import isEqual from 'lodash-es/isEqual';
 import { UxgActionColumnPosition, UxgColumn, UxgColumnType, UxgDefaultPaging, UxgPage, UxgSort, UxgTableSelectEvent } from './table.models';
 

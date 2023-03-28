@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
-import { AccountCardComponent, AccountCardSkeletonComponent } from './account-card.component';
-import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
+import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
-import { SkeletonTextModule } from '@finastra/angular-components/skeleton-text';
 import { MatIconModule } from '@angular/material/icon';
+import { SkeletonTextModule } from '@finastra/angular-components/skeleton-text';
+import { AccountCardComponent, AccountCardSkeletonComponent } from './account-card.component';
 
 @NgModule({
   declarations: [AccountCardComponent, AccountCardSkeletonComponent],
