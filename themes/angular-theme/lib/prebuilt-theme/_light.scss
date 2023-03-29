@@ -1,10 +1,33 @@
-@use '../core/core';
-@use '../core/theming/theming';
-@use '../core/theming/all-theme';
-@use '../../base';
+@use '@angular/material' as mat;
+@use '@finastra/fds-theme/color/mixins' as fds;
+@use '@finastra/fds-theme/scheme' as scheme;
 
-$uxg-light-theme: theming.uxg-light-theme();
+@use '../core/theming/palette';
+@forward '../core/style/spacing';
 
-@include core.uxg-core();
+@use '../avatar/avatar-theme' as avatar;
+@use '../icon/icon-theme' as icon;
+@use '../link/link-theme' as link;
 
-@include all-theme.uxg-material-theme($uxg-light-theme);
+@import '../../base';
+
+
+@include mat.core();
+
+
+$light-theme: mat.define-light-theme((
+ color: (
+    primary: mat.define-palette(palette.$primary-light-palette),
+    accent: mat.define-palette(palette.$secondary-light-palette),
+ ),
+  typography: mat.define-typography-config()
+));
+
+@include avatar.color();
+@include icon.color();
+@include link.color();
+
+@include mat.all-component-colors($light-theme);
+:root {
+  @include fds.custom-properties(scheme.light());
+}
