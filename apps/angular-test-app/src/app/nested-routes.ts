@@ -48,7 +48,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'account-card', component: AccountCardDemoComponent, data: { title: 'Account Card' } },
       { path: 'search-input', component: SearchInputDemoComponent, data: { title: 'Search Input' } },
       //     { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog' } },
-      { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb' } },
+      { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb' } }
       //     { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster' } },
       //     { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail' } },
       //     { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } }

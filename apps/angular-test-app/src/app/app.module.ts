@@ -98,7 +98,7 @@ import { UxgBreadcrumbModule } from '@finastra/angular-components/breadcrumb';
     EntityMenuDemoComponent,
     SearchInputDemoComponent,
     // ChangelogDemoComponent,
-    BreadcrumbDemoComponent,
+    BreadcrumbDemoComponent
     // ToasterDemoComponent,
     // VideoThumbnailDemoComponent,
     // VideoDialogComponent,
@@ -140,7 +140,7 @@ import { UxgBreadcrumbModule } from '@finastra/angular-components/breadcrumb';
     AccountCardModule,
     UxgSearchInputModule,
     // UXGChangelogModule,
-    UxgBreadcrumbModule,
+    UxgBreadcrumbModule
     // ToasterModule,
     // VideoThumbnailModule,
     // StatusStepperModule
