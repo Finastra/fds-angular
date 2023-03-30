@@ -8,7 +8,10 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["packages/angular-components/video-thumbnail/src/**/*.ts", "packages/angular-components/video-thumbnail/src/**/*.html"]
+        "lintFilePatterns": [
+          "packages/angular-components/video-thumbnail/src/**/*.ts",
+          "packages/angular-components/video-thumbnail/src/**/*.html"
+        ]
       }
     },
     "test": {
