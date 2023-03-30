@@ -14,7 +14,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
         "stylePreprocessorOptions": {
-          "includePaths": ["./themes/", "./libs/angular-components", "node_modules"]
+          "includePaths": ["./packages/", "node_modules"]
         },
         "allowedCommonJsDependencies": ["elasticlunr"],
         "outputPath": "dist/apps/angular-test-app",

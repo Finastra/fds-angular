@@ -18,7 +18,7 @@ A CSS implementation of our foundations specifically made for Angular.
 
 An angular implementation of the Finastra design system components. It provides all [the necessary components](https://lucid-bassi-bfa8cc.netlify.app/) to make fast and cohesive financial apps.
 
-[Learn more](./libs/angular-components/README.md)
+[Learn more](./packages/angular-components/README.md)
 
 # 💌 Want to help?
 

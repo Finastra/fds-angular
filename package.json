@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "workspaces": [
-    "themes/angular-theme"
+    "packages/angular-theme"
   ],
   "scripts": {
     "add:component": "nx workspace-schematic angular-component",
@@ -26,8 +26,8 @@
     "build:devkit": "tsc -p ./tools/devkit/tsconfig.devkit.json && cpx -v \"./tools/devkit/**/*.json\" dist/tools/devkit",
     "build:theme": "nx build angular-theme --prod",
     "build:scripts": "tsc --project scripts/tsconfig.json",
-    "changelog:components": "cd libs/angular-components && npx standard-version",
-    "changelog:theme": "cd themes/angular-theme && npx standard-version",
+    "changelog:components": "cd packages/angular-components && npx standard-version",
+    "changelog:theme": "cd packages/angular-theme && npx standard-version",
     "clean": "rimraf dist coverage junit.xml",
     "dep-graph": "nx dep-graph",
     "dev": "npm start -- -o",

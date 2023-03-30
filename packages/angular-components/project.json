@@ -1,0 +1,39 @@
+{
+  "name": "angular-components",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/angular-components/",
+  "prefix": "finastra",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "options": {
+        "project": "packages/angular-components/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "packages/angular-components/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "packages/angular-components/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:lint",
+      "options": {
+        "linter": "eslint",
+        "config": "packages/angular-components/.eslintrc.json",
+        "tsConfig": ["packages/angular-components/tsconfig.lib.json", "packages/angular-components/tsconfig.spec.json"],
+        "exclude": ["**/node_modules/**", "!packages/angular-components/**/*"]
+      }
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "tags": []
+}

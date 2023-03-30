@@ -4,7 +4,7 @@ on:
       - 'main'
     types: [closed]
     paths:
-      - 'libs/angular-components/CHANGELOG.md'
+      - 'packages/angular-components/CHANGELOG.md'
 
 name: Create Angular release
 
@@ -66,7 +66,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: 'angular-components'
-          path: './dist/libs/angular-components'
+          path: './dist/packages/angular-components'
       - name: Upload Angular Test App Artifact
         uses: actions/upload-artifact@v2
         with:
@@ -102,12 +102,12 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: 'angular-components'
-          path: './dist/libs/angular-components'
+          path: './dist/packages/angular-components'
       - name: Publish Components
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.FINASTRA_BOT_NPM_AUTH_TOKEN }}
-          package: ./dist/libs/angular-components/package.json
+          package: ./dist/packages/angular-components/package.json
           access: public
       - name: Publish angular theme
         uses: JS-DevTools/npm-publish@v1

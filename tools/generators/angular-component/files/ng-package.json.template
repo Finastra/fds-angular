@@ -1,6 +1,6 @@
 {
   "$schema": "../../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/libs/angular-components/<%= filename %>",
+  "dest": "../../dist/packages/angular-components/<%= filename %>",
   "lib": {
     "entryFile": "index.ts",
   }

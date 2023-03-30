@@ -1,8 +1,6 @@
-import { Tree } from '@angular-devkit/schematics/src/tree/interface';
-import { addExportToModule } from '@schematics/angular/utility/ast-utils';
-import { InsertChange } from '@schematics/angular/utility/change';
 import { Rule, SchematicContext } from '@angular-devkit/schematics';
-import { readJsonInTree, updateJsonInTree, getWorkspacePath } from '@nrwl/workspace';
+import { Tree } from '@angular-devkit/schematics/src/tree/interface';
+import { getWorkspacePath, updateJsonInTree } from '@nrwl/workspace';
 
 interface NgJsonOptions {
   projectName: string;
@@ -40,8 +38,8 @@ export function addToNgJson(options: NgJsonOptions): Rule {
     updateJsonInTree(getWorkspacePath(host), (json: AngularJson) => {
       const project: AngularProject = {
         projectType: 'library',
-        root: `libs/angular-components/${options.projectName}`,
-        sourceRoot: `libs/angular-components/${options.projectName}`,
+        root: `packages/angular-components/${options.projectName}`,
+        sourceRoot: `packages/angular-components/${options.projectName}`,
         prefix: 'uxg',
 
         architect: {
@@ -49,15 +47,15 @@ export function addToNgJson(options: NgJsonOptions): Rule {
             builder: '@nrwl/linter:eslint',
             options: {
               lintFilePatterns: [
-                `libs/angular-components/${options.projectName}/src/**/*.ts`,
-                `libs/angular-components/${options.projectName}/src/**/*.html`
+                `packages/angular-components/${options.projectName}/src/**/*.ts`,
+                `packages/angular-components/${options.projectName}/src/**/*.html`
               ]
             }
           },
           test: {
             builder: '@nrwl/jest:jest',
             options: {
-              jestConfig: `libs/angular-components/${options.projectName}/jest.config.js`
+              jestConfig: `packages/angular-components/${options.projectName}/jest.config.js`
             }
           }
         },

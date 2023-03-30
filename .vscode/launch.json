@@ -12,7 +12,7 @@
         "test",
         "vector-map",
         "--codeCoverage=false",
-        "--testFile=${workspaceFolder}/libs/angular-components/vector-map/src/vector-map.component.spec.ts"
+        "--testFile=${workspaceFolder}/packages/angular-components/vector-map/src/vector-map.component.spec.ts"
       ],
       "cwd": "${workspaceFolder}",
       "console": "internalConsole",

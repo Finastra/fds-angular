@@ -1,0 +1,28 @@
+{
+  "name": "scroll-to-top",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "packages/angular-components/scroll-to-top",
+  "prefix": "finastra",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["packages/angular-components/scroll-to-top/src/**/*.ts", "packages/angular-components/scroll-to-top/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "packages/angular-components/scroll-to-top/jest.config.ts"
+      },
+      "outputs": ["{workspaceRoot}/coverage/packages/angular-components/scroll-to-top"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "tags": []
+}

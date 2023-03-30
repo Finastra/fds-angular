@@ -20,7 +20,7 @@
       "type": "json"
     },
     {
-      "filename": "libs/angular-components/package.json",
+      "filename": "packages/angular-components/package.json",
       "updater": "scripts/standard-version-updater.js"
     }
   ]
