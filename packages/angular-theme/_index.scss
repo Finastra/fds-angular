@@ -4,6 +4,7 @@
 @use '@finastra/fds-theme/scheme' as scheme;
 
 @use './lib/core/theming/palette';
+@use './lib/core/typography/typography';
 @forward './lib/core/style/spacing';
 @forward './lib/core/layout/breakpoints';
 
@@ -34,6 +35,8 @@ $light-theme: mat.define-light-theme((
 
 
 @include mat.all-component-themes($light-theme);
+
+@include typography.uxg-base-typography();
 :root {
   @include fds.custom-properties(scheme.light());
   @include typo.custom-properties();
