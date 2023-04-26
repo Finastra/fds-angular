@@ -1,5 +1,5 @@
-import { Input, Component } from '@angular/core';
-import { ChartType, CHART_PLOLTLY_TYPE, ChartOrientation } from '../chart.models';
+import { Component, Input } from '@angular/core';
+import { CHART_PLOLTLY_TYPE, ChartOrientation, ChartType } from '../chart.models';
 
 @Component({
   selector: 'uxg-trace',

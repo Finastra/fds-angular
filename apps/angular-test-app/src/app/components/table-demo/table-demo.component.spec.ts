@@ -9,7 +9,6 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { UxgTableModule } from '@finastra/angular-components/table';
 import { TableDemoComponent } from './table-demo.component';
 
 describe('TableDemoComponent', () => {
@@ -19,7 +18,6 @@ describe('TableDemoComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        UxgTableModule,
         CommonModule,
         MatPaginatorModule,
         NoopAnimationsModule,

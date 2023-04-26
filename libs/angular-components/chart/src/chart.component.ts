@@ -1,30 +1,30 @@
+import { AsyncPipe, DOCUMENT, NgIf } from '@angular/common';
 import {
-  Component,
-  ViewEncapsulation,
+  AfterContentInit,
   ChangeDetectionStrategy,
-  OnInit,
-  ViewChild,
-  Input,
-  Inject,
-  OnDestroy,
-  ContentChild,
-  QueryList,
-  ContentChildren,
-  Output,
-  EventEmitter,
-  OnChanges,
-  SimpleChanges,
   ChangeDetectorRef,
-  AfterContentInit
+  Component,
+  ContentChild,
+  ContentChildren,
+  EventEmitter,
+  Inject,
+  Input,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Output,
+  QueryList,
+  SimpleChanges,
+  ViewChild,
+  ViewEncapsulation
 } from '@angular/core';
+import { LazyloadScriptService, PaletteConfig, PaletteService } from '@finastra/angular-components/core';
 import { PlotlyComponent, PlotlySharedModule } from 'angular-plotly.js';
-import { DOCUMENT, NgIf, AsyncPipe } from '@angular/common';
-import { TraceComponent } from './directives/trace.component';
+import { Observable, Subscription, merge } from 'rxjs';
 import { CHART_DEFAULT_PLOTLY_CONFIG } from './chart.models';
 import { GroupTracesComponent } from './directives/groupTrace.component';
 import { LegendComponent } from './directives/legend.component';
-import { PaletteService, PaletteConfig, LazyloadScriptService } from '@finastra/angular-components/core';
-import { Subscription, merge, Observable } from 'rxjs';
+import { TraceComponent } from './directives/trace.component';
 
 @Component({
   selector: 'uxg-chart',

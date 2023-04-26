@@ -15,7 +15,8 @@ PlotlyModule.plotlyjs = (global as any).Plotly;
 
 @Component({
   selector: 'uxg-test-container-component',
-  template: ``
+  template: ``,
+  standalone: true
 })
 class TestContainerComponent implements AfterViewInit {
   @ViewChild('chart', { static: false }) chart!: ChartComponent;
