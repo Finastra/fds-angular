@@ -5,11 +5,11 @@ import { MatCardModule } from '@angular/material/card';
 import { NgFor } from '@angular/common';
 
 @Component({
-    selector: 'ffdc-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: true,
-    imports: [NgFor, MatCardModule, RouterLink]
+  selector: 'ffdc-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: true,
+  imports: [NgFor, MatCardModule, RouterLink]
 })
 export class HomeComponent implements OnInit {
   nestedRoutes = nestedRoutes;

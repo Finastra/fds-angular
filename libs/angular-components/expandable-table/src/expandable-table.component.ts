@@ -30,20 +30,20 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { NgIf, NgClass, NgFor, NgTemplateOutlet } from '@angular/common';
 
 @Component({
-    selector: 'uxg-expandable-table',
-    templateUrl: './expandable-table.component.html',
-    styleUrls: ['./expandable-table.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    animations: [
-        trigger('detailExpand', [
-            state('collapsed', style({ height: '0px', minHeight: '0', padding: '0' })),
-            state('expanded', style({ height: '*' })),
-            transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
-        ])
-    ],
-    standalone: true,
-    imports: [NgIf, MatCheckboxModule, NgClass, MatButtonModule, MatIconModule, MatExpansionModule, NgFor, NgTemplateOutlet, TableComponent]
+  selector: 'uxg-expandable-table',
+  templateUrl: './expandable-table.component.html',
+  styleUrls: ['./expandable-table.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  animations: [
+    trigger('detailExpand', [
+      state('collapsed', style({ height: '0px', minHeight: '0', padding: '0' })),
+      state('expanded', style({ height: '*' })),
+      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
+    ])
+  ],
+  standalone: true,
+  imports: [NgIf, MatCheckboxModule, NgClass, MatButtonModule, MatIconModule, MatExpansionModule, NgFor, NgTemplateOutlet, TableComponent]
 })
 export class ExpandableTableComponent implements OnChanges {
   @Input() dataSource: any[];

@@ -188,13 +188,24 @@ const CUSTOM_PAGING: UxgPage = {
 };
 
 @Component({
-    selector: 'ffdc-table-demo',
-    templateUrl: './table-demo.component.html',
-    styleUrls: ['./table-demo.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [MatSidenavModule, TableComponent_1, MatSlideToggleModule, NgIf, MatRadioModule, FormsModule, MatFormFieldModule, MatSelectModule, NgFor, MatOptionModule]
+  selector: 'ffdc-table-demo',
+  templateUrl: './table-demo.component.html',
+  styleUrls: ['./table-demo.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    MatSidenavModule,
+    TableComponent_1,
+    MatSlideToggleModule,
+    NgIf,
+    MatRadioModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    NgFor,
+    MatOptionModule
+  ]
 })
 export class TableDemoComponent implements OnInit {
   @ViewChild(TableComponent, { static: true }) table!: TableComponent;

@@ -8,11 +8,11 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-    selector: 'uxg-sidenav',
-    templateUrl: './sidenav.component.html',
-    styleUrls: ['./sidenav.component.scss'],
-    standalone: true,
-    imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe]
+  selector: 'uxg-sidenav',
+  templateUrl: './sidenav.component.html',
+  styleUrls: ['./sidenav.component.scss'],
+  standalone: true,
+  imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe]
 })
 export class SidenavComponent implements OnInit, OnChanges {
   @Input() appName!: string;

@@ -6,13 +6,13 @@ import { NgClass } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-    selector: 'ffdc-repeater-card-example',
-    templateUrl: './repeater-card-example.component.html',
-    styleUrls: ['./repeater-card-example.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [MatCardModule, NgClass, MatIconModule, MatButtonModule, MatMenuModule]
+  selector: 'ffdc-repeater-card-example',
+  templateUrl: './repeater-card-example.component.html',
+  styleUrls: ['./repeater-card-example.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [MatCardModule, NgClass, MatIconModule, MatButtonModule, MatMenuModule]
 })
 export class RepeaterCardExampleComponent implements OnInit {
   @Input() data: any = {};

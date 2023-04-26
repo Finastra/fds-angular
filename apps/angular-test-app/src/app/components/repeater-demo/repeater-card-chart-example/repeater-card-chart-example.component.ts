@@ -19,12 +19,12 @@ export interface DataModel {
 }
 
 @Component({
-    selector: 'ffdc-repeater-card-chart-example',
-    templateUrl: './repeater-card-chart-example.component.html',
-    styleUrls: ['./repeater-card-chart-example.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [MatCardModule, NgClass, NgIf, MatIconModule]
+  selector: 'ffdc-repeater-card-chart-example',
+  templateUrl: './repeater-card-chart-example.component.html',
+  styleUrls: ['./repeater-card-chart-example.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [MatCardModule, NgClass, NgIf, MatIconModule]
 })
 export class RepeaterCardChartExampleComponent implements OnInit {
   @ViewChild('chart', { static: true })

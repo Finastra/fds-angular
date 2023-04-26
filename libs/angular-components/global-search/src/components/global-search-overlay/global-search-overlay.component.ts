@@ -27,19 +27,30 @@ import { MatButtonModule } from '@angular/material/button';
 
 const ANIMATION_TIMINGS = '300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
 @Component({
-    selector: 'uxg-global-search-overlay',
-    templateUrl: './global-search-overlay.component.html',
-    encapsulation: ViewEncapsulation.None,
-    animations: [
-        trigger('slideContent', [
-            state('void', style({ transform: 'translate3d(0, -30%, 0) scale(0.85)', opacity: 0 })),
-            state('enter', style({ transform: 'none', opacity: 1 })),
-            state('leave', style({ transform: 'translate3d(0, -30%, 0)', opacity: 0 })),
-            transition('* => *', animate(ANIMATION_TIMINGS))
-        ])
-    ],
-    standalone: true,
-    imports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, NgIf, NgTemplateOutlet, NgFor, MatDividerModule, MatCheckboxModule, AsyncPipe]
+  selector: 'uxg-global-search-overlay',
+  templateUrl: './global-search-overlay.component.html',
+  encapsulation: ViewEncapsulation.None,
+  animations: [
+    trigger('slideContent', [
+      state('void', style({ transform: 'translate3d(0, -30%, 0) scale(0.85)', opacity: 0 })),
+      state('enter', style({ transform: 'none', opacity: 1 })),
+      state('leave', style({ transform: 'translate3d(0, -30%, 0)', opacity: 0 })),
+      transition('* => *', animate(ANIMATION_TIMINGS))
+    ])
+  ],
+  standalone: true,
+  imports: [
+    MatButtonModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    NgIf,
+    NgTemplateOutlet,
+    NgFor,
+    MatDividerModule,
+    MatCheckboxModule,
+    AsyncPipe
+  ]
 })
 export class GlobalSearchOverlayComponent implements AfterViewInit {
   animationState: 'void' | 'enter' | 'leave' = 'enter';

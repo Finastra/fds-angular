@@ -19,19 +19,19 @@ export type DefaultGravatar = 'mp' | 'identicon' | 'monsterid' | 'wavatar' | 're
 const PALETTE_SIZE = 16;
 
 @Directive({
-    selector: 'uxg-image-avatar, [uxg-image-avatar], [uxgImageAvatar]',
-    standalone: true
+  selector: 'uxg-image-avatar, [uxg-image-avatar], [uxgImageAvatar]',
+  standalone: true
 })
 export class UxgImageAvatar {}
 
 @Component({
-    selector: 'uxg-avatar',
-    templateUrl: './avatar.component.html',
-    styleUrls: ['./avatar.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [NgClass, NgTemplateOutlet, NgIf, InitialsPipe]
+  selector: 'uxg-avatar',
+  templateUrl: './avatar.component.html',
+  styleUrls: ['./avatar.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgClass, NgTemplateOutlet, NgIf, InitialsPipe]
 })
 export class AvatarComponent implements OnInit {
   @Input() name: string | undefined;

@@ -21,17 +21,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { NgIf, NgTemplateOutlet, NgFor, NgClass, NgStyle } from '@angular/common';
 
 @Component({
-    selector: 'uxg-wizard',
-    providers: [WizardNavigationService, PageCollectionService, ButtonHubService],
-    templateUrl: './wizard.component.html',
-    styleUrls: ['./wizard.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    host: {
-        '[class.uxg-wizard]': 'true'
-    },
-    animations: [wizardAnimation()],
-    standalone: true,
-    imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle]
+  selector: 'uxg-wizard',
+  providers: [WizardNavigationService, PageCollectionService, ButtonHubService],
+  templateUrl: './wizard.component.html',
+  styleUrls: ['./wizard.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.uxg-wizard]': 'true'
+  },
+  animations: [wizardAnimation()],
+  standalone: true,
+  imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle]
 })
 export class UxgWizardComponent implements OnDestroy, AfterContentInit {
   @ContentChildren(UxgWizardPageComponent) pages!: QueryList<UxgWizardPageComponent>;

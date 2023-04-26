@@ -5,14 +5,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { GlobalNavComponent } from '../../../../../../libs/angular-components/global-nav/src/global-nav.component';
 
 @Component({
-    selector: 'ffdc-global-nav-demo',
-    templateUrl: './global-nav-demo.component.html',
-    styleUrls: ['./global-nav-demo.component.scss'],
-    host: {
-        class: 'ffdc-global-nav-demo'
-    },
-    standalone: true,
-    imports: [GlobalNavComponent, MatButtonModule, MatIconModule]
+  selector: 'ffdc-global-nav-demo',
+  templateUrl: './global-nav-demo.component.html',
+  styleUrls: ['./global-nav-demo.component.scss'],
+  host: {
+    class: 'ffdc-global-nav-demo'
+  },
+  standalone: true,
+  imports: [GlobalNavComponent, MatButtonModule, MatIconModule]
 })
 export class GlobalNavDemoComponent {
   appName = 'Global Nav Demo';

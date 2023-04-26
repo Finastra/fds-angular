@@ -1,4 +1,3 @@
-
 export * from './src/global-nav.component';
 export * from './src/services/navigation.model';
 

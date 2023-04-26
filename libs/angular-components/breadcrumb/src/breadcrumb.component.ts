@@ -11,15 +11,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { NgIf, NgFor, NgTemplateOutlet, NgClass } from '@angular/common';
 @Component({
-    selector: 'uxg-breadcrumb',
-    templateUrl: './breadcrumb.component.html',
-    host: {
-        class: 'uxg-breadcrumb'
-    },
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    standalone: true,
-    imports: [NgIf, MatIconModule, NgFor, NgTemplateOutlet, MatButtonModule, MatMenuModule, MatListModule, RouterLink, NgClass]
+  selector: 'uxg-breadcrumb',
+  templateUrl: './breadcrumb.component.html',
+  host: {
+    class: 'uxg-breadcrumb'
+  },
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [NgIf, MatIconModule, NgFor, NgTemplateOutlet, MatButtonModule, MatMenuModule, MatListModule, RouterLink, NgClass]
 })
 export class UxgBreadcrumbComponent implements OnDestroy {
   private breadcrumbs$ = new Subject<Breadcrumb[]>();

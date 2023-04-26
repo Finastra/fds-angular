@@ -17,11 +17,25 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
 
 @Component({
-    selector: 'ffdc-filter-panel-demo',
-    templateUrl: './filter-panel-demo.component.html',
-    styleUrls: ['./filter-panel-demo.component.scss'],
-    standalone: true,
-    imports: [MatTabsModule, MatSidenavModule, MatButtonModule, MatIconModule, FilterToggleComponent, FilterTagsComponent, MultiselectTagsComponent, NgIf, FilterTreeComponent, MatBadgeModule, FilterGroupComponent, UxgFilter, JsonPipe]
+  selector: 'ffdc-filter-panel-demo',
+  templateUrl: './filter-panel-demo.component.html',
+  styleUrls: ['./filter-panel-demo.component.scss'],
+  standalone: true,
+  imports: [
+    MatTabsModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    FilterToggleComponent,
+    FilterTagsComponent,
+    MultiselectTagsComponent,
+    NgIf,
+    FilterTreeComponent,
+    MatBadgeModule,
+    FilterGroupComponent,
+    UxgFilter,
+    JsonPipe
+  ]
 })
 export class FilterPanelDemoComponent implements OnInit {
   sampleDataTree: TreeNode[] = [];

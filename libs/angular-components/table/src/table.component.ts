@@ -24,12 +24,31 @@ import { NgIf, NgFor, NgClass, NgSwitch, NgSwitchCase, NgTemplateOutlet, NgSwitc
 import { MatSortModule } from '@angular/material/sort';
 
 @Component({
-    selector: 'uxg-table',
-    templateUrl: './table.component.html',
-    styleUrls: ['./table.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [MatTableModule, MatSortModule, CdkDropListGroup, NgIf, MatCheckboxModule, NgFor, CdkDropList, CdkDrag, NgClass, NgSwitch, NgSwitchCase, MatIconModule, NgTemplateOutlet, NgSwitchDefault, MatInputModule, FormsModule, MatButtonModule, MatPaginatorModule]
+  selector: 'uxg-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    MatTableModule,
+    MatSortModule,
+    CdkDropListGroup,
+    NgIf,
+    MatCheckboxModule,
+    NgFor,
+    CdkDropList,
+    CdkDrag,
+    NgClass,
+    NgSwitch,
+    NgSwitchCase,
+    MatIconModule,
+    NgTemplateOutlet,
+    NgSwitchDefault,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatPaginatorModule
+  ]
 })
 export class TableComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild(MatTable, { static: true }) table!: MatTable<any>;

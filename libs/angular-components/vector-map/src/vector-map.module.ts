@@ -10,8 +10,8 @@ import { PlotlyService, PlotlyViaCDNModule } from 'angular-plotly.js';
 import { VectorMapComponent } from './vector-map.component';
 
 @NgModule({
-    imports: [CommonModule, MatTooltipModule, MatSelectModule, MatFormFieldModule, MatInputModule, PlotlyViaCDNModule, VectorMapComponent],
-    exports: [VectorMapComponent]
+  imports: [CommonModule, MatTooltipModule, MatSelectModule, MatFormFieldModule, MatInputModule, PlotlyViaCDNModule, VectorMapComponent],
+  exports: [VectorMapComponent]
 })
 export class VectorMapModule {
   constructor(lazyLoadScriptService: LazyloadScriptService) {

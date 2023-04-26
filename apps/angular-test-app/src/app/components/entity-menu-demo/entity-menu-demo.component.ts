@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { EntityMenuItemWEvent } from '@finastra/angular-components/entity-menu';
-import { EntityMenuComponent, EntityMenuActionsComponent } from '../../../../../../libs/angular-components/entity-menu/src/entity-menu.component';
+import {
+  EntityMenuComponent,
+  EntityMenuActionsComponent
+} from '../../../../../../libs/angular-components/entity-menu/src/entity-menu.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatOptionModule } from '@angular/material/core';
 import { NgFor, NgIf } from '@angular/common';
@@ -101,11 +104,22 @@ const PR_COLUMNS: any[] = [
 ];
 
 @Component({
-    selector: 'ffdc-entity-menu-demo',
-    templateUrl: './entity-menu-demo.component.html',
-    styleUrls: ['./entity-menu-demo.component.scss'],
-    standalone: true,
-    imports: [MatExpansionModule, MatFormFieldModule, MatSelectModule, FormsModule, NgFor, MatOptionModule, MatCheckboxModule, NgIf, EntityMenuComponent, EntityMenuActionsComponent]
+  selector: 'ffdc-entity-menu-demo',
+  templateUrl: './entity-menu-demo.component.html',
+  styleUrls: ['./entity-menu-demo.component.scss'],
+  standalone: true,
+  imports: [
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    NgFor,
+    MatOptionModule,
+    MatCheckboxModule,
+    NgIf,
+    EntityMenuComponent,
+    EntityMenuActionsComponent
+  ]
 })
 export class EntityMenuDemoComponent implements OnInit {
   length = 2;

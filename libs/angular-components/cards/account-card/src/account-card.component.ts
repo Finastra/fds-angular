@@ -6,11 +6,11 @@ import { NgClass, NgIf, CurrencyPipe } from '@angular/common';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
-    selector: 'uxg-account-card',
-    templateUrl: './account-card.component.html',
-    styleUrls: ['./account-card.component.scss'],
-    standalone: true,
-    imports: [MatCardModule, NgClass, NgIf, MatIconModule, MatDividerModule, CurrencyPipe]
+  selector: 'uxg-account-card',
+  templateUrl: './account-card.component.html',
+  styleUrls: ['./account-card.component.scss'],
+  standalone: true,
+  imports: [MatCardModule, NgClass, NgIf, MatIconModule, MatDividerModule, CurrencyPipe]
 })
 export class AccountCardComponent implements OnInit, OnDestroy {
   @Input() name?: string;
@@ -39,10 +39,10 @@ export class AccountCardComponent implements OnInit, OnDestroy {
 
 // Skeleton
 @Component({
-    selector: 'uxg-account-card-skeleton',
-    templateUrl: './account-card.skeleton.html',
-    styleUrls: ['./account-card.component.scss'],
-    standalone: true,
-    imports: [MatCardModule, MatIconModule, SkeletonTextComponent, MatDividerModule]
+  selector: 'uxg-account-card-skeleton',
+  templateUrl: './account-card.skeleton.html',
+  styleUrls: ['./account-card.component.scss'],
+  standalone: true,
+  imports: [MatCardModule, MatIconModule, SkeletonTextComponent, MatDividerModule]
 })
 export class AccountCardSkeletonComponent {}

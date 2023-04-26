@@ -2,9 +2,9 @@ import { Input, Component } from '@angular/core';
 import { ChartType, CHART_PLOLTLY_TYPE, ChartOrientation } from '../chart.models';
 
 @Component({
-    selector: 'uxg-trace',
-    template: '',
-    standalone: true
+  selector: 'uxg-trace',
+  template: '',
+  standalone: true
 })
 export class TraceComponent {
   @Input() dimension!: Array<string | number>;

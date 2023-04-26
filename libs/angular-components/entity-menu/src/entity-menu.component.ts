@@ -11,12 +11,12 @@ export interface EntityMenuItemWEvent {
 }
 
 @Component({
-    selector: 'uxg-entity-menu',
-    templateUrl: './entity-menu.component.html',
-    styleUrls: ['./entity-menu.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [MatButtonModule, MatMenuModule, MatIconModule, NgClass, NgFor, MatCardModule]
+  selector: 'uxg-entity-menu',
+  templateUrl: './entity-menu.component.html',
+  styleUrls: ['./entity-menu.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [MatButtonModule, MatMenuModule, MatIconModule, NgClass, NgFor, MatCardModule]
 })
 export class EntityMenuComponent implements OnInit, OnChanges {
   items: any[] = [];
@@ -68,8 +68,8 @@ export class EntityMenuComponent implements OnInit, OnChanges {
 }
 
 @Component({
-    selector: 'uxg-entity-menu-actions',
-    template: ` <ng-content></ng-content> `,
-    standalone: true
+  selector: 'uxg-entity-menu-actions',
+  template: ` <ng-content></ng-content> `,
+  standalone: true
 })
 export class EntityMenuActionsComponent {}

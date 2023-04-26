@@ -18,16 +18,16 @@ import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-detail
 import { UxgUserProfilePanelComponent } from './user-profile-panel.component';
 import { AvatarComponent } from '../../avatar/src/avatar.component';
 @Component({
-    selector: 'uxg-user-profile-menu',
-    templateUrl: './user-profile-menu.component.html',
-    styleUrls: ['./user-profile-menu.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    host: {
-        class: 'uxg-user-profile-menu'
-    },
-    standalone: true,
-    imports: [AvatarComponent, MatMenuModule, UxgUserProfilePanelComponent]
+  selector: 'uxg-user-profile-menu',
+  templateUrl: './user-profile-menu.component.html',
+  styleUrls: ['./user-profile-menu.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'uxg-user-profile-menu'
+  },
+  standalone: true,
+  imports: [AvatarComponent, MatMenuModule, UxgUserProfilePanelComponent]
 })
 export class UxgUserProfileMenuComponent {
   @Input() user!: UserProfile;

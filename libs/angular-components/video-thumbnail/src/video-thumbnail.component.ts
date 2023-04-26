@@ -4,11 +4,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgIf } from '@angular/common';
 
 @Component({
-    selector: 'uxg-video-thumbnail',
-    templateUrl: './video-thumbnail.component.html',
-    styleUrls: ['./video-thumbnail.component.scss'],
-    standalone: true,
-    imports: [NgIf, MatIconModule]
+  selector: 'uxg-video-thumbnail',
+  templateUrl: './video-thumbnail.component.html',
+  styleUrls: ['./video-thumbnail.component.scss'],
+  standalone: true,
+  imports: [NgIf, MatIconModule]
 })
 export class VideoThumbnailComponent {
   @Input() video!: Video;

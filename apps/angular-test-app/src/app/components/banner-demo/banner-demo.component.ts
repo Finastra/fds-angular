@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Banner } from '@finastra/angular-components/banner';
 import { BannerComponent } from '../../../../../../libs/angular-components/banner/src/banner.component';
 @Component({
-    selector: 'ffdc-banner-demo',
-    templateUrl: './banner-demo.component.html',
-    styleUrls: ['./banner-demo.component.scss'],
-    standalone: true,
-    imports: [BannerComponent]
+  selector: 'ffdc-banner-demo',
+  templateUrl: './banner-demo.component.html',
+  styleUrls: ['./banner-demo.component.scss'],
+  standalone: true,
+  imports: [BannerComponent]
 })
 export class BannerDemoComponent implements OnInit {
   exampleBannerData: Banner[] = [];

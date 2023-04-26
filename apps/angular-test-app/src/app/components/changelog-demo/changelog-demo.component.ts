@@ -3,12 +3,12 @@ import { ChangeLog } from '@finastra/angular-components/changelog';
 import { UXGChangelogComponent } from '../../../../../../libs/angular-components/changelog/src/changelog.component';
 
 @Component({
-    selector: 'ffdc-changelog-demo',
-    templateUrl: './changelog-demo.component.html',
-    styleUrls: ['./changelog-demo.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [UXGChangelogComponent]
+  selector: 'ffdc-changelog-demo',
+  templateUrl: './changelog-demo.component.html',
+  styleUrls: ['./changelog-demo.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [UXGChangelogComponent]
 })
 export class ChangelogDemoComponent implements OnInit {
   changelog!: ChangeLog;

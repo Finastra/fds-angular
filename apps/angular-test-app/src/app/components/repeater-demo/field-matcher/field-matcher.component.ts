@@ -6,18 +6,18 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgFor, KeyValuePipe } from '@angular/common';
 
 @Component({
-    selector: 'ffdc-field-matcher',
-    templateUrl: './field-matcher.component.html',
-    styleUrls: ['./field-matcher.component.css'],
-    providers: [
-        {
-            provide: NG_VALUE_ACCESSOR,
-            useExisting: forwardRef(() => FieldMatcherComponent),
-            multi: true
-        }
-    ],
-    standalone: true,
-    imports: [NgFor, MatFormFieldModule, MatSelectModule, MatOptionModule, KeyValuePipe]
+  selector: 'ffdc-field-matcher',
+  templateUrl: './field-matcher.component.html',
+  styleUrls: ['./field-matcher.component.css'],
+  providers: [
+    {
+      provide: NG_VALUE_ACCESSOR,
+      useExisting: forwardRef(() => FieldMatcherComponent),
+      multi: true
+    }
+  ],
+  standalone: true,
+  imports: [NgFor, MatFormFieldModule, MatSelectModule, MatOptionModule, KeyValuePipe]
 })
 export class FieldMatcherComponent implements ControlValueAccessor, OnInit, OnDestroy, OnChanges {
   @Input() fields: any;

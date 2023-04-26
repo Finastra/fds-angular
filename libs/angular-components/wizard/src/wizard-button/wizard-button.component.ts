@@ -7,16 +7,16 @@ import { NgSwitch, NgSwitchDefault, NgTemplateOutlet, NgSwitchCase } from '@angu
 export type UxgWizardButtonType = 'cancel' | 'previous' | 'next' | 'done' | 'custom';
 
 @Component({
-    selector: 'uxg-wizard-button',
-    templateUrl: './wizard-button.component.html',
-    host: {
-        '[class.uxg-wizard-button]': 'true',
-        '[class.auto-margin]': 'isCancel || isCustom',
-        '[attr.aria-hidden]': 'isHidden',
-        '[attr.type]': 'type'
-    },
-    standalone: true,
-    imports: [NgSwitch, NgSwitchDefault, MatButtonModule, NgTemplateOutlet, NgSwitchCase]
+  selector: 'uxg-wizard-button',
+  templateUrl: './wizard-button.component.html',
+  host: {
+    '[class.uxg-wizard-button]': 'true',
+    '[class.auto-margin]': 'isCancel || isCustom',
+    '[attr.aria-hidden]': 'isHidden',
+    '[attr.type]': 'type'
+  },
+  standalone: true,
+  imports: [NgSwitch, NgSwitchDefault, MatButtonModule, NgTemplateOutlet, NgSwitchCase]
 })
 export class UxgWizardButtonComponent {
   @Input() public type!: UxgWizardButtonType;

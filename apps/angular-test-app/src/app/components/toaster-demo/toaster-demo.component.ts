@@ -9,13 +9,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 
 @Component({
-    selector: 'ffdc-toaster-demo',
-    templateUrl: './toaster-demo.component.html',
-    styleUrls: ['./toaster-demo.component.scss'],
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    encapsulation: ViewEncapsulation.None,
-    standalone: true,
-    imports: [MatFormFieldModule, MatInputModule, FormsModule, MatSelectModule, MatOptionModule, MatCheckboxModule, MatButtonModule]
+  selector: 'ffdc-toaster-demo',
+  templateUrl: './toaster-demo.component.html',
+  styleUrls: ['./toaster-demo.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [MatFormFieldModule, MatInputModule, FormsModule, MatSelectModule, MatOptionModule, MatCheckboxModule, MatButtonModule]
 })
 export class ToasterDemoComponent {
   toasterMessage = 'Some message';

@@ -8,14 +8,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-    selector: 'uxg-navbar',
-    templateUrl: './navbar.component.html',
-    styleUrls: ['./navbar.component.scss'],
-    host: {
-        class: 'uxg-navbar'
-    },
-    standalone: true,
-    imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
+  selector: 'uxg-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrls: ['./navbar.component.scss'],
+  host: {
+    class: 'uxg-navbar'
+  },
+  standalone: true,
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
 })
 export class NavbarComponent implements OnInit, OnDestroy, OnChanges {
   breadcrumbs: Breadcrumb[] = [];

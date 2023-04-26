@@ -8,11 +8,19 @@ import { UxgWizardTitleComponent } from '../../../../../../libs/angular-componen
 import { UxgWizardComponent } from '../../../../../../libs/angular-components/wizard/src/wizard.component';
 
 @Component({
-    selector: 'ffdc-wizard-demo',
-    templateUrl: './wizard-demo.component.html',
-    styleUrls: ['./wizard-demo.component.scss'],
-    standalone: true,
-    imports: [UxgWizardComponent, UxgWizardTitleComponent, UxgWizardButtonComponent, MatIconModule, UxgWizardPageComponent, UxgWizardPageTitleComponent, UxgWizardPageDescriptionComponent]
+  selector: 'ffdc-wizard-demo',
+  templateUrl: './wizard-demo.component.html',
+  styleUrls: ['./wizard-demo.component.scss'],
+  standalone: true,
+  imports: [
+    UxgWizardComponent,
+    UxgWizardTitleComponent,
+    UxgWizardButtonComponent,
+    MatIconModule,
+    UxgWizardPageComponent,
+    UxgWizardPageTitleComponent,
+    UxgWizardPageDescriptionComponent
+  ]
 })
 export class WizardDemoComponent {
   constructor() {}
