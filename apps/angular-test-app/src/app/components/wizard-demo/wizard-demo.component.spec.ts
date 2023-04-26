@@ -1,9 +1,8 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { WizardDemoComponent } from './wizard-demo.component';
-import { WizardModule } from '@finastra/angular-components/wizard';
 import { MatIconModule } from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { WizardDemoComponent } from './wizard-demo.component';
 
 describe('WizardDemoComponent', () => {
   let component: WizardDemoComponent;
@@ -11,8 +10,7 @@ describe('WizardDemoComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, MatIconModule, WizardModule],
-      declarations: [WizardDemoComponent]
+      imports: [NoopAnimationsModule, MatIconModule, WizardDemoComponent]
     }).compileComponents();
   }));
 

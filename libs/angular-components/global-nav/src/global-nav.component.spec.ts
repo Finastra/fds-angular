@@ -1,17 +1,16 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { GlobalNavComponent } from './global-nav.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { UxgBreadcrumbModule } from '@finastra/angular-components/breadcrumb';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { GlobalNavComponent } from './global-nav.component';
 
 describe('GlobalNavModule', () => {
   let component: GlobalNavComponent;
@@ -29,9 +28,10 @@ describe('GlobalNavModule', () => {
         MatListModule,
         NoopAnimationsModule,
         RouterTestingModule,
-        UxgBreadcrumbModule
-      ],
-      declarations: [GlobalNavComponent, NavbarComponent, SidenavComponent]
+        GlobalNavComponent,
+        NavbarComponent,
+        SidenavComponent
+      ]
     }).compileComponents();
   }));
 

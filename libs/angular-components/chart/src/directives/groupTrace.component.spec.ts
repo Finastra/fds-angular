@@ -1,8 +1,8 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { AfterViewInit, Component, NO_ERRORS_SCHEMA, ViewChild } from '@angular/core';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { CHART_PLOLTLY_TYPE, ChartType } from '../chart.models';
 import { GroupTracesComponent } from './groupTrace.component';
-import { ViewChild, Component, NO_ERRORS_SCHEMA, AfterViewInit } from '@angular/core';
 import { TraceComponent } from './trace.component';
-import { ChartType, CHART_PLOLTLY_TYPE } from '../chart.models';
 
 @Component({
   selector: 'uxg-test-container-component',
@@ -37,7 +37,7 @@ describe('GroupTrace', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [GroupTracesComponent, TraceComponent, TestContainerComponent],
+      imports: [GroupTracesComponent, TraceComponent, TestContainerComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
 

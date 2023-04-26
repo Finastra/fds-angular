@@ -1,4 +1,4 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { UXGChangelogComponent } from './changelog.component';
 
 describe('UXGChangelogComponent', () => {
@@ -7,7 +7,7 @@ describe('UXGChangelogComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [UXGChangelogComponent]
+      imports: [UXGChangelogComponent]
     }).compileComponents();
   }));
 

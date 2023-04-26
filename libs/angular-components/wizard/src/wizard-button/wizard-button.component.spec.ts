@@ -1,9 +1,9 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { UxgWizardButtonComponent } from './wizard-button.component';
-import { WizardNavigationService } from '../services/wizard-navigation.service';
-import { PageCollectionService } from '../services/page-collection.service';
 import { ButtonHubService } from '../services/button-hub.service';
+import { PageCollectionService } from '../services/page-collection.service';
+import { WizardNavigationService } from '../services/wizard-navigation.service';
+import { UxgWizardButtonComponent } from './wizard-button.component';
 
 describe('UxgWizardButtonComponent', () => {
   let component: UxgWizardButtonComponent;
@@ -11,7 +11,7 @@ describe('UxgWizardButtonComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [UxgWizardButtonComponent],
+      imports: [UxgWizardButtonComponent],
       providers: [WizardNavigationService, PageCollectionService, ButtonHubService]
     }).compileComponents();
   }));

@@ -26,9 +26,9 @@ describe('VectorMapDemoComponent', () => {
         MatInputModule,
         PaletteModule,
         VectorMapModule,
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        VectorMapDemoComponent
       ],
-      declarations: [VectorMapDemoComponent],
       providers: [
         {
           provide: LazyloadScriptService,

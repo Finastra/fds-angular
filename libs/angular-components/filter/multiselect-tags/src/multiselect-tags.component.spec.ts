@@ -1,12 +1,12 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MultiselectTagsComponent, MultiselectTag } from './multiselect-tags.component';
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { MultiselectTag, MultiselectTagsComponent } from './multiselect-tags.component';
 
 @Component({
   template: ` <uxg-multiselect-tags [data]="data" (changes)="updateMultiselectTags($event)" #demoMultiselectTags> </uxg-multiselect-tags> `
@@ -26,8 +26,15 @@ describe('MultiselectTagsModule', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [WrapperComponent, MultiselectTagsComponent],
-      imports: [ReactiveFormsModule, CommonModule, MatIconModule, MatChipsModule, NoopAnimationsModule]
+      imports: [
+        ReactiveFormsModule,
+        CommonModule,
+        MatIconModule,
+        MatChipsModule,
+        NoopAnimationsModule,
+        WrapperComponent,
+        MultiselectTagsComponent
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(WrapperComponent);
     wrapper = fixture.componentInstance;

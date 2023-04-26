@@ -1,7 +1,6 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-
-import { BannerComponent } from './banner.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { BannerComponent } from './banner.component';
 
 describe('BannerModule', () => {
   let component: BannerComponent;
@@ -9,8 +8,7 @@ describe('BannerModule', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [MatTooltipModule],
-      declarations: [BannerComponent]
+      imports: [MatTooltipModule, BannerComponent]
     }).compileComponents();
   }));
 

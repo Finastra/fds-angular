@@ -1,9 +1,9 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { AccountCardComponent } from './account-card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { AccountCardComponent } from './account-card.component';
 
 describe('AccountCardModule', () => {
   let component: AccountCardComponent;
@@ -11,8 +11,7 @@ describe('AccountCardModule', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [MatCardModule, MatDividerModule, MatIconModule],
-      declarations: [AccountCardComponent]
+      imports: [MatCardModule, MatDividerModule, MatIconModule, AccountCardComponent]
     }).compileComponents();
   }));
 

@@ -13,8 +13,15 @@ describe('FilterToggleComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FilterToggleComponent],
-      imports: [ReactiveFormsModule, CommonModule, NoopAnimationsModule, MatIconModule, MatExpansionModule, MatButtonToggleModule]
+      imports: [
+        ReactiveFormsModule,
+        CommonModule,
+        NoopAnimationsModule,
+        MatIconModule,
+        MatExpansionModule,
+        MatButtonToggleModule,
+        FilterToggleComponent
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(FilterToggleComponent);
     component = fixture.componentInstance;

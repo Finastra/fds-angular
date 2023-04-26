@@ -1,4 +1,4 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SkeletonTextComponent } from './skeleton-text.component';
 
@@ -8,7 +8,7 @@ describe('SkeletonTextModule', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [SkeletonTextComponent]
+      imports: [SkeletonTextComponent]
     }).compileComponents();
   }));
 

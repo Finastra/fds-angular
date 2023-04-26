@@ -1,4 +1,4 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AvatarComponent } from './avatar.component';
 import { InitialsPipe } from './initials.pipe';
@@ -9,7 +9,7 @@ describe('AvatarComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AvatarComponent, InitialsPipe]
+      imports: [AvatarComponent, InitialsPipe]
     }).compileComponents();
   }));
 
