@@ -11,12 +11,18 @@ import {
   Output,
   EventEmitter
 } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { ComponentRepeaterComponent } from './component-repeater/component-repeater.component';
+import { ScrollingModule } from '@angular/cdk-experimental/scrolling';
+import { CdkVirtualScrollViewport, CdkVirtualForOf } from '@angular/cdk/scrolling';
 
 @Component({
-  selector: 'uxg-repeater',
-  templateUrl: './repeater.component.html',
-  styleUrls: ['./repeater.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'uxg-repeater',
+    templateUrl: './repeater.component.html',
+    styleUrls: ['./repeater.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [CdkVirtualScrollViewport, ScrollingModule, CdkVirtualForOf, ComponentRepeaterComponent, NgStyle]
 })
 export class RepeaterComponent implements OnInit, OnChanges {
   private _data: Array<any> = [];

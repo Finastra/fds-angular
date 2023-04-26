@@ -13,11 +13,18 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
-import { MatExpansionPanel } from '@angular/material/expansion';
+import { MatExpansionPanel, MatExpansionModule } from '@angular/material/expansion';
 import { Subscription } from 'rxjs';
 import { FilterGroupDialogComponent } from './filter-group-dialog/filter-group-dialog.component';
 import { UxgFilter } from './filter.directive';
 import { UXGFilterChanges } from './filter.models';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatBadgeModule } from '@angular/material/badge';
+import { NgFor, NgIf } from '@angular/common';
+import { ClickOutsideDirective } from '../../../core/src/directives/click-outside/click-outside.directive';
 
 export interface FilterGroupComponentData {
   title: string;
@@ -30,11 +37,13 @@ export interface SavedFilter {
 }
 
 @Component({
-  selector: 'uxg-filter-group',
-  templateUrl: './filter-group.component.html',
-  styleUrls: ['./filter-group.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'uxg-filter-group',
+    templateUrl: './filter-group.component.html',
+    styleUrls: ['./filter-group.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [MatExpansionModule, ClickOutsideDirective, NgFor, NgIf, MatBadgeModule, MatDividerModule, MatButtonModule, MatIconModule, MatChipsModule]
 })
 export class FilterGroupComponent implements AfterViewInit, OnDestroy {
   @Output() changes = new EventEmitter<UXGFilterChanges<any>>();

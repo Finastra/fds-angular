@@ -13,7 +13,7 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { MatAccordion } from '@angular/material/expansion';
+import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
 import { createChain } from '@finastra/angular-components/core';
 import cloneDeep from 'lodash-es/cloneDeep';
 import filter from 'lodash-es/filter';
@@ -23,20 +23,27 @@ import isEqual from 'lodash-es/isEqual';
 import map from 'lodash-es/map';
 import omit from 'lodash-es/omit';
 import reject from 'lodash-es/reject';
+import { TableComponent } from '../../table/src/table.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { NgIf, NgClass, NgFor, NgTemplateOutlet } from '@angular/common';
 
 @Component({
-  selector: 'uxg-expandable-table',
-  templateUrl: './expandable-table.component.html',
-  styleUrls: ['./expandable-table.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  animations: [
-    trigger('detailExpand', [
-      state('collapsed', style({ height: '0px', minHeight: '0', padding: '0' })),
-      state('expanded', style({ height: '*' })),
-      transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
-    ])
-  ]
+    selector: 'uxg-expandable-table',
+    templateUrl: './expandable-table.component.html',
+    styleUrls: ['./expandable-table.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    animations: [
+        trigger('detailExpand', [
+            state('collapsed', style({ height: '0px', minHeight: '0', padding: '0' })),
+            state('expanded', style({ height: '*' })),
+            transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
+        ])
+    ],
+    standalone: true,
+    imports: [NgIf, MatCheckboxModule, NgClass, MatButtonModule, MatIconModule, MatExpansionModule, NgFor, NgTemplateOutlet, TableComponent]
 })
 export class ExpandableTableComponent implements OnChanges {
   @Input() dataSource: any[];

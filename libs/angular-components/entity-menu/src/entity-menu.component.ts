@@ -1,4 +1,9 @@
 import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { NgClass, NgFor } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
 
 export interface EntityMenuItemWEvent {
   value: any;
@@ -6,10 +11,12 @@ export interface EntityMenuItemWEvent {
 }
 
 @Component({
-  selector: 'uxg-entity-menu',
-  templateUrl: './entity-menu.component.html',
-  styleUrls: ['./entity-menu.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'uxg-entity-menu',
+    templateUrl: './entity-menu.component.html',
+    styleUrls: ['./entity-menu.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [MatButtonModule, MatMenuModule, MatIconModule, NgClass, NgFor, MatCardModule]
 })
 export class EntityMenuComponent implements OnInit, OnChanges {
   items: any[] = [];
@@ -61,7 +68,8 @@ export class EntityMenuComponent implements OnInit, OnChanges {
 }
 
 @Component({
-  selector: 'uxg-entity-menu-actions',
-  template: ` <ng-content></ng-content> `
+    selector: 'uxg-entity-menu-actions',
+    template: ` <ng-content></ng-content> `,
+    standalone: true
 })
 export class EntityMenuActionsComponent {}

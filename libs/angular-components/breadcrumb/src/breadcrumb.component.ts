@@ -1,18 +1,25 @@
 import { Component, Input, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef, Attribute } from '@angular/core';
 import { Breadcrumb } from './breadcrumb';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
 import { Subject, combineLatest, ReplaySubject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { NgIf, NgFor, NgTemplateOutlet, NgClass } from '@angular/common';
 @Component({
-  selector: 'uxg-breadcrumb',
-  templateUrl: './breadcrumb.component.html',
-  host: {
-    class: 'uxg-breadcrumb'
-  },
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'uxg-breadcrumb',
+    templateUrl: './breadcrumb.component.html',
+    host: {
+        class: 'uxg-breadcrumb'
+    },
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgIf, MatIconModule, NgFor, NgTemplateOutlet, MatButtonModule, MatMenuModule, MatListModule, RouterLink, NgClass]
 })
 export class UxgBreadcrumbComponent implements OnDestroy {
   private breadcrumbs$ = new Subject<Breadcrumb[]>();

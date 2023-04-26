@@ -3,14 +3,20 @@ import { NavigationNode } from './services/navigation.model';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter, map } from 'rxjs/operators';
 import { ReplaySubject } from 'rxjs';
+import { NgTemplateOutlet } from '@angular/common';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 @Component({
-  selector: 'uxg-global-nav',
-  templateUrl: './global-nav.component.html',
-  styleUrls: ['./global-nav.component.scss'],
-  host: {
-    class: 'uxg-global-nav'
-  }
+    selector: 'uxg-global-nav',
+    templateUrl: './global-nav.component.html',
+    styleUrls: ['./global-nav.component.scss'],
+    host: {
+        class: 'uxg-global-nav'
+    },
+    standalone: true,
+    imports: [MatSidenavModule, SidenavComponent, NavbarComponent, NgTemplateOutlet]
 })
 export class GlobalNavComponent implements OnInit, OnDestroy {
   @Input() appName!: string;

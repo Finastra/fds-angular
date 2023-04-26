@@ -1,7 +1,10 @@
 import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core';
 import { UXGFilter } from './filter.models';
 
-@Directive({ selector: '[uxgFilter]' })
+@Directive({
+    selector: '[uxgFilter]',
+    standalone: true
+})
 export class UxgFilter implements AfterViewInit {
   @Input('uxgFilter') instance = '';
 

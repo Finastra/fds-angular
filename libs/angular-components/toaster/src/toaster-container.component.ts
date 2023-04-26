@@ -3,6 +3,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 
 import { ToasterComponent } from './toaster.component';
 import { Toast } from './toaster.model';
+import { NgFor } from '@angular/common';
 
 const voidState = style({
   transform: 'translateX(110%)',
@@ -12,8 +13,8 @@ const voidState = style({
 });
 
 @Component({
-  selector: 'uxg-toaster-container',
-  template: `
+    selector: 'uxg-toaster-container',
+    template: `
     <uxg-toaster
       fxLayout="row"
       fxLayoutAlign="start stretch"
@@ -22,7 +23,9 @@ const voidState = style({
       [toast]="toast"
     ></uxg-toaster>
   `,
-  animations: [trigger('fadeIn', [transition(':enter', [voidState, animate(100)]), transition(':leave', [animate(100, voidState)])])]
+    animations: [trigger('fadeIn', [transition(':enter', [voidState, animate(100)]), transition(':leave', [animate(100, voidState)])])],
+    standalone: true,
+    imports: [NgFor, ToasterComponent]
 })
 export class ToasterContainerComponent implements OnInit, OnDestroy {
   @Input()

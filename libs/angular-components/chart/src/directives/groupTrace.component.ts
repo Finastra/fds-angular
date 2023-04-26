@@ -2,8 +2,9 @@ import { Input, ContentChildren, QueryList, Component } from '@angular/core';
 import { TraceComponent } from './trace.component';
 
 @Component({
-  selector: 'uxg-group-traces',
-  template: ''
+    selector: 'uxg-group-traces',
+    template: '',
+    standalone: true
 })
 export class GroupTracesComponent {
   @Input() columnPosition?: number;

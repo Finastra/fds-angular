@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy, Input, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Banner } from './model';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgFor, NgClass } from '@angular/common';
 
 interface BannerItem {
   name: string;
@@ -9,15 +11,17 @@ interface BannerItem {
 }
 
 @Component({
-  selector: 'uxg-banner',
-  templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.Default,
-  host: {
-    class: 'uxg-banner',
-    '[class.uxg-banner-small]': 'small'
-  }
+    selector: 'uxg-banner',
+    templateUrl: './banner.component.html',
+    styleUrls: ['./banner.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.Default,
+    host: {
+        class: 'uxg-banner',
+        '[class.uxg-banner-small]': 'small'
+    },
+    standalone: true,
+    imports: [NgFor, NgClass, MatTooltipModule]
 })
 export class BannerComponent {
   private _bannerData: Banner[] = [];

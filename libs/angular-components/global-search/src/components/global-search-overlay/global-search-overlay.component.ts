@@ -17,20 +17,29 @@ import { ResultGroup } from '../../global-search.model';
 import { SearchConfig } from './global-search-overlay-config';
 import { SearchOverlayRef } from './global-search-overlay-ref';
 import { SEARCH_CONFIG } from './global-search-overlay-token';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
+import { NgIf, NgTemplateOutlet, NgFor, AsyncPipe } from '@angular/common';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 const ANIMATION_TIMINGS = '300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
 @Component({
-  selector: 'uxg-global-search-overlay',
-  templateUrl: './global-search-overlay.component.html',
-  encapsulation: ViewEncapsulation.None,
-  animations: [
-    trigger('slideContent', [
-      state('void', style({ transform: 'translate3d(0, -30%, 0) scale(0.85)', opacity: 0 })),
-      state('enter', style({ transform: 'none', opacity: 1 })),
-      state('leave', style({ transform: 'translate3d(0, -30%, 0)', opacity: 0 })),
-      transition('* => *', animate(ANIMATION_TIMINGS))
-    ])
-  ]
+    selector: 'uxg-global-search-overlay',
+    templateUrl: './global-search-overlay.component.html',
+    encapsulation: ViewEncapsulation.None,
+    animations: [
+        trigger('slideContent', [
+            state('void', style({ transform: 'translate3d(0, -30%, 0) scale(0.85)', opacity: 0 })),
+            state('enter', style({ transform: 'none', opacity: 1 })),
+            state('leave', style({ transform: 'translate3d(0, -30%, 0)', opacity: 0 })),
+            transition('* => *', animate(ANIMATION_TIMINGS))
+        ])
+    ],
+    standalone: true,
+    imports: [MatButtonModule, MatIconModule, MatFormFieldModule, MatInputModule, NgIf, NgTemplateOutlet, NgFor, MatDividerModule, MatCheckboxModule, AsyncPipe]
 })
 export class GlobalSearchOverlayComponent implements AfterViewInit {
   animationState: 'void' | 'enter' | 'leave' = 'enter';

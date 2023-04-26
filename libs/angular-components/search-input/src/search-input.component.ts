@@ -1,38 +1,38 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Attribute, ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, Output, ViewEncapsulation } from '@angular/core';
-import { MatFormFieldAppearance } from '@angular/material/form-field';
+import { MatFormFieldAppearance, MatFormFieldModule } from '@angular/material/form-field';
 import { Subject, Subscription } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { NgIf } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
-  selector: 'uxg-search-input',
-  templateUrl: './search-input.component.html',
-  styleUrls: ['./search-input.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'uxg-search-input'
-  },
-  animations: [
-    trigger('showHide', [
-      state(
-        'show',
-        style({
-          opacity: 1,
-          visibility: 'visible'
-        })
-      ),
-      state(
-        'hide',
-        style({
-          opacity: 0,
-          visibility: 'hidden'
-        })
-      ),
-      transition('show => hide', [animate('0.3s ease-out')]),
-      transition('hide => show', [animate('0.2s ease-in')])
-    ])
-  ]
+    selector: 'uxg-search-input',
+    templateUrl: './search-input.component.html',
+    styleUrls: ['./search-input.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'uxg-search-input'
+    },
+    animations: [
+        trigger('showHide', [
+            state('show', style({
+                opacity: 1,
+                visibility: 'visible'
+            })),
+            state('hide', style({
+                opacity: 0,
+                visibility: 'hidden'
+            })),
+            transition('show => hide', [animate('0.3s ease-out')]),
+            transition('hide => show', [animate('0.2s ease-in')])
+        ])
+    ],
+    standalone: true,
+    imports: [MatFormFieldModule, MatIconModule, MatInputModule, MatButtonModule, NgIf]
 })
 export class UxgSearchInputComponent implements OnDestroy {
   @Input() query = '';

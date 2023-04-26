@@ -17,8 +17,8 @@ import {
   ChangeDetectorRef,
   AfterContentInit
 } from '@angular/core';
-import { PlotlyComponent } from 'angular-plotly.js';
-import { DOCUMENT } from '@angular/common';
+import { PlotlyComponent, PlotlySharedModule } from 'angular-plotly.js';
+import { DOCUMENT, NgIf, AsyncPipe } from '@angular/common';
 import { TraceComponent } from './directives/trace.component';
 import { CHART_DEFAULT_PLOTLY_CONFIG } from './chart.models';
 import { GroupTracesComponent } from './directives/groupTrace.component';
@@ -27,11 +27,13 @@ import { PaletteService, PaletteConfig, LazyloadScriptService } from '@finastra/
 import { Subscription, merge, Observable } from 'rxjs';
 
 @Component({
-  selector: 'uxg-chart',
-  templateUrl: './chart.component.html',
-  styleUrls: ['./chart.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'uxg-chart',
+    templateUrl: './chart.component.html',
+    styleUrls: ['./chart.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgIf, PlotlySharedModule, AsyncPipe]
 })
 export class ChartComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit {
   @ViewChild(PlotlyComponent, { static: false }) plot!: PlotlyComponent;

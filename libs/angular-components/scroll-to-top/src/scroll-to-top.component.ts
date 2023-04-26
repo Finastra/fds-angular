@@ -1,26 +1,30 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, NgTemplateOutlet, AsyncPipe } from '@angular/common';
 import { AfterViewInit, Component, Inject, Input, OnDestroy, PLATFORM_ID, TemplateRef } from '@angular/core';
 import { BehaviorSubject, Subscription, fromEvent } from 'rxjs';
 import { distinctUntilChanged, map, share, throttleTime } from 'rxjs/operators';
 import * as smoothscroll from 'smoothscroll-polyfill';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 enum ShowStatus {
   show = 'show',
   hide = 'hide'
 }
 @Component({
-  selector: 'uxg-scroll-to-top',
-  templateUrl: './scroll-to-top.component.html',
-  styleUrls: ['./scroll-to-top.component.scss'],
-  animations: [
-    trigger('scrollAnimation', [
-      state('show', style({ opacity: 1, transform: 'scale(1)' })),
-      state('hide', style({ opacity: 0, transform: 'scale(0)' })),
-      transition('show => hide', animate('350ms ease-out')),
-      transition('hide => show', animate('350ms ease-in'))
-    ])
-  ]
+    selector: 'uxg-scroll-to-top',
+    templateUrl: './scroll-to-top.component.html',
+    styleUrls: ['./scroll-to-top.component.scss'],
+    animations: [
+        trigger('scrollAnimation', [
+            state('show', style({ opacity: 1, transform: 'scale(1)' })),
+            state('hide', style({ opacity: 0, transform: 'scale(0)' })),
+            transition('show => hide', animate('350ms ease-out')),
+            transition('hide => show', animate('350ms ease-in'))
+        ])
+    ],
+    standalone: true,
+    imports: [NgTemplateOutlet, MatButtonModule, MatIconModule, AsyncPipe]
 })
 export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
   @Input() customTemplate?: TemplateRef<any>;

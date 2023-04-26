@@ -1,4 +1,7 @@
 import { Component, ElementRef, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { NgClass, NgFor, NgIf } from '@angular/common';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 export interface ToggleBtn {
   label: string;
@@ -13,9 +16,11 @@ interface UXGFilterChanges {
 }
 
 @Component({
-  selector: 'uxg-filter-toggle',
-  templateUrl: './filter-toggle.component.html',
-  styleUrls: ['./filter-toggle.component.scss']
+    selector: 'uxg-filter-toggle',
+    templateUrl: './filter-toggle.component.html',
+    styleUrls: ['./filter-toggle.component.scss'],
+    standalone: true,
+    imports: [MatButtonToggleModule, NgClass, NgFor, NgIf, MatIconModule]
 })
 export class FilterToggleComponent implements OnInit {
   selectedValue: ToggleBtn | undefined;

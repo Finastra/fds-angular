@@ -1,14 +1,21 @@
 import { Component, OnInit, OnDestroy, Output, EventEmitter, Input, TemplateRef, OnChanges, SimpleChanges } from '@angular/core';
 import { NavigationNode } from '../../services/navigation.model';
 import { Breadcrumb } from '@finastra/angular-components/breadcrumb';
+import { NgTemplateOutlet } from '@angular/common';
+import { UxgBreadcrumbComponent } from '../../../../breadcrumb/src/breadcrumb.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'uxg-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  host: {
-    class: 'uxg-navbar'
-  }
+    selector: 'uxg-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
+    host: {
+        class: 'uxg-navbar'
+    },
+    standalone: true,
+    imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
 })
 export class NavbarComponent implements OnInit, OnDestroy, OnChanges {
   breadcrumbs: Breadcrumb[] = [];

@@ -15,17 +15,23 @@ import { ButtonHubService } from './services/button-hub.service';
 import { PageCollectionService } from './services/page-collection.service';
 import { WizardNavigationService } from './services/wizard-navigation.service';
 import { UxgWizardPageComponent } from './wizard-page/wizard-page.component';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { NgIf, NgTemplateOutlet, NgFor, NgClass, NgStyle } from '@angular/common';
 
 @Component({
-  selector: 'uxg-wizard',
-  providers: [WizardNavigationService, PageCollectionService, ButtonHubService],
-  templateUrl: './wizard.component.html',
-  styleUrls: ['./wizard.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  host: {
-    '[class.uxg-wizard]': 'true'
-  },
-  animations: [wizardAnimation()]
+    selector: 'uxg-wizard',
+    providers: [WizardNavigationService, PageCollectionService, ButtonHubService],
+    templateUrl: './wizard.component.html',
+    styleUrls: ['./wizard.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    host: {
+        '[class.uxg-wizard]': 'true'
+    },
+    animations: [wizardAnimation()],
+    standalone: true,
+    imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle]
 })
 export class UxgWizardComponent implements OnDestroy, AfterContentInit {
   @ContentChildren(UxgWizardPageComponent) pages!: QueryList<UxgWizardPageComponent>;

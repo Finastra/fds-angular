@@ -2,8 +2,11 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { SelectionModel } from '@angular/cdk/collections';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChange, SimpleChanges } from '@angular/core';
-import { MatTreeNestedDataSource } from '@angular/material/tree';
+import { MatTreeNestedDataSource, MatTreeModule } from '@angular/material/tree';
 import { Subscription } from 'rxjs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 export interface TreeNode {
   label: string;
@@ -17,30 +20,26 @@ interface UXGFilterChanges {
 }
 
 @Component({
-  selector: 'uxg-filter-tree',
-  templateUrl: './filter-tree.component.html',
-  styleUrls: ['./filter-tree.component.scss'],
-  animations: [
-    trigger('slideInOut', [
-      state(
-        'in',
-        style({
-          overflow: 'hidden',
-          height: '*'
-        })
-      ),
-      state(
-        'out',
-        style({
-          opacity: '0',
-          overflow: 'hidden',
-          height: '0'
-        })
-      ),
-      transition('in => out', animate('250ms ease-out')),
-      transition('out => in', animate('250ms ease-in'))
-    ])
-  ]
+    selector: 'uxg-filter-tree',
+    templateUrl: './filter-tree.component.html',
+    styleUrls: ['./filter-tree.component.scss'],
+    animations: [
+        trigger('slideInOut', [
+            state('in', style({
+                overflow: 'hidden',
+                height: '*'
+            })),
+            state('out', style({
+                opacity: '0',
+                overflow: 'hidden',
+                height: '0'
+            })),
+            transition('in => out', animate('250ms ease-out')),
+            transition('out => in', animate('250ms ease-in'))
+        ])
+    ],
+    standalone: true,
+    imports: [MatTreeModule, MatCheckboxModule, MatButtonModule, MatIconModule]
 })
 export class FilterTreeComponent implements OnChanges {
   public treeControl = new NestedTreeControl<TreeNode>((node) => node.children);

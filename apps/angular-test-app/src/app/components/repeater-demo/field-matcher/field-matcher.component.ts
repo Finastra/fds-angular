@@ -1,18 +1,23 @@
 import { Component, forwardRef, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { MatSelectChange } from '@angular/material/select';
+import { MatSelectChange, MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgFor, KeyValuePipe } from '@angular/common';
 
 @Component({
-  selector: 'ffdc-field-matcher',
-  templateUrl: './field-matcher.component.html',
-  styleUrls: ['./field-matcher.component.css'],
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => FieldMatcherComponent),
-      multi: true
-    }
-  ]
+    selector: 'ffdc-field-matcher',
+    templateUrl: './field-matcher.component.html',
+    styleUrls: ['./field-matcher.component.css'],
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => FieldMatcherComponent),
+            multi: true
+        }
+    ],
+    standalone: true,
+    imports: [NgFor, MatFormFieldModule, MatSelectModule, MatOptionModule, KeyValuePipe]
 })
 export class FieldMatcherComponent implements ControlValueAccessor, OnInit, OnDestroy, OnChanges {
   @Input() fields: any;

@@ -9,6 +9,15 @@ import {
   UxgSort,
   UxgTableSelectEvent
 } from '@finastra/angular-components/table';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+import { NgIf, NgFor } from '@angular/common';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { TableComponent as TableComponent_1 } from '../../../../../../libs/angular-components/table/src/table.component';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 const ELEMENT_DATA: any[] = [
   {
@@ -179,11 +188,13 @@ const CUSTOM_PAGING: UxgPage = {
 };
 
 @Component({
-  selector: 'ffdc-table-demo',
-  templateUrl: './table-demo.component.html',
-  styleUrls: ['./table-demo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+    selector: 'ffdc-table-demo',
+    templateUrl: './table-demo.component.html',
+    styleUrls: ['./table-demo.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [MatSidenavModule, TableComponent_1, MatSlideToggleModule, NgIf, MatRadioModule, FormsModule, MatFormFieldModule, MatSelectModule, NgFor, MatOptionModule]
 })
 export class TableDemoComponent implements OnInit {
   @ViewChild(TableComponent, { static: true }) table!: TableComponent;

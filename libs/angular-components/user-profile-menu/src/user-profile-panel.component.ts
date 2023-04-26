@@ -15,16 +15,21 @@ import { UxgUserProfilePanelActionsDirective } from './user-profile-panel-action
 import { UxgUserProfilePanelContentDirective } from './user-profile-panel-content.directive';
 import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-details.directive';
 import { HeaderType } from './header-type';
+import { MatDividerModule } from '@angular/material/divider';
+import { AvatarComponent } from '../../avatar/src/avatar.component';
+import { NgClass, NgIf, NgTemplateOutlet } from '@angular/common';
 
 @Component({
-  selector: 'uxg-user-profile-panel',
-  templateUrl: './user-profile-panel.component.html',
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  host: {
-    class: 'uxg-user-profile-panel',
-    '[class.has-content]': 'hasContent'
-  }
+    selector: 'uxg-user-profile-panel',
+    templateUrl: './user-profile-panel.component.html',
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    host: {
+        class: 'uxg-user-profile-panel',
+        '[class.has-content]': 'hasContent'
+    },
+    standalone: true,
+    imports: [NgClass, AvatarComponent, NgIf, NgTemplateOutlet, MatDividerModule]
 })
 export class UxgUserProfilePanelComponent implements AfterContentInit {
   @Input() user!: UserProfile;

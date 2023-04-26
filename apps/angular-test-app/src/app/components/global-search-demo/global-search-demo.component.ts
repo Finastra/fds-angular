@@ -1,11 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ClientSideSearchService } from './client-side-search.service';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { UxgGlobalSearch } from '../../../../../../libs/angular-components/global-search/src/global-search.component';
 
 @Component({
-  selector: 'ffdc-global-search-demo',
-  templateUrl: './global-search-demo.component.html',
-  styleUrls: ['./global-search-demo.component.scss']
+    selector: 'ffdc-global-search-demo',
+    templateUrl: './global-search-demo.component.html',
+    styleUrls: ['./global-search-demo.component.scss'],
+    standalone: true,
+    imports: [UxgGlobalSearch, MatButtonModule, MatIconModule, MatCardModule]
 })
 export class GlobalSearchDemoComponent implements OnInit {
   results: any[] = [];

@@ -9,6 +9,9 @@ import {
   ChangeDetectorRef
 } from '@angular/core';
 import * as d3 from 'd3';
+import { MatIconModule } from '@angular/material/icon';
+import { NgClass, NgIf } from '@angular/common';
+import { MatCardModule } from '@angular/material/card';
 
 export interface DataModel {
   year: number;
@@ -16,10 +19,12 @@ export interface DataModel {
 }
 
 @Component({
-  selector: 'ffdc-repeater-card-chart-example',
-  templateUrl: './repeater-card-chart-example.component.html',
-  styleUrls: ['./repeater-card-chart-example.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'ffdc-repeater-card-chart-example',
+    templateUrl: './repeater-card-chart-example.component.html',
+    styleUrls: ['./repeater-card-chart-example.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [MatCardModule, NgClass, NgIf, MatIconModule]
 })
 export class RepeaterCardChartExampleComponent implements OnInit {
   @ViewChild('chart', { static: true })

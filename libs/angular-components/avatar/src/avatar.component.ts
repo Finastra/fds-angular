@@ -11,22 +11,27 @@ import {
   ViewEncapsulation
 } from '@angular/core';
 import { Md5 } from 'ts-md5/dist/md5';
+import { InitialsPipe } from './initials.pipe';
+import { NgClass, NgTemplateOutlet, NgIf } from '@angular/common';
 
 export type AvatarColor = 'primary' | 'accent' | 'gradient' | 'initials';
 export type DefaultGravatar = 'mp' | 'identicon' | 'monsterid' | 'wavatar' | 'retro' | 'robohash';
 const PALETTE_SIZE = 16;
 
 @Directive({
-  selector: 'uxg-image-avatar, [uxg-image-avatar], [uxgImageAvatar]'
+    selector: 'uxg-image-avatar, [uxg-image-avatar], [uxgImageAvatar]',
+    standalone: true
 })
 export class UxgImageAvatar {}
 
 @Component({
-  selector: 'uxg-avatar',
-  templateUrl: './avatar.component.html',
-  styleUrls: ['./avatar.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: 'uxg-avatar',
+    templateUrl: './avatar.component.html',
+    styleUrls: ['./avatar.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    standalone: true,
+    imports: [NgClass, NgTemplateOutlet, NgIf, InitialsPipe]
 })
 export class AvatarComponent implements OnInit {
   @Input() name: string | undefined;

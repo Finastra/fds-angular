@@ -1,11 +1,15 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Breadcrumb } from '@finastra/angular-components/breadcrumb';
+import { UxgBreadcrumbComponent } from '../../../../../../libs/angular-components/breadcrumb/src/breadcrumb.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
-  selector: 'ffdc-breadcrumb-demo',
-  templateUrl: './breadcrumb-demo.component.html',
-  styleUrls: ['./breadcrumb-demo.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'ffdc-breadcrumb-demo',
+    templateUrl: './breadcrumb-demo.component.html',
+    styleUrls: ['./breadcrumb-demo.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true,
+    imports: [MatToolbarModule, UxgBreadcrumbComponent]
 })
 export class BreadcrumbDemoComponent implements OnInit {
   defaultBreadcrumbs: Breadcrumb[] = [

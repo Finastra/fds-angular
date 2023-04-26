@@ -1,8 +1,9 @@
 import { Input, Component } from '@angular/core';
 
 @Component({
-  selector: 'uxg-legend',
-  template: ''
+    selector: 'uxg-legend',
+    template: '',
+    standalone: true
 })
 export class LegendComponent {
   @Input() position: LegendPosition;

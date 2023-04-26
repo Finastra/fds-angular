@@ -17,10 +17,11 @@ import { SearchOverlayRef } from './components/global-search-overlay/global-sear
 import { GlobalSearchOverlayService } from './services/global-search-overlay.service';
 
 @Component({
-  selector: 'uxg-global-search',
-  templateUrl: './global-search.component.html',
-  styleUrls: ['./global-search.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'uxg-global-search',
+    templateUrl: './global-search.component.html',
+    styleUrls: ['./global-search.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    standalone: true
 })
 export class UxgGlobalSearch implements OnChanges {
   @Input() groupBy?: string;
