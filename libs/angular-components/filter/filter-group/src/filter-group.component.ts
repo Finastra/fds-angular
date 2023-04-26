@@ -16,7 +16,7 @@ import {
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatChipsModule } from '@angular/material/chips';
-import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
+import { MatDialog, MatDialogConfig, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
 import { MatIconModule } from '@angular/material/icon';
@@ -52,7 +52,8 @@ export interface SavedFilter {
     MatDividerModule,
     MatButtonModule,
     MatIconModule,
-    MatChipsModule
+    MatChipsModule,
+    MatDialogModule
   ]
 })
 export class FilterGroupComponent implements AfterViewInit, OnDestroy {
