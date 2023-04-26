@@ -45,10 +45,10 @@ jobs:
         # Test
       # - name: Lint affected files
       #   run: npm run affected:lint -- --base=$NX_BASE --parallel
-      - name: Check formatting
+      - name: Check Formatting
         run: npm run format:check -- --base=$NX_BASE --parallel
-      - name: Run affected unit tests
-        run: npm run affected:test -- --base=$NX_BASE --parallel
+      - name: Run Unit Tests
+        run: npm run test:cov
 
         # Angular build
       - name: Build Test App
