@@ -1,7 +1,7 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 @use '@finastra/angular-theme' as fds;
-@use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
+// @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 
 @mixin theme($theme) {
   $primary: map.get($theme, primary);
@@ -173,20 +173,20 @@
       @include mat.typography-level($config, h4);
     }
 
-    @include flex-layout.layout-bp(xs) {
-      .title {
-        .creator {
-          @include mat.typography-level($config, h3);
-        }
+    // @include flex-layout.layout-bp(xs) {
+    //   .title {
+    //     .creator {
+    //       @include mat.typography-level($config, h3);
+    //     }
 
-        span {
-          @include mat.typography-level($config, h3);
-        }
-      }
+    //     span {
+    //       @include mat.typography-level($config, h3);
+    //     }
+    //   }
 
-      .category {
-        @include mat.typography-level($config, h5);
-      }
-    }
+    //   .category {
+    //     @include mat.typography-level($config, h5);
+    //   }
+    // }
   }
 }

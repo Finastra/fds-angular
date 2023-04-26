@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
-import { EntityMenuComponent, EntityMenuActionsComponent } from './entity-menu.component';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatCardModule } from '@angular/material/card';
-import { MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { EntityMenuActionsComponent, EntityMenuComponent } from './entity-menu.component';
 
 const components = [EntityMenuComponent, EntityMenuActionsComponent];
 

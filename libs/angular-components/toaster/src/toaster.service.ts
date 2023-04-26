@@ -96,7 +96,7 @@ export class ToasterContainer {
 }
 
 export function patch<T>(container: ComponentRef<T>, containerContext: Object): ComponentRef<T> {
-  Object.assign(container.instance, containerContext);
+  Object.assign(container.instance as Object, containerContext);
   container.changeDetectorRef.detectChanges();
   return container;
 }

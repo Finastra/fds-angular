@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { MatMenuModule } from '@angular/material/menu';
 
 import { PopoverComponent } from './popover.component';

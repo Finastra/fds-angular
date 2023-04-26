@@ -57,19 +57,19 @@
       <mat-divider></mat-divider>
       <div class="expansion-panel-actions" fxLayout="row wrap">
         <div class="saved-filters-container">
-          <mat-chip-list #savedFiltersList>
+          <mat-chip-listbox #savedFiltersList>
             <mat-chip
               *ngFor="let filter of savedFilters"
               large
               removable
               (click)="selectFilter(filter)"
-              [selected]="filter.isSelected"
+              [highlighted]="filter.isSelected"
               (removed)="removeFilter(filter)"
             >
               {{ filter.filterName }}
               <mat-icon matChipRemove>cancel</mat-icon>
             </mat-chip>
-          </mat-chip-list>
+          </mat-chip-listbox>
         </div>
 
         <button *ngIf="savedFilters.length" mat-button color="accent" (click)="updateFilter()">Update</button>

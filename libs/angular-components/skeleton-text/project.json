@@ -1,0 +1,28 @@
+{
+  "name": "skeleton-text",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "library",
+  "sourceRoot": "libs/angular-components/skeleton-text",
+  "prefix": "finastra",
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/angular-components/skeleton-text/src/**/*.ts", "libs/angular-components/skeleton-text/src/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/angular-components/skeleton-text/jest.config.ts"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/skeleton-text"]
+    }
+  },
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
+  "tags": []
+}

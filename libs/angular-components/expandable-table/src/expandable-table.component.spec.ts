@@ -1,20 +1,20 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
+import { ChangeDetectionStrategy, SimpleChange } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatDialogModule } from '@angular/material/dialog';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { By } from '@angular/platform-browser';
-import { ExpandableTableComponent } from './expandable-table.component';
-import { SimpleChange, ChangeDetectionStrategy } from '@angular/core';
+import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
+import { By } from '@angular/platform-browser';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { UxgTableModule } from '@finastra/angular-components/table';
 import { cloneDeep } from 'lodash-es';
+import { ExpandableTableComponent } from './expandable-table.component';
 
 export const DATASOURCE = [
   { apiGroup: 'FX Rate', api: 'Rate Changed', description: 'Lorem ipsum dolor sit amet, consectur, adipscing elit' },
@@ -104,7 +104,7 @@ fdescribe('ExpandableTableComponent', () => {
 
     fixture.detectChanges();
 
-    const checkboxes = fixture.debugElement.nativeElement.querySelectorAll('.mat-checkbox');
+    const checkboxes = fixture.debugElement.nativeElement.querySelectorAll('.mat-mdc-checkbox');
     expect(checkboxes.length).toEqual(11);
   });
 
@@ -165,7 +165,7 @@ fdescribe('ExpandableTableComponent', () => {
     });
     fixture.detectChanges();
 
-    const checkboxes = fixture.debugElement.nativeElement.querySelectorAll('.mat-checkbox');
+    const checkboxes = fixture.debugElement.nativeElement.querySelectorAll('.mat-mdc-checkbox');
 
     const checkbox = checkboxes[3];
 

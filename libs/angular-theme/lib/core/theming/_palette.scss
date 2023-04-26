@@ -1,0 +1,47 @@
+@use 'sass:map';
+@use '@finastra/fds-tokens/dist/scss/light';
+@use '@finastra/fds-tokens/dist/scss/dark';
+
+$primary-light-palette: (
+  100: map.get(light.$tokens, primary),
+  500: map.get(light.$tokens, primary),
+  700: map.get(light.$tokens, primary),
+  contrast: (
+    100: map.get(light.$tokens, on-primary),
+    500: map.get(light.$tokens, on-primary),
+    700: map.get(light.$tokens, on-primary),
+  )
+);
+
+$secondary-light-palette: (
+  100: map.get(light.$tokens, secondary),
+  500: map.get(light.$tokens, secondary),
+  700: map.get(light.$tokens, secondary),
+  contrast: (
+    100: map.get(light.$tokens, on-secondary),
+    500: map.get(light.$tokens, on-secondary),
+    700: map.get(light.$tokens, on-secondary),
+  )
+);
+
+$primary-dark-palette: (
+  100: map.get(dark.$tokens, primary),
+  500: map.get(dark.$tokens, primary),
+  700: map.get(dark.$tokens, primary),
+  contrast: (
+    100: map.get(dark.$tokens, on-primary),
+    500: map.get(dark.$tokens, on-primary),
+    700: map.get(dark.$tokens, on-primary),
+  )
+);
+
+$secondary-dark-palette: (
+  100: map.get(dark.$tokens, secondary),
+  500: map.get(dark.$tokens, secondary),
+  700: map.get(dark.$tokens, secondary),
+  contrast: (
+    100: map.get(dark.$tokens, on-secondary),
+    500: map.get(dark.$tokens, on-secondary),
+    700: map.get(dark.$tokens, on-secondary),
+  )
+);

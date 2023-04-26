@@ -1,20 +1,20 @@
 import {
-  Component,
-  ViewEncapsulation,
-  ChangeDetectionStrategy,
-  Input,
-  ContentChild,
-  TemplateRef,
   Attribute,
-  ViewChild
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+  Input,
+  TemplateRef,
+  ViewChild,
+  ViewEncapsulation
 } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
+import { AvatarColor, DefaultGravatar } from '@finastra/angular-components/avatar';
+import { HeaderType } from './header-type';
 import { UserProfile } from './user-profile';
 import { UxgUserProfilePanelActionsDirective } from './user-profile-panel-actions.directive';
 import { UxgUserProfilePanelContentDirective } from './user-profile-panel-content.directive';
 import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-details.directive';
-import { DefaultGravatar, AvatarColor } from '@finastra/angular-components/avatar';
-import { MatMenuTrigger } from '@angular/material/menu';
-import { HeaderType } from './header-type';
 @Component({
   selector: 'uxg-user-profile-menu',
   templateUrl: './user-profile-menu.component.html',

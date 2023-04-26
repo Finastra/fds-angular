@@ -342,28 +342,28 @@
 <div class="block-test">
   <h3 class="uxg-h3">Chips</h3>
   <div class="example-row chip-states-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip>Simple</mat-chip>
       <mat-chip disabled>Disabled</mat-chip>
       <mat-chip selected>Selected</mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-density-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip large>Large</mat-chip>
       <mat-chip>Default</mat-chip>
       <mat-chip dense>Dense</mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-dense-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip dense>Dense</mat-chip>
       <mat-chip disabled dense>Disabled</mat-chip>
       <mat-chip selected dense>Selected</mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-icon-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip>
         <mat-icon matChipAvatar>check</mat-icon>
         Icon
@@ -380,10 +380,10 @@
         <mat-icon matChipAvatar>check</mat-icon>
         Selected
       </mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-icon-dense-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip dense>
         <mat-icon matChipAvatar>check</mat-icon>
         Dense icon
@@ -396,10 +396,10 @@
         <mat-icon matChipAvatar>check</mat-icon>
         Selected
       </mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-removable-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip removable>
         <span>Removable</span>
         <mat-icon matChipRemove>cancel</mat-icon>
@@ -416,10 +416,10 @@
         <span>Dense selected</span>
         <mat-icon matChipRemove>cancel</mat-icon>
       </mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-avatar-test">
-    <mat-chip-list>
+    <mat-chip-listbox>
       <mat-chip>
         <mat-chip-avatar>C</mat-chip-avatar>
         Chester Young
@@ -428,10 +428,10 @@
         <img src="https://randomuser.me/api/portraits/men/5.jpg" matChipAvatar />
         Jerry Gilmer
       </mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
   <div class="example-row chip-toggle-test">
-    <mat-chip-list multiple="true">
+    <mat-chip-listbox multiple="true">
       <mat-chip (click)="chip1.selected ? chip1.deselect() : chip1.select()" #chip1="matChip">
         <mat-icon matChipAvatar>language</mat-icon>
         Public
@@ -440,7 +440,7 @@
         <mat-icon matChipAvatar>group</mat-icon>
         Shared
       </mat-chip>
-    </mat-chip-list>
+    </mat-chip-listbox>
   </div>
 </div>
 
@@ -541,7 +541,7 @@
       <mat-icon matPrefix>lock_outlined</mat-icon>
       <mat-label>Enter your email</mat-label>
       <input matInput placeholder="pat@example.com" [formControl]="email" required />
-      <mat-icon matSuffix [ngClass]="{ 'mat-warn': ff1._control.errorState }">error_outlined</mat-icon>
+      <mat-icon matSuffix>error_outlined</mat-icon>
       <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
     </mat-form-field>
   </div>
@@ -605,7 +605,7 @@
       <mat-icon matPrefix dense>lock_outlined</mat-icon>
       <mat-label>Enter your email</mat-label>
       <input matInput placeholder="pat@example.com" [formControl]="email" required />
-      <mat-icon matSuffix dense [ngClass]="{ 'mat-warn': ff2._control.errorState }">error_outlined</mat-icon>
+      <mat-icon matSuffix dense>error_outlined</mat-icon>
       <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
     </mat-form-field>
   </div>
@@ -646,184 +646,6 @@
     <div>
       <p class="uxg-body-3">Multi-select, no default value</p>
       <mat-form-field appearance="outline" dense>
-        <mat-label> Colors </mat-label>
-        <mat-select multiple>
-          <mat-option value="Violet">Violet</mat-option>
-          <mat-option value="Fuchsia">Fuchsia</mat-option>
-          <mat-option value="Crimson">Crimson</mat-option>
-          <mat-option value="Grass">Grass</mat-option>
-          <mat-option value="Ocean">Ocean</mat-option>
-          <mat-option value="Gold">Gold</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-  </div>
-</div>
-
-<div>
-  <h3 class="uxg-h3">Filled Inputs (deprecated)</h3>
-  <h5 class="uxg-h5">Fill Input</h5>
-  <div class="example-row">
-    <mat-form-field floatLabel="never" appearance="fill">
-      <mat-icon color="primary" matPrefix>favorite</mat-icon>
-      <mat-label>Label</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-icon color="primary" matSuffix>favorite</mat-icon>
-    </mat-form-field>
-  </div>
-  <div class="example-row">
-    <mat-form-field floatLabel="never" appearance="fill">
-      <mat-label>Label</mat-label>
-      <input matInput placeholder="Placeholder" />
-      <mat-hint>Helper text</mat-hint>
-    </mat-form-field>
-  </div>
-  <div class="example-row">
-    <mat-form-field floatLabel="never" class="example-full-width" appearance="fill">
-      <mat-icon color="primary" matPrefix>search</mat-icon>
-      <mat-label>Search...</mat-label>
-      <input type="search" matInput />
-    </mat-form-field>
-  </div>
-
-  <h5 class="uxg-h5">Input With Icon Button</h5>
-  <div class="example-row" dense>
-    <mat-form-field appearance="fill">
-      <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" />
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
-      </button>
-    </mat-form-field>
-  </div>
-  <div class="example-row">
-    <mat-form-field appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input matInput type="number" value="0" class="example-right-align" />
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
-  </div>
-
-  <h5 class="uxg-h5">Error Message</h5>
-  <div class="example-row">
-    <mat-form-field #ff1 appearance="fill">
-      <mat-icon matPrefix>lock_outlined</mat-icon>
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required />
-      <mat-icon matSuffix [ngClass]="{ 'mat-warn': ff1._control.errorState }">error_outlined</mat-icon>
-      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
-    </mat-form-field>
-  </div>
-  <br />
-  <h5 class="uxg-h5">Dense Inputs</h5>
-  <div class="example-row">
-    <mat-form-field dense appearance="fill">
-      <mat-label>This is label</mat-label>
-      <input matInput value="this is value" />
-    </mat-form-field>
-  </div>
-  <div class="example-row">
-    <mat-form-field dense appearance="fill">
-      <mat-icon color="primary" matPrefix dense>search</mat-icon>
-      <mat-label>This is label</mat-label>
-      <input matInput value="this is value" />
-    </mat-form-field>
-  </div>
-  <div class="example-row">
-    <mat-form-field dense appearance="fill">
-      <mat-label>Label</mat-label>
-      <input matInput />
-      <mat-hint>Helper text</mat-hint>
-    </mat-form-field>
-  </div>
-  <br />
-  <form class="example-row">
-    <mat-form-field dense floatLabel="never" class="example-full-width" appearance="fill">
-      <mat-icon color="primary" matPrefix dense>search</mat-icon>
-      <mat-label>Search...</mat-label>
-      <input type="search" matInput />
-    </mat-form-field>
-  </form>
-
-  <div class="example-row">
-    <mat-form-field dense appearance="fill">
-      <mat-label>Enter your password</mat-label>
-      <input matInput [type]="hide ? 'password' : 'text'" />
-      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-        <mat-icon dense>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
-      </button>
-    </mat-form-field>
-  </div>
-  <div class="example-row">
-    <mat-form-field dense appearance="fill">
-      <mat-label>Amount</mat-label>
-      <input matInput type="number" value="0" class="example-right-align" />
-      <span matPrefix>$&nbsp;</span>
-      <span matSuffix>.00</span>
-    </mat-form-field>
-  </div>
-  <br />
-
-  <div class="example-row">
-    <mat-form-field #ff2 dense appearance="fill">
-      <mat-icon matPrefix dense>lock_outlined</mat-icon>
-      <mat-label>Enter your email</mat-label>
-      <input matInput placeholder="pat@example.com" [formControl]="email" required />
-      <mat-icon matSuffix dense [ngClass]="{ 'mat-warn': ff2._control.errorState }">error_outlined</mat-icon>
-      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
-    </mat-form-field>
-  </div>
-
-  <br />
-  <h5 class="uxg-h5">Select</h5>
-  <div class="example-row">
-    <div>
-      <mat-form-field appearance="fill">
-        <mat-label>Font size</mat-label>
-        <mat-select value="16px">
-          <mat-option value="10px">10px</mat-option>
-          <mat-option value="12px">12px</mat-option>
-          <mat-option value="14px">14px</mat-option>
-          <mat-option value="16px">16px</mat-option>
-          <mat-option value="18px">18px</mat-option>
-          <mat-option value="20px">20px</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div>
-      <p class="uxg-body-3">No label</p>
-      <mat-form-field appearance="fill">
-        <mat-select value="16px">
-          <mat-option value="10px">10px</mat-option>
-          <mat-option value="12px">12px</mat-option>
-          <mat-option value="14px">14px</mat-option>
-          <mat-option value="16px">16px</mat-option>
-          <mat-option value="18px">18px</mat-option>
-          <mat-option value="20px">20px</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-  </div>
-
-  <h5 class="uxg-h5">Dense select</h5>
-  <div class="example-row">
-    <div>
-      <mat-form-field appearance="fill" dense>
-        <mat-label>Font size</mat-label>
-        <mat-select value="16px">
-          <mat-option value="10px">10px</mat-option>
-          <mat-option value="12px">12px</mat-option>
-          <mat-option value="14px">14px</mat-option>
-          <mat-option value="16px">16px</mat-option>
-          <mat-option value="18px">18px</mat-option>
-          <mat-option value="20px">20px</mat-option>
-        </mat-select>
-      </mat-form-field>
-    </div>
-    <div>
-      <p class="uxg-body-3">Multi-select, no default value</p>
-      <mat-form-field appearance="fill" dense>
         <mat-label> Colors </mat-label>
         <mat-select multiple>
           <mat-option value="Violet">Violet</mat-option>

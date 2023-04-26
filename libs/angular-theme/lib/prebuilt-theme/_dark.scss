@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@use '@finastra/fds-theme/color/mixins' as fds;
+@use '@finastra/fds-theme/scheme' as scheme;
+
+@use '../core/theming/palette';
+@forward '../core/style/spacing';
+
+@use '../avatar/avatar-theme' as avatar;
+@use '../icon/icon-theme' as icon;
+@use '../link/link-theme' as link;
+
+@import '../../base';
+
+
+@include mat.core();
+
+
+$dark-theme: mat.define-dark-theme((
+ color: (
+    primary: mat.define-palette(palette.$primary-dark-palette),
+    accent: mat.define-palette(palette.$secondary-dark-palette),
+ ),
+  typography: mat.define-typography-config()
+));
+
+@include avatar.color();
+@include icon.color();
+@include link.color();
+
+@include mat.all-component-colors($dark-theme);
+:root {
+  @include fds.custom-properties(scheme.dark());
+}

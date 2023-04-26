@@ -9,9 +9,7 @@
 <div class="changelog-container">
   <div
     *ngFor="let release of changelog; first as first; last as last"
-    [fxLayout]="displayVersion === 'top' ? 'column' : 'row'"
     fxLayout.lt-md="column"
-    [fxLayout.gt-md]="displayVersion === 'top' ? 'column' : 'row'"
     fxLayoutAlign="center"
     [class.layout-column]="displayVersion === 'top'"
   >

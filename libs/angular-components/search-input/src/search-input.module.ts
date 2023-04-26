@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 
-import { UxgSearchInputComponent } from './search-input.component';
 import { CommonModule } from '@angular/common';
-import { MatFormFieldModule, MatHint } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { UxgSearchInputComponent } from './search-input.component';
 
 @NgModule({
   imports: [CommonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatButtonModule],

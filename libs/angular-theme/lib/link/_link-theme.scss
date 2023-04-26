@@ -1,0 +1,12 @@
+@use '@finastra/fds-theme/color' as fds;
+
+@mixin color() {
+  .uxg-link {
+    @include fds.color(primary);
+    text-decoration: underline;
+
+    &:hover {
+      @include fds.color(secondary);
+    }
+  }
+}

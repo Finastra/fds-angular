@@ -1,15 +1,15 @@
-import { Rule, SchematicContext, Tree, apply, url, applyTemplates, move, mergeWith, chain } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
+import { apply, applyTemplates, chain, mergeWith, move, Rule, SchematicContext, Tree, url } from '@angular-devkit/schematics';
 
-import gitParse from 'parse-git-config';
 import gitPath from 'git-config-path';
+import gitParse from 'parse-git-config';
 
-import { Schema } from './schema';
-import { join } from 'path';
 import { readFile } from 'fs-extra';
+import { join } from 'path';
+import { Schema } from './schema';
 
-import { registerLocalPackage, addToIndex, addToNgJson } from '../../utils';
 import { updateJsonInTree } from '@nrwl/workspace';
+import { addToIndex, addToNgJson, registerLocalPackage } from '../../utils';
 
 export default function (schema: Schema): Rule {
   return async (host: Tree, context: SchematicContext) => {

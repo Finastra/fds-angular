@@ -1,34 +1,34 @@
 <div class="filter-tags-container">
-  <mat-chip-list #chipList aria-label="Tags selection">
+  <mat-chip-grid #chipList aria-label="Tags selection">
     <ng-container *ngFor="let tag of selectedData | slice: 0:displayMax">
-      <mat-chip
+      <mat-chip-row
         [attr.standard]="standard === '' || null"
         [attr.dense]="standard === '' ? null : ''"
-        selected
+        highlighted
         [attr.aria-label]="tag.label"
         [removable]="removable"
         (removed)="tag.label === tag.category ? this.removeMultiple(tag) : remove(tag)"
       >
         {{ tag.label }}
         <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
-      </mat-chip>
+      </mat-chip-row>
     </ng-container>
-    <mat-chip
+    <mat-chip-row
       *ngIf="selectedData.length > displayMax"
       [attr.standard]="standard === '' || null"
       [attr.dense]="standard === '' ? null : ''"
       [attr.aria-label]="selectedData.length + ' more'"
       [removable]="false"
-      [selectable]="false"
+      selectable="false"
       disableRipple
       matTooltip="{{ showMoreTags() }}"
       [matTooltipClass]="'show-more-tags-tooltip'"
     >
       {{ '+' + (selectedData.length - displayMax) }}
-    </mat-chip>
-  </mat-chip-list>
+    </mat-chip-row>
+  </mat-chip-grid>
 
-  <mat-form-field aria-label="Search" floatLabel="never" class="chip-list" [appearance]="appearance" dense>
+  <mat-form-field aria-label="Search" floatLabel="auto" class="chip-list" [appearance]="appearance" dense>
     <mat-icon matPrefix dense class="search-icon">search</mat-icon>
     <mat-label>{{ placeholder }}</mat-label>
     <input

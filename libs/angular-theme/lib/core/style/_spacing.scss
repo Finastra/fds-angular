@@ -1,0 +1,41 @@
+@use 'sass:map';
+@use '@finastra/fds-tokens/dist/scss/spacing';
+
+$uxg-spacing-0: map.get(spacing.$tokens, spacing-0) !default;
+$uxg-spacing-1: map.get(spacing.$tokens, spacing-1) !default;
+$uxg-spacing-2: map.get(spacing.$tokens, spacing-2) !default;
+$uxg-spacing-3: map.get(spacing.$tokens, spacing-3) !default;
+$uxg-spacing-4: map.get(spacing.$tokens, spacing-4) !default;
+$uxg-spacing-5: map.get(spacing.$tokens, spacing-5) !default;
+$uxg-spacing-6: map.get(spacing.$tokens, spacing-6) !default;
+
+@mixin styles() {
+  $sides: (top, bottom, left, right);
+  $spacings: (
+    $uxg-spacing-0,
+    $uxg-spacing-1,
+    $uxg-spacing-2,
+    $uxg-spacing-3,
+    $uxg-spacing-4,
+    $uxg-spacing-5,
+    $uxg-spacing-6
+  );
+
+  @for $i from 1 through length($spacings) {
+    @each $side in $sides {
+      .m#{str-slice($side, 0, 1)}-#{$i - 1} {
+        margin-#{$side}: nth($spacings, $i) !important;
+      }
+      .p#{str-slice($side, 0, 1)}-#{$i - 1} {
+        padding-#{$side}: nth($spacings, $i) !important;
+      }
+    }
+
+    .m-#{$i - 1} {
+      margin: nth($spacings, $i) !important;
+    }
+    .p-#{$i - 1} {
+      padding: nth($spacings, $i) !important;
+    }
+  }
+}

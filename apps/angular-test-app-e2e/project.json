@@ -1,0 +1,28 @@
+{
+  "name": "test-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/angular-test-app-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/angular-test-app-e2e/cypress.json",
+        "tsConfig": "apps/angular-test-app-e2e/tsconfig.e2e.json",
+        "devServerTarget": "test:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "test:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/angular-test-app-e2e/src/**/*.ts"]
+      }
+    }
+  },
+  "tags": []
+}

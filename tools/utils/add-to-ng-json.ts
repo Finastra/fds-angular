@@ -1,8 +1,6 @@
-import { Tree } from '@angular-devkit/schematics/src/tree/interface';
-import { addExportToModule } from '@schematics/angular/utility/ast-utils';
-import { InsertChange } from '@schematics/angular/utility/change';
 import { Rule, SchematicContext } from '@angular-devkit/schematics';
-import { readJsonInTree, updateJsonInTree, getWorkspacePath } from '@nrwl/workspace';
+import { Tree } from '@angular-devkit/schematics/src/tree/interface';
+import { getWorkspacePath, updateJsonInTree } from '@nrwl/workspace';
 
 interface NgJsonOptions {
   projectName: string;

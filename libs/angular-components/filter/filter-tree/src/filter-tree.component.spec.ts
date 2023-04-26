@@ -29,8 +29,7 @@ describe('FilterTreeModule', () => {
         MatChipsModule,
         MatIconModule,
         MatButtonModule,
-        MatTreeModule,
-        MatIconModule
+        MatTreeModule
       ],
       declarations: [FilterTreeComponent]
     }).compileComponents();

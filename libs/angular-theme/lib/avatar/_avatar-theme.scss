@@ -1,0 +1,106 @@
+@use 'sass:map';
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography' as typo;
+
+@mixin multiple-backgrounds($backgrounds...) {
+  $multi-background: ();
+
+  @each $background in $backgrounds {
+    $multi-background: append($multi-background, $background, comma);
+  }
+
+  background: $multi-background;
+}
+
+@mixin color() {
+  $avatar-path: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cdefs%3E%3Cstyle%3E.a%7Bfill:white%7D%3C/style%3E%3C/defs%3E%3Cpath class='a' d='M12 5.2c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z'/%3E%3C/svg%3E";
+  $uxg-default-avatar: url($avatar-path) center center / 120% 120% no-repeat;
+
+  .uxg-avatar {
+    @include fds.color(on-gradient);
+    @include fds.background(gradient-vertical);
+
+    &.uxg-primary-color {
+      @include fds.background(primary);
+    }
+
+    &.uxg-accent-color {
+      @include fds.background(secondary);
+    }
+
+    &.uxg-gravatar {
+      background: none;
+    }
+
+    &:empty:not(img) {
+      @include multiple-backgrounds($uxg-default-avatar, top left / 100% 100% no-repeat var(--fds-gradient-vertical));
+
+      &.uxg-primary-color {
+        @include multiple-backgrounds($uxg-default-avatar, var(--fds-primary));
+      }
+
+      &.uxg-accent-color {
+        @include multiple-backgrounds($uxg-default-avatar, var(--fds-secondary));
+      }
+    }
+  }
+
+  img {
+    &.uxg-avatar {
+      @include fds.background(background);
+    }
+  }
+
+  .uxg-avatar-list {
+    > li, > uxg-avatar {
+      > .uxg-avatar {
+        border: 1px solid;
+        @include fds.property(border-color, background);
+      }
+    }
+  }
+
+  .uxg-avatar-number {
+    @include fds.color(on-background);
+  }
+}
+
+@mixin typography() {
+  .uxg-avatar {
+    @include typo.typography(body-3);
+    font-size: 16px;
+
+    &[large] {
+      font-size: 44px;
+    }
+
+    &[dense] {
+      font-size: 14px;
+    }
+  }
+
+  .uxg-avatar-number {
+    @include typo.typography(subtitle-1);
+  }
+
+  *[large] {
+    .uxg-avatar {
+      font-size: 14px;
+    }
+  }
+
+  *[dense] {
+    .uxg-avatar {
+      font-size: 14px;
+    }
+
+    .uxg-avatar-number {
+      @include typo.typography(caption);
+    }
+  }
+}
+
+@mixin theme() {
+  @include color();
+  @include typography();
+}

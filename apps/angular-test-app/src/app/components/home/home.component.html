@@ -11,7 +11,9 @@
       <div class="home-list-grid">
         <ng-container *ngFor="let route of nestedRoute.routes">
           <mat-card [routerLink]="route.path" class="uxg-card-product">
-            <span class="uxg-h4 uxg-card-product-name">{{ route.data?.title }}</span>
+            <mat-card-content>
+              <span class="uxg-h4 uxg-card-product-name">{{ route.data?.title }}</span>
+            </mat-card-content>
           </mat-card>
         </ng-container>
       </div>

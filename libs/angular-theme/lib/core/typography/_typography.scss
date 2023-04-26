@@ -1,0 +1,78 @@
+@use '@finastra/fds-theme/typography' as fds;
+
+// Adds the base typography styles, based on a config.
+@mixin uxg-base-typography($selector: '.uxg-typography') {
+  .uxg-h1,
+  #{$selector} h1 {
+    @include fds.typography(headline-1);
+
+    margin: 0 0 16px;
+  }
+
+  .uxg-h2,
+  #{$selector} h2 {
+    @include fds.typography(headline-2);
+
+    margin: 0 0 16px;
+  }
+
+  .uxg-h3,
+  #{$selector} h3 {
+    @include fds.typography(headline-3);
+
+    margin: 0 0 16px;
+  }
+
+  .uxg-h4,
+  #{$selector} h4 {
+    @include fds.typography(headline-4);
+
+    margin: 0 0 16px;
+  }
+
+  .uxg-h5,
+  #{$selector} h5 {
+    @include fds.typography(headline-5);
+
+    margin: 0 0 16px;
+  }
+
+  .uxg-h6,
+  #{$selector} h6 {
+    @include fds.typography(headline-6);
+
+    margin: 0 0 16px;
+  }
+
+  .uxg-subtitle-1 {
+    @include fds.typography(subtitle-1);
+  }
+
+  .uxg-subtitle-2 {
+    @include fds.typography(subtitle-2);
+  }
+
+  .uxg-subtitle-3 {
+    @include fds.typography(subtitle-3);
+  }
+
+  .uxg-body-1 {
+    @include fds.typography(body-1);
+  }
+
+  .uxg-body-2 {
+    @include fds.typography(body-2);
+  }
+
+  .uxg-body-3 {
+    @include fds.typography(body-3);
+  }
+
+  .uxg-caption {
+    @include fds.typography(caption);
+  }
+
+  .uxg-overline {
+    @include fds.typography(overline);
+  }
+}

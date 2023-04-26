@@ -11,7 +11,6 @@
     "@angular/core": "^14.1.0",
     "@angular/forms": "^14.1.0",
     "@angular/cdk": "^14.1.0",
-    "@angular/flex-layout": "^14.0.0-beta.40",
     "lodash-es": "^4.17.21",
     "angular-plotly.js": "^4.0.0",
     "plotly.js": "^1.58.4",

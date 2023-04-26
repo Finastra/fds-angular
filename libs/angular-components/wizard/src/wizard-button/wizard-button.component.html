@@ -1,22 +1,11 @@
 <ng-container [ngSwitch]="type">
-  <button
-    *ngSwitchDefault
-    mat-button
-    color="accent"
-    [attr.large]="!media.isActive('xs') || null"
-    [attr.dense]="media.isActive('xs') || null"
-    [disabled]="disabledAttribute"
-    [class.disabled]="isDisabled"
-    (click)="click()"
-  >
+  <button *ngSwitchDefault mat-button color="accent" [disabled]="disabledAttribute" [class.disabled]="isDisabled" (click)="click()">
     <ng-container *ngTemplateOutlet="contentTpl"></ng-container>
   </button>
   <button
     *ngSwitchCase="'next'"
     mat-stroked-button
     color="accent"
-    [attr.large]="!media.isActive('xs') || null"
-    [attr.dense]="media.isActive('xs') || null"
     [disabled]="disabledAttribute"
     [class.disabled]="isDisabled"
     (click)="click()"
@@ -27,8 +16,6 @@
     *ngSwitchCase="'done'"
     mat-flat-button
     color="accent"
-    [attr.large]="!media.isActive('xs') || null"
-    [attr.dense]="media.isActive('xs') || null"
     [disabled]="disabledAttribute"
     [class.disabled]="isDisabled"
     (click)="click()"
