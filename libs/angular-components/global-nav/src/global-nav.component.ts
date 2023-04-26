@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy, Input, EventEmitter, Output, TemplateRef, OnChanges, SimpleChanges } from '@angular/core';
-import { NavigationNode } from './services/navigation.model';
-import { Router, NavigationEnd } from '@angular/router';
-import { filter, map } from 'rxjs/operators';
-import { ReplaySubject } from 'rxjs';
 import { NgTemplateOutlet } from '@angular/common';
+import { Component, EventEmitter, Input, OnDestroy, OnInit, Output, TemplateRef } from '@angular/core';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { NavigationEnd, Router } from '@angular/router';
+import { ReplaySubject } from 'rxjs';
+import { filter } from 'rxjs/operators';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { NavigationNode } from './services/navigation.model';
 
 @Component({
   selector: 'uxg-global-nav',
