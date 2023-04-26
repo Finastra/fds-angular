@@ -8,15 +8,14 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { MatMenuTrigger, MatMenuModule } from '@angular/material/menu';
-import { AvatarColor, DefaultGravatar } from '@finastra/angular-components/avatar';
+import { MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { AvatarColor, AvatarComponent, DefaultGravatar } from '@finastra/angular-components/avatar';
 import { HeaderType } from './header-type';
 import { UserProfile } from './user-profile';
 import { UxgUserProfilePanelActionsDirective } from './user-profile-panel-actions.directive';
 import { UxgUserProfilePanelContentDirective } from './user-profile-panel-content.directive';
 import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-details.directive';
 import { UxgUserProfilePanelComponent } from './user-profile-panel.component';
-import { AvatarComponent } from '../../avatar/src/avatar.component';
 @Component({
   selector: 'uxg-user-profile-menu',
   templateUrl: './user-profile-menu.component.html',
