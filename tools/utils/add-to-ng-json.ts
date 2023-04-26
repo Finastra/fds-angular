@@ -38,8 +38,8 @@ export function addToNgJson(options: NgJsonOptions): Rule {
     updateJsonInTree(getWorkspacePath(host), (json: AngularJson) => {
       const project: AngularProject = {
         projectType: 'library',
-        root: `packages/angular-components/${options.projectName}`,
-        sourceRoot: `packages/angular-components/${options.projectName}`,
+        root: `libs/angular-components/${options.projectName}`,
+        sourceRoot: `libs/angular-components/${options.projectName}`,
         prefix: 'uxg',
 
         architect: {
@@ -47,15 +47,15 @@ export function addToNgJson(options: NgJsonOptions): Rule {
             builder: '@nrwl/linter:eslint',
             options: {
               lintFilePatterns: [
-                `packages/angular-components/${options.projectName}/src/**/*.ts`,
-                `packages/angular-components/${options.projectName}/src/**/*.html`
+                `libs/angular-components/${options.projectName}/src/**/*.ts`,
+                `libs/angular-components/${options.projectName}/src/**/*.html`
               ]
             }
           },
           test: {
             builder: '@nrwl/jest:jest',
             options: {
-              jestConfig: `packages/angular-components/${options.projectName}/jest.config.js`
+              jestConfig: `libs/angular-components/${options.projectName}/jest.config.js`
             }
           }
         },

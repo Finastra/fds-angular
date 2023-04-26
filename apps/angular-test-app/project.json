@@ -14,9 +14,9 @@
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
         "stylePreprocessorOptions": {
-          "includePaths": ["./packages/", "node_modules"]
+          "includePaths": ["./libs/", "node_modules"]
         },
-        "allowedCommonJsDependencies": ["elasticlunr"],
+        "allowedCommonJsDependencies": ["elasticlunr", "ts-md5/dist/md5", "smoothscroll-polyfill"],
         "outputPath": "dist/apps/angular-test-app",
         "index": "apps/angular-test-app/src/index.html",
         "main": "apps/angular-test-app/src/main.ts",

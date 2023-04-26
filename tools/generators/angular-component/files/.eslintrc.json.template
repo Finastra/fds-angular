@@ -5,7 +5,7 @@
     {
       "files": ["*.ts"],
       "parserOptions": {
-        "project": ["packages/angular-components/<%= filename %>/tsconfig.*?.json"]
+        "project": ["libs/angular-components/<%= filename %>/tsconfig.*?.json"]
       },
       "rules": {}
     },

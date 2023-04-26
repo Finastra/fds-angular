@@ -17,16 +17,16 @@
 *.svg       @dorsaffrigui @ttalbot
 
 # Palette service
-/packages/angular-components/core/src/palette/palette.defaults.ts   @dorsaffrigui @ttalbot
+/libs/angular-components/core/src/palette/palette.defaults.ts   @dorsaffrigui @ttalbot
 
 # Per components owners
-/packages/angular-components/global-search/            @rbordeanu
-/packages/angular-components/scroll-to-top/            @rbordeanu
-/packages/angular-components/table/                    @Ping-YUAN
-/packages/angular-components/popover/                  @rbordeanu
-/packages/angular-components/repeater/                 @xmonvoisin
-/packages/angular-components/filter/filter-tree/       @Pi5rr5
-/packages/angular-components/vector-map/               @rbordeanu
-/packages/angular-components/wizard/                   @rbordeanu
+/libs/angular-components/global-search/            @rbordeanu
+/libs/angular-components/scroll-to-top/            @rbordeanu
+/libs/angular-components/table/                    @Ping-YUAN
+/libs/angular-components/popover/                  @rbordeanu
+/libs/angular-components/repeater/                 @xmonvoisin
+/libs/angular-components/filter/filter-tree/       @Pi5rr5
+/libs/angular-components/vector-map/               @rbordeanu
+/libs/angular-components/wizard/                   @rbordeanu
 
 

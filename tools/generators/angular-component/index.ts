@@ -23,7 +23,7 @@ export default function (schema: Schema): Rule {
 
     const pkg = JSON.parse((await readFile(join(process.cwd(), './package.json'))).toString());
     const filename = strings.dasherize(schema.name);
-    const dest = `packages/angular-components/${filename}`;
+    const dest = `libs/angular-components/${filename}`;
     const classNamePrefix = strings.classify(schema.name);
 
     const templateSource = apply(url('./files'), [
@@ -40,7 +40,7 @@ export default function (schema: Schema): Rule {
 
     return chain([
       addToIndex({
-        indexPath: 'packages/angular-components/index.ts',
+        indexPath: 'libs/angular-components/index.ts',
         filename
       }),
       addToNgJson({
