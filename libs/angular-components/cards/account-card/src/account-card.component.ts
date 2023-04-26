@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
-import { SkeletonTextComponent } from '../../../skeleton-text/src/skeleton-text.component';
+import { CurrencyPipe, NgClass, NgIf } from '@angular/common';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
-import { NgClass, NgIf, CurrencyPipe } from '@angular/common';
-import { MatCardModule } from '@angular/material/card';
+import { SkeletonTextComponent } from '@finastra/angular-components/skeleton-text';
 
 @Component({
   selector: 'uxg-account-card',
