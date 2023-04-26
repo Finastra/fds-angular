@@ -1,3 +1,4 @@
+import { NgFor, NgIf } from '@angular/common';
 import {
   AfterViewInit,
   ChangeDetectionStrategy,
@@ -12,19 +13,18 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatChipsModule } from '@angular/material/chips';
 import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material/dialog';
-import { MatExpansionPanel, MatExpansionModule } from '@angular/material/expansion';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatExpansionModule, MatExpansionPanel } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
+import { ClickOutsideDirective } from '@finastra/angular-components/core';
 import { Subscription } from 'rxjs';
 import { FilterGroupDialogComponent } from './filter-group-dialog/filter-group-dialog.component';
 import { UxgFilter } from './filter.directive';
 import { UXGFilterChanges } from './filter.models';
-import { MatChipsModule } from '@angular/material/chips';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatBadgeModule } from '@angular/material/badge';
-import { NgFor, NgIf } from '@angular/common';
-import { ClickOutsideDirective } from '../../../core/src/directives/click-outside/click-outside.directive';
 
 export interface FilterGroupComponentData {
   title: string;
