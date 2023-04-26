@@ -25,10 +25,10 @@ bootstrapApplication(AppComponent, {
       EntityMenuModule,
       ColorSketchModule,
       ToasterModule,
-      RouterModule.forRoot(
-        [{ path: '', component: HomeComponent }, ...([] as Routes).concat(...nestedRoutes.map((nestedRoute) => nestedRoute.routes))],
-        {}
-      )
+      RouterModule.forRoot([
+        { path: '', component: HomeComponent },
+        ...([] as Routes).concat(...nestedRoutes.map((nestedRoute) => nestedRoute.routes))
+      ])
     ),
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'outline' } },
     provideAnimations()

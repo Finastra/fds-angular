@@ -8,6 +8,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ActivatedRoute, NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { ScrollToTopComponent } from '@finastra/angular-components/scroll-to-top';
 import { nestedRoutes } from './nested-routes';
 
 const darkThemeLSName = 'darkTheme';
@@ -28,7 +29,8 @@ const darkThemeLSName = 'darkTheme';
     MatListModule,
     MatButtonModule,
     NgFor,
-    NgIf
+    NgIf,
+    ScrollToTopComponent
   ]
 })
 export class AppComponent implements OnInit {
