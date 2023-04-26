@@ -68,7 +68,7 @@ jobs:
           name: 'angular-components'
           path: './dist/libs/angular-components'
         # Deploy
-      - name: Deploy angular test app to Netlify
+      - name: Deploy angular-test-app to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
           publish-dir: './dist/apps/angular-test-app'
