@@ -37,7 +37,7 @@ describe('GroupTrace', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [GroupTracesComponent, TraceComponent, TestContainerComponent],
+      imports: [GroupTracesComponent, TraceComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
 

@@ -19,7 +19,7 @@ describe('ClickOutsideDirective directive', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [WrapperComponent, ClickOutsideDirective]
+      imports: [ClickOutsideDirective]
     }).compileComponents();
 
     fixture = TestBed.createComponent(WrapperComponent);

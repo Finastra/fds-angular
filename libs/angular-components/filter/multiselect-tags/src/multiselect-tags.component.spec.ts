@@ -26,15 +26,7 @@ describe('MultiselectTagsModule', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        ReactiveFormsModule,
-        CommonModule,
-        MatIconModule,
-        MatChipsModule,
-        NoopAnimationsModule,
-        WrapperComponent,
-        MultiselectTagsComponent
-      ]
+      imports: [ReactiveFormsModule, CommonModule, MatIconModule, MatChipsModule, NoopAnimationsModule, MultiselectTagsComponent]
     }).compileComponents();
     fixture = TestBed.createComponent(WrapperComponent);
     wrapper = fixture.componentInstance;

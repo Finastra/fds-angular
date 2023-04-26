@@ -26,8 +26,7 @@ describe('VectorMapDemoComponent', () => {
         MatInputModule,
         PaletteModule,
         VectorMapModule,
-        NoopAnimationsModule,
-        VectorMapDemoComponent
+        NoopAnimationsModule
       ],
       providers: [
         {
