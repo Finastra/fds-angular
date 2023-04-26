@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { SelectionModel } from '@angular/cdk/collections';
+import { NgClass, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,8 +14,12 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { createChain } from '@finastra/angular-components/core';
+import { TableComponent } from '@finastra/angular-components/table';
 import cloneDeep from 'lodash-es/cloneDeep';
 import filter from 'lodash-es/filter';
 import find from 'lodash-es/find';
@@ -23,11 +28,6 @@ import isEqual from 'lodash-es/isEqual';
 import map from 'lodash-es/map';
 import omit from 'lodash-es/omit';
 import reject from 'lodash-es/reject';
-import { TableComponent } from '../../table/src/table.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { NgIf, NgClass, NgFor, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'uxg-expandable-table',
