@@ -1,16 +1,12 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { EntityMenuItemWEvent } from '@finastra/angular-components/entity-menu';
-import {
-  EntityMenuComponent,
-  EntityMenuActionsComponent
-} from '../../../../../../libs/angular-components/entity-menu/src/entity-menu.component';
+import { FormsModule } from '@angular/forms';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatOptionModule } from '@angular/material/core';
-import { NgFor, NgIf } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { EntityMenuActionsComponent, EntityMenuComponent, EntityMenuItemWEvent } from '@finastra/angular-components/entity-menu';
 
 const TEMPLATES_DATA: any[] = [
   {

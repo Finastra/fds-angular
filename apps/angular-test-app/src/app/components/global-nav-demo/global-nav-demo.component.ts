@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
-import { NavigationNode } from '@finastra/angular-components/global-nav';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { GlobalNavComponent } from '../../../../../../libs/angular-components/global-nav/src/global-nav.component';
+import { MatIconModule } from '@angular/material/icon';
+import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components/global-nav';
 
 @Component({
   selector: 'ffdc-global-nav-demo',

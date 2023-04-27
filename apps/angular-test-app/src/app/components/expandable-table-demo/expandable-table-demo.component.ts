@@ -1,13 +1,12 @@
-import { Component, ViewChild } from '@angular/core';
-import { ExpandableTableComponent } from '@finastra/angular-components/expandable-table';
-import { MatOptionModule } from '@angular/material/core';
 import { NgFor, NgIf } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
+import { Component, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { ExpandableTableComponent as ExpandableTableComponent_1 } from '../../../../../../libs/angular-components/expandable-table/src/expandable-table.component';
+import { MatOptionModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ExpandableTableComponent } from '@finastra/angular-components/expandable-table';
 
 export const DATASOURCE = [
   { apiGroup: 'FX Rate', api: 'Rate Changed', description: 'Lorem ipsum dolor sit amet, consectur, adipscing elit' },
@@ -36,7 +35,7 @@ export const GROUP_BY_KEY = 'apiGroup';
   styleUrls: ['./expandable-table-demo.component.scss'],
   standalone: true,
   imports: [
-    ExpandableTableComponent_1,
+    ExpandableTableComponent,
     MatButtonModule,
     MatIconModule,
     MatSlideToggleModule,

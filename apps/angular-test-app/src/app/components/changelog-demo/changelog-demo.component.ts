@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ChangeLog } from '@finastra/angular-components/changelog';
-import { UXGChangelogComponent } from '../../../../../../libs/angular-components/changelog/src/changelog.component';
+import { ChangeLog, UXGChangelogComponent } from '@finastra/angular-components/changelog';
 
 @Component({
   selector: 'ffdc-changelog-demo',

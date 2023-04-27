@@ -1,7 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Breadcrumb } from '@finastra/angular-components/breadcrumb';
-import { UxgBreadcrumbComponent } from '../../../../../../libs/angular-components/breadcrumb/src/breadcrumb.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { Breadcrumb, UxgBreadcrumbComponent } from '@finastra/angular-components/breadcrumb';
 
 @Component({
   selector: 'ffdc-breadcrumb-demo',

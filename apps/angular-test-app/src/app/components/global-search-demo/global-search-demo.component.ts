@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
-import { ClientSideSearchService } from './client-side-search.service';
+import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { UxgGlobalSearch } from '../../../../../../libs/angular-components/global-search/src/global-search.component';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { UxgGlobalSearch } from '@finastra/angular-components/global-search';
+import { ClientSideSearchService } from './client-side-search.service';
 
 @Component({
   selector: 'ffdc-global-search-demo',

@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { UxgSearchInputComponent } from '../../../../../../libs/angular-components/search-input/src/search-input.component';
+import { UxgSearchInputComponent } from '@finastra/angular-components/search-input';
 
 @Component({
   selector: 'ffdc-search-input-demo',

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AvatarListComponent } from '../../../../../../libs/angular-components/avatar/src/avatar-list.component';
-import { AvatarComponent, UxgImageAvatar } from '../../../../../../libs/angular-components/avatar/src/avatar.component';
+import { AvatarComponent, AvatarListComponent, UxgImageAvatar } from '@finastra/angular-components/avatar';
 
 @Component({
   selector: 'ffdc-avatar-demo',

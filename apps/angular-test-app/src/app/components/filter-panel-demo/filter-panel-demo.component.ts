@@ -1,20 +1,16 @@
+import { JsonPipe, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Tag } from '@finastra/angular-components/filter/filter-tags';
-import { ToggleBtn } from '@finastra/angular-components/filter/filter-toggle';
-import { TreeNode } from '@finastra/angular-components/filter/filter-tree';
-import { sampleFilterTags, sampleFilterTree, sampleGroupTags, sampleTimeline, sampleToggleBtn } from './filter-panel-demo.sample-data';
-import { UxgFilter } from '../../../../../../libs/angular-components/filter/filter-group/src/filter.directive';
-import { FilterGroupComponent } from '../../../../../../libs/angular-components/filter/filter-group/src/filter-group.component';
 import { MatBadgeModule } from '@angular/material/badge';
-import { FilterTreeComponent } from '../../../../../../libs/angular-components/filter/filter-tree/src/filter-tree.component';
-import { NgIf, JsonPipe } from '@angular/common';
-import { MultiselectTagsComponent } from '../../../../../../libs/angular-components/filter/multiselect-tags/src/multiselect-tags.component';
-import { FilterTagsComponent } from '../../../../../../libs/angular-components/filter/filter-tags/src/filter-tags.component';
-import { FilterToggleComponent } from '../../../../../../libs/angular-components/filter/filter-toggle/src/filter-toggle.component';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatTabsModule } from '@angular/material/tabs';
+import { FilterGroupComponent, UxgFilter } from '@finastra/angular-components/filter/filter-group';
+import { FilterTagsComponent, Tag } from '@finastra/angular-components/filter/filter-tags';
+import { FilterToggleComponent, ToggleBtn } from '@finastra/angular-components/filter/filter-toggle';
+import { FilterTreeComponent, TreeNode } from '@finastra/angular-components/filter/filter-tree';
+import { MultiselectTagsComponent } from '@finastra/angular-components/filter/multiselect-tags';
+import { sampleFilterTags, sampleFilterTree, sampleGroupTags, sampleTimeline, sampleToggleBtn } from './filter-panel-demo.sample-data';
 
 @Component({
   selector: 'ffdc-filter-panel-demo',

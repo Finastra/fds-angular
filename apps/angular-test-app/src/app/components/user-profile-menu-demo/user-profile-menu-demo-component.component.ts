@@ -1,12 +1,14 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
-import { UserProfile } from '@finastra/angular-components/user-profile-menu';
-import { MatMenuModule } from '@angular/material/menu';
-import { UxgUserProfilePanelContentDirective } from '../../../../../../libs/angular-components/user-profile-menu/src/user-profile-panel-content.directive';
-import { UxgUserProfilePanelDetailsDirective } from '../../../../../../libs/angular-components/user-profile-menu/src/user-profile-panel-details.directive';
-import { MatIconModule } from '@angular/material/icon';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
-import { UxgUserProfilePanelActionsDirective } from '../../../../../../libs/angular-components/user-profile-menu/src/user-profile-panel-actions.directive';
-import { UxgUserProfileMenuComponent } from '../../../../../../libs/angular-components/user-profile-menu/src/user-profile-menu.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import {
+  UserProfile,
+  UxgUserProfileMenuComponent,
+  UxgUserProfilePanelActionsDirective,
+  UxgUserProfilePanelContentDirective,
+  UxgUserProfilePanelDetailsDirective
+} from '@finastra/angular-components/user-profile-menu';
 @Component({
   selector: 'uxg-user-profile-menu-demo',
   templateUrl: './user-profile-menu-demo-component.component.html',

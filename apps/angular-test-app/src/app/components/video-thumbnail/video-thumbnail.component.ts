@@ -1,14 +1,12 @@
-import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Video, VideoWEvent } from '@finastra/angular-components/video-thumbnail';
 import { JsonPipe } from '@angular/common';
-import { VideoThumbnailComponent } from '../../../../../../libs/angular-components/video-thumbnail/src/video-thumbnail.component';
+import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
-import { MatSelectModule } from '@angular/material/select';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { Video, VideoThumbnailComponent, VideoWEvent } from '@finastra/angular-components/video-thumbnail';
 @Component({
   selector: 'ffdc-video-thumbnail',
   templateUrl: './video-thumbnail.component.html',

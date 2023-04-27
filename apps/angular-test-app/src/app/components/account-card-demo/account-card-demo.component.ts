@@ -1,11 +1,7 @@
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Account, AccountCardComponent, AccountCardSkeletonComponent } from '@finastra/angular-components/cards/account-card';
 import { Subject } from 'rxjs';
-import { Account } from '@finastra/angular-components/cards/account-card';
-import {
-  AccountCardComponent,
-  AccountCardSkeletonComponent
-} from '../../../../../../libs/angular-components/cards/account-card/src/account-card.component';
-import { NgIf, NgFor, AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'ffdc-account-card-demo',

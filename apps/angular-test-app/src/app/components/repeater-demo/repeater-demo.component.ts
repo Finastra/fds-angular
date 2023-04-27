@@ -1,17 +1,17 @@
-import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation, Type, OnDestroy } from '@angular/core';
-import { RepeaterCardExampleComponent } from './repeater-card-example/repeater-card-example.component';
-import { RepeaterCardAdvancedExampleComponent } from './repeater-card-advanced-example/repeater-card-advanced-example.component';
-import { FormGroup, FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { takeUntil } from 'rxjs/operators';
-import { Subject } from 'rxjs';
-import { RepeaterCardChartExampleComponent } from './repeater-card-chart-example/repeater-card-chart-example.component';
-import { FieldMatcherComponent } from './field-matcher/field-matcher.component';
-import { MatOptionModule } from '@angular/material/core';
 import { NgFor, NgIf } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
-import { MatRadioModule } from '@angular/material/radio';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, Type, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { RepeaterComponent } from '../../../../../../libs/angular-components/repeater/src/repeater.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { RepeaterComponent } from '@finastra/angular-components/repeater';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { FieldMatcherComponent } from './field-matcher/field-matcher.component';
+import { RepeaterCardAdvancedExampleComponent } from './repeater-card-advanced-example/repeater-card-advanced-example.component';
+import { RepeaterCardChartExampleComponent } from './repeater-card-chart-example/repeater-card-chart-example.component';
+import { RepeaterCardExampleComponent } from './repeater-card-example/repeater-card-example.component';
 
 const ELEMENT_DATA_TRADE: any[] = [
   {

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { SkeletonTextComponent } from '../../../../../../libs/angular-components/skeleton-text/src/skeleton-text.component';
 import { MatCardModule } from '@angular/material/card';
+import { SkeletonTextComponent } from '@finastra/angular-components/skeleton-text';
 
 @Component({
   selector: 'ffdc-skeleton-demo',
