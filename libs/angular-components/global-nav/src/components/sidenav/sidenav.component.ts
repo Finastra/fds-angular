@@ -2,11 +2,17 @@ import { Component, OnInit, OnChanges, Input, Output, Inject, forwardRef, Change
 import { MatSidenav } from '@angular/material/sidenav';
 import { NavigationNode } from '../../services/navigation.model';
 import { EventEmitter } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
+import { NgFor, NgClass, UpperCasePipe } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
   selector: 'uxg-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
+  standalone: true,
+  imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe]
 })
 export class SidenavComponent implements OnInit, OnChanges {
   @Input() appName!: string;

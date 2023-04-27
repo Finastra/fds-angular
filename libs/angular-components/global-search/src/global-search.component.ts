@@ -20,7 +20,8 @@ import { GlobalSearchOverlayService } from './services/global-search-overlay.ser
   selector: 'uxg-global-search',
   templateUrl: './global-search.component.html',
   styleUrls: ['./global-search.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true
 })
 export class UxgGlobalSearch implements OnChanges {
   @Input() groupBy?: string;

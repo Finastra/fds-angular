@@ -1,7 +1,7 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { ToasterComponent } from './toaster.component';
 import { MatIconModule } from '@angular/material/icon';
+import { ToasterComponent } from './toaster.component';
 
 const INITIAL_TOAST = <any>{
   message: 'test toast',
@@ -14,8 +14,7 @@ describe('ToasterComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [MatIconModule],
-      declarations: [ToasterComponent]
+      imports: [MatIconModule, ToasterComponent]
     }).compileComponents();
   }));
 

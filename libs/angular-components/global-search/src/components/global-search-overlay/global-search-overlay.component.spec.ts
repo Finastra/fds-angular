@@ -1,18 +1,9 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { GlobalSearchOverlayComponent } from './global-search-overlay.component';
-import { GlobalSearchModule } from '../../global-search.module';
 
-// TODO: Fix this test
 describe('GlobalSearchOverlayComponent', () => {
   let component: GlobalSearchOverlayComponent;
   let fixture: ComponentFixture<GlobalSearchOverlayComponent>;
-
-  beforeEach(waitForAsync(() => {
-    TestBed.configureTestingModule({
-      imports: [GlobalSearchModule]
-    }).compileComponents();
-  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(GlobalSearchOverlayComponent);

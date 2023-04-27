@@ -14,7 +14,7 @@ describe('UxgWizardPageComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [UxgWizardPageComponent],
+      imports: [UxgWizardPageComponent],
       providers: [ButtonHubService, { provide: PageCollectionService, useValue: mockPageCollection }, WizardNavigationService]
     }).compileComponents();
   }));

@@ -1,15 +1,15 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { ToasterDemoComponent } from './toaster-demo.component';
-import { ToasterModule } from '@finastra/angular-components/toaster';
-import { MatSelectModule } from '@angular/material/select';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { ToasterModule } from '@finastra/angular-components/toaster';
+import { ToasterDemoComponent } from './toaster-demo.component';
 
 describe('ToasterDemoComponent', () => {
   let component: ToasterDemoComponent;
@@ -26,9 +26,9 @@ describe('ToasterDemoComponent', () => {
         MatButtonModule,
         MatInputModule,
         MatCheckboxModule,
-        FormsModule
-      ],
-      declarations: [ToasterDemoComponent]
+        FormsModule,
+        ToasterDemoComponent
+      ]
     }).compileComponents();
   }));
 

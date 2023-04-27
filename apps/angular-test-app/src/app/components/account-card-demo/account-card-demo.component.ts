@@ -1,11 +1,14 @@
+import { AsyncPipe, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Account, AccountCardComponent, AccountCardSkeletonComponent } from '@finastra/angular-components/cards/account-card';
 import { Subject } from 'rxjs';
-import { Account } from '@finastra/angular-components/cards/account-card';
 
 @Component({
   selector: 'ffdc-account-card-demo',
   templateUrl: './account-card-demo.component.html',
-  styleUrls: ['./account-card-demo.component.scss']
+  styleUrls: ['./account-card-demo.component.scss'],
+  standalone: true,
+  imports: [NgIf, NgFor, AccountCardComponent, AccountCardSkeletonComponent, AsyncPipe]
 })
 export class AccountCardDemoComponent implements OnInit {
   accounts: Account[] = [

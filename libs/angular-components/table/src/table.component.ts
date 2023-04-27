@@ -1,4 +1,4 @@
-import { CdkDragDrop, CdkDragStart, moveItemInArray } from '@angular/cdk/drag-drop';
+import { CdkDragDrop, CdkDragStart, moveItemInArray, CdkDropListGroup, CdkDropList, CdkDrag } from '@angular/cdk/drag-drop';
 import {
   Component,
   EventEmitter,
@@ -11,17 +11,44 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { MatCheckboxChange } from '@angular/material/checkbox';
-import { MatPaginator, PageEvent } from '@angular/material/paginator';
-import { MatTable } from '@angular/material/table';
+import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
+import { MatPaginator, PageEvent, MatPaginatorModule } from '@angular/material/paginator';
+import { MatTable, MatTableModule } from '@angular/material/table';
 import isEqual from 'lodash-es/isEqual';
 import { UxgActionColumnPosition, UxgColumn, UxgColumnType, UxgDefaultPaging, UxgPage, UxgSort, UxgTableSelectEvent } from './table.models';
+import { MatButtonModule } from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { NgIf, NgFor, NgClass, NgSwitch, NgSwitchCase, NgTemplateOutlet, NgSwitchDefault } from '@angular/common';
+import { MatSortModule } from '@angular/material/sort';
 
 @Component({
   selector: 'uxg-table',
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    MatTableModule,
+    MatSortModule,
+    CdkDropListGroup,
+    NgIf,
+    MatCheckboxModule,
+    NgFor,
+    CdkDropList,
+    CdkDrag,
+    NgClass,
+    NgSwitch,
+    NgSwitchCase,
+    MatIconModule,
+    NgTemplateOutlet,
+    NgSwitchDefault,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatPaginatorModule
+  ]
 })
 export class TableComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild(MatTable, { static: true }) table!: MatTable<any>;

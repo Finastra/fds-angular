@@ -4,7 +4,8 @@ import { Component, OnInit, ComponentFactory, Input, ViewChild, ViewContainerRef
   selector: 'uxg-component-repeater',
   templateUrl: './component-repeater.component.html',
   styleUrls: ['./component-repeater.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true
 })
 export class ComponentRepeaterComponent implements OnInit {
   private _factory: any;

@@ -11,12 +11,11 @@
 @use './lib/avatar/avatar-theme' as avatar;
 @use './lib/icon/icon-theme' as icon;
 @use './lib/link/link-theme' as link;
+@use './lib/button/button-theme' as button;
 
 @import './base';
 
-
 @include mat.core();
-
 
 $dark-theme: mat.define-dark-theme((
  color: (
@@ -33,17 +32,19 @@ $light-theme: mat.define-light-theme((
  )
 ));
 
-
 @include mat.all-component-themes($light-theme);
 
 @include typography.uxg-base-typography();
+
 :root {
   @include fds.custom-properties(scheme.light());
   @include typo.custom-properties();
 }
+
 @include avatar.theme();
 @include icon.color();
 @include link.color();
+@include button.theme();
 
 @media (prefers-color-scheme: dark) {
   @include mat.all-component-colors($dark-theme);
@@ -51,4 +52,3 @@ $light-theme: mat.define-light-theme((
     @include fds.custom-properties(scheme.dark());
   }
 }
-

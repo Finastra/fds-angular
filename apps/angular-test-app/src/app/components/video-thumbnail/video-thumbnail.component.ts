@@ -1,13 +1,20 @@
+import { JsonPipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Inject, ViewEncapsulation } from '@angular/core';
-import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Video, VideoWEvent } from '@finastra/angular-components/video-thumbnail';
-
+import { FormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { Video, VideoThumbnailComponent, VideoWEvent } from '@finastra/angular-components/video-thumbnail';
 @Component({
   selector: 'ffdc-video-thumbnail',
   templateUrl: './video-thumbnail.component.html',
   styleUrls: ['./video-thumbnail.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [MatFormFieldModule, MatSelectModule, MatOptionModule, MatInputModule, FormsModule, VideoThumbnailComponent]
 })
 export class VideoThumbnailDemoComponent {
   video: Video = {
@@ -40,7 +47,9 @@ export class VideoThumbnailDemoComponent {
       <li>metaKey : {{ video.$event.metaKey }}</li>
       <li>ctrlKey : {{ video.$event.ctrlKey }}</li>
     </ul>
-  `
+  `,
+  standalone: true,
+  imports: [JsonPipe]
 })
 export class VideoDialogComponent {
   constructor(@Inject(MAT_DIALOG_DATA) public video: VideoWEvent) {}

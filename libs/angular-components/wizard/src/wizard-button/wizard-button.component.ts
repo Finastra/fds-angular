@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ButtonHubService } from '../services/button-hub.service';
 import { WizardNavigationService } from '../services/wizard-navigation.service';
+import { MatButtonModule } from '@angular/material/button';
+import { NgSwitch, NgSwitchDefault, NgTemplateOutlet, NgSwitchCase } from '@angular/common';
 
 export type UxgWizardButtonType = 'cancel' | 'previous' | 'next' | 'done' | 'custom';
 
@@ -12,7 +14,9 @@ export type UxgWizardButtonType = 'cancel' | 'previous' | 'next' | 'done' | 'cus
     '[class.auto-margin]': 'isCancel || isCustom',
     '[attr.aria-hidden]': 'isHidden',
     '[attr.type]': 'type'
-  }
+  },
+  standalone: true,
+  imports: [NgSwitch, NgSwitchDefault, MatButtonModule, NgTemplateOutlet, NgSwitchCase]
 })
 export class UxgWizardButtonComponent {
   @Input() public type!: UxgWizardButtonType;

@@ -7,8 +7,7 @@ import { ChartComponent } from './chart.component';
 import { PlotlyViaCDNModule, PlotlyService } from 'angular-plotly.js';
 import { LazyloadScriptService } from '@finastra/angular-components/core';
 @NgModule({
-  imports: [CommonModule, PlotlyViaCDNModule],
-  declarations: [ChartComponent, GroupTracesComponent, LegendComponent, TraceComponent],
+  imports: [CommonModule, PlotlyViaCDNModule, ChartComponent, GroupTracesComponent, LegendComponent, TraceComponent],
   exports: [ChartComponent, GroupTracesComponent, LegendComponent, TraceComponent]
 })
 export class ChartModule {

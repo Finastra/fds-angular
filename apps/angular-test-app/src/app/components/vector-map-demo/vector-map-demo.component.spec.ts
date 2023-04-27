@@ -28,7 +28,6 @@ describe('VectorMapDemoComponent', () => {
         VectorMapModule,
         NoopAnimationsModule
       ],
-      declarations: [VectorMapDemoComponent],
       providers: [
         {
           provide: LazyloadScriptService,

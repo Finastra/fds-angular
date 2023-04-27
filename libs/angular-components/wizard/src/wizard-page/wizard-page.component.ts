@@ -4,6 +4,7 @@ import { PageCollectionService } from '../services/page-collection.service';
 import { WizardNavigationService } from '../services/wizard-navigation.service';
 import { UxgWizardPageDescriptionComponent } from './wizard-page-description.directive';
 import { UxgWizardPageTitleComponent } from './wizard-page-title.directive';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'uxg-wizard-page',
@@ -15,7 +16,9 @@ import { UxgWizardPageTitleComponent } from './wizard-page-title.directive';
     '[class.active]': 'current',
     '[class.no-title]': '!showTitle',
     '[class.uxg-wizard-page]': 'true'
-  }
+  },
+  standalone: true,
+  imports: [NgIf]
 })
 export class UxgWizardPageComponent {
   @Output('uxgWizardPageOnLoad') load: EventEmitter<string> = new EventEmitter();

@@ -1,11 +1,30 @@
-import { Component, OnInit, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
-import { UserProfile } from '@finastra/angular-components/user-profile-menu';
+import { ChangeDetectionStrategy, Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import {
+  UserProfile,
+  UxgUserProfileMenuComponent,
+  UxgUserProfilePanelActionsDirective,
+  UxgUserProfilePanelContentDirective,
+  UxgUserProfilePanelDetailsDirective
+} from '@finastra/angular-components/user-profile-menu';
 @Component({
   selector: 'uxg-user-profile-menu-demo',
   templateUrl: './user-profile-menu-demo-component.component.html',
   styleUrls: ['./user-profile-menu-demo-component.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  standalone: true,
+  imports: [
+    UxgUserProfileMenuComponent,
+    UxgUserProfilePanelActionsDirective,
+    MatButtonModule,
+    MatIconModule,
+    UxgUserProfilePanelDetailsDirective,
+    UxgUserProfilePanelContentDirective,
+    MatMenuModule
+  ]
 })
 export class UserProfileMenuDemoComponentComponent implements OnInit {
   vinh: UserProfile = {

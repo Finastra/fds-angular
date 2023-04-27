@@ -16,7 +16,6 @@ describe.skip('FilterTagsModule', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FilterTagsComponent, HighlightPipe],
       imports: [
         ReactiveFormsModule,
         CommonModule,
@@ -25,7 +24,9 @@ describe.skip('FilterTagsModule', () => {
         MatAutocompleteModule,
         MatFormFieldModule,
         MatInputModule,
-        NoopAnimationsModule
+        NoopAnimationsModule,
+        FilterTagsComponent,
+        HighlightPipe
       ]
     }).compileComponents();
     fixture = TestBed.createComponent(FilterTagsComponent);

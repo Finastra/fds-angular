@@ -1,5 +1,5 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
-import { LegendComponent, LegendPositionConvertion, LegendPosition } from './legend.component';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { LegendComponent, LegendPosition, LegendPositionConvertion } from './legend.component';
 
 describe('Legend Directive', () => {
   let component: LegendComponent;
@@ -7,7 +7,7 @@ describe('Legend Directive', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [LegendComponent]
+      imports: [LegendComponent]
     }).compileComponents();
   }));
 

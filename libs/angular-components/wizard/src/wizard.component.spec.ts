@@ -1,10 +1,10 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { UxgWizardComponent } from './wizard.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDividerModule } from '@angular/material/divider';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { UxgWizardComponent } from './wizard.component';
 
 describe('UxgWizardComponent', () => {
   let component: UxgWizardComponent;
@@ -12,8 +12,7 @@ describe('UxgWizardComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [NoopAnimationsModule, MatIconModule, MatDividerModule],
-      declarations: [UxgWizardComponent],
+      imports: [NoopAnimationsModule, MatIconModule, MatDividerModule, UxgWizardComponent],
       schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
   }));

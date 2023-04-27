@@ -10,8 +10,7 @@ import { EntityMenuActionsComponent, EntityMenuComponent } from './entity-menu.c
 const components = [EntityMenuComponent, EntityMenuActionsComponent];
 
 @NgModule({
-  declarations: [...components],
-  imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule, MatMenuModule],
+  imports: [CommonModule, MatButtonModule, MatIconModule, MatCardModule, MatMenuModule, ...components],
   exports: [...components]
 })
 export class EntityMenuModule {}

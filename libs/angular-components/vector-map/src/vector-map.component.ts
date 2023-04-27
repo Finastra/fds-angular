@@ -10,7 +10,7 @@ import {
   SimpleChanges,
   ViewChild
 } from '@angular/core';
-import { TooltipComponent } from '@angular/material/tooltip';
+import { TooltipComponent, MatTooltipModule } from '@angular/material/tooltip';
 import {
   ColorScale,
   LazyloadScriptService,
@@ -18,7 +18,7 @@ import {
   PaletteService,
   PALETTE_DEFAULT_CONFIG
 } from '@finastra/angular-components/core';
-import { PlotlyComponent } from 'angular-plotly.js';
+import { PlotlyComponent, PlotlySharedModule } from 'angular-plotly.js';
 import { Observable, Subscription } from 'rxjs';
 import {
   COUNTRIES,
@@ -32,11 +32,17 @@ import {
   VectorMapView,
   VectorMapViewsDataSource
 } from './vector-map.models';
+import { MatOptionModule } from '@angular/material/core';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { NgIf, NgFor, NgStyle, AsyncPipe } from '@angular/common';
 
 @Component({
   selector: 'uxg-vector-map',
   templateUrl: './vector-map.component.html',
-  styleUrls: ['./vector-map.component.scss']
+  styleUrls: ['./vector-map.component.scss'],
+  standalone: true,
+  imports: [NgIf, PlotlySharedModule, MatFormFieldModule, MatSelectModule, NgFor, MatOptionModule, NgStyle, MatTooltipModule, AsyncPipe]
 })
 export class VectorMapComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild(PlotlyComponent, { static: false }) plot!: PlotlyComponent;

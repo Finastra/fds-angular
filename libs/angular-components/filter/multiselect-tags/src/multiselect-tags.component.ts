@@ -1,5 +1,8 @@
 import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import cloneDeep from 'lodash-es/cloneDeep';
+import { MatIconModule } from '@angular/material/icon';
+import { NgFor, NgIf } from '@angular/common';
+import { MatChipsModule } from '@angular/material/chips';
 
 export interface MultiselectTag {
   label: string;
@@ -14,7 +17,9 @@ interface UXGMultiSelectFilterChanges {
 @Component({
   selector: 'uxg-multiselect-tags',
   templateUrl: './multiselect-tags.component.html',
-  styleUrls: ['./multiselect-tags.component.scss']
+  styleUrls: ['./multiselect-tags.component.scss'],
+  standalone: true,
+  imports: [MatChipsModule, NgFor, NgIf, MatIconModule]
 })
 export class MultiselectTagsComponent {
   private _data: MultiselectTag[] = [];

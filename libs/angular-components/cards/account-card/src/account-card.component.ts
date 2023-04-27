@@ -1,9 +1,16 @@
-import { Component, OnInit, OnDestroy, Input, Output, EventEmitter } from '@angular/core';
+import { CurrencyPipe, NgClass, NgIf } from '@angular/common';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { SkeletonTextComponent } from '@finastra/angular-components/skeleton-text';
 
 @Component({
   selector: 'uxg-account-card',
   templateUrl: './account-card.component.html',
-  styleUrls: ['./account-card.component.scss']
+  styleUrls: ['./account-card.component.scss'],
+  standalone: true,
+  imports: [MatCardModule, NgClass, NgIf, MatIconModule, MatDividerModule, CurrencyPipe]
 })
 export class AccountCardComponent implements OnInit, OnDestroy {
   @Input() name?: string;
@@ -34,6 +41,8 @@ export class AccountCardComponent implements OnInit, OnDestroy {
 @Component({
   selector: 'uxg-account-card-skeleton',
   templateUrl: './account-card.skeleton.html',
-  styleUrls: ['./account-card.component.scss']
+  styleUrls: ['./account-card.component.scss'],
+  standalone: true,
+  imports: [MatCardModule, MatIconModule, SkeletonTextComponent, MatDividerModule]
 })
 export class AccountCardSkeletonComponent {}

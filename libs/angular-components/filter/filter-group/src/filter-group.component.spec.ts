@@ -18,7 +18,6 @@ describe('FilterGroupComponent', () => {
   let fixture: ComponentFixture<FilterGroupComponent>;
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FilterGroupComponent],
       imports: [
         NoopAnimationsModule,
         ReactiveFormsModule,
@@ -32,7 +31,8 @@ describe('FilterGroupComponent', () => {
         MatFormFieldModule,
         MatInputModule,
         MatDialogModule,
-        FormsModule
+        FormsModule,
+        FilterGroupComponent
       ]
     }).compileComponents();
     fixture = TestBed.createComponent(FilterGroupComponent);

@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { SelectionModel } from '@angular/cdk/collections';
+import { NgClass, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   Component,
@@ -13,8 +14,12 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { MatAccordion } from '@angular/material/expansion';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatAccordion, MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule } from '@angular/material/icon';
 import { createChain } from '@finastra/angular-components/core';
+import { TableComponent } from '@finastra/angular-components/table';
 import cloneDeep from 'lodash-es/cloneDeep';
 import filter from 'lodash-es/filter';
 import find from 'lodash-es/find';
@@ -36,7 +41,9 @@ import reject from 'lodash-es/reject';
       state('expanded', style({ height: '*' })),
       transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
     ])
-  ]
+  ],
+  standalone: true,
+  imports: [NgIf, MatCheckboxModule, NgClass, MatButtonModule, MatIconModule, MatExpansionModule, NgFor, NgTemplateOutlet, TableComponent]
 })
 export class ExpandableTableComponent implements OnChanges {
   @Input() dataSource: any[];

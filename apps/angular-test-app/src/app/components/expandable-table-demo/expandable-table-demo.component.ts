@@ -1,4 +1,11 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, ViewChild } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatOptionModule } from '@angular/material/core';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ExpandableTableComponent } from '@finastra/angular-components/expandable-table';
 
 export const DATASOURCE = [
@@ -25,7 +32,19 @@ export const GROUP_BY_KEY = 'apiGroup';
 @Component({
   selector: 'ffdc-expandable-table-demo',
   templateUrl: './expandable-table-demo.component.html',
-  styleUrls: ['./expandable-table-demo.component.scss']
+  styleUrls: ['./expandable-table-demo.component.scss'],
+  standalone: true,
+  imports: [
+    ExpandableTableComponent,
+    MatButtonModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    FormsModule,
+    MatSelectModule,
+    NgFor,
+    MatOptionModule,
+    NgIf
+  ]
 })
 export class ExpandableTableDemoComponent {
   @ViewChild(ExpandableTableComponent, { static: true }) table!: ExpandableTableComponent;

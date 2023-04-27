@@ -1,5 +1,12 @@
+import { NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { EntityMenuItemWEvent } from '@finastra/angular-components/entity-menu';
+import { FormsModule } from '@angular/forms';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatOptionModule } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { EntityMenuActionsComponent, EntityMenuComponent, EntityMenuItemWEvent } from '@finastra/angular-components/entity-menu';
 
 const TEMPLATES_DATA: any[] = [
   {
@@ -95,7 +102,20 @@ const PR_COLUMNS: any[] = [
 @Component({
   selector: 'ffdc-entity-menu-demo',
   templateUrl: './entity-menu-demo.component.html',
-  styleUrls: ['./entity-menu-demo.component.scss']
+  styleUrls: ['./entity-menu-demo.component.scss'],
+  standalone: true,
+  imports: [
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    NgFor,
+    MatOptionModule,
+    MatCheckboxModule,
+    NgIf,
+    EntityMenuComponent,
+    EntityMenuActionsComponent
+  ]
 })
 export class EntityMenuDemoComponent implements OnInit {
   length = 2;

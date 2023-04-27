@@ -3,7 +3,8 @@ import { TraceComponent } from './trace.component';
 
 @Component({
   selector: 'uxg-group-traces',
-  template: ''
+  template: '',
+  standalone: true
 })
 export class GroupTracesComponent {
   @Input() columnPosition?: number;

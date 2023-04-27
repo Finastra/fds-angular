@@ -1,4 +1,4 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AvatarListComponent } from './avatar-list.component';
 
@@ -8,7 +8,7 @@ describe('AvatarListComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [AvatarListComponent]
+      imports: [AvatarListComponent]
     }).compileComponents();
   }));
 

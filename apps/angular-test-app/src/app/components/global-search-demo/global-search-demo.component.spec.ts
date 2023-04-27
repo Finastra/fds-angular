@@ -1,10 +1,9 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { GlobalSearchDemoComponent } from './global-search-demo.component';
-import { GlobalSearchModule } from '@finastra/angular-components/global-search';
+import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatCardModule } from '@angular/material/card';
+import { GlobalSearchDemoComponent } from './global-search-demo.component';
 
 describe('GlobalSearchDemoComponent', () => {
   let component: GlobalSearchDemoComponent;
@@ -12,8 +11,7 @@ describe('GlobalSearchDemoComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [MatIconModule, MatSnackBarModule, GlobalSearchModule, MatCardModule],
-      declarations: [GlobalSearchDemoComponent]
+      imports: [MatIconModule, MatSnackBarModule, MatCardModule]
     }).compileComponents();
   }));
 

@@ -1,6 +1,10 @@
-import { Component, OnInit, OnDestroy, Output, EventEmitter, Input, TemplateRef, OnChanges, SimpleChanges } from '@angular/core';
+import { NgTemplateOutlet } from '@angular/common';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges, TemplateRef } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { Breadcrumb, UxgBreadcrumbComponent } from '@finastra/angular-components/breadcrumb';
 import { NavigationNode } from '../../services/navigation.model';
-import { Breadcrumb } from '@finastra/angular-components/breadcrumb';
 
 @Component({
   selector: 'uxg-navbar',
@@ -8,7 +12,9 @@ import { Breadcrumb } from '@finastra/angular-components/breadcrumb';
   styleUrls: ['./navbar.component.scss'],
   host: {
     class: 'uxg-navbar'
-  }
+  },
+  standalone: true,
+  imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
 })
 export class NavbarComponent implements OnInit, OnDestroy, OnChanges {
   breadcrumbs: Breadcrumb[] = [];

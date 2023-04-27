@@ -12,7 +12,6 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
 import { By } from '@angular/platform-browser';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { UxgTableModule } from '@finastra/angular-components/table';
 import { cloneDeep } from 'lodash-es';
 import { ExpandableTableComponent } from './expandable-table.component';
 
@@ -43,7 +42,6 @@ fdescribe('ExpandableTableComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ExpandableTableComponent],
       imports: [
         MatProgressBarModule,
         MatButtonModule,
@@ -55,7 +53,7 @@ fdescribe('ExpandableTableComponent', () => {
         MatTableModule,
         MatCheckboxModule,
         MatDialogModule,
-        UxgTableModule
+        ExpandableTableComponent
       ]
     })
       .overrideComponent(ExpandableTableComponent, {

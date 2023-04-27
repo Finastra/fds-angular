@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
 import { ColorEvent, RGB, RGBA } from 'ngx-color';
+import { ColorSketchModule } from 'ngx-color/sketch';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'ffdc-theme-builder-demo',
   templateUrl: './theme-builder-demo.component.html',
-  styleUrls: ['./theme-builder-demo.component.scss']
+  styleUrls: ['./theme-builder-demo.component.scss'],
+  standalone: true,
+  imports: [MatMenuModule, ColorSketchModule]
 })
 export class ThemeBuilderComponent {
   colorShift = 150;

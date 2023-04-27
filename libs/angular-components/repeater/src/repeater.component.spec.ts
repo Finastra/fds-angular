@@ -1,14 +1,13 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RepeaterComponent } from './repeater.component';
-import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ScrollingModule as ExperimentalScrollingModule } from '@angular/cdk-experimental/scrolling';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 import { CommonModule } from '@angular/common';
+import { Component, NgModule, SimpleChange, Type } from '@angular/core';
 import { MatTableModule } from '@angular/material/table';
-import { ComponentRepeaterComponent } from './component-repeater/component-repeater.component';
-import { Component, DebugElement, Type, NgModule, SimpleChange } from '@angular/core';
 import { By } from '@angular/platform-browser';
-import { RepeaterModule } from './repeater.module';
+import { ComponentRepeaterComponent } from './component-repeater/component-repeater.component';
+import { RepeaterComponent } from './repeater.component';
 
 @Component({
   selector: 'uxg-mock-card',
@@ -17,9 +16,7 @@ import { RepeaterModule } from './repeater.module';
 class MockCardComponent {}
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [MockCardComponent],
-  entryComponents: [MockCardComponent]
+  imports: [CommonModule]
 })
 export class FakeMockCardNgModule {}
 
@@ -120,8 +117,15 @@ describe('RepeaterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [RepeaterComponent, ComponentRepeaterComponent],
-      imports: [FakeMockCardNgModule, CommonModule, MatTableModule, ScrollingModule, ExperimentalScrollingModule]
+      imports: [
+        FakeMockCardNgModule,
+        CommonModule,
+        MatTableModule,
+        ScrollingModule,
+        ExperimentalScrollingModule,
+        RepeaterComponent,
+        ComponentRepeaterComponent
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(RepeaterComponent);
     component = fixture.componentInstance;

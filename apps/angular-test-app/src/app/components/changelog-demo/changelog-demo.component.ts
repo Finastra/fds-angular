@@ -1,11 +1,13 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { ChangeLog } from '@finastra/angular-components/changelog';
+import { ChangeLog, UXGChangelogComponent } from '@finastra/angular-components/changelog';
 
 @Component({
   selector: 'ffdc-changelog-demo',
   templateUrl: './changelog-demo.component.html',
   styleUrls: ['./changelog-demo.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [UXGChangelogComponent]
 })
 export class ChangelogDemoComponent implements OnInit {
   changelog!: ChangeLog;

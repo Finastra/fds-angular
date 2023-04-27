@@ -1,10 +1,10 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { EntityMenuComponent } from './entity-menu.component';
 import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
+import { EntityMenuComponent } from './entity-menu.component';
 
 describe('EntityMenuModule', () => {
   let component: EntityMenuComponent;
@@ -12,8 +12,7 @@ describe('EntityMenuModule', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [MatButtonModule, MatIconModule, MatCardModule, MatMenuModule],
-      declarations: [EntityMenuComponent]
+      imports: [MatButtonModule, MatIconModule, MatCardModule, MatMenuModule, EntityMenuComponent]
     }).compileComponents();
   }));
 

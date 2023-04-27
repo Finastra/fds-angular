@@ -1,9 +1,11 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
-import { isPlatformBrowser } from '@angular/common';
+import { isPlatformBrowser, NgTemplateOutlet, AsyncPipe } from '@angular/common';
 import { AfterViewInit, Component, Inject, Input, OnDestroy, PLATFORM_ID, TemplateRef } from '@angular/core';
 import { BehaviorSubject, Subscription, fromEvent } from 'rxjs';
 import { distinctUntilChanged, map, share, throttleTime } from 'rxjs/operators';
 import * as smoothscroll from 'smoothscroll-polyfill';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
 
 enum ShowStatus {
   show = 'show',
@@ -20,7 +22,9 @@ enum ShowStatus {
       transition('show => hide', animate('350ms ease-out')),
       transition('hide => show', animate('350ms ease-in'))
     ])
-  ]
+  ],
+  standalone: true,
+  imports: [NgTemplateOutlet, MatButtonModule, MatIconModule, AsyncPipe]
 })
 export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
   @Input() customTemplate?: TemplateRef<any>;

@@ -14,14 +14,25 @@ import {
   ViewChildren,
   ViewEncapsulation
 } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { MatAutocomplete, MatAutocompleteSelectedEvent, MatAutocompleteTrigger } from '@angular/material/autocomplete';
-import { MatCheckboxChange } from '@angular/material/checkbox';
-import { MatChip, MatChipInputEvent } from '@angular/material/chips';
-import { MatFormFieldAppearance } from '@angular/material/form-field';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {
+  MatAutocomplete,
+  MatAutocompleteSelectedEvent,
+  MatAutocompleteTrigger,
+  MatAutocompleteModule
+} from '@angular/material/autocomplete';
+import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
+import { MatChip, MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
+import { MatFormFieldAppearance, MatFormFieldModule } from '@angular/material/form-field';
 import { uniqBy } from 'lodash-es';
 import { Observable, Subscription } from 'rxjs';
 import { delay, map, startWith } from 'rxjs/operators';
+import { HighlightPipe } from './highlight.pipe';
+import { MatOptionModule } from '@angular/material/core';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatIconModule } from '@angular/material/icon';
+import { NgFor, NgIf, NgTemplateOutlet, NgClass, AsyncPipe, SlicePipe } from '@angular/common';
 
 export interface Tag {
   label: string;
@@ -39,7 +50,27 @@ interface UXGFilterChanges {
   selector: 'uxg-filter-tags',
   templateUrl: './filter-tags.component.html',
   styleUrls: ['./filter-tags.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    MatChipsModule,
+    NgFor,
+    NgIf,
+    MatIconModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatOptionModule,
+    MatCheckboxModule,
+    NgTemplateOutlet,
+    NgClass,
+    AsyncPipe,
+    SlicePipe,
+    HighlightPipe
+  ]
 })
 export class FilterTagsComponent implements OnInit, AfterViewInit, OnDestroy {
   visible = true;

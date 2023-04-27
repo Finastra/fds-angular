@@ -1,6 +1,8 @@
 import { Component, OnInit, OnDestroy, Input, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
 import { Banner } from './model';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { NgFor, NgClass } from '@angular/common';
 
 interface BannerItem {
   name: string;
@@ -17,7 +19,9 @@ interface BannerItem {
   host: {
     class: 'uxg-banner',
     '[class.uxg-banner-small]': 'small'
-  }
+  },
+  standalone: true,
+  imports: [NgFor, NgClass, MatTooltipModule]
 })
 export class BannerComponent {
   private _bannerData: Banner[] = [];

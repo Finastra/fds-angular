@@ -8,8 +8,7 @@ import { TOASTER_CONFIG } from './toaster.config';
 import { ToasterContainerOverlayService, ToasterContainerRegistry, ToasterService } from './toaster.service';
 
 @NgModule({
-  imports: [CommonModule, MatIconModule, MatButtonModule],
-  declarations: [ToasterContainerComponent, ToasterComponent],
+  imports: [CommonModule, MatIconModule, MatButtonModule, ToasterContainerComponent, ToasterComponent],
   providers: [ToasterService, ToasterContainerOverlayService, ToasterContainerRegistry, { provide: TOASTER_CONFIG, useValue: {} }],
   exports: [ToasterComponent]
 })

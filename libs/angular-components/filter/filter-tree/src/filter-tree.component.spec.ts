@@ -29,9 +29,9 @@ describe('FilterTreeModule', () => {
         MatChipsModule,
         MatIconModule,
         MatButtonModule,
-        MatTreeModule
-      ],
-      declarations: [FilterTreeComponent]
+        MatTreeModule,
+        FilterTreeComponent
+      ]
     }).compileComponents();
     fixture = TestBed.createComponent(FilterTreeComponent);
     component = fixture.componentInstance;

@@ -7,7 +7,7 @@ import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { PaletteModule } from '@finastra/angular-components/core';
 import { PlotlyModule } from 'angular-plotly.js';
 import { of } from 'rxjs';
-import { ChartType, CHART_PLOLTLY_TYPE } from './chart.models';
+import { CHART_PLOLTLY_TYPE, ChartType } from './chart.models';
 import { GroupTracesComponent } from './directives/groupTrace.component';
 import { LegendComponent, LegendPosition, LegendPositionConvertion } from './directives/legend.component';
 import { TraceComponent } from './directives/trace.component';
@@ -15,7 +15,8 @@ PlotlyModule.plotlyjs = (global as any).Plotly;
 
 @Component({
   selector: 'uxg-test-container-component',
-  template: ``
+  template: ``,
+  standalone: true
 })
 class TestContainerComponent implements AfterViewInit {
   @ViewChild('chart', { static: false }) chart!: ChartComponent;
@@ -37,8 +38,16 @@ describe.skip('Chart Component', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [CommonModule, PlotlyModule, PaletteModule],
-      declarations: [ChartComponent, GroupTracesComponent, LegendComponent, TraceComponent, TestContainerComponent]
+      imports: [
+        CommonModule,
+        PlotlyModule,
+        PaletteModule,
+        ChartComponent,
+        GroupTracesComponent,
+        LegendComponent,
+        TraceComponent,
+        TestContainerComponent
+      ]
     });
   });
 

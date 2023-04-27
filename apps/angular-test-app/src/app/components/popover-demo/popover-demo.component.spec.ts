@@ -1,7 +1,6 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PopoverDemoComponent } from './popover-demo.component';
-import { PopoverModule } from '@finastra/angular-components/popover';
 
 describe('PopoverDemoComponent', () => {
   let component: PopoverDemoComponent;
@@ -9,8 +8,7 @@ describe('PopoverDemoComponent', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [PopoverModule],
-      declarations: [PopoverDemoComponent]
+      imports: [PopoverDemoComponent]
     }).compileComponents();
   }));
 

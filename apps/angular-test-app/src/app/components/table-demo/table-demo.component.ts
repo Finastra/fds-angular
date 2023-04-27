@@ -1,5 +1,13 @@
+import { NgFor, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { PageEvent } from '@angular/material/paginator';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {
   TableComponent,
   UxgActionColumnPosition,
@@ -183,7 +191,20 @@ const CUSTOM_PAGING: UxgPage = {
   templateUrl: './table-demo.component.html',
   styleUrls: ['./table-demo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    MatSidenavModule,
+    TableComponent,
+    MatSlideToggleModule,
+    NgIf,
+    MatRadioModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    NgFor,
+    MatOptionModule
+  ]
 })
 export class TableDemoComponent implements OnInit {
   @ViewChild(TableComponent, { static: true }) table!: TableComponent;

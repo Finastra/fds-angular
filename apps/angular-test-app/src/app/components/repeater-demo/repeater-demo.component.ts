@@ -1,10 +1,17 @@
-import { Component, OnInit, ChangeDetectionStrategy, ViewEncapsulation, Type, OnDestroy } from '@angular/core';
-import { RepeaterCardExampleComponent } from './repeater-card-example/repeater-card-example.component';
-import { RepeaterCardAdvancedExampleComponent } from './repeater-card-advanced-example/repeater-card-advanced-example.component';
-import { FormGroup, FormBuilder } from '@angular/forms';
-import { takeUntil } from 'rxjs/operators';
+import { NgFor, NgIf } from '@angular/common';
+import { ChangeDetectionStrategy, Component, OnDestroy, OnInit, Type, ViewEncapsulation } from '@angular/core';
+import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatOptionModule } from '@angular/material/core';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { RepeaterComponent } from '@finastra/angular-components/repeater';
 import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { FieldMatcherComponent } from './field-matcher/field-matcher.component';
+import { RepeaterCardAdvancedExampleComponent } from './repeater-card-advanced-example/repeater-card-advanced-example.component';
 import { RepeaterCardChartExampleComponent } from './repeater-card-chart-example/repeater-card-chart-example.component';
+import { RepeaterCardExampleComponent } from './repeater-card-example/repeater-card-example.component';
 
 const ELEMENT_DATA_TRADE: any[] = [
   {
@@ -332,7 +339,20 @@ const TEMPLATES_DATA: any[] = [
   templateUrl: './repeater-demo.component.html',
   styleUrls: ['./repeater-demo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  standalone: true,
+  imports: [
+    RepeaterComponent,
+    MatExpansionModule,
+    MatRadioModule,
+    FormsModule,
+    MatSelectModule,
+    NgFor,
+    MatOptionModule,
+    ReactiveFormsModule,
+    FieldMatcherComponent,
+    NgIf
+  ]
 })
 export class RepeaterDemoComponent implements OnInit, OnDestroy {
   dataSource = ELEMENT_DATA; //data

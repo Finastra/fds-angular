@@ -1,9 +1,9 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ComponentRepeaterComponent } from './component-repeater.component';
-import { Component, NgModule, Type, ComponentFactoryResolver } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Component, ComponentFactoryResolver, NgModule, Type } from '@angular/core';
 import { By } from '@angular/platform-browser';
+import { ComponentRepeaterComponent } from './component-repeater.component';
 
 @Component({
   selector: 'uxg-mock-card',
@@ -12,9 +12,7 @@ import { By } from '@angular/platform-browser';
 class MockCardComponent {}
 
 @NgModule({
-  imports: [CommonModule],
-  declarations: [MockCardComponent],
-  entryComponents: [MockCardComponent]
+  imports: [CommonModule]
 })
 export class FakeMockCardNgModule {}
 
@@ -25,8 +23,7 @@ describe('ComponentRepeaterComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ComponentRepeaterComponent],
-      imports: [FakeMockCardNgModule, CommonModule]
+      imports: [FakeMockCardNgModule, CommonModule, ComponentRepeaterComponent]
     }).compileComponents();
     fixture = TestBed.createComponent(ComponentRepeaterComponent);
     component = fixture.componentInstance;

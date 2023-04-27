@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavigationNode } from '@finastra/angular-components/global-nav';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components/global-nav';
 
 @Component({
   selector: 'ffdc-global-nav-demo',
@@ -7,7 +9,9 @@ import { NavigationNode } from '@finastra/angular-components/global-nav';
   styleUrls: ['./global-nav-demo.component.scss'],
   host: {
     class: 'ffdc-global-nav-demo'
-  }
+  },
+  standalone: true,
+  imports: [GlobalNavComponent, MatButtonModule, MatIconModule]
 })
 export class GlobalNavDemoComponent {
   appName = 'Global Nav Demo';

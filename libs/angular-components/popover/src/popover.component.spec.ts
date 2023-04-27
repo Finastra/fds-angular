@@ -1,8 +1,8 @@
-import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { PopoverComponent } from './popover.component';
-import { MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
+import { MatMenuModule } from '@angular/material/menu';
+import { PopoverComponent } from './popover.component';
 
 describe('PopoverModule', () => {
   let component: PopoverComponent;
@@ -10,8 +10,7 @@ describe('PopoverModule', () => {
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      imports: [CommonModule, MatMenuModule],
-      declarations: [PopoverComponent]
+      imports: [CommonModule, MatMenuModule, PopoverComponent]
     }).compileComponents();
   }));
 
