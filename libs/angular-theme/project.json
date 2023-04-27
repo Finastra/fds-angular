@@ -2,15 +2,15 @@
   "name": "angular-theme",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
-  "sourceRoot": "themes/angular-theme/",
+  "sourceRoot": "libs/angular-theme/",
   "prefix": "finastra",
   "targets": {
     "build": {
       "executor": "./dist/tools/devkit:theme-builder",
       "options": {
-        "inputPath": "themes/angular-theme/lib/",
-        "outputPath": "themes/angular-theme/prebuilt-theme",
-        "assets": ["themes/angular-theme/lib", "themes/angular-theme/assets", "themes/angular-theme/*.scss"],
+        "inputPath": "libs/angular-theme/lib/",
+        "outputPath": "libs/angular-theme/prebuilt-theme",
+        "assets": ["libs/angular-theme/lib", "libs/angular-theme/assets", "libs/angular-theme/*.scss"],
         "sourceMap": true
       },
       "configurations": {
@@ -22,7 +22,7 @@
     "lint": {
       "executor": "./dist/tools/devkit:theme-linter",
       "options": {
-        "project": "themes/angular-theme"
+        "project": "libs/angular-theme"
       }
     }
   },
