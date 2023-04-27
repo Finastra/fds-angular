@@ -52,7 +52,8 @@
   }
 
   .uxg-avatar-list {
-    > li, > uxg-avatar {
+    > li,
+    > uxg-avatar {
       > .uxg-avatar {
         border: 1px solid;
         @include fds.property(border-color, background);

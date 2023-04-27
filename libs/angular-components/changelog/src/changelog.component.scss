@@ -52,14 +52,12 @@ $bullet-size: 20px;
       width: 14px;
       height: 14px;
       left: calc(#{-$bullet-center} - 17px);
-    }
-    @else {
+    } @else {
       top: -39.5px;
       width: 25px;
       height: 25px;
       left: calc(#{-$bullet-center} - 22px);
     }
-
   }
 
   .release-detail::before,
@@ -85,7 +83,7 @@ $bullet-size: 20px;
   }
 
   .release-detail::after {
-      bottom: -35px;
+    bottom: -35px;
     @if $size == 'none' {
       top: fds.$uxg-spacing-3;
       bottom: -48px;

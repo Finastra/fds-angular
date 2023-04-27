@@ -5,7 +5,8 @@
   $primary: map.get($theme, primary);
   $foreground: map.get($theme, foreground);
 
-  .selectable-card,.selected-card {
+  .selectable-card,
+  .selected-card {
     border: 1px solid transparent;
     cursor: pointer;
     .checked {
