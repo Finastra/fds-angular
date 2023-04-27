@@ -39,9 +39,7 @@
   #{if(&, '&', ':root')} {
     @if $is-dark {
       @include dark-css-variables.dark-vars();
-    }
-
-    @else {
+    } @else {
       @include light-css-variables.light-vars();
     }
 

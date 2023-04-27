@@ -3,9 +3,9 @@
 @use './palette' as uxg-palette;
 
 $uxg-primary: mat.define-palette(uxg-palette.$uxg-violet, 500, 100, 900);
-$uxg-accent:  mat.define-palette(uxg-palette.$uxg-fuchsia, 500, 100, 900);
-$uxg-warn:    mat.define-palette(uxg-palette.$uxg-amber, 100, 75, 100-dark);
-$uxg-error:   mat.define-palette(uxg-palette.$uxg-crimson, 100, 75, 100-dark);
+$uxg-accent: mat.define-palette(uxg-palette.$uxg-fuchsia, 500, 100, 900);
+$uxg-warn: mat.define-palette(uxg-palette.$uxg-amber, 100, 75, 100-dark);
+$uxg-error: mat.define-palette(uxg-palette.$uxg-crimson, 100, 75, 100-dark);
 $uxg-success: mat.define-palette(uxg-palette.$uxg-grass, 100, 75, 100-dark);
 
 // Creates a container object for a light theme to be given to individual component theme mixins.
@@ -18,7 +18,7 @@ $uxg-success: mat.define-palette(uxg-palette.$uxg-grass, 100, 75, 100-dark);
     success: $uxg-success,
     is-dark: false,
     foreground: uxg-palette.$uxg-light-theme-foreground,
-    background: uxg-palette.$uxg-light-theme-background,
+    background: uxg-palette.$uxg-light-theme-background
   );
 }
 
@@ -32,7 +32,7 @@ $uxg-success: mat.define-palette(uxg-palette.$uxg-grass, 100, 75, 100-dark);
     success: $uxg-success,
     is-dark: true,
     foreground: uxg-palette.$uxg-dark-theme-foreground,
-    background: uxg-palette.$uxg-dark-theme-background,
+    background: uxg-palette.$uxg-dark-theme-background
   );
 }
 

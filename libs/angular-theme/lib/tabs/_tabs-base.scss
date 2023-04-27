@@ -1,6 +1,6 @@
-@use "../core/style/spacing"as *;
+@use '../core/style/spacing' as *;
 
-.uxg-tabs>.mat-tab-header {
+.uxg-tabs > .mat-tab-header {
   $tab-radius: 6px;
 
   .mat-ink-bar {
@@ -8,7 +8,7 @@
   }
 
   .mat-tab-labels::after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     left: 0;
@@ -68,7 +68,7 @@
 
         &::before,
         &::after {
-          content: "";
+          content: '';
           display: block;
           position: absolute;
           bottom: 0;
@@ -81,7 +81,7 @@
     }
 
     &:not(.mat-tab-label-active, .mat-tab-label-active + .mat-tab-label):not(:first-child)::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 12px;

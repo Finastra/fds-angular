@@ -32,11 +32,7 @@
   }
 
   .uxg-card-solution.mat-card {
-    background:
-      top left / 40% 30% no-repeat
-      url($sol-wave-top),
-      bottom right / 30% 30% no-repeat
-      url($sol-wave-bot),
+    background: top left / 40% 30% no-repeat url($sol-wave-top), bottom right / 30% 30% no-repeat url($sol-wave-bot),
       top left / 100% 100% no-repeat mat.get-color-from-palette(palette.$uxg-gradient, diagonal);
     color: mat.get-color-from-palette($primary, default-contrast);
   }
