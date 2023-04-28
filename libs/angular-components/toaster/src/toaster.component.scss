@@ -1,39 +1,60 @@
-@use '@finastra/angular-theme' as fds;
-@use '@angular/material' as mat;
+@use '@finastra/fds-theme' as fds;
+
+//TODO: see if we keep the breakpoints in the angular theme
+@use '@finastra/angular-theme/lib/core/layout/breakpoints' as breakpoints;
 
 
 $border-radius: 4px;
-$container-size: 48px;
+$container-size: 64px;
 
 :host {
-  margin: fds.$uxg-spacing-3 4vw;
+  display: flex;
+  flex-direction: row;
+  place-content: stretch flex-start;
+  align-items: stretch;
+  @include fds.margin-y(3);
+  margin-right: 4vw;
+  margin-left: 4vw;
   min-height: $container-size;
   width: 92vw;
   border-radius: $border-radius;
-  @include mat.elevation(8);
+  @include fds.elevation(8);
+
   .icon-container {
+    @include fds.padding(2);
+    display: flex;
+    place-content: center;
+    align-items: center;
     width: $container-size;
+    box-sizing: border-box;
     border-radius: $border-radius 0 0 $border-radius;
-    padding: fds.$uxg-spacing-3;
+
+    mat-icon{
+      padding: 9px;
+      border-radius: 50%;
+    }
   }
   .message {
-    padding: fds.$uxg-spacing-3;
+    @include fds.padding(3);
+    align-self: center;
+    flex: 1 1 0%;
     word-break: break-word;
     white-space: pre-line;
+    border: 1px transparent;
   }
   &.destroy-by-click {
     cursor: pointer;
   }
 
   /* Small Tablet */
-  @media only screen and (min-width: fds.$small-tablet-size-down) and (max-width: fds.$small-tablet-size-up) {
+  @media only screen and (min-width: breakpoints.$small-tablet-size-down) and (max-width: breakpoints.$small-tablet-size-up) {
+    @include fds.margin(3);
     width: 50vw;
-    margin: fds.$uxg-spacing-3;
   }
 
   /* Large Tablet and Desktop */
-  @media only screen and (min-width: fds.$large-tablet-size-down) {
+  @media only screen and (min-width: breakpoints.$large-tablet-size-down) {
+    @include fds.margin(3);
     width: 30vw;
-    margin: fds.$uxg-spacing-3;
   }
 }

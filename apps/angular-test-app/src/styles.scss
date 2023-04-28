@@ -1,5 +1,9 @@
 @use "angular-theme" as fds;
 
+@use "angular-components/toaster/src/toaster.theme" as toaster;
+
+@include toaster.color();
+
 html,
 body {
   height: 100%;
