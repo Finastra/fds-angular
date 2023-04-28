@@ -1,22 +1,22 @@
 @use '@finastra/fds-theme/color' as fds;
 
 @mixin color() {
-  .mat-icon[color=secondary],
+  .mat-icon[color='secondary'],
   .mat-icon.mat-secondary {
     @include fds.color(secondary);
   }
 
-  .mat-icon[color=success],
+  .mat-icon[color='success'],
   .mat-icon.mat-success {
     @include fds.color(success);
   }
 
-  .mat-icon[color=error],
+  .mat-icon[color='error'],
   .mat-icon.mat-error {
     @include fds.color(error);
   }
 
-  .mat-icon[color=gradient],
+  .mat-icon[color='gradient'],
   .mat-icon.mat-gradient {
     @include fds.background(gradient-vertical);
     background-clip: text;

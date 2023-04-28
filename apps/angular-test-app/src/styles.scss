@@ -1,4 +1,4 @@
-@use "angular-theme" as fds;
+@use 'angular-theme' as fds;
 
 @use "angular-components/toaster/src/toaster.theme" as toaster;
 
@@ -11,7 +11,7 @@ body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
 
 section {

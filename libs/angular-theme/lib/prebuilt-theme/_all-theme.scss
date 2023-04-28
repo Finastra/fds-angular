@@ -11,24 +11,26 @@
 
 @import '../../base';
 
-
 @include mat.core();
 
+$dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: mat.define-palette(palette.$primary-dark-palette),
+      accent: mat.define-palette(palette.$secondary-dark-palette)
+    ),
+    typography: mat.define-typography-config()
+  )
+);
 
-$dark-theme: mat.define-dark-theme((
- color: (
-    primary: mat.define-palette(palette.$primary-dark-palette),
-    accent: mat.define-palette(palette.$secondary-dark-palette),
- ),
-  typography: mat.define-typography-config()
-));
-
-$light-theme: mat.define-light-theme((
- color: (
-    primary: mat.define-palette(palette.$primary-light-palette),
-    accent: mat.define-palette(palette.$secondary-light-palette),
- )
-));
+$light-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: mat.define-palette(palette.$primary-light-palette),
+      accent: mat.define-palette(palette.$secondary-light-palette)
+    )
+  )
+);
 
 @include mat.all-component-themes($light-theme);
 :root {
@@ -44,4 +46,3 @@ $light-theme: mat.define-light-theme((
     @include fds.custom-properties(scheme.dark());
   }
 }
-

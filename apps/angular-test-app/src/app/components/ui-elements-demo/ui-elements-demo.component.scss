@@ -10,8 +10,7 @@
 
 .button-default-test,
 .button-stroked-test,
-.button-flat-test
- {
+.button-flat-test {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: $uxg-spacing-3;
@@ -33,7 +32,7 @@
   display: inline-block;
 }
 
-.uxg-tabs-custom-test{
+.uxg-tabs-custom-test {
   background-image: linear-gradient(to right, #322b65 25%, #862670 100%);
   padding-top: $uxg-spacing-2;
 }

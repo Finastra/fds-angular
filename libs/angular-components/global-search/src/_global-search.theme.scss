@@ -49,7 +49,7 @@
     .uxg-global-search-input-area {
       .uxg-global-search-input {
         @include mat.typography-level($config, h2);
-        font-feature-settings: "liga"0, "clig"0;
+        font-feature-settings: 'liga' 0, 'clig' 0;
 
         .mat-form-field-label {
           @include mat.typography-level($config, h2);

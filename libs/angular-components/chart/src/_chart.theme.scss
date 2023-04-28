@@ -3,12 +3,14 @@
 @use '@finastra/angular-theme' as fds;
 
 @mixin typography($config) {
-  .chart-font, .chart-font-axis, .chart-font-legend {
+  .chart-font,
+  .chart-font-axis,
+  .chart-font-legend {
     font: {
       family: mat.font-family($config, body-1);
       size: mat.font-size($config, body-1);
       weight: mat.font-weight($config, body-1);
-    };
+    }
   }
 }
 
@@ -44,7 +46,9 @@
     }
   }
 
-  .chart-font, .chart-font-axis, .chart-font-legend {
+  .chart-font,
+  .chart-font-axis,
+  .chart-font-legend {
     color: map.get($foreground, text);
     background-color: map.get($background, 'background');
   }

@@ -9,7 +9,6 @@
   $fill-background: palette.get-color-from-palette($primary, default, 0.08);
   $error-background: palette.get-color-from-palette($error, default, 0.04);
 
-
   .mat-form-field-appearance-outline {
     .mat-form-field-outline {
       background-color: map.get($background, card);
@@ -63,7 +62,6 @@
       color: map.get($error, default);
     }
 
-    
     .mat-form-field-ripple {
       background-color: map.get($error, default);
     }

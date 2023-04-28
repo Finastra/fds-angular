@@ -6,8 +6,8 @@
 
 .filter-panel-container {
   height: 100%;
-  border: 1px solid rgba(0,0,0,.04);
-  box-shadow: 0 2px 2px rgba(0,0,0,.24), 0 0 2px rgba(0,0,0,.12);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24), 0 0 2px rgba(0, 0, 0, 0.12);
 }
 
 .filter-panel-side {
@@ -64,21 +64,21 @@
   align-items: baseline;
 }
 
-.documentation{
+.documentation {
   width: 50%;
   border-collapse: collapse;
   tr {
     font-family: Roboto, sans-serif;
-    border-bottom: 1px solid #E6ECF1;
+    border-bottom: 1px solid #e6ecf1;
     td {
       padding: 8px;
     }
-    &.header{
-      color: #9DAAB6;
+    &.header {
+      color: #9daab6;
       font-size: 16px;
       font-weight: 500;
       line-height: 1.5;
-      border-bottom: 2px solid #E6ECF1;
+      border-bottom: 2px solid #e6ecf1;
       white-space: nowrap;
     }
   }

@@ -36,24 +36,24 @@ $close-button-size-small: 32px;
       }
 
       // .mat-form-field-infix {
-        // @include flex-layout.layout-bp(xs) {
-        //   padding-bottom: 0;
-        // }
+      // @include flex-layout.layout-bp(xs) {
+      //   padding-bottom: 0;
+      // }
 
-        // .mat-form-field-label-wrapper {
-        //   @include flex-layout.layout-bp(xs) {
-        //     left: fds.$uxg-spacing-1;
-        //     top: 0.2em;
-        //   }
-        // }
-      }
-
-      // .mat-input-element {
+      // .mat-form-field-label-wrapper {
       //   @include flex-layout.layout-bp(xs) {
-      //     height: 50px;
-      //     padding: 1.5rem 0.2rem;
+      //     left: fds.$uxg-spacing-1;
+      //     top: 0.2em;
       //   }
       // }
+    }
+
+    // .mat-input-element {
+    //   @include flex-layout.layout-bp(xs) {
+    //     height: 50px;
+    //     padding: 1.5rem 0.2rem;
+    //   }
+    // }
     // }
 
     .uxg-global-search-close-overlay-button {

@@ -8,7 +8,7 @@
   $background: map.get($theme, background);
 
   uxg-filter-group {
-    .uxg-group-filter{
+    .uxg-group-filter {
       display: flex;
       .mat-badge-content {
         color: fds.get-color-from-palette($primary, default) !important;
@@ -18,7 +18,6 @@
     }
 
     .uxg-expansion-filter {
-
       .expand-button {
         background-color: fds.get-color-from-palette($primary, default, 0.15);
       }

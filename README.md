@@ -10,7 +10,7 @@ If you are looking for a modern, framework agnostic version of the Finastra desi
 
 A CSS implementation of our foundations specifically made for Angular.
 
-[Learn more](./themes/angular-theme/README.md)
+[Learn more](./libs/angular-theme/README.md)
 
 # Angular components
 
