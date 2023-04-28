@@ -10,7 +10,7 @@
   .uxg-expansion-filter.mat-expansion-panel {
     background: transparent;
 
-    &:not([class*=mat-elevation-z]) {
+    &:not([class*='mat-elevation-z']) {
       @include mat.elevation(0);
     }
 

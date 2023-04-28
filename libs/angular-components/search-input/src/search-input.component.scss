@@ -1,10 +1,9 @@
 .uxg-search-input {
   display: flex;
-  .mat-form-field  {
+  .mat-form-field {
     flex: 1;
   }
-  .mat-form-field-appearance-outline .mat-form-field-wrapper .mat-form-field-infix{
+  .mat-form-field-appearance-outline .mat-form-field-wrapper .mat-form-field-infix {
     top: -0.5em;
   }
 }
-

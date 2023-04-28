@@ -5,7 +5,7 @@
 @mixin theme($theme) {
   $primary: map.get($theme, primary);
   $foreground: map.get($theme, foreground);
-  $filter-tags-background-color: fds.get-color-from-palette($primary, default, .12);
+  $filter-tags-background-color: fds.get-color-from-palette($primary, default, 0.12);
   $filter-tags-option-height: 32px;
 
   uxg-filter-tags {
@@ -41,8 +41,9 @@
     }
 
     mat-checkbox {
-      &.mat-checkbox-checked, &.mat-checkbox-indeterminate {
-        .mat-checkbox-label{
+      &.mat-checkbox-checked,
+      &.mat-checkbox-indeterminate {
+        .mat-checkbox-label {
           color: fds.get-color-from-palette($primary, default);
         }
       }

@@ -1,9 +1,11 @@
 // @use 'sass:map';
-// @use '@angular/material' as mat;
+@use '@angular/material' as mat;
 // @use '../core/theming/palette' as palette;
-@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/color' as color;
+@use '@finastra/fds-theme/typography' as typography;
+@use '@finastra/fds-theme/spacing' as spacing;
 
-@mixin theme() {
+@mixin color() {
   // $primary: map.get($theme, primary);
   // $accent: map.get($theme, accent);
   // $success: map.get($theme, success);
@@ -122,24 +124,28 @@
   // }
 
   .mat-mdc-fab.mat-gradient {
-    // color: palette.get-color-from-palette($primary, default-contrast);
-    // background: palette.get-color-from-palette(palette.$uxg-gradient, vertical);
-
-    @include fds.background(gradient-vertical);
-    @include fds.color(on-gradient);
+    @include color.background(gradient-vertical);
+    @include color.color(on-gradient);
   }
 }
 
-// @mixin typography($config) {
-//   button[dense],
-//   a[dense],
-//   *[dense] button {
-//     @include mat.typography-level($config, button-3);
-//   }
+@mixin typography() {
+  button[dense],
+  a[dense],
+  *[dense] button {
+    @include typography.typography('button-3');
+    @include spacing.padding-x(3);
+  }
 
-//   button[large],
-//   a[large],
-//   *[large] button {
-//     @include mat.typography-level($config, button-1);
-//   }
-// }
+  button[large],
+  a[large],
+  *[large] button {
+    @include typography.typography('button-1');
+    @include spacing.padding-x(4);
+  }
+}
+
+@mixin theme() {
+  @include color();
+  @include typography();
+}

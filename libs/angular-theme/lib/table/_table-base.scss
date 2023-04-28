@@ -1,4 +1,4 @@
-@use "../core/style/spacing" as *;
+@use '../core/style/spacing' as *;
 
 $uxg-table-cell-icon-margin: $uxg-spacing-2;
 $uxg-table-cell-margin: $uxg-spacing-3;
@@ -6,7 +6,8 @@ $uxg-table-row-height: 44px;
 
 .mat-table {
   tr {
-    th, td {
+    th,
+    td {
       white-space: nowrap;
     }
   }

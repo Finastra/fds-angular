@@ -3,7 +3,7 @@
 @use '../core/theming/palette';
 
 @mixin uxg-badge-color($color-name, $color) {
-  &[matBadgeColor=#{$color-name}],
+  &[matBadgeColor='#{$color-name}'],
   &.mat-badge-#{$color-name} {
     span.mat-badge-content {
       background-color: palette.get-color-from-palette($color, default);

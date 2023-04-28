@@ -5,7 +5,8 @@
   $primary: map.get($theme, primary);
 
   mat-checkbox {
-    &.mat-checkbox-checked, &.mat-checkbox-indeterminate {
+    &.mat-checkbox-checked,
+    &.mat-checkbox-indeterminate {
       .node-label {
         color: fds.get-color-from-palette($primary, default);
       }

@@ -11,15 +11,7 @@ $uxg-spacing-6: map.get(spacing.$tokens, spacing-6) !default;
 
 @mixin styles() {
   $sides: (top, bottom, left, right);
-  $spacings: (
-    $uxg-spacing-0,
-    $uxg-spacing-1,
-    $uxg-spacing-2,
-    $uxg-spacing-3,
-    $uxg-spacing-4,
-    $uxg-spacing-5,
-    $uxg-spacing-6
-  );
+  $spacings: ($uxg-spacing-0, $uxg-spacing-1, $uxg-spacing-2, $uxg-spacing-3, $uxg-spacing-4, $uxg-spacing-5, $uxg-spacing-6);
 
   @for $i from 1 through length($spacings) {
     @each $side in $sides {

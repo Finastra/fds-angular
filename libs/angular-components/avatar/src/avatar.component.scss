@@ -6,7 +6,12 @@
   @each $map in $maps {
     @each $tone, $color in $map {
       @if type_of($tone) == number and $tone >= $minTone {
-        $palette: map-merge($palette, ( $index: $color ));
+        $palette: map-merge(
+          $palette,
+          (
+            $index: $color
+          )
+        );
         $index: $index + 1;
       }
     }

@@ -7,8 +7,8 @@
   $background: map.get($theme, background);
   .uxg-horizontal-status-stepper {
     .icon-container {
-      color:  fds.get-color-from-palette($foreground, text);
-      background-color:  fds.get-color-from-palette($background,  focused-button);
+      color: fds.get-color-from-palette($foreground, text);
+      background-color: fds.get-color-from-palette($background, focused-button);
     }
 
     .completed,
@@ -20,9 +20,7 @@
     }
 
     .horizontal-line {
-      border-color: fds.get-color-from-palette($foreground, divider);;
+      border-color: fds.get-color-from-palette($foreground, divider);
     }
   }
-
-
 }

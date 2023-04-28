@@ -1,17 +1,17 @@
 @use 'sass:map';
 
 @mixin theme($theme) {
-    $foreground: map.get($theme, foreground);
-    $background: map.get($theme, background);
-    $icon: map.get($foreground, icon);
-    $card: map.get($background, card);
+  $foreground: map.get($theme, foreground);
+  $background: map.get($theme, background);
+  $icon: map.get($foreground, icon);
+  $card: map.get($background, card);
 
-    uxg-video-thumbnail {
-        .play-button {
-            background: rgba(#212121, 0.36);
-            .mat-icon {
-                color: white;
-            }
-        }
+  uxg-video-thumbnail {
+    .play-button {
+      background: rgba(#212121, 0.36);
+      .mat-icon {
+        color: white;
+      }
     }
+  }
 }
