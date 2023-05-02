@@ -6,6 +6,7 @@
 @forward '../core/style/spacing';
 
 @use '../avatar/avatar-theme' as avatar;
+@use '../button-toggle/button-toggle-theme' as button-toggle;
 @use '../icon/icon-theme' as icon;
 @use '../link/link-theme' as link;
 
@@ -23,7 +24,8 @@ $light-theme: mat.define-light-theme(
   )
 );
 
-@include avatar.color();
+@include avatar.color(); //TODO: do we only include color here? avatar has also typography
+@include button-toggle.color(); //TODO: do we only include color here? button toggle has also typography
 @include icon.color();
 @include link.color();
 
