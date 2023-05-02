@@ -3,7 +3,6 @@
 @use '@finastra/fds-theme/typography' as typo;
 
 @mixin color() {
-
   .mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
     .mat-button-toggle {
       @include fds.color(secondary);
