@@ -1,4 +1,4 @@
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme' as fds;
 
 :host {
   display: block;
@@ -6,8 +6,7 @@
   width: 100%;
   height: 15px;
 
-  margin-top: fds.$uxg-spacing-1;
-  margin-bottom: fds.$uxg-spacing-1;
+  @include fds.margin(1, top, bottom);
 
   &::before {
     display: inline-block;
