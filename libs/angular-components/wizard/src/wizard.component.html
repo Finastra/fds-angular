@@ -1,22 +1,22 @@
 <div class="flex-row flex-col-xs fill uxg-wizard">
-  <div fxFlex="66" fxFlex.xs="0"></div>
-  <div fxHide.xs fxFlex class="uxg-wizard-right-panel">
+  <div class="filler-row"></div>
+  <div class="flex-1 hide-xs uxg-wizard-right-panel">
     <div *ngIf="showCloseButton" class="close-button">
       <button mat-icon-button (click)="navService.cancel()">
         <mat-icon aria-hidden="false" aria-label="Close">clear</mat-icon>
       </button>
     </div>
   </div>
-  <h4 fxHide.xs class="uxg-wizard-title uxg-h4">
+  <h4 class="hide-xs uxg-wizard-title uxg-h4">
     <ng-content select="uxg-wizard-title"></ng-content>
   </h4>
 
-  <div fxHide fxShow.xs class="flex-col uxg-wizard-timeline-xs">
+  <div class="flex-col uxg-wizard-timeline-xs">
     <div class="flex-row justify-around">
       <div class="step active">
         <div>{{ navService.currentPage ? pageCollection.getPageIndex(navService.currentPage) + 1 : 1 }}</div>
       </div>
-      <div fxFlex="80" class="flex-col justify-around align-stretch">
+      <div class="flex-col flex-80 justify-around align-stretch">
         <div class="step-info-container">
           <div class="step-title uxg-h5">
             <ng-template [ngTemplateOutlet]="navService.currentPageTitle"></ng-template>
@@ -40,20 +40,20 @@
     (touchstart)="swipe($event, 'start')"
     (touchend)="swipe($event, 'end')"
   >
-    <main [@wizardAnimation]="currentPageId" class="uxg-wizard-content" fxFlex>
-      <div fxHide.xs *ngIf="showPageTitles" class="uxg-wizard-page-title uxg-h3">
+    <main [@wizardAnimation]="currentPageId" class="flex-1 uxg-wizard-content">
+      <div *ngIf="showPageTitles" class="hide-xs uxg-wizard-page-title uxg-h3">
         <ng-template [ngTemplateOutlet]="navService.currentPageTitle"></ng-template>
       </div>
       <ng-content></ng-content>
     </main>
 
     <mat-divider></mat-divider>
-    <div class="uxg-wizard-footer" fxFlex="10">
+    <div class="uxg-wizard-footer">
       <div class="uxg-wizard-footer-buttons-wrapper">
         <ng-content select="uxg-wizard-button"></ng-content>
 
-        <div fxHide fxShow.xs class="dot-navigation">
-          <div fxFlex="70" class="flex-row justify-center dot-navigation-flex">
+        <div class="dot-navigation">
+          <div class="flex-row flex-70 justify-center dot-navigation-flex">
             <ng-container *ngFor="let page of pages">
               <div
                 class="dot"
@@ -69,8 +69,8 @@
     </div>
   </div>
 
-  <div fxHide.xs class="flex-row uxg-wizard-timeline">
-    <div fxFlex="20" class="flex-col justify-around align-center">
+  <div class="flex-row hide-xs uxg-wizard-timeline">
+    <div class="flex-col flex-20 justify-around align-center">
       <div class="timeline-progress-bar" [ngStyle]="{ 'height.%': (100 * (pages.length - 1)) / pages.length }">
         <span
           id="dp-create-project-wizard-timeline-progress"
@@ -97,7 +97,7 @@
         </div>
       </ng-container>
     </div>
-    <div fxFlex="80" class="flex-col justify-around align-stretch">
+    <div class="flex-col flex-80 justify-around align-stretch">
       <ng-container *ngFor="let page of pages">
         <div
           class="flex-col step-info-container"

@@ -1,10 +1,10 @@
 <div class="flex-col fill uxg-global-search-overlay">
-  <div fxFlex="5" class="uxg-global-search-close-overlay-button">
+  <div class="uxg-global-search-close-overlay-button">
     <button aria-label="Close" mat-icon-button (click)="closeSearch()" extra-large>
       <mat-icon>clear</mat-icon>
     </button>
   </div>
-  <div fxFlex="30" fxFlex.lt-lg="20" fxFlex.xs="15" [@slideContent]="animationState" class="flex-row uxg-global-search-input-area">
+  <div [@slideContent]="animationState" class="flex-row uxg-global-search-input-area">
     <mat-form-field floatLabel="auto" class="uxg-global-search-input">
       <mat-icon #searchIcon color="primary" matPrefix class="uxg-global-search-icon">search</mat-icon>
       <input matInput #searchInput type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Global search" />

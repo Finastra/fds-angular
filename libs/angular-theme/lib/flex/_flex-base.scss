@@ -7,16 +7,16 @@
   </div>
 ```
 
-### In sass
+### In your sass definitions
 ```scss
   // style.scss
-  @use 'flex-layout'; // import it
+  @use '@finastra/angular-theme' as fds;
 
   .some-div {
     margin-right: 16px;
 
-    @include flex-layout.breakpoint('lt-sm') { // use the breakpoint mixin
-        margin-right: 0;
+    @include fds.flex-breakpoint('lt-sm') { // use the breakpoint mixin
+      margin-right: 0;
     }
   }
 ```
@@ -30,7 +30,7 @@ $md: 1279px;
 $lg: 1919px;
 $xl: 5000px;
 
-// Empty comments at ends is to prevent VS from Collapsing maps onto a single line
+// Empty comments at ends is to prevent VS from collapsing maps onto a single line
 $fx-media-queries: (
   //
   'xs': 'screen and (max-width: #{$xs})',
@@ -61,7 +61,7 @@ $fx-media-queries: (
   //
 );
 
-@mixin breakpoint($bp) {
+@mixin flex-breakpoint($bp) {
   @media #{map-get($fx-media-queries, $bp)} {
     @content;
   }
@@ -98,43 +98,43 @@ $fx-media-queries: (
 }
 
 .flex-col-xs {
-  @include breakpoint('xs') {
+  @include flex-breakpoint('xs') {
     flex-direction: column;
   }
 }
 
 .flex-col-lt-md {
-  @include breakpoint('lt-md') {
+  @include flex-breakpoint('lt-md') {
     flex-direction: column;
   }
 }
 
 .flex-col-lt-lg {
-  @include breakpoint('lt-lg') {
+  @include flex-breakpoint('lt-lg') {
     flex-direction: column;
   }
 }
 
 .flex-row-xs {
-  @include breakpoint('xs') {
+  @include flex-breakpoint('xs') {
     flex-direction: row;
   }
 }
 
 .flex-row-lt-md {
-  @include breakpoint('lt-md') {
+  @include flex-breakpoint('lt-md') {
     flex-direction: row;
   }
 }
 
 .flex-row-lt-lg {
-  @include breakpoint('lt-lg') {
+  @include flex-breakpoint('lt-lg') {
     flex-direction: row;
   }
 }
 
 .flex-row-gt-xs {
-  @include breakpoint('gt-xs') {
+  @include flex-breakpoint('gt-xs') {
     flex-direction: row;
   }
 }
@@ -196,6 +196,21 @@ $fx-media-queries: (
 
 .flex-grow75 {
   flex: 0 1 75%;
+}
+
+.flex-20 {
+  flex: 1 1 100%;
+  max-width: 20%;
+}
+
+.flex-70 {
+  flex: 1 1 100%;
+  max-width: 70%;
+}
+
+.flex-80 {
+  flex: 1 1 100%;
+  max-width: 80%;
 }
 
 // Justify content
@@ -346,25 +361,25 @@ $fx-media-queries: (
 }
 
 .hide-xs {
-  @include breakpoint('xs') {
+  @include flex-breakpoint('xs') {
     display: none;
   }
 }
 
 .hide-gt-xs {
-  @include breakpoint('gt-xs') {
+  @include flex-breakpoint('gt-xs') {
     display: none;
   }
 }
 
 .hide-sm {
-  @include breakpoint('lt-md') {
+  @include flex-breakpoint('lt-md') {
     display: none;
   }
 }
 
 .hide-gt-sm {
-  @include breakpoint('gt-sm') {
+  @include flex-breakpoint('gt-sm') {
     display: none;
   }
 }
