@@ -5,10 +5,10 @@
 
 @use './lib/core/theming/palette';
 @use './lib/core/typography/typography';
+
 @forward './lib/core/style/spacing';
 @forward './lib/core/layout/breakpoints';
-
-@forward './lib/flex/flex-base';
+@forward './lib/core/layout/flex';
 
 @use './lib/avatar/avatar-theme' as avatar;
 @use './lib/icon/icon-theme' as icon;

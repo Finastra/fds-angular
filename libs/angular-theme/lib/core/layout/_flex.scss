@@ -357,29 +357,29 @@ $fx-media-queries: (
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 .hide-xs {
   @include flex-breakpoint('xs') {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-gt-xs {
   @include flex-breakpoint('gt-xs') {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-sm {
   @include flex-breakpoint('lt-md') {
-    display: none;
+    display: none !important;
   }
 }
 
 .hide-gt-sm {
   @include flex-breakpoint('gt-sm') {
-    display: none;
+    display: none !important;
   }
 }

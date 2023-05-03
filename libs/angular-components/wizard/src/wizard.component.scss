@@ -63,6 +63,9 @@ $wizard-title-top: 3%;
       position: initial;
       width: 100%;
 
+      flex: 1 1 100%;
+      max-height: 100%;
+
       uxg-wizard-page {
         width: 100%;
         top: $wizard-page-top-xs;
