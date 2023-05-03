@@ -1,17 +1,17 @@
-@use "@finastra/fds-theme/color" as fds;
+@use '@finastra/fds-theme/color' as fds;
 
 @mixin color() {
   uxg-skeleton-text {
     @include fds.background(surface-selected);
 
     &::before {
-    background-image: linear-gradient(
-      90deg,
-      transparent 0%,
-      var(--fds-on-surface-medium) 30%,
-      var(--fds-on-surface-medium) 70%,
-      transparent 100%
-    );
+      background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--fds-on-surface-medium) 30%,
+        var(--fds-on-surface-medium) 70%,
+        transparent 100%
+      );
     }
   }
 }
