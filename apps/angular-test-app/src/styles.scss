@@ -1,5 +1,9 @@
 @use 'angular-theme' as fds;
 
+@use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
+
+@include skeleton.color();
+
 html,
 body {
   height: 100%;
