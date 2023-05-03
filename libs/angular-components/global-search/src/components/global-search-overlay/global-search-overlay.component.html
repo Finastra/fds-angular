@@ -1,10 +1,10 @@
-<div fxLayout="column" class="uxg-global-search-overlay" fxFlexFill>
+<div class="flex-col fill uxg-global-search-overlay">
   <div fxFlex="5" class="uxg-global-search-close-overlay-button">
     <button aria-label="Close" mat-icon-button (click)="closeSearch()" extra-large>
       <mat-icon>clear</mat-icon>
     </button>
   </div>
-  <div fxFlex="30" fxFlex.lt-lg="20" fxFlex.xs="15" fxLayout="row" [@slideContent]="animationState" class="uxg-global-search-input-area">
+  <div fxFlex="30" fxFlex.lt-lg="20" fxFlex.xs="15" [@slideContent]="animationState" class="flex-row uxg-global-search-input-area">
     <mat-form-field floatLabel="auto" class="uxg-global-search-input">
       <mat-icon #searchIcon color="primary" matPrefix class="uxg-global-search-icon">search</mat-icon>
       <input matInput #searchInput type="search" placeholder="Search" autocomplete="off" spellcheck="false" aria-label="Global search" />
@@ -12,8 +12,8 @@
   </div>
   <ng-container *ngIf="results$ | async as results; else emptySearch">
     <ng-container *ngIf="results.length; else empty">
-      <div fxFlex="65" fxFlex.lt-lg="75" fxFlex.xs="80" fxLayout fxLayout.lt-lg="column" class="uxg-global-search-container-parent">
-        <div fxLayout="column" fxFlex.lt-lg="auto" class="uxg-global-search-results-container">
+      <div fxFlex="65" fxFlex.lt-lg="75" fxFlex.xs="80" class="flex-row flex-col-lt-lg uxg-global-search-container-parent">
+        <div fxFlex.lt-lg="auto" class="flex-col uxg-global-search-results-container">
           <!-- results status area -->
           <ng-container [ngTemplateOutlet]="resultStatusTemplate"></ng-container>
           <div class="uxg-global-search-results-counter">
@@ -48,7 +48,7 @@
         <!-- filter area -->
         <ng-container *ngIf="groupBy && showFilter">
           <mat-divider fxHide.lt-lg [vertical]="true"></mat-divider>
-          <div fxLayout="column" fxLayout.lt-lg="row wrap" fxFlexOrder.lt-lg="-1" class="uxg-global-search-results-filter">
+          <div fxLayout.lt-lg="row wrap" fxFlexOrder.lt-lg="-1" class="flex-col uxg-global-search-results-filter">
             <h5 class="uxg-h5">Filter results by</h5>
             <ng-container *ngFor="let resultGroup of results">
               <mat-checkbox color="primary" [checked]="resultGroup.selected ?? false" (change)="toggleFilter(resultGroup)">
@@ -74,7 +74,7 @@
 </ng-template>
 
 <ng-template #defaultTemplate let-result>
-  <div fxLayout="column">
+  <div class="flex-col">
     <h5 class="uxg-subtitle-1">{{ result.title }}</h5>
     <div class="uxg-caption">
       {{ result.body }}
