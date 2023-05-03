@@ -30,7 +30,7 @@ $md: 1279px;
 $lg: 1919px;
 $xl: 5000px;
 
-// Empty comments at ends is to prevent VS from collapsing maps onto a single line
+// empty comments at the end to prevent VS from collapsing maps onto a single line
 $fx-media-queries: (
   //
   'xs': 'screen and (max-width: #{$xs})',
@@ -67,7 +67,7 @@ $fx-media-queries: (
   }
 }
 
-// Flex display
+// flex display
 
 .flex {
   display: flex;
@@ -79,7 +79,7 @@ $fx-media-queries: (
   box-sizing: border-box;
 }
 
-// Flex direction
+// flex direction
 
 .flex-row {
   display: flex;
@@ -139,7 +139,7 @@ $fx-media-queries: (
   }
 }
 
-// Shorthands
+// shorthands
 
 .flex-initial {
   flex: initial; // 0 1 auto;
@@ -149,7 +149,7 @@ $fx-media-queries: (
   flex: auto; // 1 1 auto;
 }
 
-//https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg
+// https://www.w3.org/TR/css-flexbox-1/images/rel-vs-abs-flex.svg
 .flex-1 {
   flex: 1; //flex: 1 1 0 i.e. fxFlex
 }
@@ -214,7 +214,6 @@ $fx-media-queries: (
 }
 
 // Justify content
-
 .justify-start {
   justify-content: flex-start;
 }
@@ -269,7 +268,7 @@ $fx-media-queries: (
   align-content: space-evenly;
 }
 
-// Align items
+// align items
 
 .align-start {
   align-items: flex-start;
@@ -296,7 +295,7 @@ $fx-media-queries: (
   align-items: center;
 }
 
-// Align self
+// align self
 
 .item-start {
   align-self: flex-start;
@@ -318,7 +317,7 @@ $fx-media-queries: (
   align-self: baseline;
 }
 
-// Gap
+// gap
 
 .gap-4 {
   gap: 4px;
@@ -336,7 +335,7 @@ $fx-media-queries: (
   gap: 20px;
 }
 
-// Item utilities
+// item utilities
 
 .center {
   display: block;
