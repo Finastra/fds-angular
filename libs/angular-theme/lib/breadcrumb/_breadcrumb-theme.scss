@@ -2,9 +2,7 @@
 @use '@finastra/fds-theme/color' as color;
 @use '@finastra/fds-theme/typography' as typography;
 
-
 @mixin theme($theme: null) {
-
   .uxg-breadcrumb {
     a {
       @include color.color(foreground);
@@ -52,4 +50,3 @@
     @include typography.typography(caption);
   }
 }
-
