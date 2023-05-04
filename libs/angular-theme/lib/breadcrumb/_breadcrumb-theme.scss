@@ -25,10 +25,10 @@
     }
 
     &[color='accent'] {
-      @include color.color(accent);
+      @include color.color(secondary);
 
       a {
-        @include color.color(accent);
+        @include color.color(secondary);
         text-decoration: none;
       }
 
