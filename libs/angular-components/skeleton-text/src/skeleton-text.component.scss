@@ -8,17 +8,19 @@
 
   @include fds.margin(1, top, bottom);
 
-  &::before {
-    display: inline-block;
-    content: '';
-    opacity: 0.1;
-    width: 300%;
-    height: 300%;
-    animation-duration: 1.2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: shine;
-    animation-timing-function: cubic-bezier(0, 0, 0.35, 1);
+  &[animated] {
+    &::before {
+      display: inline-block;
+      content: '';
+      opacity: 0.1;
+      width: 300%;
+      height: 300%;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: shine;
+      animation-timing-function: cubic-bezier(0, 0, 0.35, 1);
+    }
   }
   @keyframes shine {
     0% {
