@@ -1,36 +1,38 @@
-@use 'sass:map';
 @use '@angular/material' as mat;
-@use '../core/theming/palette';
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography' as typo;
 
-@mixin theme($theme) {
-  $background: map.get($theme, background);
-  $foreground: map.get($theme, foreground);
-  $primary: map.get($theme, primary);
+@mixin color() {
+  .mat-mdc-chip.mat-mdc-standard-chip {
+    border: 1px solid;
+    @include fds.property(border-color, outline);
+    @include fds.color(on-surface-medium);
 
-  .mat-chip.mat-standard-chip {
-    background-color: palette.get-color-from-palette($background, raised-button);
-    border: 1px solid palette.get-color-from-palette($foreground, text, 0.15);
-    color: palette.get-color-from-palette($foreground, text);
+    &:not(.mat-mdc-chip-disabled) {
+      @include fds.property(background-color, surface);
 
-    &:not(.mat-chip-disabled) {
       .mat-icon {
-        color: palette.get-color-from-palette($foreground, text);
+        @include fds.color(on-surface-medium);
         opacity: 0.75;
       }
 
+      .mat-mdc-chip-action-label {
+        @include fds.color(on-background);
+      }
+
       .mat-ripple-element {
-        background: palette.get-color-from-palette($primary, default, 0.2);
+        @include fds.property(background-color, outline-info);
       }
 
       &:hover {
-        color: palette.get-color-from-palette($primary, default);
+        @include fds.color(primary);
 
         .mat-icon {
-          color: palette.get-color-from-palette($primary, default);
+          @include fds.color(primary);
         }
       }
 
-      .mat-chip-remove {
+      .mat-mdc-chip-remove {
         opacity: 0.75;
 
         &:hover {
@@ -38,25 +40,29 @@
         }
       }
 
-      &.mat-chip-selected {
+      &[selected],
+      &.mat-mdc-chip-highlighted {
         &,
         &.mat-primary {
-          background-color: palette.get-color-from-palette($primary, default, 0.09);
-          border: 1px solid palette.get-color-from-palette($primary, default);
-          color: palette.get-color-from-palette($primary, default);
+          @include fds.property(background-color, surface-selected);
+          @include fds.property(border-color, primary);
 
           .mat-icon {
-            color: palette.get-color-from-palette($primary, default);
+            @include fds.color(primary);
             opacity: 1;
           }
 
           .mat-ripple-element {
-            background: palette.get-color-from-palette($primary, default, 0.2);
+            @include fds.property(background-color, outline-info);
             opacity: 1;
           }
 
-          .mat-chip-remove {
-            color: palette.get-color-from-palette($primary, default);
+          .mat-mdc-chip-action-label {
+            @include fds.color(primary);
+          }
+
+          .mat-mdc-chip-remove {
+            @include fds.color(primary);
             opacity: 1;
           }
         }
@@ -64,30 +70,40 @@
     }
 
     &::after {
-      background-color: palette.get-color-from-palette($primary, default);
+      @include fds.property(background-color, primary);
     }
 
-    &.mat-chip-disabled {
-      background-color: palette.get-color-from-palette($foreground, base, 0.1);
-      color: palette.get-color-from-palette($foreground, text, 0.5);
-      border-color: palette.get-color-from-palette($foreground, text, 0.15);
+    &.mat-mdc-chip-disabled {
+      @include fds.property(background-color, surface-disabled);
       opacity: 1;
+
+      .mat-icon {
+        @include fds.color(on-surface-medium);
+        opacity: 0.75;
+      }
+
+      .mat-mdc-chip-action-label {
+        @include fds.color(on-surface-medium);
+      }
     }
   }
 }
 
 @mixin typography($config) {
-  .mat-chip.mat-standard-chip {
-    @include mat.typography-level($config, caption);
+  .mat-mdc-chip.mat-mdc-standard-chip {
+    @include typo.typography(body-3);
 
     &[dense] {
-      @include mat.typography-level($config, legend);
-
-      font-weight: mat.font-weight($config, caption);
+      @include typo.typography(body-4);
     }
 
     &[large] {
-      @include mat.typography-level($config, body-2);
+      @include typo.typography(body-2);
     }
   }
+}
+
+@mixin theme($typography-config) {
+  @include color();
+  @include typography($typography-config);
 }

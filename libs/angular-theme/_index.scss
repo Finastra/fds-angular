@@ -10,6 +10,7 @@
 
 @use './lib/avatar/avatar-theme' as avatar;
 @use './lib/button-toggle/button-toggle-theme' as button-toggle;
+@use './lib/chips/chips-theme' as chips;
 @use './lib/icon/icon-theme' as icon;
 @use './lib/link/link-theme' as link;
 @use './lib/button/button-theme' as button;
@@ -50,6 +51,7 @@ $light-theme: mat.define-light-theme(
 
 @include avatar.theme();
 @include button-toggle.theme($typography-config);
+@include chips.theme($typography-config);
 @include icon.color();
 @include link.color();
 @include button.theme();
