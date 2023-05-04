@@ -22,7 +22,7 @@
 ```
 */
 
-// Breakpoints
+// breakpoints
 
 $xs: 599px;
 $sm: 959px;
@@ -198,22 +198,8 @@ $fx-media-queries: (
   flex: 0 1 75%;
 }
 
-.flex-20 {
-  flex: 1 1 100%;
-  max-width: 20%;
-}
+// justify content
 
-.flex-70 {
-  flex: 1 1 100%;
-  max-width: 70%;
-}
-
-.flex-80 {
-  flex: 1 1 100%;
-  max-width: 80%;
-}
-
-// Justify content
 .justify-start {
   justify-content: flex-start;
 }
@@ -238,7 +224,7 @@ $fx-media-queries: (
   justify-content: space-evenly;
 }
 
-// Align content
+// align content
 
 .content-start {
   align-content: flex-start;
@@ -317,24 +303,6 @@ $fx-media-queries: (
   align-self: baseline;
 }
 
-// gap
-
-.gap-4 {
-  gap: 4px;
-}
-
-.gap-5 {
-  gap: 5px;
-}
-
-.gap-10 {
-  gap: 10px;
-}
-
-.gap-20 {
-  gap: 20px;
-}
-
 // item utilities
 
 .center {
@@ -380,5 +348,15 @@ $fx-media-queries: (
 .hide-gt-sm {
   @include flex-breakpoint('gt-sm') {
     display: none !important;
+  }
+}
+
+// mixins
+
+@mixin flex-size-classes($values: 20 33 66 80) {
+  @each $value in $values {
+    *.flex-#{$value} {
+      flex: 1 1 $value * 1%;
+    }
   }
 }

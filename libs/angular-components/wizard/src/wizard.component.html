@@ -48,12 +48,12 @@
     </main>
 
     <mat-divider></mat-divider>
-    <div class="uxg-wizard-footer">
+    <div class="uxg-wizard-footer" [class.xs]="(xs | async)?.matches">
       <div class="uxg-wizard-footer-buttons-wrapper">
         <ng-content select="uxg-wizard-button"></ng-content>
 
         <div class="dot-navigation">
-          <div class="flex-row flex-70 justify-center dot-navigation-flex">
+          <div class="flex-row justify-center dot-navigation-flex">
             <ng-container *ngFor="let page of pages">
               <div
                 class="dot"

@@ -104,8 +104,9 @@ $wizard-title-top: 3%;
 
     .dot-navigation {
       display: none;
+
       @include fds.flex-breakpoint('xs') {
-        display: initial;
+        display: flex;
       }
 
       order: 2;
@@ -113,6 +114,7 @@ $wizard-title-top: 3%;
       width: 50%;
 
       .dot-navigation-flex {
+        flex: 1 1 70%;
         margin: auto;
 
         .dot {

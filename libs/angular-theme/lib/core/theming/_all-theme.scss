@@ -26,14 +26,10 @@
 // @use '../../tabs/tabs-theme';
 // @use '../../toolbar/toolbar-theme';
 
-// TODO: fix
-// @use './color-utility';
-// @use './light-css-variables';
-// @use './dark-css-variables';
+@use './color-utility';
 
 @use './theming' as theme;
 
-// TODO: fix
 @mixin uxg-core-theme($theme) {
   $foreground: map.get($theme, foreground);
   $background: map.get($theme, background);
@@ -46,19 +42,21 @@
   }
 
   #{if(&, '&', ':root')} {
-    @if $is-dark {
-      @include dark-css-variables.dark-vars();
+    @if $theme == theme.$light-theme {
+      @include color.custom-properties(scheme.light());
+      @include typography.custom-properties();
     } @else {
-      @include light-css-variables.light-vars();
+      @include color.custom-properties(scheme.dark());
     }
 
-    color: mat.get-color-from-palette($foreground, text);
+    // TODO: fix ?
+    // color: mat.get-color-from-palette($foreground, text);
 
-    *::selection {
-      background: mat.get-color-from-palette($background, selected-text);
-      color: mat.get-color-from-palette($foreground, text);
-      -webkit-text-fill-color: mat.get-color-from-palette($foreground, text);
-    }
+    // *::selection {
+    //   background: mat.get-color-from-palette($background, selected-text);
+    //   color: mat.get-color-from-palette($foreground, text);
+    //   -webkit-text-fill-color: mat.get-color-from-palette($foreground, text);
+    // }
   }
 
   @include color-utility.uxg-color-utility($theme);
@@ -67,20 +65,11 @@
 @mixin uxg-material-theme($theme) {
   @if $theme == theme.$light-theme {
     @include mat.all-component-themes($theme);
-
-    :root {
-      @include color.custom-properties(scheme.light());
-      @include typography.custom-properties();
-    }
   } @else {
     @include mat.all-component-colors($theme);
-
-    :root {
-      @include color.custom-properties(scheme.dark());
-    }
   }
 
-  // @include uxg-core-theme($theme);
+  @include uxg-core-theme($theme);
   @include avatar-theme.theme($theme);
   // @include badge-theme.theme($theme);
   @include button-theme.theme($theme);
