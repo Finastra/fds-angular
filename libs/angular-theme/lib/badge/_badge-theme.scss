@@ -20,7 +20,7 @@
   }
 }
 
-@mixin color() {
+@mixin theme($theme: null) {
   .mat-badge {
     @include uxg-badge-color('secondary');
     @include uxg-badge-color('success');
@@ -44,7 +44,7 @@
   }
 }
 
-@mixin typography() {
+@mixin typography($config: null) {
   .uxg-side-badge {
     &.mat-badge-small.mat-badge-after {
       .mat-badge-content {
@@ -65,9 +65,4 @@
       }
     }
   }
-}
-
-@mixin theme() {
-  @include color();
-  @include typography();
 }

@@ -2,7 +2,7 @@
 @use '@finastra/fds-theme/color' as fds;
 @use '@finastra/fds-theme/typography' as typo;
 
-@mixin color() {
+@mixin theme($theme: null) {
   .mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
     .mat-button-toggle {
       @include fds.color(secondary);
@@ -52,12 +52,14 @@
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
+  $mat-typo-config: mat.define-typography-config();
+
   .mat-button-toggle-group {
     .mat-button-toggle {
       .mat-button-toggle-label-content {
         @include typo.typography(subtitle-2);
-        line-height: mat.line-height($config, button);
+        line-height: mat.line-height($mat-typo-config, button);
       }
     }
 
@@ -77,9 +79,4 @@
       }
     }
   }
-}
-
-@mixin theme($typography-config) {
-  @include color();
-  @include typography($typography-config);
 }

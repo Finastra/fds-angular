@@ -2,7 +2,7 @@
 @use '@finastra/fds-theme/color' as fds;
 @use '@finastra/fds-theme/typography' as typo;
 
-@mixin color() {
+@mixin theme($theme: null) {
   .mat-mdc-chip.mat-mdc-standard-chip {
     border: 1px solid;
     @include fds.property(border-color, outline);
@@ -89,7 +89,7 @@
   }
 }
 
-@mixin typography() {
+@mixin typography($config: null) {
   .mat-mdc-chip.mat-mdc-standard-chip {
     @include typo.typography(body-3);
 
@@ -101,9 +101,4 @@
       @include typo.typography(body-2);
     }
   }
-}
-
-@mixin theme() {
-  @include color();
-  @include typography();
 }
