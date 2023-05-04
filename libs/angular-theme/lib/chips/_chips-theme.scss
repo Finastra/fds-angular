@@ -89,7 +89,7 @@
   }
 }
 
-@mixin typography($config) {
+@mixin typography() {
   .mat-mdc-chip.mat-mdc-standard-chip {
     @include typo.typography(body-3);
 
@@ -103,7 +103,7 @@
   }
 }
 
-@mixin theme($typography-config) {
+@mixin theme() {
   @include color();
-  @include typography($typography-config);
+  @include typography();
 }
