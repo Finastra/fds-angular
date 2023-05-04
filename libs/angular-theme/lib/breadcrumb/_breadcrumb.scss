@@ -1,5 +1,6 @@
 @use '../core/layout/breakpoints' as *;
 @use '../icon/icon';
+@use '@finastra/fds-theme/color' as fds;
 
 $back-button-icon-size: 18px;
 

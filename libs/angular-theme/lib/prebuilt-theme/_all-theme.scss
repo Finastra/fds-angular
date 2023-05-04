@@ -6,6 +6,7 @@
 @forward '../core/style/spacing';
 
 @use '../avatar/avatar-theme' as avatar;
+@use '../breadcrumb/breadcrumb-theme' as breadcrumb;
 @use '../icon/icon-theme' as icon;
 @use '../link/link-theme' as link;
 
@@ -37,6 +38,7 @@ $light-theme: mat.define-light-theme(
   @include fds.custom-properties(scheme.light());
 }
 @include avatar.color();
+@include breadcrumb.theme($typography-config);
 @include icon.color();
 @include link.color();
 
