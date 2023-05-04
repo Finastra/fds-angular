@@ -1,66 +1,10 @@
-@use '@angular/material' as mat;
-@use '@finastra/fds-theme/color/mixins' as fds;
-@use '@finastra/fds-theme/typography/mixins' as typo;
-@use '@finastra/fds-theme/scheme' as scheme;
-
-@use './lib/core/theming/palette';
-@use './lib/core/typography/typography';
+@forward './lib/core/core';
 @forward './lib/core/style/spacing';
+
+@forward './lib/core/theming/all-theme';
+@forward './lib/core/theming/theming';
+
 @forward './lib/core/layout/breakpoints';
+@forward './lib/core/layout/flex';
 
-@use './lib/avatar/avatar-theme' as avatar;
-@use './lib/button-toggle/button-toggle-theme' as button-toggle;
-@use './lib/badge/badge-theme' as badge;
-@use './lib/chips/chips-theme' as chips;
-@use './lib/icon/icon-theme' as icon;
-@use './lib/link/link-theme' as link;
-@use './lib/button/button-theme' as button;
-
-@import './base';
-
-@include mat.core();
-
-$typography-config: mat.define-typography-config();
-
-$dark-theme: mat.define-dark-theme(
-  (
-    color: (
-      primary: mat.define-palette(palette.$primary-dark-palette),
-      accent: mat.define-palette(palette.$secondary-dark-palette)
-    ),
-    typography: $typography-config
-  )
-);
-
-$light-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: mat.define-palette(palette.$primary-light-palette),
-      accent: mat.define-palette(palette.$secondary-light-palette)
-    )
-  )
-);
-
-@include mat.all-component-themes($light-theme);
-
-@include typography.uxg-base-typography();
-
-:root {
-  @include fds.custom-properties(scheme.light());
-  @include typo.custom-properties();
-}
-
-@include avatar.theme();
-@include button-toggle.theme($typography-config);
-@include badge.theme();
-@include chips.theme();
-@include icon.color();
-@include link.color();
-@include button.theme();
-
-@media (prefers-color-scheme: dark) {
-  @include mat.all-component-colors($dark-theme);
-  :root {
-    @include fds.custom-properties(scheme.dark());
-  }
-}
+@forward './lib/core/theming/palette';

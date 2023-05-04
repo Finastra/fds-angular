@@ -1,50 +1,12 @@
-@use '@angular/material' as mat;
-@use '@finastra/fds-theme/color/mixins' as fds;
-@use '@finastra/fds-theme/scheme' as scheme;
+@use '../core/core';
+@use '../core/theming/theming' as theme;
+@use '../core/theming/all-theme';
+@use '../../base';
 
-@use '../core/theming/palette';
-@forward '../core/style/spacing';
+@include core.uxg-core();
 
-@use '../avatar/avatar-theme' as avatar;
-@use '../button-toggle/button-toggle-theme' as button-toggle;
-@use '../icon/icon-theme' as icon;
-@use '../link/link-theme' as link;
-
-@import '../../base';
-
-@include mat.core();
-
-$dark-theme: mat.define-dark-theme(
-  (
-    color: (
-      primary: mat.define-palette(palette.$primary-dark-palette),
-      accent: mat.define-palette(palette.$secondary-dark-palette)
-    ),
-    typography: mat.define-typography-config()
-  )
-);
-
-$light-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: mat.define-palette(palette.$primary-light-palette),
-      accent: mat.define-palette(palette.$secondary-light-palette)
-    )
-  )
-);
-
-@include mat.all-component-themes($light-theme);
-:root {
-  @include fds.custom-properties(scheme.light());
-}
-@include avatar.color(); //TODO: do we only include color here? avatar has also typography
-@include button-toggle.color(); //TODO: do we only include color here? button toggle has also typography
-@include icon.color();
-@include link.color();
+@include all-theme.uxg-material-theme(theme.$light-theme);
 
 @media (prefers-color-scheme: dark) {
-  @include mat.all-component-colors($dark-theme);
-  :root {
-    @include fds.custom-properties(scheme.dark());
-  }
+  @include all-theme.uxg-material-theme(theme.$dark-theme);
 }

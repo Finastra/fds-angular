@@ -32,14 +32,14 @@
   </uxg-expandable-table>
 </div>
 
-<div fxLayout="row" fxLayoutAlign="start start" class="configuration">
-  <div class="orientation-area" fxLayout="column" fxLayoutAlign="start start">
+<div class="flex-row justify-start align-start configuration">
+  <div class="flex-col justify-start align-start orientation-area">
     <h3>Selection</h3>
     <mat-slide-toggle [(ngModel)]="selectable">Selectable</mat-slide-toggle>
   </div>
-  <div class="group-by" fxLayout="column" fxLayoutAlign="start start">
+  <div class="flex-col justify-start align-start group-by">
     <h3>Group By</h3>
-    <mat-select fxLayout="column" [(ngModel)]="groupByKey" (selectionChange)="updateGroupBy($event)">
+    <mat-select class="flex-col" [(ngModel)]="groupByKey" (selectionChange)="updateGroupBy($event)">
       <mat-option *ngFor="let groupBy of groupByList" [value]="groupBy">
         {{ groupBy }}
       </mat-option>
@@ -47,7 +47,7 @@
   </div>
 </div>
 
-<div fxLayout="column" *ngIf="actionDescription && selectable" class="interaction-information">
+<div *ngIf="actionDescription && selectable" class="flex-col interaction-information">
   <h3>Output:</h3>
   {{ actionDescription }}
 </div>

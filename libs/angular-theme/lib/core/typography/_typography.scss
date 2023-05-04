@@ -1,6 +1,5 @@
 @use '@finastra/fds-theme/typography' as fds;
 
-// Adds the base typography styles, based on a config.
 @mixin uxg-base-typography($selector: '.uxg-typography') {
   .uxg-h1,
   #{$selector} h1 {
