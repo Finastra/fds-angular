@@ -4,7 +4,7 @@
 @use '../../button/button-theme';
 // @use '../../button-toggle/button-toggle-theme';
 // @use '../../breadcrumb/breadcrumb-theme';
-// @use '../../card/card-theme';
+@use '../../card/card-theme';
 // @use '../../chips/chips-theme';
 // @use '../../form-field/form-field-theme';
 // @use '../../list/list-theme';
@@ -21,7 +21,7 @@
 
   // @include button-toggle-theme.typography($config);
   // @include breadcrumb-theme.typography($config);
-  // @include card-theme.typography($config);
+  @include card-theme.typography($config);
   // @include chips-theme.typography($config);
   // @include form-field-theme.typography($config);
   // @include list-theme.typography($config);
