@@ -1,6 +1,6 @@
-<div fxLayout="row" *ngIf="title" class="title" fxLayoutAlign="center center">
+<div *ngIf="title" class="flex-row justify-center align-center title">
   <div class="changelog-icon"></div>
-  <div fxLayout="column">
+  <div class="flex-col">
     <div class="creator">{{ title }}</div>
     <span>{{ subtitle }}</span>
   </div>
@@ -9,8 +9,7 @@
 <div class="changelog-container">
   <div
     *ngFor="let release of changelog; first as first; last as last"
-    fxLayout.lt-md="column"
-    fxLayoutAlign="center"
+    class="justify-center flex-col-lt-md"
     [class.layout-column]="displayVersion === 'top'"
   >
     <div class="version" fxFlex="9" fxFlex.lt-md="30">
@@ -31,7 +30,7 @@
         </div>
 
         <div *ngFor="let change of release.changes; first as firstChange; last as lastChange" class="change">
-          <div *ngIf="change.category === category.label" fxLayout.xs="column" fxLayout.gt-xs="row">
+          <div *ngIf="change.category === category.label" class="flex-col-xs flex-row-gt-xs">
             <div fxFlex="10" fxFlex.lt-lg="15" class="change-type">
               <span class="{{ change.type | lowercase }} type uxg-caption">{{ change.type | titlecase }}</span>
             </div>

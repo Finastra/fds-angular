@@ -1,58 +1,55 @@
-@use '@angular/material' as mat;
-@use '@finastra/fds-theme/color' as fds;
-@use '@finastra/fds-theme/typography' as typo;
+@use 'sass:map';
+@use '@finastra/fds-theme/color' as color;
+@use '@finastra/fds-theme/typography' as typography;
 
-  @mixin color() {
+
+@mixin theme($theme: null) {
 
   .uxg-breadcrumb {
     a {
-      @include fds.color(foreground);
+      @include color.color(foreground);
       text-decoration: none;
     }
 
     &[color='primary'] {
-      @include fds.color(primary);
+      @include color.color(primary);
 
       a {
-        @include fds.color(primary);
+        @include color.color(primary);
         text-decoration: none;
       }
 
       .mat-flat-button {
-        @include fds.color(primary);
+        @include color.color(primary);
       }
     }
 
     &[color='accent'] {
-      @include fds.color(accent);
+      @include color.color(accent);
 
       a {
-        @include fds.color(accent);
+        @include color.color(accent);
         text-decoration: none;
       }
 
       .mat-flat-button {
-        @include fds.color(primary);
+        @include color.color(primary);
       }
     }
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
   .uxg-breadcrumb {
-    @include typo.typography(body-2);
+    @include typography.typography(body-2);
 
     .mat-flat-button {
-      @include typo.typography(body-2);
+      @include typography.typography(body-2);
     }
   }
 
   .uxg-breadcrumb[dense] {
-    @include typo.typography(caption);
+    @include typography.typography(caption);
   }
 }
 
-@mixin theme($typography-config) {
-  @include color();
-  @include typography($typography-config);
-}

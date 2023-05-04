@@ -27,11 +27,11 @@
     </uxg-table>
   </div>
 
-  <div fxLayout="row" fxLayoutAlign="start start" class="config-block">
-    <div fxLayout="column" fxLayoutAlign="start start">
+  <div class="flex-row justify-start align-start config-block">
+    <div class="flex-col justify-start align-start">
       <h4>Customized options</h4>
-      <div fxLayout="row">
-        <div fxLayout="column" fxLayoutAlign="space-between start">
+      <div class="flex-row">
+        <div class="flex-col justify-between align-start">
           <mat-slide-toggle [color]="" [checked]="dragEnable" (change)="enableDrag($event)">Enable Drag Columns</mat-slide-toggle>
           <mat-slide-toggle [checked]="totalEnable" (change)="enableTotal($event)">Enable total</mat-slide-toggle>
           <mat-slide-toggle [checked]="pageEnable" (change)="enablePaging($event)">Enable paging</mat-slide-toggle>
@@ -49,21 +49,21 @@
         </div>
       </div>
     </div>
-    <div class="selection-area" fxLayout="column" fxLayoutAlign="start start">
+    <div class="flex-col justify-start align-start selection-area">
       <h5>Action column position</h5>
-      <mat-radio-group fxLayout="column" [(ngModel)]="actionColumnPosition">
+      <mat-radio-group class="flex-col" [(ngModel)]="actionColumnPosition">
         <mat-radio-button [value]="'start'">start</mat-radio-button>
         <mat-radio-button [value]="'end'">end</mat-radio-button>
       </mat-radio-group>
     </div>
-    <div class="selection-area" fxLayout="column" fxLayoutAlign="start start">
+    <div class="flex-col justify-start align-start lection-area">
       <h5>Select Mode</h5>
-      <mat-radio-group fxLayout="column" [(ngModel)]="singleSelect">
+      <mat-radio-group class="flex-col" [(ngModel)]="singleSelect">
         <mat-radio-button [value]="true">single select</mat-radio-button>
         <mat-radio-button [value]="false">multiple select</mat-radio-button>
       </mat-radio-group>
     </div>
-    <div class="set-selection-area" *ngIf="!singleSelect" fxLayout="column" fxLayoutAlign="start start">
+    <div class="flex-col justify-start align-startset-selection-area" *ngIf="!singleSelect">
       <h5>Set selection</h5>
       <mat-form-field>
         <mat-label>Selection</mat-label>
@@ -72,7 +72,7 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="set-selection-area" fxLayout="column" fxLayoutAlign="start start">
+    <div class="flex-col justify-start align-startset-selection-area">
       <h5>Sort</h5>
       <mat-form-field>
         <mat-select placeholder="active" (selectionChange)="setActive($event)">

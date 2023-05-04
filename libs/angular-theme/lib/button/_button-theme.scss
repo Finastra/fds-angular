@@ -5,7 +5,7 @@
 @use '@finastra/fds-theme/typography' as typography;
 @use '@finastra/fds-theme/spacing' as spacing;
 
-@mixin color() {
+@mixin theme($theme: null) {
   // $primary: map.get($theme, primary);
   // $accent: map.get($theme, accent);
   // $success: map.get($theme, success);
@@ -129,7 +129,7 @@
   }
 }
 
-@mixin typography() {
+@mixin typography($config: null) {
   button[dense],
   a[dense],
   *[dense] button {
@@ -143,9 +143,4 @@
     @include typography.typography('button-1');
     @include spacing.padding-x(4);
   }
-}
-
-@mixin theme() {
-  @include color();
-  @include typography();
 }
