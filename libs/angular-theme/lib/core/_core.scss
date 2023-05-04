@@ -1,10 +1,12 @@
-// @use '@angular/material/core/style/elevation' with ( $opacity: 0.8 );
 @use '@angular/material' as mat;
 @use './typography/all-typography' as uxg-typography;
 @use './style/spacing';
+@use './layout/flex';
 
-@mixin uxg-core($typography-config: null) {
-  @include mat.core($typography-config);
-  @include uxg-typography.uxg-material-typography($typography-config);
-  @include spacing.styles();
+@mixin uxg-core() {
+  @include mat.core();
+  @include uxg-typography.uxg-material-typography();
+
+  @include spacing.helper-classes();
+  @include flex.flex-size-classes();
 }

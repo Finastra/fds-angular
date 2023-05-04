@@ -49,13 +49,13 @@
         Reset
       </button>
     </div>
-    <div class="expansion-panel-content" fxLayout="row wrap" fxLayoutAlign="start">
+    <div class="flex-row flex-wrap justify-start expansion-panel-content">
       <ng-content></ng-content>
     </div>
 
     <ng-container *ngIf="showActions">
       <mat-divider></mat-divider>
-      <div class="expansion-panel-actions" fxLayout="row wrap">
+      <div class="flex-row flex-wrap expansion-panel-actions">
         <div class="saved-filters-container">
           <mat-chip-listbox #savedFiltersList>
             <mat-chip

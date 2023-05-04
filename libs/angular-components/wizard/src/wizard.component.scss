@@ -40,6 +40,17 @@ $wizard-title-top: 3%;
 .uxg-wizard {
   position: relative;
 
+  .filler-row {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    max-width: 66%;
+
+    @include fds.flex-breakpoint('xs') {
+      flex: 1 1 0%;
+      max-width: unset;
+    }
+  }
+
   .uxg-wizard-container {
     position: absolute;
     border-radius: $wizard-border-radius;
@@ -51,6 +62,9 @@ $wizard-title-top: 3%;
     &.xs {
       position: initial;
       width: 100%;
+
+      flex: 1 1 100%;
+      max-height: 100%;
 
       uxg-wizard-page {
         width: 100%;
@@ -82,14 +96,25 @@ $wizard-title-top: 3%;
   .uxg-wizard-footer {
     display: flex;
     align-items: center;
+
+    flex: 1 1 100%;
+    max-height: 10%;
+
     margin: 0 fds.$uxg-spacing-3;
 
     .dot-navigation {
+      display: none;
+
+      @include fds.flex-breakpoint('xs') {
+        display: flex;
+      }
+
       order: 2;
       margin-left: auto;
       width: 50%;
 
       .dot-navigation-flex {
+        flex: 1 1 70%;
         margin: auto;
 
         .dot {
@@ -217,6 +242,11 @@ $wizard-title-top: 3%;
   .uxg-wizard-timeline-xs {
     width: 100%;
     padding: fds.$uxg-spacing-3;
+
+    display: none;
+    @include fds.flex-breakpoint('xs') {
+      display: initial;
+    }
 
     .step {
       width: $step-size-xs;

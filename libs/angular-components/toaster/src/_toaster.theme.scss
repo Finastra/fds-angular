@@ -1,6 +1,6 @@
 @use '@finastra/fds-theme/color' as fds;
 
-@mixin color() {
+@mixin theme($theme: null) {
   uxg-toaster {
     @include fds.color(on-surface);
     @include fds.background(surface);
