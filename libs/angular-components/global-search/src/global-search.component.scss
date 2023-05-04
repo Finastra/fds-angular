@@ -1,5 +1,4 @@
 @use '@finastra/angular-theme' as fds;
-// @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 
 $close-button-size: 48px;
 $close-button-size-small: 32px;
@@ -9,6 +8,17 @@ $close-button-size-small: 32px;
 
   uxg-global-search-overlay {
     .uxg-global-search-input-area {
+      flex: 1 1 100%;
+      max-height: 30%;
+
+      @include fds.flex-breakpoint('lt-lg') {
+        max-height: 20%;
+      }
+
+      @include fds.flex-breakpoint('xs') {
+        max-height: 15%;
+      }
+
       justify-content: center;
       align-items: center;
 
@@ -57,6 +67,9 @@ $close-button-size-small: 32px;
     // }
 
     .uxg-global-search-close-overlay-button {
+      flex: 1 1 100%;
+      max-height: 5%;
+
       button {
         float: right;
         margin: fds.$uxg-spacing-2;

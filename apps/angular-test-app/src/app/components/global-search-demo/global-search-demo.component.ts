@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 import { UxgGlobalSearch } from '@finastra/angular-components/global-search';
 import { ClientSideSearchService } from './client-side-search.service';
 
@@ -11,7 +11,7 @@ import { ClientSideSearchService } from './client-side-search.service';
   templateUrl: './global-search-demo.component.html',
   styleUrls: ['./global-search-demo.component.scss'],
   standalone: true,
-  imports: [UxgGlobalSearch, MatButtonModule, MatIconModule, MatCardModule]
+  imports: [UxgGlobalSearch, MatButtonModule, MatIconModule, MatCardModule, MatSnackBarModule]
 })
 export class GlobalSearchDemoComponent implements OnInit {
   results: any[] = [];

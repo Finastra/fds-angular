@@ -25,7 +25,7 @@
 
       <mat-checkbox class="example-margin" (change)="updateTemplate($event)">No data limit</mat-checkbox>
     </div>
-    <div class="description" fxLayout="column" *ngIf="actionDescription">
+    <div class="flex-col description" *ngIf="actionDescription">
       <h3>Output:</h3>
       <p>
         {{ actionDescription }}

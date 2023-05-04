@@ -1,3 +1,5 @@
+import { BreakpointObserver, BreakpointState, Breakpoints } from '@angular/cdk/layout';
+import { AsyncPipe, NgClass, NgFor, NgIf, NgStyle, NgTemplateOutlet } from '@angular/common';
 import {
   AfterContentInit,
   Component,
@@ -9,16 +11,15 @@ import {
   QueryList,
   ViewEncapsulation
 } from '@angular/core';
-import { Subscription } from 'rxjs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatIconModule } from '@angular/material/icon';
+import { Observable, Subscription } from 'rxjs';
 import { wizardAnimation } from './animations';
 import { ButtonHubService } from './services/button-hub.service';
 import { PageCollectionService } from './services/page-collection.service';
 import { WizardNavigationService } from './services/wizard-navigation.service';
 import { UxgWizardPageComponent } from './wizard-page/wizard-page.component';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
-import { NgIf, NgTemplateOutlet, NgFor, NgClass, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'uxg-wizard',
@@ -31,7 +32,7 @@ import { NgIf, NgTemplateOutlet, NgFor, NgClass, NgStyle } from '@angular/common
   },
   animations: [wizardAnimation()],
   standalone: true,
-  imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle]
+  imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle, AsyncPipe]
 })
 export class UxgWizardComponent implements OnDestroy, AfterContentInit {
   @ContentChildren(UxgWizardPageComponent) pages!: QueryList<UxgWizardPageComponent>;
@@ -54,6 +55,8 @@ export class UxgWizardComponent implements OnDestroy, AfterContentInit {
 
   swipeCoord: [number, number] = [0, 0];
   swipeTime = 0;
+
+  xs!: Observable<BreakpointState>;
 
   public get currentPage() {
     return this.navService.currentPage;
@@ -90,9 +93,11 @@ export class UxgWizardComponent implements OnDestroy, AfterContentInit {
   constructor(
     public navService: WizardNavigationService,
     public pageCollection: PageCollectionService,
-    public buttonService: ButtonHubService
+    public buttonService: ButtonHubService,
+    breakpointObserver: BreakpointObserver
   ) {
     this.subscriptions.push(this.listenForCancelChanges(), this.listenForDoneChanges(), this.listenForPageChanges());
+    this.xs = breakpointObserver.observe(Breakpoints.XSmall);
   }
 
   ngOnDestroy() {

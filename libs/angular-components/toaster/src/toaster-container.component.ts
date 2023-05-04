@@ -1,9 +1,9 @@
-import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { Component, Input, OnDestroy, OnInit, QueryList, ViewChildren } from '@angular/core';
 
+import { NgFor } from '@angular/common';
 import { ToasterComponent } from './toaster.component';
 import { Toast } from './toaster.model';
-import { NgFor } from '@angular/common';
 
 const voidState = style({
   transform: 'translateX(110%)',
@@ -16,8 +16,7 @@ const voidState = style({
   selector: 'uxg-toaster-container',
   template: `
     <uxg-toaster
-      fxLayout="row"
-      fxLayoutAlign="start stretch"
+      class="flex-row justify-start align-stretch"
       [@fadeIn]="fadeIn"
       *ngFor="let toast of content"
       [toast]="toast"

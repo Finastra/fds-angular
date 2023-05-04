@@ -1,4 +1,32 @@
 @use 'angular-theme' as fds;
+@use 'angular-theme/base';
+
+@include fds.uxg-core();
+
+@mixin app-theme($theme) {
+  @include fds.uxg-material-theme($theme);
+  // @include filter-group.theme($theme);
+  // @include filter-tags.theme($theme);
+  // @include filter-tree.theme($theme);
+  // @include global-search.theme($theme);
+  // @include vector-map.theme($theme);
+  // @include chart.theme($theme);
+  // @include wizard.theme($theme);
+  // @include banner.theme($theme);
+  // @include skeleton.theme($theme);
+  // @include repeater.theme($theme);
+  // @include changelog.theme($theme);
+  // @include toaster.theme($theme);
+  // @include video-thumbnail.theme($theme);
+  // @include status-stepper.theme($theme);
+  // @include account-card.theme($theme);
+}
+
+@include app-theme(fds.$light-theme);
+
+.uxg-dark-theme {
+  @include app-theme(fds.$dark-theme);
+}
 
 html,
 body {
