@@ -1,6 +1,5 @@
 @use '../core/layout/breakpoints' as *;
 @use '../icon/icon';
-@use '@finastra/fds-theme/color' as fds;
 
 $back-button-icon-size: 18px;
 
@@ -55,7 +54,7 @@ $back-button-icon-size: 18px;
       text-align: left;
 
       .mat-icon {
-        padding-bottom: 0;
+        padding-bottom: 0;       
       }
     }
   }

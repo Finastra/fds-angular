@@ -16,8 +16,8 @@
 // @use '../../expansion/expansion-theme';
 // @use '../../form-field/form-field-theme';
 @use '../../icon/icon-theme';
-// @use '../../link/link-theme';
-// @use '../../list/list-theme';
+@use '../../link/link-theme';
+@use '../../list/list-theme';
 // @use '../../logo/logo-theme';
 // @use '../../menu/menu-theme';
 // @use '../../sidenav/sidenav-theme';
@@ -80,8 +80,8 @@
   // @include expansion-theme.theme($theme);
   // @include form-field-theme.theme($theme);
   @include icon-theme.theme($theme);
-  // @include link-theme.theme($theme);
-  // @include list-theme.theme($theme);
+  @include link-theme.theme($theme);
+  @include list-theme.theme($theme);
   // @include logo-theme.theme($theme);
   // @include menu-theme.theme($theme);
   // @include sidenav-theme.theme($theme);

@@ -1,4 +1,5 @@
 @use '../core/style/spacing' as *;
+@use '@finastra/fds-theme/color' as color;
 
 $uxg-link-list-item-height: 35px;
 $uxg-link-list-icon-size: 18px;
@@ -66,7 +67,7 @@ $uxg-nav-list-level-height: 48px;
         margin-right: 8px;
       }
 
-      .mdc-list-item__content {
+      .mdc-list-item-content {
         padding: 0 28px;
 
         .mat-icon {
@@ -82,18 +83,20 @@ $uxg-nav-list-level-height: 48px;
   &.uxg-nav-list-level {
     & > .mat-mdc-list-item {
       box-sizing: border-box;
-      padding-left: 10px;
+      // padding-left: 0;
       border-left-width: 11px;
+      border-left-style: solid;
 
       .mat-icon:first-of-type {
         margin-right: 14px;
+        @include color.color(on-surface-medium);
       }
 
       &:last-of-type {
         margin-bottom: 30px;
       }
 
-      .mat-mdc-list-item__content {
+      .mat-mdc-list-item-content {
         .mat-icon:nth-last-child(1) {
           position: absolute;
           right: 20px;
@@ -104,7 +107,7 @@ $uxg-nav-list-level-height: 48px;
 }
 
 .mat-mdc-list-base {
-  .mat-divider {
+  .mat-mdc-list-divider {
     margin: 0 10px;
   }
 }

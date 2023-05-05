@@ -10,29 +10,36 @@
     }
   }
 
-  .mat-list-base.mat-nav-list {
+  .mat-mdc-nav-list.mat-mdc-list-base {
     &.uxg-link-list {
-      .mat-list-item {
+      .mat-mdc-list-item {
         @include color.color(primary);
       }
     }
 
     &.uxg-nav-list,
     &.uxg-nav-list-level {
-      .mat-list-item {
+      .mat-mdc-list-item {
         border-left-color: transparent;
 
         &:hover {
-          @include color.property(background-color, secondary);
+          @include color.property(background-color, primary);
+          opacity: 0.04;
+
           @include color.property(border-color, primary);
+          opacity: 0.2;
         }
 
         .mat-icon {
-          @include color.color(foreground, 0.25);
+          // @include color.color(foreground);
+          // opacity: 0.25;
+          @include color.color(on-surface-medium);
+          opacity: 0.75;
         }
 
         .mat-ripple-element {
           @include color.property(background-color, primary);
+          opacity: 0.1;
         }
 
         &.uxg-list-item-selected {
@@ -41,6 +48,7 @@
 
           .mat-icon {
             @include color.color(primary);
+            opacity: 0.5;
           }
         }
       }
@@ -49,14 +57,14 @@
 }
 
 @mixin typography($config: null) {
-  .uxg-nav-list.mat-nav-list.mat-list-base {
-    & .mat-list-item > * {
+  .uxg-nav-list.mat-mdc-nav-list.mat-list-base {
+    & .mat-mdc-list-item > * {
       @include typography.typography(subtitle-1);
     }
   }
 
   .mat-list-base.mat-nav-list.uxg-link-list {
-    & .mat-list-item > * {
+    & .mat-mdc-list-item> * {
       @include typography.typography(caption);
     }
   }
