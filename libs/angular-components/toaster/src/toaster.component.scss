@@ -1,7 +1,5 @@
 @use '@finastra/fds-theme' as fds;
-
-//TODO: see if we keep the breakpoints in the angular theme
-@use '@finastra/angular-theme/lib/core/layout/breakpoints' as breakpoints;
+@use '@finastra/angular-theme' as breakpoints;
 
 $border-radius: 4px;
 $container-size: 48px;
@@ -41,13 +39,13 @@ $container-size: 48px;
   }
 
   /* Small Tablet */
-  @media only screen and (min-width: breakpoints.$small-tablet-size-down) and (max-width: breakpoints.$small-tablet-size-up) {
+  @include breakpoints.flex-breakpoint('md') {
     @include fds.margin(3);
     width: 50vw;
   }
 
   /* Large Tablet and Desktop */
-  @media only screen and (min-width: breakpoints.$large-tablet-size-down) {
+  @include breakpoints.flex-breakpoint('gt-md') {
     @include fds.margin(3);
     width: 30vw;
   }
