@@ -4,7 +4,7 @@
 @use '@finastra/angular-theme/lib/core/layout/breakpoints' as breakpoints;
 
 $border-radius: 4px;
-$container-size: 64px;
+$container-size: 48px;
 
 :host {
   display: flex;
@@ -27,11 +27,6 @@ $container-size: 64px;
     width: $container-size;
     box-sizing: border-box;
     border-radius: $border-radius 0 0 $border-radius;
-
-    mat-icon {
-      padding: 9px;
-      border-radius: 50%;
-    }
   }
   .message {
     @include fds.padding(3);

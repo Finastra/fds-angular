@@ -4,32 +4,29 @@
   uxg-toaster {
     @include fds.color(on-surface);
     @include fds.background(surface);
-    mat-icon {
-      @include fds.background(surface);
-    }
 
     &.type-success .icon-container {
-      @include fds.background(surface-success);
+      @include fds.background(success);
       mat-icon {
-        @include fds.color(success);
+        @include fds.color(on-success);
       }
     }
     &.type-info .icon-container {
-      @include fds.background(surface-info);
+      @include fds.background(info);
       mat-icon {
-        @include fds.color(info);
+        @include fds.color(on-success);
       }
     }
     &.type-error .icon-container {
-      @include fds.background(surface-error);
+      @include fds.background(error);
       mat-icon {
-        @include fds.color(error);
+        @include fds.color(on-error);
       }
     }
     &.type-warning .icon-container {
-      @include fds.background(surface-warning);
+      @include fds.background(warning);
       mat-icon {
-        @include fds.color(warning);
+        @include fds.color(on-error);
       }
     }
   }
