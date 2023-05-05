@@ -1,31 +1,17 @@
-@use 'sass:map';
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as fds;
 
-@mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $accent: map.get($theme, accent);
-  $text-primary: fds.get-color-from-palette($primary, default);
-  $color-accent: fds.get-color-from-palette($accent, default);
-  $foreground: map.get($theme, foreground);
-  $text-banner: fds.get-color-from-palette($foreground, base);
-  $divider: fds.get-color-from-palette($foreground, divider);
+@mixin color() {
 
   .uxg-banner {
-    .uxg-body-1 {
-      color: $text-banner;
-    }
-    .uxg-display-3 {
-      color: $text-primary;
-      font-weight: bold;
+    .uxg-banner-item-label {
+      @include fds.color(primary);
     }
     .uxg-banner-item--smal-label {
-      color: $text-primary;
-      font-weight: bold;
-      line-height: 36px;
+      @include fds.color(primary);
     }
 
     .uxg-banner-spliter {
-      border-right-color: $divider;
+      @include fds.color(on-surface);
     }
   }
 }

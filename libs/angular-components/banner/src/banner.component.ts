@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, Input, ViewEncapsulation, ChangeDetectionStrategy } from '@angular/core';
-import { Banner } from './model';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
+import { NgClass, NgFor } from '@angular/common';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { NgFor, NgClass } from '@angular/common';
+import { Banner } from './model';
 
 interface BannerItem {
   name: string;
