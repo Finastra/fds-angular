@@ -15,15 +15,15 @@ $infix-border-top-dense: 0.661em;
 $infix-top-no-label: -0.35em;
 $infix-padding-bottom-no-label: 0.469em;
 
-.mat-form-field-appearance-outline {
-  .mat-form-field-wrapper {
-    .mat-form-field-flex {
+.mat-mdc-form-field.mat-form-field-appearance-outline {
+  .mat-mdc-text-field-wrapper {
+    .mat-mdc-form-field-flex {
       padding: 0 1em 0 1em;
     }
-    .mat-form-field-prefix {
+    .mat-mdc-form-field-icon-prefix {
       padding-right: 0.5em;
     }
-    .mat-form-field-infix {
+    .mat-mdc-form-field-infix {
       padding: 1.2em 0 0.7em 0;
     }
   }
@@ -44,8 +44,8 @@ $infix-padding-bottom-no-label: 0.469em;
     }
   }
 
-  .mat-form-field-prefix.mat-form-field-prefix,
-  .mat-form-field-suffix.mat-form-field-suffix {
+  .mat-mdc-form-field-icon-prefix.mat-mdc-form-field-icon-prefix,
+  .mat-mdc-form-field-icon-suffix.mat-mdc-form-field-icon-suffix {
     top: -0.1em;
   }
 
@@ -67,18 +67,18 @@ $infix-padding-bottom-no-label: 0.469em;
 }
 
 .mat-form-field-appearance-legacy {
-  .mat-form-field-flex {
+  .mat-mdc-form-field-flex {
     align-items: flex-end;
   }
 }
 
 .mat-form-field-appearance-fill {
-  .mat-form-field-wrapper {
-    .mat-form-field-flex {
+  .mat-mdc-text-field-wrapper {
+    .mat-mdc-form-field-flex {
       padding-top: $mat-form-field-fill-line-spacing;
       padding-left: $mat-form-field-fill-side-padding;
 
-      .mat-form-field-infix {
+      .mat-mdc-form-field-infix {
         padding-bottom: $infix-padding-bottom;
       }
     }
@@ -89,9 +89,9 @@ $infix-padding-bottom-no-label: 0.469em;
   }
 
   &:not(.mat-form-field-has-label) {
-    .mat-form-field-wrapper {
-      .mat-form-field-flex {
-        .mat-form-field-infix {
+    .mat-mdc-text-field-wrapper {
+      .mat-mdc-form-field-flex {
+        .mat-mdc-form-field-infix {
           top: $infix-top-no-label;
           padding-bottom: $infix-padding-bottom-no-label;
         }
@@ -100,11 +100,11 @@ $infix-padding-bottom-no-label: 0.469em;
   }
 
   &[dense] {
-    .mat-form-field-wrapper {
-      .mat-form-field-flex {
+    .mat-mdc-text-field-wrapper {
+      .mat-mdc-form-field-flex {
         padding-top: $mat-form-field-fill-line-spacing-dense;
 
-        .mat-form-field-infix {
+        .mat-mdc-form-field-infix {
           border-top: $infix-border-top-dense solid transparent;
           padding-top: $infix-padding-top-dense;
           padding-bottom: $infix-padding-bottom-dense;
@@ -113,7 +113,7 @@ $infix-padding-bottom-no-label: 0.469em;
     }
   }
 
-  .mat-form-field-prefix {
+  .mat-mdc-form-field-icon-prefix {
     .mat-icon {
       padding-right: $uxg-spacing-2;
     }

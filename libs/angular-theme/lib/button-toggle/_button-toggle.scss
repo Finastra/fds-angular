@@ -86,7 +86,7 @@ $button-toggle-radius-v: $uxg-spacing-3;
   }
 
   .mat-button-toggle-label-content {
-    line-height: $filtering-button-toggle-height;
+    line-height: $filtering-button-toggle-height !important;
     padding: 0 math.div(($filtering-button-toggle-height - $uxg-spacing-4), 2);
 
     span {
