@@ -9,10 +9,6 @@
   display: flex;
   align-items: center;
 
-  & > .fill-remaining-space {
-    flex: 1 1 auto;
-  }
-
   & > .mat-icon,
   & > .uxg-avatar-list {
     margin-left: $uxg-spacing-2;

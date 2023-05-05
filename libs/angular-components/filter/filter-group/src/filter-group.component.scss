@@ -19,10 +19,6 @@ $uxg-filter-group-border-radius: 4px;
       align-items: center;
       cursor: default;
 
-      .fill-remaining-space {
-        flex: 1 1 auto;
-      }
-
       .selectedFilters {
         overflow: hidden;
         display: flex;
