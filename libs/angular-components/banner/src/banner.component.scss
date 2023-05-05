@@ -25,23 +25,21 @@
       font-size: 48px;
       line-height: 72px;
     }
-  
+
     .uxg-banner-item--smal-label {
       @include fds.typography(subtitle-1);
       font-weight: bold;
       line-height: 36px;
-
     }
-    
-    .uxg-banner-item-name{
+
+    .uxg-banner-item-name {
       @include fds.typography(subtitle-2);
     }
 
-    .uxg-banner-item--smal-name{
+    .uxg-banner-item--smal-name {
       @include fds.typography(subtitle-4);
     }
   }
-
 
   &.uxg-banner-small {
     .uxg-banner-spliter {

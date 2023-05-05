@@ -1,13 +1,9 @@
 @use 'angular-theme' as fds;
 @use 'angular-theme/base';
-@use 'angular-components/banner/src/banner.theme' as banner; 
-
-
+@use 'angular-components/banner/src/banner.theme' as banner;
 
 @include fds.uxg-core();
 @include banner.color();
-
-
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);

@@ -1,7 +1,6 @@
 @use '@finastra/fds-theme/color' as fds;
 
 @mixin color() {
-
   .uxg-banner {
     .uxg-banner-item-label {
       @include fds.color(primary);
