@@ -2,7 +2,6 @@
 @use '@finastra/fds-theme/typography' as typography;
 
 @mixin theme($theme: null) {
-
   .uxg-ol {
     *::before {
       @include color.color(primary);
@@ -64,7 +63,7 @@
   }
 
   .mat-list-base.mat-nav-list.uxg-link-list {
-    & .mat-mdc-list-item> * {
+    & .mat-mdc-list-item > * {
       @include typography.typography(caption);
     }
   }
