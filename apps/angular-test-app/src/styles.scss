@@ -1,5 +1,6 @@
 @use 'angular-theme' as fds;
 @use 'angular-theme/base';
+@use 'angular-components/toaster/src/toaster.theme' as toaster;
 
 @include fds.uxg-core();
 
@@ -16,7 +17,7 @@
   // @include skeleton.theme($theme);
   // @include repeater.theme($theme);
   // @include changelog.theme($theme);
-  // @include toaster.theme($theme);
+  @include toaster.theme($theme);
   // @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
   // @include account-card.theme($theme);

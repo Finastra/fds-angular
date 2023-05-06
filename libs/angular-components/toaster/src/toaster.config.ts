@@ -1,5 +1,5 @@
 import { InjectionToken } from '@angular/core';
-import { ToastPosition, ToastLogicalPosition } from './toaster.model';
+import { ToastLogicalPosition, ToastPosition } from './toaster.model';
 
 export const TOASTER_CONFIG = new InjectionToken<ToasterConfig>('Default toaster config');
 
