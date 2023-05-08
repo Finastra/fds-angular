@@ -1,16 +1,17 @@
 import { AsyncPipe, NgFor, NgIf } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Account, AccountCardComponent, AccountCardSkeletonComponent } from '@finastra/angular-components/cards/account-card';
 import { Subject } from 'rxjs';
 
 @Component({
-  selector: 'ffdc-account-card-demo',
-  templateUrl: './account-card-demo.component.html',
-  styleUrls: ['./account-card-demo.component.scss'],
+  selector: 'ffdc-card-demo',
+  templateUrl: './card-demo.component.html',
+  styleUrls: ['./card-demo.component.scss'],
+  encapsulation: ViewEncapsulation.None,
   standalone: true,
-  imports: [NgIf, NgFor, AccountCardComponent, AccountCardSkeletonComponent, AsyncPipe]
+  imports: [AsyncPipe, NgIf, NgFor, AccountCardComponent, AccountCardSkeletonComponent]
 })
-export class AccountCardDemoComponent implements OnInit {
+export class CardDemoComponent implements OnInit {
   accounts: Account[] = [
     {
       name: 'France',
@@ -38,6 +39,7 @@ export class AccountCardDemoComponent implements OnInit {
     }
   ];
   accounts$ = new Subject();
+
   constructor() {}
 
   ngOnInit() {
