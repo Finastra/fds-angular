@@ -7,7 +7,7 @@
 @use '@finastra/fds-theme/typography/mixins' as typography;
 
 @use '../../avatar/avatar-theme';
-// @use '../../badge/badge-theme';
+@use '../../badge/badge-theme';
 @use '../../button/button-theme';
 // @use '../../button-toggle/button-toggle-theme';
 @use '../../breadcrumb/breadcrumb-theme';
@@ -71,7 +71,7 @@
 
   @include uxg-core-theme($theme);
   @include avatar-theme.theme($theme);
-  // @include badge-theme.theme($theme);
+  @include badge-theme.theme($theme);
   @include button-theme.theme($theme);
   // @include button-toggle-theme.theme($theme);
   @include breadcrumb-theme.theme($theme);
