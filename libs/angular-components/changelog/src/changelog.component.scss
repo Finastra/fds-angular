@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-@use '@finastra/angular-theme' as fds;
 // @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 
 $bullet-space: 8%;
@@ -9,14 +8,14 @@ $bullet-size: 20px;
 
 @mixin changelog-layout($size) {
   .version {
-    margin-bottom: fds.$uxg-spacing-2;
+    margin-bottom: 8px;
     position: relative;
     left: $bullet-space;
     display: inline-flex;
     align-items: baseline;
 
     .version-id {
-      margin-right: fds.$uxg-spacing-2;
+      margin-right: 8px;
     }
   }
 
@@ -24,9 +23,9 @@ $bullet-size: 20px;
   .release-detail,
   .last-release {
     @if $size == 'xs' {
-      padding: fds.$uxg-spacing-2 fds.$uxg-spacing-3;
-      margin-right: fds.$uxg-spacing-2;
-      width: calc(100% - #{$bullet-space} - #{fds.$uxg-spacing-2});
+      padding: 8px 16px;
+      margin-right: 8px;
+      width: calc(100% - #{$bullet-space} - #{8px});
     } @else {
       width: calc(100% - #{$bullet-space});
     }
@@ -37,12 +36,12 @@ $bullet-size: 20px;
       .change-type {
         .type {
           margin: 0;
-          margin-left: -(fds.$uxg-spacing-1);
+          margin-left: -(4px);
         }
       }
     }
     .change-detail {
-      margin-top: fds.$uxg-spacing-2;
+      margin-top: 8px;
     }
   }
 
@@ -63,7 +62,7 @@ $bullet-size: 20px;
   .release-detail::before,
   .last-release::before {
     @if $size == 'none' {
-      top: fds.$uxg-spacing-3;
+      top: 16px;
     } @else {
       top: -30px;
     }
@@ -71,11 +70,11 @@ $bullet-size: 20px;
 
   .first-release::after {
     @if $size == 'xs' {
-      top: -(fds.$uxg-spacing-4);
+      top: -(24px);
       bottom: -44px;
     } @else if $size == 'none' {
-      top: fds.$uxg-spacing-3;
-      bottom: -(fds.$uxg-spacing-4);
+      top: 16px;
+      bottom: -(24px);
     } @else {
       top: -35px;
       bottom: -35px;
@@ -85,10 +84,10 @@ $bullet-size: 20px;
   .release-detail::after {
     bottom: -35px;
     @if $size == 'none' {
-      top: fds.$uxg-spacing-3;
+      top: 16px;
       bottom: -48px;
     } @else {
-      top: -(fds.$uxg-spacing-4);
+      top: -(24px);
     }
   }
 }
@@ -98,14 +97,14 @@ uxg-changelog {
     padding: 3rem 1rem;
 
     .changelog-icon {
-      margin-right: fds.$uxg-spacing-3;
+      margin-right: 16px;
       width: 120px;
       height: 120px;
     }
   }
 
   .changelog-container {
-    margin: fds.$uxg-spacing-5;
+    margin: 48px;
     margin-left: 0;
 
     .version {
@@ -126,28 +125,28 @@ uxg-changelog {
       flex: 1 1 100%;
       cursor: unset;
       height: unset;
-      margin-bottom: fds.$uxg-spacing-4;
-      padding: fds.$uxg-spacing-4 fds.$uxg-spacing-5;
-      margin-right: fds.$uxg-spacing-4;
+      margin-bottom: 24px;
+      padding: 24px 48px;
+      margin-right: 24px;
     }
 
     .category {
-      padding: fds.$uxg-spacing-2 0;
+      padding: 8px 0;
     }
 
     .change {
       .change-detail {
-        margin: fds.$uxg-spacing-2 0;
+        margin: 8px 0;
       }
 
       .change-type {
         min-width: 85px;
 
         .type {
-          margin: fds.$uxg-spacing-2 0;
+          margin: 8px 0;
           text-align: center;
-          padding: 2px fds.$uxg-spacing-2;
-          border-radius: fds.$uxg-spacing-3;
+          padding: 2px 8px;
+          border-radius: 16px;
           display: inline-block;
         }
       }
@@ -201,14 +200,14 @@ uxg-changelog {
 
   // @include flex-layout.layout-bp(sm) {
   //   .changelog-container {
-  //     margin: fds.$uxg-spacing-4;
+  //     margin: 24px;
   //     @include changelog-layout('sm');
   //   }
   // }
 
   // @include flex-layout.layout-bp(xs) {
   //   .changelog-container {
-  //     margin: fds.$uxg-spacing-4 fds.$uxg-spacing-2;
+  //     margin: 24px 8px;
   //     @include changelog-layout('xs');
   //     .version  {
   //       margin-top: 0;
