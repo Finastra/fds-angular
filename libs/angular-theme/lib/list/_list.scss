@@ -53,7 +53,7 @@ $uxg-nav-list-level-height: 48px;
       width: $uxg-nav-list-level-icon-size;
       height: $uxg-nav-list-level-icon-size;
       font-size: $uxg-nav-list-level-icon-size;
-      position: fixed;
+      vertical-align: middle;
     }
   }
 }
@@ -83,7 +83,6 @@ $uxg-nav-list-level-height: 48px;
   &.uxg-nav-list-level {
     & > .mat-mdc-list-item {
       box-sizing: border-box;
-      // padding-left: 0;
       border-left-width: 11px;
       border-left-style: solid;
 

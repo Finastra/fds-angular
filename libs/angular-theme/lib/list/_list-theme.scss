@@ -27,11 +27,12 @@
 
           @include color.property(border-color, primary);
           opacity: 0.2;
+
+          @include color.property(background-color, primary);
+          opacity: 0.1;
         }
 
         .mat-icon {
-          // @include color.color(foreground);
-          // opacity: 0.25;
           @include color.color(on-surface-medium);
           opacity: 0.75;
         }
