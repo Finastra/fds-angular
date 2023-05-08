@@ -41,8 +41,6 @@
     ></uxg-account-card>
   </div>
 
-  <br />
-
   <h5 class="uxg-h5">Selected Account Card</h5>
   <div class="accounts-list">
     <uxg-account-card
@@ -62,4 +60,93 @@
       [selectedWithCheckIcon]="true"
     ></uxg-account-card>
   </div>
+
+  <h4 class="uxg-h4">Detailed Account Card</h4>
+  <div class="account-detail-card mb-5">
+    <mat-card>
+      <mat-card-title>
+        <div>{{ account.nickname }}</div>
+      </mat-card-title>
+      <mat-card-content>
+        <div class="account-card-detail-summary">
+          <div class="uxg-avatar"></div>
+          <div class="account-card-detail-summary-info">
+            <div class="uxg-body-1">Account Number</div>
+            <div class="uxg-subtitle-1">{{ account.accountNumber }}</div>
+          </div>
+        </div>
+        <div class="account-detail-card-content">
+          <div class="account-detail-card-content__static">
+            <div class="account-detail-card-content__line">
+              <div class="uxg-subtitle-2 account-detail-card-content__line-title">Card type</div>
+              <div>
+                {{ account.accountType || 'not available' }}
+              </div>
+            </div>
+
+            <div class="account-detail-card-content__line">
+              <div class="uxg-subtitle-2 account-detail-card-content__line-title">Owner</div>
+              <div>
+                {{ account.ownerName || 'not available' }}
+              </div>
+            </div>
+
+            <div class="account-detail-card-content__line">
+              <div class="uxg-subtitle-2 account-detail-card-content__line-title">Created date</div>
+              <div>
+                {{ account.openDate || 'not available' }}
+              </div>
+            </div>
+            <div class="account-detail-card-content__line">
+              <div class="uxg-subtitle-2 account-detail-card-content__line-title">Alternate account number</div>
+              <div>
+                {{ account.alternateAccountNumber || 'no available' }}
+              </div>
+            </div>
+          </div>
+          <mat-divider [vertical]="true"></mat-divider>
+          <div class="account-detail-card-content__status">
+            <div class="account-detail-card-content__line">
+              <div class="uxg-subtitle-2 account-detail-card-content__line-title">Interest paid</div>
+              <div>{{ account.details[2].value }}</div>
+            </div>
+            <div class="account-detail-card-content__line">
+              <div class="uxg-subtitle-2 account-detail-card-content__line-title">Interest paid last year</div>
+              <div>{{ account.details[3].value }}</div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <h4 class="uxg-h4">Accounts Grid</h4>
+  <mat-card class="accounts-grid-card mb-5">
+    <mat-card-header *ngIf="actions.length > 0">
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon class="material-icons">more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let action of actions">
+          <mat-icon>{{ action.icon }}</mat-icon>
+          <span>{{ action.title }}</span>
+        </button>
+      </mat-menu>
+    </mat-card-header>
+
+    <mat-card-content class="accounts-grid">
+      <ng-container *ngFor="let item of gridAccounts">
+        <div class="account-item" (click)="onCardClick(item)">
+          <div class="uxg-icon-category">
+            <mat-icon class="material-icons" aria-label="credit card icon">credit_card</mat-icon>
+          </div>
+          <div class="account-content">
+            <div class="uxg-subtitle-3">{{ item.type }}</div>
+            <div class="uxg-body-3">{{ item.number }}</div>
+            <div class="uxg-caption">{{ item.principalAmount | currency }}</div>
+          </div>
+        </div>
+      </ng-container>
+    </mat-card-content>
+  </mat-card>
 </div>
