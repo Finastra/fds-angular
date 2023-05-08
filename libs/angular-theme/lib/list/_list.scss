@@ -59,25 +59,24 @@ $uxg-nav-list-level-height: 48px;
 }
 
 .mat-mdc-nav-list.mat-mdc-list-base {
-
   &.uxg-link-list {
-      .mat-mdc-list-item {
-        height: $uxg-link-list-item-height;
-  
-        .mat-icon:first-of-type {
-          margin-right: 8px;
-        }
-  
-        .mdc-list-item-content {
-          padding: 0 28px;
-  
-          .mat-icon {
-            width: $uxg-link-list-icon-size;
-            height: $uxg-link-list-icon-size;
-            font-size: $uxg-link-list-icon-size;
-          }
+    .mat-mdc-list-item {
+      height: $uxg-link-list-item-height;
+
+      .mat-icon:first-of-type {
+        margin-right: 8px;
+      }
+
+      .mdc-list-item-content {
+        padding: 0 28px;
+
+        .mat-icon {
+          width: $uxg-link-list-icon-size;
+          height: $uxg-link-list-icon-size;
+          font-size: $uxg-link-list-icon-size;
         }
       }
+    }
   }
 
   &.uxg-nav-list,
