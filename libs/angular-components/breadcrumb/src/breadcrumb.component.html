@@ -28,8 +28,8 @@
                 [ngClass]="{ 'uxg-list-item-selected': item.label === breadcrumbItem.label }"
                 mat-list-item
               >
-                <mat-icon mat-list-icon>{{ item.icon ? item.icon : 'filter_none' }}</mat-icon>
-                <span>{{ item.label }}</span>
+                <mat-icon matListItemIcon>{{ item.icon ? item.icon : 'filter_none' }}</mat-icon>
+                <p matListItemTitle>{{ item.label }}</p>
               </a>
             </mat-nav-list>
           </mat-menu>

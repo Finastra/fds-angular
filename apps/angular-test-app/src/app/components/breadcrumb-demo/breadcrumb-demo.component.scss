@@ -7,7 +7,8 @@
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 32px;
-  .title {
-    padding: 32px 0 16px 0;
+
+  .mat-toolbar {
+    margin-bottom: $uxg-spacing-5;
   }
 }
