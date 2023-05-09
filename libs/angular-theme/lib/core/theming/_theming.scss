@@ -16,6 +16,7 @@ $dark-theme: mat.define-dark-theme(
     color: (
       primary: mat.define-palette(palette.$primary-dark-palette),
       accent: mat.define-palette(palette.$secondary-dark-palette)
-    )
+    ),
+    typography: mat.define-typography-config()
   )
 );
