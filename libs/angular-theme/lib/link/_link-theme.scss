@@ -1,6 +1,6 @@
 @use '@finastra/fds-theme/color' as fds;
 
-@mixin color() {
+@mixin theme($theme: null) {
   .uxg-link {
     @include fds.color(primary);
     text-decoration: underline;
