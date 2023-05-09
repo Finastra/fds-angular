@@ -12,9 +12,9 @@
   &[matBadgeColor='#{$color-name}'],
   &.mat-badge-#{$color-name} {
     span.mat-badge-content {
-      background-color: var(--fds-#{$fds-color});
+      @include fds.property(background-color, #{$fds-color});
+      @include fds.color(on-primary);
       border-style: none;
-      color: var(--fds-on-primary);
     }
   }
 }
