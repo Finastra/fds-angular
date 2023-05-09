@@ -1,0 +1,110 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+@use '../core/style/spacing' as *;
+
+@use '@finastra/fds-theme/color' as color;
+@use '@finastra/fds-theme/typography' as typography;
+@use '@finastra/fds-theme/spacing' as spacing;
+
+@mixin mat-card-actions {
+  display: flex;
+  align-items: center;
+
+  & > .mat-icon,
+  & > .uxg-avatar-list {
+    margin-left: $uxg-spacing-2;
+  }
+
+  button + button {
+    margin-left: $uxg-spacing-2;
+  }
+}
+
+.mat-mdc-card {
+  .uxg-card-image-overlay {
+    position: relative;
+    display: block;
+
+    &:first-of-type {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+    }
+
+    img {
+      border-top-left-radius: inherit;
+      border-top-right-radius: inherit;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.04));
+    }
+  }
+
+  .mat-mdc-card-title {
+    font-family: var(--fds-font-family);
+    font-weight: 500;
+    font-size: var(--fds-headline-4-font-size);
+    line-height: var(--fds-headline-4-line-height);
+
+    @include spacing.padding(3);
+  }
+
+  .mat-mdc-card-subtitle {
+    padding: 0 $uxg-spacing-3;
+  }
+
+  .mat-mdc-card-content {
+    @include typography.typography(body-2);
+    @include spacing.padding(3, bottom);
+  }
+
+  .mat-mdc-card-actions {
+    @include mat-card-actions();
+    @include spacing.padding-x(3);
+    @include spacing.padding(3, bottom);
+  }
+
+  &[dense] {
+    width: 210px;
+  }
+}
+
+.uxg-card-product.mat-mdc-card,
+.uxg-card-solution.mat-mdc-card {
+  width: 160px;
+  height: 120px;
+
+  text-align: center;
+
+  &[extra-dense] {
+    width: 100px;
+    height: 70px;
+  }
+
+  &[dense] {
+    width: 120px;
+    height: 90px;
+  }
+
+  &[large] {
+    width: 320px;
+    height: 240px;
+  }
+
+  .uxg-card-product-name,
+  .uxg-card-solution-name {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
+}

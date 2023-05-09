@@ -81,3 +81,17 @@ section {
   margin-bottom: 2 * fds.$uxg-spacing-5;
   align-items: flex-start;
 }
+
+@keyframes animate-filter {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(30deg);
+  }
+
+  to {
+    filter: hue-rotate(0deg);
+  }
+}

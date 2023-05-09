@@ -1,0 +1,99 @@
+@import 'angular-theme/lib/core/style/spacing';
+
+.container {
+  display: flex;
+}
+
+.accounts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-gap: $uxg-spacing-3;
+
+  margin-bottom: $uxg-spacing-5;
+}
+
+.account-detail-card {
+  .mat-mdc-card {
+    max-width: 620px;
+  }
+  .account-card-detail-summary {
+    display: flex;
+    padding-top: $uxg-spacing-3;
+    padding-bottom: $uxg-spacing-3;
+    align-items: center;
+    .account-card-detail-summary-info {
+      display: flex;
+      padding-left: $uxg-spacing-3;
+      flex-direction: column;
+    }
+  }
+  .account-detail-card-content {
+    display: flex;
+    .account-detail-card-content__static {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+      padding-right: $uxg-spacing-3;
+    }
+    .account-detail-card-content__status {
+      display: flex;
+      padding-left: $uxg-spacing-3;
+      flex: 1;
+      flex-direction: column;
+    }
+    .account-detail-card-content__line {
+      display: flex;
+      padding-bottom: 8px;
+      .account-detail-card-content__line-title {
+        min-width: 196px;
+      }
+    }
+  }
+}
+
+.accounts-grid-card {
+  .mat-mdc-card-header {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-left: $uxg-spacing-0;
+
+    .mat-icon {
+      color: rgba(var(--fds-primary), 0.5);
+    }
+
+    .mat-mdc-card-header-text {
+      margin: $uxg-spacing-0;
+    }
+  }
+
+  mat-card-content.accounts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: $uxg-spacing-3;
+    padding: $uxg-spacing-3 $uxg-spacing-3 $uxg-spacing-4;
+
+    .account-item {
+      cursor: pointer;
+      vertical-align: top;
+      display: inline-block;
+      text-align: center;
+
+      .uxg-icon-category {
+        display: inline-flex;
+        margin-bottom: $uxg-spacing-2;
+        width: $uxg-spacing-5;
+        height: $uxg-spacing-5;
+      }
+
+      .account-content {
+        .uxg-body-3 {
+          opacity: 0.65;
+        }
+      }
+    }
+  }
+}
+
+.default-card {
+  max-width: 400px;
+}
