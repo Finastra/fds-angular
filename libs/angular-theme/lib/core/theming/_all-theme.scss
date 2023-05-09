@@ -31,7 +31,6 @@
 @use './theming' as theme;
 
 @mixin uxg-core-theme($theme) {
-
   @at-root {
     body {
       @include color.background(background);
