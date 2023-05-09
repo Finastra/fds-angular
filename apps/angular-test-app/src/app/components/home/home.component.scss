@@ -50,15 +50,12 @@
 
   .home-list-grid {
     display: flex;
-    gap: 16px;
+    gap: 24px;
     flex-wrap: wrap;
     justify-content: flex-start;
 
-    .mat-card {
-      width: 210px;
-      margin: 20px 10px;
+    .mat-mdc-card {
       cursor: pointer;
-      padding: 28px 0;
     }
   }
 }

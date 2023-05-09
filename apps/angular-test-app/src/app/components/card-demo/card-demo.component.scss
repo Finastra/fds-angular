@@ -1,5 +1,9 @@
 @import 'angular-theme/lib/core/style/spacing';
 
+.container {
+  display: flex;
+}
+
 .accounts-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, 250px);
@@ -10,16 +14,16 @@
 
 .account-detail-card {
   .mat-mdc-card {
-    max-width: 629px;
+    max-width: 620px;
   }
   .account-card-detail-summary {
     display: flex;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: $uxg-spacing-3;
+    padding-bottom: $uxg-spacing-3;
     align-items: center;
     .account-card-detail-summary-info {
       display: flex;
-      padding-left: 16px;
+      padding-left: $uxg-spacing-3;
       flex-direction: column;
     }
   }
@@ -29,11 +33,11 @@
       display: flex;
       flex: 1;
       flex-direction: column;
-      padding-right: 16px;
+      padding-right: $uxg-spacing-3;
     }
     .account-detail-card-content__status {
       display: flex;
-      padding-left: 16px;
+      padding-left: $uxg-spacing-3;
       flex: 1;
       flex-direction: column;
     }
@@ -88,4 +92,8 @@
       }
     }
   }
+}
+
+.default-card {
+  max-width: 400px;
 }

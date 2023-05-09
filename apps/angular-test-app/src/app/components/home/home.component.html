@@ -1,7 +1,8 @@
 <main class="home-container">
   <div class="home-title">
-    <div class="home-title-content">
+    <div class="home-title-content flex align-baseline">
       <h2 class="uxg-h2 title mb-0">Angular Components</h2>
+      <span class="ml-3 uxg-caption"> v{{ version }} </span>
     </div>
   </div>
 
@@ -11,9 +12,7 @@
       <div class="home-list-grid mb-5">
         <ng-container *ngFor="let route of nestedRoute.routes">
           <mat-card [routerLink]="route.path" class="uxg-card-product">
-            <mat-card-content>
-              <span class="uxg-h4 uxg-card-product-name">{{ route.data?.title }}</span>
-            </mat-card-content>
+            <span class="uxg-h5 uxg-card-product-name pl-3 pr-3">{{ route.data?.title }}</span>
           </mat-card>
         </ng-container>
       </div>

@@ -22,14 +22,11 @@
 .mat-mdc-card {
   .uxg-card-image-overlay {
     position: relative;
-    // margin: 0 (-$mat-card-padding) $uxg-spacing-3 (-$mat-card-padding);
-    // width: calc(100% + #{$mat-card-padding * 2});
     display: block;
 
     &:first-of-type {
       border-top-left-radius: inherit;
       border-top-right-radius: inherit;
-      // margin-top: -$mat-card-padding !important;
     }
 
     img {
@@ -51,30 +48,32 @@
     }
   }
 
+  .mat-mdc-card-title {
+    font-family: var(--fds-font-family);
+    font-weight: 500;
+    font-size: var(--fds-headline-4-font-size);
+    line-height: var(--fds-headline-4-line-height);
+
+    @include spacing.padding(3);
+  }
+
+  .mat-mdc-card-subtitle {
+    padding: 0 $uxg-spacing-3;
+  }
+
   .mat-mdc-card-content {
     @include typography.typography(body-2);
-    // @include color.color(on-surface-medium);
-    @include spacing.margin(3, bottom);
+    @include spacing.padding(3, bottom);
   }
 
   .mat-mdc-card-actions {
     @include mat-card-actions();
+    @include spacing.padding-x(3);
+    @include spacing.padding(3, bottom);
   }
 
   &[dense] {
     width: 210px;
-  }
-}
-
-.uxg-card-product.mat-mdc-card {
-  .uxg-card-product-name {
-    top: 30%;
-  }
-}
-
-.uxg-card-solution.mat-mdc-card {
-  .uxg-card-solution-name {
-    top: 35%;
   }
 }
 
@@ -103,7 +102,9 @@
   .uxg-card-product-name,
   .uxg-card-solution-name {
     height: 100%;
-    vertical-align: middle;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
   }
 }
