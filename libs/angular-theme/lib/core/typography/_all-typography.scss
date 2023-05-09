@@ -1,6 +1,6 @@
 @use './typography' as uxg-typography;
 @use '../../avatar/avatar-theme';
-// @use '../../badge/badge-theme';
+@use '../../badge/badge-theme';
 @use '../../button/button-theme';
 // @use '../../button-toggle/button-toggle-theme';
 @use '../../breadcrumb/breadcrumb-theme';
@@ -14,9 +14,7 @@
   @include uxg-typography.uxg-base-typography();
 
   @include avatar-theme.typography($config);
-
-  // @include badge-theme.typography($config);
-
+  @include badge-theme.typography($config);
   @include button-theme.typography($config);
 
   // @include button-toggle-theme.typography($config);
