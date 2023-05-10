@@ -20,6 +20,7 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
+      "@env/*": ["apps/angular-test-app/src/environments/*"],
       "@finastra/angular-components": ["libs/angular-components"],
       "@finastra/angular-components/avatar": ["libs/angular-components/avatar"],
       "@finastra/angular-components/banner": ["libs/angular-components/banner"],
@@ -49,8 +50,7 @@
       "@finastra/angular-components/vector-map": ["libs/angular-components/vector-map"],
       "@finastra/angular-components/video-thumbnail": ["libs/angular-components/video-thumbnail"],
       "@finastra/angular-components/wizard": ["libs/angular-components/wizard"],
-      "@finastra/devkit": ["dist/devkit/"],
-      "@env/*": ["apps/angular-test-app/src/environments/*"]
+      "@finastra/devkit": ["dist/devkit/"]
     }
   },
   "angularCompilerOptions": {

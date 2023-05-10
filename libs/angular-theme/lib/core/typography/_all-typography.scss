@@ -3,11 +3,11 @@
 @use '../../badge/badge-theme';
 @use '../../button/button-theme';
 // @use '../../button-toggle/button-toggle-theme';
-// @use '../../breadcrumb/breadcrumb-theme';
+@use '../../breadcrumb/breadcrumb-theme';
 @use '../../card/card-theme';
 // @use '../../chips/chips-theme';
 // @use '../../form-field/form-field-theme';
-// @use '../../list/list-theme';
+@use '../../list/list-theme';
 // @use '../../table/table-theme';
 
 @mixin uxg-material-typography($config: null) {
@@ -16,12 +16,11 @@
   @include avatar-theme.typography($config);
   @include badge-theme.typography($config);
   @include button-theme.typography($config);
-
   // @include button-toggle-theme.typography($config);
-  // @include breadcrumb-theme.typography($config);
+  @include breadcrumb-theme.typography($config);
   @include card-theme.typography($config);
   // @include chips-theme.typography($config);
   // @include form-field-theme.typography($config);
-  // @include list-theme.typography($config);
+  @include list-theme.typography($config);
   // @include table-theme.typography($config);
 }
