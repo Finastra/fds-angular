@@ -45,7 +45,7 @@ $uxg-nav-list-level-height: 48px;
   }
 }
 
-.uxg-nav-list-level.mat-mdc-nav-list.mat-mdc-list-base {
+.mat-mdc-list-base.mat-mdc-nav-list.uxg-nav-list-level {
   & > .mat-mdc-list-item {
     height: $uxg-nav-list-level-height;
 
@@ -67,7 +67,7 @@ $uxg-nav-list-level-height: 48px;
         margin-right: 8px;
       }
 
-      .mdc-list-item-content {
+      .mdc-list-item__content {
         padding: 0 28px;
 
         .mat-icon {

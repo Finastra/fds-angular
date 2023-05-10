@@ -9,17 +9,15 @@
     }
   }
 
-  .mat-mdc-nav-list.mat-mdc-list-base {
+  .mat-mdc-list-base.mat-mdc-nav-list {
     padding: 0;
 
     &.uxg-link-list {
-      .mat-mdc-list-item {
-        .mat-mdc-list-item-title {
-          @include color.color(primary);
-        }
-        .mat-icon {
-          @include color.color(primary);
-        }
+      .mat-mdc-list-item .mdc-list-item__primary-text {
+        @include color.color(primary);
+
+        display: flex;
+        align-items: center;
       }
     }
 
@@ -43,12 +41,15 @@
         }
 
         &.uxg-list-item-selected {
-          @include color.color(primary);
           @include color.property(border-color, primary);
 
           .mat-icon {
             @include color.color(primary);
             opacity: 0.5;
+          }
+
+          .mdc-list-item__primary-text {
+            @include color.color(primary);
           }
         }
 
@@ -64,20 +65,20 @@
 
 @mixin typography($config: null) {
   .uxg-nav-list.mat-mdc-nav-list.mat-mdc-list-base {
-    &.mat-mdc-list-item > * {
+    & .mat-mdc-list-item .mdc-list-item__primary-text {
       @include typography.typography(subtitle-1);
     }
   }
 
   .uxg-link-list.mat-mdc-nav-list.mat-mdc-list-base {
-    &.mat-mdc-list-item > * {
+    & .mat-mdc-list-item .mdc-list-item__primary-text {
       @include typography.typography(caption);
     }
   }
 
   .uxg-ol {
     *::before {
-      @include typography.typography(h6);
+      @include typography.typography(subtitle-1);
     }
 
     .uxg-ol-title {
