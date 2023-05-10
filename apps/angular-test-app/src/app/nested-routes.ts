@@ -11,6 +11,7 @@ import { FilterPanelDemoComponent } from './components/filter-panel-demo/filter-
 import { FoundationsDemoComponent } from './components/foundations-demo/foundations-demo.component';
 import { GlobalNavDemoComponent } from './components/global-nav-demo/global-nav-demo.component';
 import { GlobalSearchDemoComponent } from './components/global-search-demo/global-search-demo.component';
+import { ListDemoComponent } from './components/list-demo/list-demo.component';
 import { PopoverDemoComponent } from './components/popover-demo/popover-demo.component';
 import { RepeaterDemoComponent } from './components/repeater-demo/repeater-demo.component';
 import { SearchInputDemoComponent } from './components/search-input-demo/search-input-demo.component';
@@ -61,6 +62,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster' } },
       { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail' } },
       { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } },
+      { path: 'list', component: ListDemoComponent, data: { title: 'List' } },
       { path: 'card', component: CardDemoComponent, data: { title: 'Card' } }
     ]
   }
