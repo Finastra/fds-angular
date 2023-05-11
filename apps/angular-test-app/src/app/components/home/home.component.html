@@ -11,12 +11,15 @@
 
   <div class="home-list">
     <ng-container *ngFor="let nestedRoute of nestedRoutes">
-      <h5 class="uxg-h4 uxg-text-primary">{{ nestedRoute.title }}</h5>
+      <h5 class="uxg-h4 uxg-text-primary mb-4">{{ nestedRoute.title }}</h5>
       <div class="home-list-grid mb-5">
         <ng-container *ngFor="let route of nestedRoute.routes">
-          <mat-card [routerLink]="route.path" class="uxg-card-product">
-            <span class="uxg-h5 uxg-card-product-name pl-3 pr-3">{{ route.data?.title }}</span>
-          </mat-card>
+          <div class="card-container">
+            <div class="banner uxg-caption" [class.migrated]="route.data?.migrated">Angular 15</div>
+            <mat-card [routerLink]="route.path" class="uxg-card-product">
+              <span class="uxg-h5 uxg-card-product-name pl-3 pr-3">{{ route.data?.title }}</span>
+            </mat-card>
+          </div>
         </ng-container>
       </div>
     </ng-container>
