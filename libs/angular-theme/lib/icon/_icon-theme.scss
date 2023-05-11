@@ -1,6 +1,6 @@
 @use '@finastra/fds-theme/color' as fds;
 
-@mixin color() {
+@mixin theme($theme: null) {
   .mat-icon[color='secondary'],
   .mat-icon.mat-secondary {
     @include fds.color(secondary);
@@ -25,7 +25,7 @@
   }
 
   .uxg-icon-category {
-    // background-color: $background;
+    @include fds.background(surface-selected);
 
     .mat-icon {
       @include fds.color(primary);

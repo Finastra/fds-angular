@@ -1,7 +1,7 @@
-<div class="vector-map" fxLayout="column">
+<div class="flex-col vector-map">
   <h3 class="uxg-h3">{{ title }}</h3>
-  <div fxFlex="fill" class="wrapper" fxLayout="row" fxLayout.xs="column" #wrapper>
-    <div class="map" fxFlex="fill" #map>
+  <div class="flex-row flex-col-xs fill wrapper" #wrapper>
+    <div class="fill map" #map>
       <plotly-plot
         *ngIf="plotlyReady$ | async"
         [data]="data"
@@ -16,7 +16,7 @@
       </plotly-plot>
     </div>
     <div class="meta" *ngIf="views || (max > 0 && showLegend === true)">
-      <div class="meta-wrapper" fxLayout="column" fxLayoutAlign="center space-between">
+      <div class="flex-col justify-between align-center meta-wrapper">
         <div class="views" *ngIf="views">
           <mat-form-field>
             <mat-label>View by</mat-label>

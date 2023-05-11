@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { AccountCardDemoComponent } from './components/account-card-demo/account-card-demo.component';
 import { AvatarDemoComponent } from './components/avatar-demo/avatar-demo.component';
 import { BannerDemoComponent } from './components/banner-demo/banner-demo.component';
 import { BreadcrumbDemoComponent } from './components/breadcrumb-demo/breadcrumb-demo.component';
+import { CardDemoComponent } from './components/card-demo/card-demo.component';
 import { ChangelogDemoComponent } from './components/changelog-demo/changelog-demo.component';
 import { EntityMenuDemoComponent } from './components/entity-menu-demo/entity-menu-demo.component';
 import { ExpandableTableDemoComponent } from './components/expandable-table-demo/expandable-table-demo.component';
@@ -11,6 +11,7 @@ import { FilterPanelDemoComponent } from './components/filter-panel-demo/filter-
 import { FoundationsDemoComponent } from './components/foundations-demo/foundations-demo.component';
 import { GlobalNavDemoComponent } from './components/global-nav-demo/global-nav-demo.component';
 import { GlobalSearchDemoComponent } from './components/global-search-demo/global-search-demo.component';
+import { ListDemoComponent } from './components/list-demo/list-demo.component';
 import { PopoverDemoComponent } from './components/popover-demo/popover-demo.component';
 import { RepeaterDemoComponent } from './components/repeater-demo/repeater-demo.component';
 import { SearchInputDemoComponent } from './components/search-input-demo/search-input-demo.component';
@@ -55,13 +56,14 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
         data: { title: 'User Profile Menu' }
       },
       { path: 'banner', component: BannerDemoComponent, data: { title: 'Banner' } },
-      { path: 'account-card', component: AccountCardDemoComponent, data: { title: 'Account Card' } },
       { path: 'search-input', component: SearchInputDemoComponent, data: { title: 'Search Input' } },
       { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog' } },
       { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb' } },
       { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster' } },
       { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail' } },
-      { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } }
+      { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } },
+      { path: 'list', component: ListDemoComponent, data: { title: 'List' } },
+      { path: 'card', component: CardDemoComponent, data: { title: 'Card' } }
     ]
   }
 ].map((groups) => {

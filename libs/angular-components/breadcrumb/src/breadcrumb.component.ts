@@ -1,15 +1,15 @@
-import { Component, Input, OnDestroy, ViewEncapsulation, ChangeDetectionStrategy, ChangeDetectorRef, Attribute } from '@angular/core';
-import { Breadcrumb } from './breadcrumb';
-import { Router, RouterLink } from '@angular/router';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
 import { coerceBooleanProperty } from '@angular/cdk/coercion';
-import { Subject, combineLatest, ReplaySubject } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
-import { MatListModule } from '@angular/material/list';
-import { MatMenuModule } from '@angular/material/menu';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { NgClass, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
+import { Attribute, ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, OnDestroy, ViewEncapsulation } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import { NgIf, NgFor, NgTemplateOutlet, NgClass } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { Router, RouterLink } from '@angular/router';
+import { Subject, combineLatest } from 'rxjs';
+import { map, takeUntil } from 'rxjs/operators';
+import { Breadcrumb } from './breadcrumb';
 @Component({
   selector: 'uxg-breadcrumb',
   templateUrl: './breadcrumb.component.html',

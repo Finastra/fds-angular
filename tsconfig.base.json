@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "noImplicitReturns": false,
     "noFallthroughCasesInSwitch": true,
@@ -19,6 +20,7 @@
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
+      "@env/*": ["apps/angular-test-app/src/environments/*"],
       "@finastra/angular-components": ["libs/angular-components"],
       "@finastra/angular-components/avatar": ["libs/angular-components/avatar"],
       "@finastra/angular-components/banner": ["libs/angular-components/banner"],

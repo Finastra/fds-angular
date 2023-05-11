@@ -1,31 +1,24 @@
-@use 'sass:map';
-@use './palette';
+@use '@finastra/fds-theme/color' as fds;
 
 @mixin uxg-color-utility($theme) {
-  $primary: map.get($theme, primary);
-  $accent: map.get($theme, accent);
-  $warn: map.get($theme, warn);
-  $success: map.get($theme, success);
-  $error: map.get($theme, error);
-
   .uxg-text-primary {
-    color: palette.mat-color($primary, default);
+    @include fds.color(primary);
   }
 
   .uxg-text-accent,
   .uxg-text-secondary {
-    color: palette.mat-color($accent, default);
+    @include fds.color(secondary);
   }
 
   .uxg-text-warn {
-    color: palette.mat-color($warn, default);
+    @include fds.color(warning);
   }
 
   .uxg-text-error {
-    color: palette.mat-color($error, default);
+    @include fds.color(error);
   }
 
   .uxg-text-success {
-    color: palette.mat-color($success, default);
+    @include fds.color(success);
   }
 }
