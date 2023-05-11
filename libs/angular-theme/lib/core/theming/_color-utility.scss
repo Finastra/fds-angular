@@ -1,5 +1,13 @@
 @use '@finastra/fds-theme/color' as fds;
 
+@use 'sass:color';
+@use 'sass:map';
+
+@use '@finastra/fds-tokens/dist/scss/light';
+@use '@finastra/fds-tokens/dist/scss/dark';
+
+@use './theming' as theme;
+
 @mixin uxg-color-utility($theme) {
   .uxg-text-primary {
     @include fds.color(primary);
@@ -21,4 +29,12 @@
   .uxg-text-success {
     @include fds.color(success);
   }
+}
+
+@function get-color-from-token($token, $opacity: null, $theme: theme.$light-theme) {
+  $tokens: if($theme == theme.$light-theme, light.$tokens, dark.$tokens);
+
+  $color: map.get($tokens, $token);
+
+  @return rgba(red($color), green($color), blue($color), if($opacity == null, opacity($color), $opacity));
 }

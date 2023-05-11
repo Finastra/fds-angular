@@ -20,7 +20,6 @@
   @include toaster.theme($theme);
   // @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
-  // @include account-card.theme($theme);
 }
 
 @include app-theme(fds.$light-theme);

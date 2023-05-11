@@ -14,13 +14,13 @@
     *ngFor="let node of navigationNodes"
   >
     <mat-icon matListItemIcon>{{ node.icon }}</mat-icon>
-    <p>{{ node.title }}</p>
+    <p matListItemTitle>{{ node.title }}</p>
   </a>
 </mat-nav-list>
 
 <mat-nav-list class="uxg-link-list">
   <a (click)="logout.emit()" mat-list-item>
-    <mat-icon matListItemIcon>power_settings_new</mat-icon>
+    <mat-icon>power_settings_new</mat-icon>
     <span class="uxg-body-2">Logout</span>
   </a>
 </mat-nav-list>

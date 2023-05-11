@@ -17,11 +17,41 @@
 </ng-template>
 
 <ng-template #navbarAction>
-  <button mat-icon-button color="neutral" aria-label="notifications" aria-expanded="true">
+  <button mat-icon-button color="neutral">
+    <mat-icon>search</mat-icon>
+  </button>
+  <button mat-icon-button color="neutral">
     <mat-icon>notifications</mat-icon>
   </button>
+  <button mat-icon-button color="neutral">
+    <mat-icon>help_outline</mat-icon>
+  </button>
+  <button mat-icon-button color="neutral">
+    <mat-icon>apps</mat-icon>
+  </button>
 
-  <button mat-icon-button color="gradient" aria-label="uxp-navbar-user-button">
+  <button mat-icon-button [matMenuTriggerFor]="menuHero" color="gradient">
     <mat-icon>account_circle</mat-icon>
   </button>
+  <button mat-icon-button class="uxg-toolbar-icon-menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
 </ng-template>
+
+<mat-menu #menuHero="matMenu" class="uxg-user-profile">
+  <div class="uxg-menu-header">
+    <div class="uxg-avatar-hero-block">
+      <div class="uxg-avatar" large>RH</div>
+      <h6 class="uxg-h6">Raya Hristova</h6>
+      <span class="uxg-caption">raya.hristova@finastra.com</span>
+    </div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="uxg-menu-footer">
+    <button mat-flat-button color="primary" dense>
+      <mat-icon>exit_to_app</mat-icon>
+      Logout
+    </button>
+    <button mat-button color="primary" dense>View profile</button>
+  </div>
+</mat-menu>
