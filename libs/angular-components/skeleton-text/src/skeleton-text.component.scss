@@ -13,13 +13,13 @@
       display: inline-block;
       content: '';
       opacity: 0.1;
-      width: 300%;
+      width: 150%;
       height: 300%;
-      animation-duration: 1.2s;
+      animation-duration: 1.3s;
       animation-fill-mode: forwards;
       animation-iteration-count: infinite;
       animation-name: shine;
-      animation-timing-function: cubic-bezier(0, 0, 0.35, 1);
+      animation-timing-function: linear;
       @media (prefers-reduced-motion: reduce) {
         display: none;
         animation: none;
@@ -29,11 +29,11 @@
 
   @keyframes shine {
     0% {
-      margin-left: -500%;
+      margin-left: -150%;
     }
 
     100% {
-      margin-left: 500%;
+      margin-left: 150%;
     }
   }
 }
