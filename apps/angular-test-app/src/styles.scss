@@ -1,11 +1,14 @@
 @use 'angular-theme' as fds;
 @use 'angular-theme/base';
 @use 'angular-components/toaster/src/toaster.theme' as toaster;
+@use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
 
 @include fds.uxg-core();
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);
+  @include toaster.theme($theme);
+  @include skeleton.theme($theme);
   // @include filter-group.theme($theme);
   // @include filter-tags.theme($theme);
   // @include filter-tree.theme($theme);
@@ -17,7 +20,6 @@
   // @include skeleton.theme($theme);
   // @include repeater.theme($theme);
   // @include changelog.theme($theme);
-  @include toaster.theme($theme);
   // @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
   // @include account-card.theme($theme);
@@ -28,10 +30,6 @@
 .uxg-dark-theme {
   @include app-theme(fds.$dark-theme);
 }
-
-@use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
-
-@include skeleton.color();
 
 html,
 body {
