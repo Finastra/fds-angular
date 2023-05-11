@@ -1,17 +1,17 @@
-@use 'sass:map';
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as fds;
 
-@mixin theme($theme) {
-  $foreground: map.get($theme, foreground);
-
-  $background-color: fds.get-color-from-palette($foreground, text, 0.065);
-  $background-color-animated: fds.get-color-from-palette($foreground, text, 0.135);
-
+@mixin theme($theme: null) {
   uxg-skeleton-text {
-    background: $background-color;
+    @include fds.background(surface-selected);
 
-    &[animated] {
-      background-image: linear-gradient(to right, $background-color 8%, $background-color-animated 18%, $background-color 33%);
+    &::before {
+      background-image: linear-gradient(
+        to right,
+        transparent 0%,
+        var(--fds-on-surface-medium) 30%,
+        var(--fds-on-surface-medium) 70%,
+        transparent 100%
+      );
     }
   }
 }
