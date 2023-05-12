@@ -2,12 +2,6 @@
 @use '@finastra/fds-theme/typography' as typo;
 
 @mixin theme($theme: null) {
-  // $primary: map.get($theme, primary);
-  // $error: map.get($theme, error);
-  // $background: map-get($theme, background);
-  // $fill-background: palette.get-color-from-palette($primary, default, 0.08);
-  // $error-background: palette.get-color-from-palette($error, default, 0.04);
-
   .mat-form-field-appearance-outline {
     .mat-form-field-outline {
       @include fds.property(background-color, surface);
@@ -70,35 +64,40 @@
 @mixin typography($config: null) {
   .mat-form-field-appearance-outline {
     &[dense] {
-      .mat-input-element {
-        @include typo.typography(subtitle-3);
+      .mat-mdc-input-element,
+      .mat-form-field-label,
+      .mat-mdc-floating-label {
+        @include typo.typography(body-2);
       }
       .mat-input-element::placeholder {
-        @include typo.typography(body-3);
+        @include typo.typography(body-2);
       }
-      @include typo.typography(body-3);
     }
 
-    .mat-input-element {
-      @include typo.typography(subtitle-2);
-    }
+    .mat-mdc-input-element,
     .mat-input-element::placeholder {
-      @include typo.typography(body-2);
+      @include typo.typography(body-1);
     }
-    @include typo.typography(body-2);
+    @include typo.typography(body-1);
   }
+
   .mat-form-field-appearance-fill {
     @include typo.typography(subtitle-1);
 
-    .mat-form-field-label {
-      @include fds.property(font-weight, body-1-font-weight);
+    .mat-form-field-label,
+    .mat-mdc-floating-label {
+      @include typo.typography(body-1);
     }
 
     &[dense] {
       @include typo.typography(subtitle-2);
 
-      .mat-form-field-label {
-        @include fds.property(font-weight, caption-font-weight);
+      .mat-mdc-input-element {
+        @include typo.typography(subtitle-2);
+      }
+      .mat-form-field-label,
+      .mat-mdc-floating-label {
+        @include typo.typography(body-2);
       }
     }
   }

@@ -1,30 +1,32 @@
 @use '../core/style/spacing' as *;
 
-$mat-form-field-fill-side-padding: 1em !default;
-$mat-form-field-fill-line-spacing: 7px !default;
-$mat-form-field-fill-line-spacing-dense: 6.2px;
-
 $mat-form-field-subscript-margin-top: 2px;
 
-$infix-padding-bottom: 0.41em;
-
-$infix-padding-top-dense: 0.196em;
-$infix-padding-bottom-dense: 0.368em;
-$infix-border-top-dense: 0.661em;
+$infix-padding-top-dense: 18px;
+$infix-padding-bottom-dense: 4px;
 
 $infix-top-no-label: -0.35em;
 $infix-padding-bottom-no-label: 0.469em;
 
+$mat-icon-button-dense-size: 40px;
+
 .mat-mdc-form-field.mat-form-field-appearance-outline {
   .mat-mdc-text-field-wrapper {
-    .mat-mdc-form-field-flex {
-      padding: 0 1em 0 1em;
-    }
     .mat-mdc-form-field-icon-prefix {
-      padding-right: 0.5em;
+      .mat-icon,
+      span {
+        padding-left: $uxg-spacing-3;
+        padding-right: $uxg-spacing-2;
+      }
+    }
+    .mat-mdc-form-field-icon-suffix {
+      span {
+        padding-left: $uxg-spacing-2;
+        padding-right: $uxg-spacing-3;
+      }
     }
     .mat-mdc-form-field-infix {
-      padding: 1.2em 0 0.7em 0;
+      min-height: auto;
     }
   }
 
@@ -64,25 +66,27 @@ $infix-padding-bottom-no-label: 0.469em;
   .mat-form-field-subscript-wrapper {
     margin-top: 0;
   }
-}
 
-.mat-form-field-appearance-legacy {
-  .mat-mdc-form-field-flex {
-    align-items: flex-end;
+  &[dense] {
+    .mat-mdc-text-field-wrapper {
+      .mat-mdc-form-field-flex {
+        .mat-mdc-icon-button.mat-mdc-button-base {
+          width: $mat-icon-button-dense-size;
+          height: $mat-icon-button-dense-size;
+        }
+        .mat-mdc-floating-label:not(.mdc-floating-label--float-above) {
+          top: 20px;
+        }
+      }
+      .mat-mdc-form-field-infix {
+        padding: 10px 0;
+      }
+    }
   }
 }
 
 .mat-form-field-appearance-fill {
   .mat-mdc-text-field-wrapper {
-    .mat-mdc-form-field-flex {
-      padding-top: $mat-form-field-fill-line-spacing;
-      padding-left: $mat-form-field-fill-side-padding;
-
-      .mat-mdc-form-field-infix {
-        padding-bottom: $infix-padding-bottom;
-      }
-    }
-
     .mat-form-field-subscript-wrapper {
       margin-top: $mat-form-field-subscript-margin-top;
     }
@@ -102,20 +106,34 @@ $infix-padding-bottom-no-label: 0.469em;
   &[dense] {
     .mat-mdc-text-field-wrapper {
       .mat-mdc-form-field-flex {
-        padding-top: $mat-form-field-fill-line-spacing-dense;
-
         .mat-mdc-form-field-infix {
-          border-top: $infix-border-top-dense solid transparent;
           padding-top: $infix-padding-top-dense;
           padding-bottom: $infix-padding-bottom-dense;
+          min-height: auto;
+
+          .mat-mdc-floating-label {
+            top: 22px;
+          }
+        }
+        .mat-mdc-icon-button.mat-mdc-button-base {
+          width: $mat-icon-button-dense-size;
+          height: $mat-icon-button-dense-size;
         }
       }
     }
   }
 
   .mat-mdc-form-field-icon-prefix {
-    .mat-icon {
+    .mat-icon,
+    span {
+      padding-left: $uxg-spacing-3;
       padding-right: $uxg-spacing-2;
+    }
+  }
+  .mat-mdc-form-field-icon-suffix {
+    span {
+      padding-left: $uxg-spacing-2;
+      padding-right: $uxg-spacing-3;
     }
   }
 }

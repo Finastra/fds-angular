@@ -1,6 +1,7 @@
 @use '@finastra/angular-theme' as fds;
 
 $uxg-filter-group-border-radius: 4px;
+$uxg-expansion-panel-header-height: 40px;
 
 .uxg-expansion-filter {
   .filter-value {
@@ -13,27 +14,39 @@ $uxg-filter-group-border-radius: 4px;
     cursor: default !important;
     padding-right: 0;
 
-    .uxg-filter-group-header {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      cursor: default;
+    .mat-content.mat-content-hide-toggle {
+      margin-right: 0;
 
-      .selectedFilters {
-        overflow: hidden;
+      .uxg-filter-group-header {
+        width: 100%;
         display: flex;
+        align-items: center;
+        cursor: default;
 
-        .uxg-group-filter {
-          flex: 0 0 auto;
-          margin-right: fds.$uxg-spacing-4;
+        .selectedFilters {
+          overflow: hidden;
+          display: flex;
+
+          .uxg-group-filter {
+            flex: 0 0 auto;
+            margin-right: fds.$uxg-spacing-4;
+          }
+
+          .filter-divider {
+            margin-right: fds.$uxg-spacing-4;
+          }
+
+          .mat-standard-chip {
+            cursor: pointer;
+          }
         }
 
-        .filter-divider {
-          margin-right: fds.$uxg-spacing-4;
-        }
-
-        .mat-standard-chip {
-          cursor: pointer;
+        .expand-button {
+          .mat-mdc-icon-button.mat-mdc-button-base {
+            width: $uxg-expansion-panel-header-height;
+            height: $uxg-expansion-panel-header-height;
+            padding: fds.$uxg-spacing-2;
+          }
         }
       }
     }
