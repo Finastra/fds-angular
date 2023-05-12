@@ -29,7 +29,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
   {
     title: 'Theme',
     routes: [
-      { path: 'foundations', component: FoundationsDemoComponent, data: { title: 'Foundations' } },
+      { path: 'foundations', component: FoundationsDemoComponent, data: { title: 'Foundations', migrated: true } },
       { path: 'ui-elements', component: UiElementsDemoComponent, data: { title: 'UI Elements' } },
       { path: 'theme-builder', component: ThemeBuilderComponent, data: { title: 'Theme Builder' } }
     ]
@@ -43,12 +43,12 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover' } },
       { path: 'table', component: TableDemoComponent, data: { title: 'Table' } },
       { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater' } },
-      { path: 'skeleton', component: SkeletonDemoComponent, data: { title: 'Skeleton' } },
+      { path: 'skeleton', component: SkeletonDemoComponent, data: { title: 'Skeleton', migrated: true } },
       //     { path: 'vector-map', component: VectorMapDemoComponent, data: { title: 'Vector Map' } },
       { path: 'wizard', component: WizardDemoComponent, data: { title: 'Wizard' } },
       { path: 'entity-menu', component: EntityMenuDemoComponent, data: { title: 'Entity Menu' } },
-      { path: 'global-nav', component: GlobalNavDemoComponent, data: { title: 'Global Nav' } },
-      { path: 'avatar', component: AvatarDemoComponent, data: { title: 'Avatar' } },
+      { path: 'global-nav', component: GlobalNavDemoComponent, data: { title: 'Global Nav', migrated: true } },
+      { path: 'avatar', component: AvatarDemoComponent, data: { title: 'Avatar', migrated: true } },
       { path: 'expandable-table', component: ExpandableTableDemoComponent, data: { title: 'Expandable Table' } },
       {
         path: 'user-profile-menu',
@@ -58,12 +58,12 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'banner', component: BannerDemoComponent, data: { title: 'Banner' } },
       { path: 'search-input', component: SearchInputDemoComponent, data: { title: 'Search Input' } },
       { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog' } },
-      { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb' } },
-      { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster' } },
+      { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb', migrated: true } },
+      { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster', migrated: true } },
       { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail' } },
       { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } },
-      { path: 'list', component: ListDemoComponent, data: { title: 'List' } },
-      { path: 'card', component: CardDemoComponent, data: { title: 'Card' } }
+      { path: 'list', component: ListDemoComponent, data: { title: 'List', migrated: true } },
+      { path: 'card', component: CardDemoComponent, data: { title: 'Card', migrated: true } }
     ]
   }
 ].map((groups) => {

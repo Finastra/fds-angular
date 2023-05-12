@@ -12,6 +12,17 @@
   background: linear-gradient(90deg, #0a0014 0%, #23055a 40%, #50015a 80%, #4b0254 100%) !important;
   background-size: 200% 200%;
 
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url(/assets/angular-white-transparent.svg);
+    background-size: 280px;
+    inset: 0;
+    background-repeat: no-repeat;
+    background-position: 65% 20px;
+    opacity: 0.2;
+  }
+
   .home-title-content {
     box-sizing: border-box;
     max-width: 960px;
@@ -43,6 +54,9 @@
 }
 
 .home-list {
+  z-index: 1;
+  background: var(--fds-background);
+
   box-sizing: border-box;
   width: 100%;
   max-width: 960px;
@@ -56,6 +70,32 @@
 
     .mat-mdc-card {
       cursor: pointer;
+    }
+  }
+}
+
+.card-container {
+  position: relative;
+
+  .banner {
+    visibility: hidden;
+
+    position: absolute;
+    top: -11px;
+    border-top-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    color: var(--fds-on-primary);
+    padding: 2px 24px;
+    border-bottom: 2px solid var(--fds-background);
+    border-right: 2px solid var(--fds-background);
+    width: max-content;
+    cursor: default;
+    z-index: 2;
+
+    &.migrated {
+      visibility: visible;
+
+      background: var(--fds-success);
     }
   }
 }

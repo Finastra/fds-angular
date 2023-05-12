@@ -68,7 +68,7 @@ $uxg-nav-list-level-height: 48px;
       }
 
       .mdc-list-item__content {
-        padding: 0 28px;
+        padding: 0 $uxg-spacing-3;
 
         .mat-icon {
           width: $uxg-link-list-icon-size;

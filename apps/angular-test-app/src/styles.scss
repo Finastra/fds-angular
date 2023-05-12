@@ -17,12 +17,10 @@
   // @include chart.theme($theme);
   // @include wizard.theme($theme);
   // @include banner.theme($theme);
-  // @include skeleton.theme($theme);
   // @include repeater.theme($theme);
   // @include changelog.theme($theme);
   // @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
-  // @include account-card.theme($theme);
 }
 
 @include app-theme(fds.$light-theme);

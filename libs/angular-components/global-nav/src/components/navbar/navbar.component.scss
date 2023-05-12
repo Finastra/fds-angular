@@ -10,11 +10,11 @@ uxg-navbar {
   position: relative;
 }
 
-.uxg-nav-list.mat-nav-list.mat-list-base > .mat-list-item:last-of-type,
-.uxg-nav-list-level.mat-nav-list.mat-list-base > .mat-list-item:last-of-type {
+.uxg-nav-list.mat-nav-list.mat-mdc-list-base > .mat-mdc-list-item:last-of-type,
+.uxg-nav-list-level.mat-nav-list.mat-mdc-list-base > .mat-mdc-list-item:last-of-type {
   margin-bottom: 0px !important;
 }
 
-.mat-list-base {
+.mat-mdc-list-base {
   padding-top: 0px !important;
 }
