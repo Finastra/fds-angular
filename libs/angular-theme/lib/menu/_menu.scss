@@ -1,0 +1,47 @@
+@use '../core/style/spacing' as *;
+@use '@finastra/fds-theme/typography';
+
+$uxg-user-profile-width: 280px;
+$uxg-user-profile-menu-item-icon-size: 18px;
+
+.uxg-user-profile {
+  width: $uxg-user-profile-width;
+
+  .mat-mdc-menu-content {
+    &:not(:empty) {
+      padding: 0;
+    }
+
+    .mat-mdc-menu-item {
+      .mat-icon {
+        height: $uxg-user-profile-menu-item-icon-size;
+        width: $uxg-user-profile-menu-item-icon-size;
+        line-height: $uxg-user-profile-menu-item-icon-size;
+        font-size: $uxg-user-profile-menu-item-icon-size;
+      }
+
+      .mdc-list-item__primary-text {
+        @include typography.typography(body-2);
+      }
+    }
+  }
+
+  .uxg-menu-header,
+  .uxg-menu-footer {
+    padding: $uxg-spacing-3;
+  }
+
+  .uxg-menu-footer {
+    button {
+      width: 100%;
+    }
+
+    button + button {
+      margin-top: $uxg-spacing-2;
+    }
+  }
+
+  .uxg-avatar-title-block {
+    margin: $uxg-spacing-3 $uxg-spacing-1 $uxg-spacing-1 $uxg-spacing-1;
+  }
+}

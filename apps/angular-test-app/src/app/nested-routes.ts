@@ -40,7 +40,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       //     { path: 'chart', component: ChartDemoComponent, data: { title: 'Chart' } },
       { path: 'filter-panel', component: FilterPanelDemoComponent, data: { title: 'Filter' } },
       { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search' } },
-      { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover' } },
+      { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover', migrated: true } },
       { path: 'table', component: TableDemoComponent, data: { title: 'Table' } },
       { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater' } },
       { path: 'skeleton', component: SkeletonDemoComponent, data: { title: 'Skeleton', migrated: true } },
@@ -53,7 +53,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       {
         path: 'user-profile-menu',
         component: UserProfileMenuDemoComponentComponent,
-        data: { title: 'User Profile Menu' }
+        data: { title: 'User Profile Menu', migrated: true }
       },
       { path: 'banner', component: BannerDemoComponent, data: { title: 'Banner' } },
       { path: 'search-input', component: SearchInputDemoComponent, data: { title: 'Search Input' } },

@@ -1,6 +1,6 @@
 @use '@finastra/angular-theme' as fds;
 
-.uxg-popover-menu-item.mat-menu-item {
+.uxg-popover-menu-item.mat-mdc-menu-item {
   height: auto;
   white-space: normal;
   line-height: inherit;
@@ -15,7 +15,7 @@
 }
 
 .uxg-popover {
-  .mat-menu-content {
+  .mat-mdc-menu-content {
     padding: 0 !important;
   }
 }
