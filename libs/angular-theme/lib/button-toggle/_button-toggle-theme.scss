@@ -5,7 +5,7 @@
 @mixin theme($theme: null) {
   .mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
     .mat-button-toggle {
-      @include fds.color(secondary);
+      @include fds.color(on-surface-medium);
       @include fds.property(border-color, outline);
       @include fds.background(surface);
 
