@@ -10,7 +10,7 @@
   align-self: stretch;
   color: white;
   background: linear-gradient(90deg, #0a0014 0%, #23055a 40%, #50015a 80%, #4b0254 100%) !important;
-  background-size: 200% 200%;
+  height: 210px;
 
   &::before {
     content: '';
@@ -21,6 +21,7 @@
     background-repeat: no-repeat;
     background-position: 65% 20px;
     opacity: 0.2;
+    height: inherit;
   }
 
   .home-title-content {
@@ -54,9 +55,6 @@
 }
 
 .home-list {
-  z-index: 1;
-  background: var(--fds-background);
-
   box-sizing: border-box;
   width: 100%;
   max-width: 960px;
