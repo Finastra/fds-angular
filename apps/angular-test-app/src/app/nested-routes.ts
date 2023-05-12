@@ -42,7 +42,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search' } },
       { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover', migrated: true } },
       { path: 'table', component: TableDemoComponent, data: { title: 'Table' } },
-      { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater' } },
+      { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater', migrated: true } },
       { path: 'skeleton', component: SkeletonDemoComponent, data: { title: 'Skeleton', migrated: true } },
       //     { path: 'vector-map', component: VectorMapDemoComponent, data: { title: 'Vector Map' } },
       { path: 'wizard', component: WizardDemoComponent, data: { title: 'Wizard' } },
@@ -60,7 +60,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog' } },
       { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb', migrated: true } },
       { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster', migrated: true } },
-      { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail' } },
+      { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail', migrated: true } },
       { path: 'status-stepper', component: StatusStepsDemoComponent, data: { title: 'Status Stepper' } },
       { path: 'list', component: ListDemoComponent, data: { title: 'List', migrated: true } },
       { path: 'card', component: CardDemoComponent, data: { title: 'Card', migrated: true } }
