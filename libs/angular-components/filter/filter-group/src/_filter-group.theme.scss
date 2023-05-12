@@ -14,7 +14,7 @@
 
     .uxg-expansion-filter {
       .expand-button {
-        @include fds.property(background-color, surface-selected);
+        @include fds.background(surface-selected);
       }
 
       .filter-value {
@@ -24,7 +24,7 @@
 
     .expansion-panel-header,
     .filter-group-dialog-header {
-      @include fds.property(background-color, outline);
+      @include fds.background(outline);
     }
   }
 }

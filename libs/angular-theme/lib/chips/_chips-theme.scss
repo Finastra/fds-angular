@@ -9,7 +9,7 @@
     @include fds.color(on-surface-medium);
 
     &:not(.mat-mdc-chip-disabled) {
-      @include fds.property(background-color, surface);
+      @include fds.background(surface);
 
       .mat-icon {
         @include fds.color(on-surface-medium);
@@ -21,7 +21,7 @@
       }
 
       .mat-ripple-element {
-        @include fds.property(background-color, outline-info);
+        @include fds.background(outline-info);
       }
 
       &:hover {
@@ -44,7 +44,7 @@
       &.mat-mdc-chip-highlighted {
         &,
         &.mat-primary {
-          @include fds.property(background-color, surface-selected);
+          @include fds.background(surface-selected);
           @include fds.property(border-color, primary);
 
           .mat-icon {
@@ -53,7 +53,7 @@
           }
 
           .mat-ripple-element {
-            @include fds.property(background-color, outline-info);
+            @include fds.background(outline-info);
             opacity: 1;
           }
 
@@ -70,11 +70,11 @@
     }
 
     &::after {
-      @include fds.property(background-color, primary);
+      @include fds.background(primary);
     }
 
     &.mat-mdc-chip-disabled {
-      @include fds.property(background-color, surface-disabled);
+      @include fds.background(surface-disabled);
       opacity: 1;
 
       .mat-icon {
