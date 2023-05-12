@@ -2,8 +2,9 @@
 
 @mixin theme($theme) {
   .uxg-toolbar {
+    background: var(--fds-surface);
     .uxg-toolbar-icon-menu {
-      color: utility.get-color-from-token(on-surface, 0.38, $theme);
+      color: var(--fds-on-surface-medium);
     }
 
     &.mat-primary {
