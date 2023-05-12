@@ -23,7 +23,7 @@
 // @use '../../slide-toggle/slide-toggle-theme';
 // @use '../../table/table-theme';
 // @use '../../tabs/tabs-theme';
-// @use '../../toolbar/toolbar-theme';
+@use '../../toolbar/toolbar-theme';
 
 @use './color-utility';
 @use './theming' as theme;
@@ -81,5 +81,5 @@
   // @include slide-toggle-theme.theme($theme);
   // @include table-theme.theme($theme);
   // @include tabs-theme.theme($theme);
-  // @include toolbar-theme.theme($theme);
+  @include toolbar-theme.theme($theme);
 }
