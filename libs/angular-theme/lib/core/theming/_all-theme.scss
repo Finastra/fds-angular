@@ -75,8 +75,6 @@
   @include icon-theme.theme($theme);
   @include link-theme.theme($theme);
   @include logo-theme.theme($theme);
-  @include icon-theme.theme($theme);
-  @include link-theme.theme($theme);
   @include list-theme.theme($theme);
   // @include menu-theme.theme($theme);
   @include sidenav-theme.theme($theme);
