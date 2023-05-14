@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { TOASTER_CONFIG, ToasterContainerOverlayService, ToasterContainerRegistry } from '@finastra/angular-components/toaster';
 import { ToasterDemoComponent } from './toaster-demo.component';
 
 describe('ToasterDemoComponent', () => {
@@ -25,7 +26,9 @@ describe('ToasterDemoComponent', () => {
         MatCheckboxModule,
         FormsModule,
         ToasterDemoComponent
-      ]
+      ],
+
+      providers: [ToasterContainerRegistry, ToasterContainerOverlayService, { provide: TOASTER_CONFIG, useValue: {} }]
     }).compileComponents();
   }));
 
