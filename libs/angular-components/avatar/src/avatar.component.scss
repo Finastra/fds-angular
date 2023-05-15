@@ -19,11 +19,11 @@
   @return $palette;
 }
 
-// $palette: build-palette((), 500, fds.$uxg-violet, fds.$uxg-fuchsia);
-// $palette: build-palette($palette, 100, fds.$uxg-crimson, fds.$uxg-grass, fds.$uxg-amber, fds.$uxg-gold, fds.$uxg-ocean, fds.$uxg-lime);
+$palette: build-palette((), 500, fds.$uxg-violet, fds.$uxg-fuchsia);
+$palette: build-palette($palette, 100, fds.$uxg-crimson, fds.$uxg-grass, fds.$uxg-amber, fds.$uxg-gold, fds.$uxg-ocean, fds.$uxg-lime);
 
-// @each $level, $color in $palette {
-//   .uxg-avatar-color-#{$level} {
-//     background: $color;
-//   }
-// }
+@each $level, $color in $palette {
+  .uxg-avatar-color-#{$level} {
+    background: $color;
+  }
+}

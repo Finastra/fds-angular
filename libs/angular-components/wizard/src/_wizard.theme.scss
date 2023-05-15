@@ -1,12 +1,12 @@
 @use 'sass:color';
 @use 'sass:map';
 
-@use '@finastra/angular-theme' as utility;
-@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as colors;
 @use '@finastra/fds-theme/typography';
 
 @mixin theme($theme) {
-  $primary: utility.get-color-from-token(primary, null, $theme);
+  $primary: fds.get-color-from-token(primary, null, $theme);
   $is-dark: map.get($theme, is-dark);
 
   $default-background-color: var(--fds-surface);
@@ -16,12 +16,12 @@
   $wizard-step-done-color: var(--fds-success);
   $wizard-timeline-color: var(--fds-on-surface-medium);
 
-  $wizard-dark-blue: if($is-dark, black, darken($primary, 40%));
-  $wizard-step-description-color: rgba(lighten($primary, 40%), 0.8);
+  $wizard-dark-blue: if($is-dark, black, map_get(fds.$uxg-violet, 900));
+  $wizard-step-description-color: rgba(map_get(fds.$uxg-violet, 100), 0.8);
   $wizard-step-container-active-color: rgba($primary, 0.45);
 
-  // $wizard-dot-color: map_get(fds.$mat-grey, 200);
-  // $wizard-dot-active-color: fds.get-color-from-palette($primary, default);
+  $wizard-dot-color: var(--fds-surface-disabled);
+  $wizard-dot-active-color: var(--fds-primary);
 
   .uxg-wizard {
     background: $wizard-background-color;
@@ -34,7 +34,7 @@
       background: $wizard-dark-blue;
 
       .close-button {
-        @include fds.color(on-primary);
+        @include colors.color(on-primary);
       }
     }
 
@@ -47,14 +47,14 @@
         &.done {
           background-color: $wizard-step-done-color;
           border-color: $wizard-step-done-color;
-          @include fds.color(on-success);
+          @include colors.color(on-success);
         }
 
         &.active {
           border-color: $wizard-step-active-color;
           background-color: $wizard-step-active-color;
 
-          @include fds.color(on-secondary);
+          @include colors.color(on-secondary);
         }
       }
 
@@ -68,7 +68,7 @@
 
       .step-info-container {
         .step-title {
-          @include fds.color(on-dark);
+          @include colors.color(on-dark);
         }
 
         .step-description {
@@ -86,29 +86,29 @@
           background-color: $wizard-step-container-active-color;
 
           .step-description {
-            @include fds.color(on-dark);
+            @include colors.color(on-dark);
           }
         }
       }
     }
 
-    // .uxg-wizard-timeline-xs {
-    //   background: $wizard-dark-blue;
+    .uxg-wizard-timeline-xs {
+      background: $wizard-dark-blue;
 
-    //   .close-button {
-    //     color: fds.get-color-from-palette($primary, darker-contrast);
-    //   }
-    // }
+      .close-button {
+        @include colors.color(on-primary);
+      }
+    }
 
-    // .uxg-wizard-footer {
-    //   .dot {
-    //     background-color: $wizard-dot-color;
+    .uxg-wizard-footer {
+      .dot {
+        background-color: $wizard-dot-color;
 
-    //     &.active {
-    //       background-color: $wizard-dot-active-color;
-    //     }
-    //   }
-    // }
+        &.active {
+          background-color: $wizard-dot-active-color;
+        }
+      }
+    }
   }
 }
 
