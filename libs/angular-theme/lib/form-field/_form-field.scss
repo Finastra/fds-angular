@@ -5,8 +5,8 @@ $mat-form-field-subscript-margin-top: 2px;
 $infix-padding-top-dense: 18px;
 $infix-padding-bottom-dense: 4px;
 
-$infix-top-no-label: -0.35em;
-$infix-padding-bottom-no-label: 0.469em;
+// $infix-top-no-label: -0.35em;
+// $infix-padding-bottom-no-label: 0.469em;
 
 $mat-icon-button-dense-size: 40px;
 
@@ -77,6 +77,10 @@ $mat-icon-button-dense-size: 40px;
         .mat-mdc-floating-label:not(.mdc-floating-label--float-above) {
           top: 20px;
         }
+        .mdc-notched-outline__notch {
+          width: min-content !important;
+          padding-right: 0;
+        }
       }
       .mat-mdc-form-field-infix {
         padding: 10px 0;
@@ -92,17 +96,6 @@ $mat-icon-button-dense-size: 40px;
     }
   }
 
-  &:not(.mat-form-field-has-label) {
-    .mat-mdc-text-field-wrapper {
-      .mat-mdc-form-field-flex {
-        .mat-mdc-form-field-infix {
-          top: $infix-top-no-label;
-          padding-bottom: $infix-padding-bottom-no-label;
-        }
-      }
-    }
-  }
-
   &[dense] {
     .mat-mdc-text-field-wrapper {
       .mat-mdc-form-field-flex {
@@ -112,7 +105,7 @@ $mat-icon-button-dense-size: 40px;
           min-height: auto;
 
           .mat-mdc-floating-label {
-            top: 26px;
+            top: 22px;
           }
         }
         .mat-mdc-icon-button.mat-mdc-button-base {

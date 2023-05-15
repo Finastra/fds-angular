@@ -69,6 +69,13 @@ $uxg-expansion-panel-header-height: 40px;
 
 .expansion-panel-content {
   padding: fds.$uxg-spacing-4;
+  .filter-tags-container {
+    .mat-form-field-appearance-outline {
+      .mdc-floating-label.mat-mdc-floating-label:not(.mdc-floating-label--float-above) {
+        left: 44px;
+      }
+    }
+  }
 }
 
 .expansion-panel-actions {
