@@ -1,41 +1,37 @@
-@use 'sass:map';
 @use '@angular/material' as mat;
-@use '../core/theming/palette' as fds;
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography' as typo;
 
-@mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $foreground: map.get($theme, foreground);
-  $background: map.get($theme, background);
-
+@mixin theme($theme: null) {
   .mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
     .mat-button-toggle {
-      color: fds.get-color-from-palette($foreground, secondary-text);
-      border-color: fds.get-color-from-palette($foreground, divider);
-      background-color: fds.get-color-from-palette($background, card);
+      @include fds.color(on-surface-medium);
+      @include fds.property(border-color, outline);
+      @include fds.background(surface);
 
       .mat-button-toggle-button {
         border-color: transparent;
       }
 
       &.mat-button-toggle-disabled {
-        color: fds.get-color-from-palette($foreground, secondary-text, 0.25);
-
-        .mat-icon {
-          color: fds.get-color-from-palette($foreground, icon, 0.12);
-        }
+        @include fds.color(on-surface-disabled);
       }
 
       &.mat-button-toggle-checked {
-        background-color: fds.get-color-from-palette($background, background);
+        @include fds.background(background);
 
         .mat-button-toggle-button {
-          background-color: fds.get-color-from-palette($primary, default, 0.09);
-          border-color: fds.get-color-from-palette($primary, default);
+          @include fds.background(surface-selected);
+          @include fds.property(border-color, primary);
         }
 
         .mat-button-toggle-button,
         .mat-icon {
-          color: fds.get-color-from-palette($primary, default);
+          @include fds.color(primary);
+        }
+
+        &.mat-button-toggle-disabled {
+          opacity: 60%;
         }
       }
     }
@@ -43,34 +39,34 @@
 
   .uxg-filtering-toggle-group.mat-button-toggle-group.mat-button-toggle-group-appearance-standard {
     .mat-button-toggle {
-      border-color: fds.get-color-from-palette($foreground, divider);
+      @include fds.property(border-color, outline);
 
       .mat-button-toggle-button {
         border-color: transparent;
       }
 
       &.mat-button-toggle-checked {
-        border-color: fds.get-color-from-palette($primary, default);
+        @include fds.property(border-color, primary);
       }
     }
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
+  $mat-typo-config: mat.define-typography-config();
+
   .mat-button-toggle-group {
     .mat-button-toggle {
       .mat-button-toggle-label-content {
-        font-family: mat.font-family($config, subtitle-2);
-        font-size: mat.font-size($config, subtitle-2);
-        font-weight: mat.font-weight($config, subtitle-2);
-        line-height: mat.line-height($config, button-1);
+        @include typo.typography(subtitle-2);
+        line-height: mat.line-height($mat-typo-config, button);
       }
     }
 
     &[dense] {
       .mat-button-toggle {
         .mat-button-toggle-label-content {
-          @include mat.typography-level($config, subtitle-3);
+          @include typo.typography(subtitle-3);
         }
       }
     }
@@ -79,9 +75,7 @@
   .uxg-filtering-toggle-group.mat-button-toggle-group {
     .mat-button-toggle {
       .mat-button-toggle-label-content {
-        font-family: mat.font-family($config, body-2);
-        font-size: mat.font-size($config, body-2);
-        font-weight: mat.font-weight($config, body-2);
+        @include typo.typography(body-2);
       }
     }
   }

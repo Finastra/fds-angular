@@ -7,17 +7,21 @@
 
 @use './app/components/repeater-demo/repeater-card-example/repeater-card-example.theme' as repeater;
 
+@use 'angular-components/filter/filter-group/src/filter-group.theme';
+@use 'angular-components/filter/filter-tags/src/filter-tags.theme';
+@use 'angular-components/filter/filter-tree/src/filter-tree.theme';
+
 @include fds.uxg-core();
 
 @include wizard.typography();
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);
+  @include filter-group.theme($theme);
+  @include filter-tags.theme($theme);
+  @include filter-tree.theme($theme);
   @include toaster.theme($theme);
   @include skeleton.theme($theme);
-  // @include filter-group.theme($theme);
-  // @include filter-tags.theme($theme);
-  // @include filter-tree.theme($theme);
   // @include global-search.theme($theme);
   // @include vector-map.theme($theme);
   // @include chart.theme($theme);
@@ -30,6 +34,14 @@
 }
 
 @include app-theme(fds.$light-theme);
+
+@mixin app-typography() {
+  @include filter-group.typography($config: null);
+  @include filter-tags.typography($config: null);
+  @include filter-tree.typography($config: null);
+}
+
+@include app-typography();
 
 .uxg-dark-theme {
   @include app-theme(fds.$dark-theme);
