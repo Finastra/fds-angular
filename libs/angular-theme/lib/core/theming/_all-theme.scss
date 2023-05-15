@@ -18,7 +18,7 @@
 @use '../../link/link-theme';
 @use '../../logo/logo-theme';
 @use '../../list/list-theme';
-// @use '../../menu/menu-theme';
+@use '../../menu/menu-theme';
 @use '../../sidenav/sidenav-theme';
 // @use '../../slide-toggle/slide-toggle-theme';
 // @use '../../table/table-theme';
@@ -76,7 +76,7 @@
   @include link-theme.theme($theme);
   @include logo-theme.theme($theme);
   @include list-theme.theme($theme);
-  // @include menu-theme.theme($theme);
+  @include menu-theme.theme($theme);
   @include sidenav-theme.theme($theme);
   // @include slide-toggle-theme.theme($theme);
   // @include table-theme.theme($theme);

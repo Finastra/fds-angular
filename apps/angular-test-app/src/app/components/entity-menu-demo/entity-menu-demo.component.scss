@@ -7,6 +7,7 @@
 uxg-entity-menu {
   padding-left: $uxg-spacing-3;
 }
+
 mat-expansion-panel {
   width: 400px;
   .description {
@@ -35,10 +36,4 @@ mat-expansion-panel {
       white-space: nowrap;
     }
   }
-}
-
-.view-all {
-  text-align: center;
-  display: block;
-  margin-bottom: $uxg-spacing-0;
 }

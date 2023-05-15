@@ -3,11 +3,11 @@
 .container-list {
   max-width: 427px !important;
 
-  .mat-menu-content:not(:empty) {
+  .mat-mdc-menu-content:not(:empty) {
     padding: fds.$uxg-spacing-0;
   }
 
-  .mat-menu-content {
+  .mat-mdc-menu-content {
     margin: fds.$uxg-spacing-4;
 
     .solutions-title {

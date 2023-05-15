@@ -9,7 +9,7 @@
       </div>
       <mat-nav-list class="uxg-nav-list" (click)="sidenav.toggle()" dense>
         <ng-container *ngFor="let nestedRoute of nestedRoutes">
-          <h3 matSubheader class="uxg-text-primary">{{ nestedRoute.title }}</h3>
+          <h3 matSubheader class="uxg-h5">{{ nestedRoute.title.toUpperCase() }}</h3>
           <ng-container *ngFor="let route of nestedRoute.routes">
             <a mat-list-item [routerLink]="route.path" routerLinkActive="uxg-list-item-selected">
               <p>{{ route.data?.title }}</p>

@@ -1,3 +1,5 @@
+@use '@finastra/fds-theme/typography';
+
 @import 'angular-theme/lib/core/style/spacing';
 
 .main-container {
@@ -30,4 +32,10 @@ mat-sidenav-container {
 
 .theme-toggle {
   margin-left: $uxg-spacing-3;
+}
+
+.uxg-nav-list {
+  .mat-mdc-subheader {
+    @include typography.typography(headline-5);
+  }
 }
