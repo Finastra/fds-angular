@@ -3,13 +3,13 @@
     <mat-sidenav #sidenav mode="over" fixedInViewport="true" [autoFocus]="false">
       <div class="uxg-nav-header">
         <mat-card class="uxg-card-product" extra-dense routerLink="/">
-          <span class="uxg-h5 uxg-card-product-name">DS</span>
+          <span class="uxg-h5 uxg-card-product-name">FDS</span>
         </mat-card>
-        <h6 class="uxg-h6">Angular</h6>
+        <h6 class="uxg-h6">ANGULAR COMPONENTS</h6>
       </div>
       <mat-nav-list class="uxg-nav-list" (click)="sidenav.toggle()" dense>
         <ng-container *ngFor="let nestedRoute of nestedRoutes">
-          <h3 mat-subheader>{{ nestedRoute.title }}</h3>
+          <h3 matSubheader class="uxg-text-primary">{{ nestedRoute.title }}</h3>
           <ng-container *ngFor="let route of nestedRoute.routes">
             <a mat-list-item [routerLink]="route.path" routerLinkActive="uxg-list-item-selected">
               <p>{{ route.data?.title }}</p>
@@ -26,7 +26,7 @@
         </button>
         <div class="uxg-toolbar-logo-small"></div>
         <ul class="uxg-breadcrumb">
-          <li class="uxg-h6"><a routerLink="/">Angular</a></li>
+          <li class="uxg-h6"><a routerLink="/">ANGULAR COMPONENTS</a></li>
           <li *ngIf="title">{{ title }}</li>
         </ul>
         <span class="fill-remaining-space"></span>

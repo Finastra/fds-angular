@@ -1,10 +1,9 @@
 @use '../core/style/spacing' as *;
+@use '@finastra/fds-theme/color' as color;
 
-// uxg-link-list
 $uxg-link-list-item-height: 35px;
 $uxg-link-list-icon-size: 18px;
 
-// uxg-nav-list
 $uxg-nav-list-level-icon-size: 18px;
 $uxg-nav-list-level-height: 48px;
 
@@ -46,29 +45,30 @@ $uxg-nav-list-level-height: 48px;
   }
 }
 
-.uxg-nav-list-level.mat-nav-list.mat-list-base {
-  & > .mat-list-item {
+.mat-mdc-list-base.mat-mdc-nav-list.uxg-nav-list-level {
+  & > .mat-mdc-list-item {
     height: $uxg-nav-list-level-height;
 
     .mat-icon {
       width: $uxg-nav-list-level-icon-size;
       height: $uxg-nav-list-level-icon-size;
       font-size: $uxg-nav-list-level-icon-size;
+      vertical-align: middle;
     }
   }
 }
 
-.mat-nav-list.mat-list-base {
+.mat-mdc-nav-list.mat-mdc-list-base {
   &.uxg-link-list {
-    .mat-list-item {
+    .mat-mdc-list-item {
       height: $uxg-link-list-item-height;
 
       .mat-icon:first-of-type {
         margin-right: 8px;
       }
 
-      .mat-list-item-content {
-        padding: 0 28px;
+      .mdc-list-item__content {
+        padding: 0 $uxg-spacing-3;
 
         .mat-icon {
           width: $uxg-link-list-icon-size;
@@ -81,21 +81,21 @@ $uxg-nav-list-level-height: 48px;
 
   &.uxg-nav-list,
   &.uxg-nav-list-level {
-    & > .mat-list-item {
+    & > .mat-mdc-list-item {
       box-sizing: border-box;
-      padding-left: 0;
       border-left-width: 11px;
       border-left-style: solid;
 
       .mat-icon:first-of-type {
         margin-right: 14px;
+        @include color.color(on-surface-medium);
       }
 
       &:last-of-type {
         margin-bottom: 30px;
       }
 
-      .mat-list-item-content {
+      .mat-mdc-list-item-content {
         .mat-icon:nth-last-child(1) {
           position: absolute;
           right: 20px;
@@ -105,8 +105,8 @@ $uxg-nav-list-level-height: 48px;
   }
 }
 
-.mat-list-base {
-  .mat-divider {
+.mat-mdc-list-base {
+  .mat-mdc-list-divider {
     margin: 0 10px;
   }
 }

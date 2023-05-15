@@ -1,22 +1,27 @@
-<div class="home-container">
+<main class="home-container">
   <div class="home-title">
-    <div class="home-title-content">
-      <h1 class="uxg-h2">UXD <span class="uxg-display-3">Angular</span> Components</h1>
+    <div class="home-title-content flex flex-col">
+      <h3 class="uxg-h3">Finastra Design System</h3>
+      <div class="flex align-baseline">
+        <h2 class="uxg-h2 title mb-0">Angular Components</h2>
+        <span class="ml-3 uxg-caption"> v{{ version }} </span>
+      </div>
     </div>
   </div>
 
   <div class="home-list">
     <ng-container *ngFor="let nestedRoute of nestedRoutes">
-      <h5 class="uxg-h5">{{ nestedRoute.title }}</h5>
-      <div class="home-list-grid">
+      <h5 class="uxg-h4 uxg-text-primary mb-4">{{ nestedRoute.title }}</h5>
+      <div class="home-list-grid mb-5">
         <ng-container *ngFor="let route of nestedRoute.routes">
-          <mat-card [routerLink]="route.path" class="uxg-card-product">
-            <mat-card-content>
-              <span class="uxg-h4 uxg-card-product-name">{{ route.data?.title }}</span>
-            </mat-card-content>
-          </mat-card>
+          <div class="card-container">
+            <div class="banner uxg-caption" [class.migrated]="route.data?.migrated">Angular 15</div>
+            <mat-card [routerLink]="route.path" class="uxg-card-product">
+              <span class="uxg-h5 uxg-card-product-name pl-3 pr-3">{{ route.data?.title }}</span>
+            </mat-card>
+          </div>
         </ng-container>
       </div>
     </ng-container>
   </div>
-</div>
+</main>
