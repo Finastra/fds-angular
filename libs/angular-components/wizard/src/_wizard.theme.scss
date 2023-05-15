@@ -1,27 +1,27 @@
+@use 'sass:color';
 @use 'sass:map';
-@use '@angular/material' as mat;
-@use '@finastra/angular-theme' as fds;
+
+@use '@finastra/angular-theme' as utility;
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography';
 
 @mixin theme($theme) {
-  $accent: map.get($theme, accent);
-  $primary: map.get($theme, primary);
-  $success: map.get($theme, success);
-  $background: map.get($theme, background);
-  $foreground: map.get($theme, foreground);
+  $primary: utility.get-color-from-token(primary, null, $theme);
+  $is-dark: map.get($theme, is-dark);
 
-  $default-background-color: fds.get-color-from-palette($background, card);
+  $default-background-color: var(--fds-surface);
 
-  $wizard-background-color: fds.get-color-from-palette($background, background);
-  $wizard-step-active-color: fds.get-color-from-palette($accent, default);
-  $wizard-step-done-color: fds.get-color-from-palette($success, default);
-  $wizard-timeline-color: fds.get-color-from-palette($foreground, disabled-text);
+  $wizard-background-color: var(--fds-background);
+  $wizard-step-active-color: var(--fds-secondary);
+  $wizard-step-done-color: var(--fds-success);
+  $wizard-timeline-color: var(--fds-on-surface-medium);
 
-  $wizard-dark-blue: fds.get-color-from-palette($primary, darker);
-  $wizard-step-description-color: fds.get-color-from-palette($primary, lighter, 0.8);
-  $wizard-step-container-active-color: fds.get-color-from-palette($primary, default, 0.45);
+  $wizard-dark-blue: if($is-dark, black, darken($primary, 40%));
+  $wizard-step-description-color: rgba(lighten($primary, 40%), 0.8);
+  $wizard-step-container-active-color: rgba($primary, 0.45);
 
-  $wizard-dot-color: map_get(fds.$mat-grey, 200);
-  $wizard-dot-active-color: fds.get-color-from-palette($primary, default);
+  // $wizard-dot-color: map_get(fds.$mat-grey, 200);
+  // $wizard-dot-active-color: fds.get-color-from-palette($primary, default);
 
   .uxg-wizard {
     background: $wizard-background-color;
@@ -34,7 +34,7 @@
       background: $wizard-dark-blue;
 
       .close-button {
-        color: fds.get-color-from-palette($primary, darker-contrast);
+        @include fds.color(on-primary);
       }
     }
 
@@ -47,13 +47,14 @@
         &.done {
           background-color: $wizard-step-done-color;
           border-color: $wizard-step-done-color;
-          color: mat.get-color-from-palette($success, default-contrast);
+          @include fds.color(on-success);
         }
 
         &.active {
           border-color: $wizard-step-active-color;
           background-color: $wizard-step-active-color;
-          color: fds.get-color-from-palette($accent, default-contrast);
+
+          @include fds.color(on-secondary);
         }
       }
 
@@ -67,7 +68,7 @@
 
       .step-info-container {
         .step-title {
-          color: fds.get-color-from-palette($primary, darker-contrast);
+          @include fds.color(on-dark);
         }
 
         .step-description {
@@ -85,49 +86,49 @@
           background-color: $wizard-step-container-active-color;
 
           .step-description {
-            color: fds.get-color-from-palette($primary, darker-contrast);
+            @include fds.color(on-dark);
           }
         }
       }
     }
 
-    .uxg-wizard-timeline-xs {
-      background: $wizard-dark-blue;
+    // .uxg-wizard-timeline-xs {
+    //   background: $wizard-dark-blue;
 
-      .close-button {
-        color: fds.get-color-from-palette($primary, darker-contrast);
-      }
-    }
+    //   .close-button {
+    //     color: fds.get-color-from-palette($primary, darker-contrast);
+    //   }
+    // }
 
-    .uxg-wizard-footer {
-      .dot {
-        background-color: $wizard-dot-color;
+    // .uxg-wizard-footer {
+    //   .dot {
+    //     background-color: $wizard-dot-color;
 
-        &.active {
-          background-color: $wizard-dot-active-color;
-        }
-      }
-    }
+    //     &.active {
+    //       background-color: $wizard-dot-active-color;
+    //     }
+    //   }
+    // }
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
   .uxg-wizard {
     .uxg-wizard-timeline {
       .step {
         font: {
-          weight: mat.font-weight($config, h1);
-          size: mat.font-size($config, subtitle-1);
+          weight: var(--fds-headline-1-font-weight);
+          size: var(--fds-subtitle-1-font-size);
         }
 
         mat-icon {
-          font-weight: mat.font-weight($config, h1);
+          font-weight: var(--fds-headline-1-font-weight);
         }
       }
 
       .step-info-container {
         .step-description {
-          @include mat.typography-level($config, caption);
+          @include typography.typography(caption);
         }
       }
     }
@@ -135,20 +136,20 @@
     .uxg-wizard-timeline-xs {
       .step {
         font: {
-          weight: mat.font-weight($config, h2);
-          size: mat.font-size($config, subtitle-2);
+          weight: var(--fds-headline-2-font-weight);
+          size: var(--fds-subtitle-2-font-size);
         }
 
         mat-icon {
-          font-weight: mat.font-weight($config, h2);
+          font-weight: var(--fds-headline-2-font-weight);
         }
       }
 
       .step-info-container {
         .step-description {
-          @include mat.typography-level($config, body-3);
+          @include typography.typography(body-3);
 
-          font-weight: mat.font-weight($config, caption);
+          font-weight: var(--fds-caption-font-weight);
         }
       }
     }

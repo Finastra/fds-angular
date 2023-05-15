@@ -1,6 +1,7 @@
 @use 'sass:map';
 @use '@finastra/angular-theme' as fds;
 
+// TODO: forgot about this one
 @mixin theme($theme) {
   $primary: map.get($theme, primary);
   $foreground: map.get($theme, foreground);
