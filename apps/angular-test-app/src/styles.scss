@@ -4,6 +4,7 @@
 @use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
 @use 'angular-components/video-thumbnail/src/video-thumbnail.theme' as video-thumbnail;
 @use 'angular-components/wizard/src/wizard.theme' as wizard;
+@use 'angular-components/cards/account-card/src/account-card.theme' as account-card;
 
 @use './app/components/repeater-demo/repeater-card-example/repeater-card-example.theme' as repeater;
 
@@ -31,6 +32,7 @@
   // @include changelog.theme($theme);
   @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
+  @include account-card.theme($theme);
 }
 
 @include app-theme(fds.$light-theme);

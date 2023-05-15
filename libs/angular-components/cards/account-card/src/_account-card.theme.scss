@@ -1,10 +1,9 @@
 @use 'sass:map';
 @use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color';
 
-// TODO: forgot about this one
 @mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $foreground: map.get($theme, foreground);
+  $primary: fds.get-color-from-token(primary, null, $theme);
 
   .selectable-card,
   .selected-card {
@@ -15,22 +14,22 @@
     }
 
     &:hover {
-      background: fds.get-color-from-palette($primary, default, 0.05);
+      background: rgba($primary, 0.05);
       .checked {
         display: block;
         position: absolute;
         right: fds.$uxg-spacing-2;
         top: fds.$uxg-spacing-2;
         .mat-icon {
-          color: fds.get-color-from-palette($primary, default);
+          @include color.color(primary);
         }
       }
     }
   }
 
   .selected-card {
-    border: 1px solid fds.get-color-from-palette($primary, default);
-    background: fds.get-color-from-palette($primary, default, 0.1);
+    border: 1px solid var(--fds-primary);
+    background: rgba($primary, 0.1);
 
     .checked {
       display: block;
@@ -38,15 +37,15 @@
       right: fds.$uxg-spacing-2;
       top: fds.$uxg-spacing-2;
       .mat-icon {
-        color: fds.get-color-from-palette($primary, default);
+        @include color.color(primary);
       }
     }
 
     &:hover {
-      background: fds.get-color-from-palette($primary, default, 0.1);
+      background: rgba($primary, 0.1);
       .checked {
         .mat-icon {
-          color: fds.get-color-from-palette($primary, default);
+          @include color.color(primary);
         }
       }
     }
