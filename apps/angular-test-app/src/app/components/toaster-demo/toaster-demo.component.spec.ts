@@ -1,6 +1,5 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
-
 import { CommonModule } from '@angular/common';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -8,7 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ToasterModule } from '@finastra/angular-components/toaster';
+import { TOASTER_CONFIG, ToasterContainerOverlayService, ToasterContainerRegistry } from '@finastra/angular-components/toaster';
 import { ToasterDemoComponent } from './toaster-demo.component';
 
 describe('ToasterDemoComponent', () => {
@@ -18,7 +17,6 @@ describe('ToasterDemoComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        ToasterModule,
         CommonModule,
         NoopAnimationsModule,
         MatSelectModule,
@@ -28,7 +26,9 @@ describe('ToasterDemoComponent', () => {
         MatCheckboxModule,
         FormsModule,
         ToasterDemoComponent
-      ]
+      ],
+
+      providers: [ToasterContainerRegistry, ToasterContainerOverlayService, { provide: TOASTER_CONFIG, useValue: {} }]
     }).compileComponents();
   }));
 

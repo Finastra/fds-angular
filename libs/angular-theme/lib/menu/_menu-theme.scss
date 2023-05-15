@@ -1,15 +1,16 @@
 @use 'sass:map';
 @use '../core/theming/palette';
+@use '../core/theming/color-utility' as utility;
 
 @mixin theme($theme) {
   $foreground: map.get($theme, foreground);
   $background: map.get($theme, background);
 
-  .mat-menu-content {
-    color: palette.get-color-from-palette($foreground, text);
+  .mat-mdc-menu-content {
+    color: var(--fds-on-surface);
   }
 
   .uxg-menu-header {
-    background-color: palette.get-color-from-palette($background, background, 0.5);
+    background-color: utility.get-color-from-token(background, 0.5, $theme);
   }
 }
