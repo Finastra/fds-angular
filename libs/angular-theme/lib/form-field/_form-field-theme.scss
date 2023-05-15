@@ -1,105 +1,103 @@
-@use 'sass:map';
-@use '@angular/material' as mat;
-@use '../core/theming/palette';
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography' as typo;
 
-@mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $error: map.get($theme, error);
-  $background: map-get($theme, background);
-  $fill-background: palette.get-color-from-palette($primary, default, 0.08);
-  $error-background: palette.get-color-from-palette($error, default, 0.04);
-
+@mixin theme($theme: null) {
   .mat-form-field-appearance-outline {
     .mat-form-field-outline {
-      background-color: map.get($background, card);
+      @include fds.property(background-color, surface);
     }
 
     &.mat-focused {
       .mat-form-field-outline {
-        background-color: $fill-background;
+        @include fds.property(background-color, surface-info);
       }
 
       &.mat-focused.mat-form-field-invalid {
         .mat-form-field-outline {
-          background-color: $error-background;
+          @include fds.property(background-color, surface-error);
         }
       }
     }
     &.mat-form-field-invalid.mat-form-field-invalid .mat-form-field-outline-thick {
-      color: map.get($error, default);
+      @include fds.color(error);
     }
   }
 
   .mat-form-field-appearance-fill {
     .mat-form-field-flex {
-      background-color: $fill-background;
+      @include fds.property(background-color, surface-info);
     }
 
     .mat-form-field-underline::before {
-      background-color: map.get($primary, default);
+      @include fds.property(background-color, primary);
     }
 
     .mat-form-field-ripple {
-      background-color: map.get($primary, default);
+      @include fds.property(background-color, primary);
     }
 
     &.mat-form-field-invalid {
       .mat-form-field-flex {
-        background-color: $error-background;
+        @include fds.property(background-color, surface-error);
       }
     }
   }
 
   .mat-form-field.mat-form-field-invalid {
     .mat-input-element {
-      caret-color: map.get($error, default);
+      @include fds.property(caret-color, error);
     }
 
     .mat-icon.mat-warn,
     .mat-form-field-label,
     .mat-form-field-label .mat-form-field-required-marker,
     .mat-error {
-      color: map.get($error, default);
+      @include fds.color(error);
     }
 
     .mat-form-field-ripple {
-      background-color: map.get($error, default);
+      @include fds.property(background-color, error);
     }
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
   .mat-form-field-appearance-outline {
     &[dense] {
-      .mat-input-element {
-        @include mat.typography-level($config, subtitle-3);
+      .mat-mdc-input-element,
+      .mat-form-field-label,
+      .mat-mdc-floating-label {
+        @include typo.typography(body-2);
       }
       .mat-input-element::placeholder {
-        @include mat.typography-level($config, body-3);
+        @include typo.typography(body-2);
       }
-      @include mat.typography-level($config, body-3);
     }
 
-    .mat-input-element {
-      @include mat.typography-level($config, subtitle-2);
-    }
+    .mat-mdc-input-element,
     .mat-input-element::placeholder {
-      @include mat.typography-level($config, body-2);
+      @include typo.typography(body-1);
     }
-    @include mat.typography-level($config, body-2);
+    @include typo.typography(body-1);
   }
-  .mat-form-field-appearance-fill {
-    @include mat.typography-level($config, subtitle-1);
 
-    .mat-form-field-label {
-      font-weight: mat.font-weight($config, body-1);
+  .mat-form-field-appearance-fill {
+    @include typo.typography(subtitle-1);
+
+    .mat-form-field-label,
+    .mat-mdc-floating-label {
+      @include typo.typography(body-1);
     }
 
     &[dense] {
-      @include mat.typography-level($config, subtitle-2);
+      @include typo.typography(subtitle-2);
 
-      .mat-form-field-label {
-        font-weight: mat.font-weight($config, caption);
+      .mat-mdc-input-element {
+        @include typo.typography(subtitle-2);
+      }
+      .mat-form-field-label,
+      .mat-mdc-floating-label {
+        @include typo.typography(body-2);
       }
     }
   }

@@ -1,8 +1,8 @@
-import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
-import cloneDeep from 'lodash-es/cloneDeep';
-import { MatIconModule } from '@angular/material/icon';
 import { NgFor, NgIf } from '@angular/common';
+import { Component, ElementRef, EventEmitter, Input, Output } from '@angular/core';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
+import cloneDeep from 'lodash-es/cloneDeep';
 
 export interface MultiselectTag {
   label: string;

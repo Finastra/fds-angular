@@ -1,12 +1,7 @@
-@use 'sass:map';
 @use '@angular/material' as mat;
-@use '../core/theming/palette';
+@use '@finastra/fds-theme/color' as fds;
 
-@mixin theme($theme) {
-  $background: map.get($theme, background);
-  $foreground: map.get($theme, foreground);
-  $primary: map.get($theme, primary);
-
+@mixin theme($theme: null) {
   .uxg-expansion-filter.mat-expansion-panel {
     background: transparent;
 
@@ -15,20 +10,20 @@
     }
 
     .mat-expansion-panel-header {
-      border-color: mat.get-color-from-palette($foreground, divider);
-      background: mat.get-color-from-palette($background, card);
-      color: palette.get-color-from-palette($foreground, text, 0.6);
+      @include fds.property(border-color, outline);
+      @include fds.background(surface);
+      @include fds.color(on-surface-medium);
     }
 
     &.active {
       .mat-expansion-panel-header {
-        border-color: mat.get-color-from-palette($primary, default);
+        @include fds.property(border-color, primary);
       }
     }
 
     .mat-expansion-panel-content {
       .mat-expansion-panel-body {
-        background: mat.get-color-from-palette($background, card);
+        @include fds.background(surface);
 
         @include mat.elevation(2);
       }
@@ -36,18 +31,18 @@
   }
 
   .mat-action-row {
-    background-color: mat.get-color-from-palette($background, background);
+    @include fds.background(background);
   }
 
   .uxg-contact {
     .uxg-contact-header {
       .mat-icon {
-        color: mat.get-color-from-palette($primary, lighter);
+        @include fds.color(outline-info);
       }
 
       .mat-icon-button {
         .mat-icon {
-          color: mat.get-color-from-palette($primary, default);
+          @include fds.color(primary);
         }
       }
     }

@@ -38,7 +38,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
     title: 'Components',
     routes: [
       //     { path: 'chart', component: ChartDemoComponent, data: { title: 'Chart' } },
-      { path: 'filter-panel', component: FilterPanelDemoComponent, data: { title: 'Filter' } },
+      { path: 'filter-panel', component: FilterPanelDemoComponent, data: { title: 'Filter', migrated: true } },
       { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search' } },
       { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover', migrated: true } },
       { path: 'table', component: TableDemoComponent, data: { title: 'Table' } },
