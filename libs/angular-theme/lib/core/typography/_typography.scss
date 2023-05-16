@@ -74,4 +74,43 @@
   .uxg-overline {
     @include fds.typography(overline);
   }
+
+  // DEPRECATED (ng15)
+  // only used for backwards compatibility
+
+  .uxg-display-1 {
+    font-size: 72px;
+    line-height: 108px;
+    font-weight: 300;
+  }
+
+  .uxg-display-2 {
+    font-size: 60px;
+    line-height: 90px;
+    font-weight: 300;
+  }
+
+  .uxg-display-3 {
+    font-size: 48px;
+    line-height: 72px;
+    font-weight: 300;
+  }
+
+  .uxg-display-4 {
+    font-size: 44px;
+    line-height: 66px;
+    font-weight: 300;
+  }
+
+  .uxg-display-5 {
+    font-size: 28px;
+    line-height: 42px;
+    font-weight: 300;
+  }
+
+  .uxg-display-6 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+  }
 }

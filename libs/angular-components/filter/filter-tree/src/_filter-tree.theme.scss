@@ -1,15 +1,22 @@
-@use 'sass:map';
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography' as typo;
 
-@mixin theme($theme) {
-  $primary: map.get($theme, primary);
-
+@mixin theme($theme: null) {
   mat-checkbox {
-    &.mat-checkbox-checked,
-    &.mat-checkbox-indeterminate {
+    &.mat-mdc-checkbox-checked,
+    &[ng-reflect-indeterminate='true'] {
       .node-label {
-        color: fds.get-color-from-palette($primary, default);
+        @include fds.color(primary);
+        font-weight: 300;
       }
+    }
+  }
+}
+
+@mixin typography($config: null) {
+  mat-checkbox {
+    .node-label {
+      font-weight: var(--fds-body-2-font-weight);
     }
   }
 }

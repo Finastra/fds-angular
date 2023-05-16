@@ -1,38 +1,32 @@
-@use 'sass:map';
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as fds;
 
-@mixin theme($theme) {
-  $foreground: map.get($theme, foreground);
-  $toaster-text-color: fds.get-color-from-palette($foreground, text);
-
-  $background: map.get($theme, background);
-
+@mixin theme($theme: null) {
   uxg-toaster {
-    color: $toaster-text-color;
-    background: fds.get-color-from-palette($background, card);
+    @include fds.color(on-surface);
+    @include fds.background(surface);
 
     &.type-success .icon-container {
-      background-color: fds.get-color-from-palette(fds.$uxg-grass, 25);
+      @include fds.background(success);
       mat-icon {
-        color: fds.get-color-from-palette(fds.$uxg-grass, 100-dark);
+        @include fds.color(on-success);
       }
     }
     &.type-info .icon-container {
-      background-color: fds.get-color-from-palette(fds.$uxg-ocean, 25);
+      @include fds.background(info);
       mat-icon {
-        color: fds.get-color-from-palette(fds.$uxg-ocean, 100-dark);
+        @include fds.color(on-success);
       }
     }
     &.type-error .icon-container {
-      background-color: fds.get-color-from-palette(fds.$uxg-crimson, 25);
+      @include fds.background(error);
       mat-icon {
-        color: fds.get-color-from-palette(fds.$uxg-crimson, 100-dark);
+        @include fds.color(on-error);
       }
     }
     &.type-warning .icon-container {
-      background-color: fds.get-color-from-palette(fds.$uxg-gold, 25);
+      @include fds.background(warning);
       mat-icon {
-        color: fds.get-color-from-palette(fds.$uxg-gold, 100-dark);
+        @include fds.color(on-error);
       }
     }
   }

@@ -25,7 +25,7 @@
   }
 
   .uxg-icon-category {
-    // background-color: $background;
+    @include fds.background(surface-selected);
 
     .mat-icon {
       @include fds.color(primary);

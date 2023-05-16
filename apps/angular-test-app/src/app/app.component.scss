@@ -1,3 +1,5 @@
+@use '@finastra/fds-theme/typography';
+
 @import 'angular-theme/lib/core/style/spacing';
 
 .main-container {
@@ -15,8 +17,7 @@ mat-sidenav-container {
 
   .uxg-card-product {
     cursor: pointer;
-    width: 45px;
-    margin-bottom: 10px;
+    margin-bottom: $uxg-spacing-3;
   }
 }
 .app-content {
@@ -31,4 +32,10 @@ mat-sidenav-container {
 
 .theme-toggle {
   margin-left: $uxg-spacing-3;
+}
+
+.uxg-nav-list {
+  .mat-mdc-subheader {
+    @include typography.typography(headline-5);
+  }
 }

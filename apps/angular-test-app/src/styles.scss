@@ -1,30 +1,47 @@
 @use 'angular-theme' as fds;
 @use 'angular-theme/base';
+
 @use 'angular-components/banner/src/banner.theme' as banner;
+@use 'angular-components/toaster/src/toaster.theme' as toaster;
+@use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
+@use 'angular-components/video-thumbnail/src/video-thumbnail.theme' as video-thumbnail;
+
+@use './app/components/repeater-demo/repeater-card-example/repeater-card-example.theme' as repeater;
+
+@use 'angular-components/filter/filter-group/src/filter-group.theme';
+@use 'angular-components/filter/filter-tags/src/filter-tags.theme';
+@use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
 @include fds.uxg-core();
 @include banner.color();
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);
-  // @include filter-group.theme($theme);
-  // @include filter-tags.theme($theme);
-  // @include filter-tree.theme($theme);
+  @include filter-group.theme($theme);
+  @include filter-tags.theme($theme);
+  @include filter-tree.theme($theme);
+  @include toaster.theme($theme);
+  @include skeleton.theme($theme);
   // @include global-search.theme($theme);
   // @include vector-map.theme($theme);
   // @include chart.theme($theme);
   // @include wizard.theme($theme);
   // @include banner.theme($theme);
-  // @include skeleton.theme($theme);
-  // @include repeater.theme($theme);
+  @include repeater.theme($theme);
   // @include changelog.theme($theme);
-  // @include toaster.theme($theme);
-  // @include video-thumbnail.theme($theme);
+  @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
-  // @include account-card.theme($theme);
 }
 
 @include app-theme(fds.$light-theme);
+
+@mixin app-typography() {
+  @include filter-group.typography($config: null);
+  @include filter-tags.typography($config: null);
+  @include filter-tree.typography($config: null);
+}
+
+@include app-typography();
 
 .uxg-dark-theme {
   @include app-theme(fds.$dark-theme);
@@ -81,4 +98,18 @@ section {
   flex-direction: column;
   margin-bottom: 2 * fds.$uxg-spacing-5;
   align-items: flex-start;
+}
+
+@keyframes animate-filter {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+
+  50% {
+    filter: hue-rotate(30deg);
+  }
+
+  to {
+    filter: hue-rotate(0deg);
+  }
 }

@@ -1,5 +1,5 @@
 <div class="block-test">
-  <h3 class="uxg-h3">Avatars</h3>
+  <h4 class="uxg-h4">Avatars</h4>
   <div class="example-row avatar-default-test">
     <div class="uxg-avatar" large></div>
     <div class="uxg-avatar"></div>
@@ -39,16 +39,16 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Badges</h3>
+  <h4 class="uxg-h4">Badges</h4>
   <div class="example-row badge-test">
-    <span matBadge="4" class="uxg-subtitle-2" matBadgeSize="small" matBadgeColor="success">Success</span>
-    <span matBadge="18" class="uxg-subtitle-2" matBadgeColor="warn" matBadgeSize="medium">Warnings</span>
-    <span matBadge="72" class="uxg-subtitle-2" matBadgeColor="error">Errors</span>
+    <span matBadge="4" class="uxg-subtitle-2" matBadgeSize="small" matBadgeColor="success" matBadgeOverlap="false">Success</span>
+    <span matBadge="18" class="uxg-subtitle-2" matBadgeColor="warn" matBadgeSize="medium" matBadgeOverlap="false">Warnings</span>
+    <span matBadge="72" class="uxg-subtitle-2" matBadgeColor="error" matBadgeOverlap="false">Errors</span>
   </div>
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Side badges</h3>
+  <h4 class="uxg-h4">Side badges</h4>
   <div class="example-row badge-side-test">
     <h6 matBadge="4" class="uxg-subtitle-2 uxg-side-badge" matBadgeSize="small">Currencies</h6>
     <h6 matBadge="18" class="uxg-subtitle-2 uxg-side-badge" matBadgeColor="secondary" matBadgeSize="medium">Folders</h6>
@@ -58,7 +58,7 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Breadcrumb</h3>
+  <h4 class="uxg-h4">Breadcrumb</h4>
   <div class="example-row">
     <ul class="uxg-breadcrumb uxg-breadcrumb-responsive">
       <button mat-icon-button color="accent" class="uxg-breadcrumb-back">
@@ -72,7 +72,7 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Buttons</h3>
+  <h4 class="uxg-h4">Buttons</h4>
   <div class="example-row button-default-test">
     <button mat-button>Basic</button>
     <button mat-button color="primary">Primary</button>
@@ -183,7 +183,7 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Button toggle</h3>
+  <h4 class="uxg-h4">Button toggle</h4>
   <div class="example-row toggle-filter-test">
     <mat-button-toggle-group class="uxg-filtering-toggle-group" value="public">
       <mat-button-toggle value="public">
@@ -247,100 +247,7 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Cards</h3>
-  <div class="example-row card-basic-test">
-    <mat-card class="example-card">
-      <mat-card-header>
-        <img mat-card-avatar src="https://randomuser.me/api/portraits/women/36.jpg" class="uxg-avatar" />
-        <mat-card-title>Open Innovation</mat-card-title>
-        <mat-card-subtitle>Rachelle Ross</mat-card-subtitle>
-      </mat-card-header>
-      <img mat-card-image src="/assets/conference.jpg" alt="Photo of Fusion ONE" />
-      <mat-card-content>
-        <p>
-          To unlock the potential of people and businesses by creating a platform for open innovation in the world of financial services.
-        </p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-stroked-button color="primary">Like</button>
-        <button mat-stroked-button color="primary">Share</button>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-
-  <div class="example-row card-workspace-dense-test">
-    <mat-card dense>
-      <div class="uxg-card-image-overlay">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAoGVRDsE54AMV1QYasu_H0M868g8fmS4_i9cz5G-U9JgYc96pwg" />
-      </div>
-
-      <mat-card-title>New Age in Finance</mat-card-title>
-      <mat-card-subtitle>Risk Management</mat-card-subtitle>
-
-      <mat-card-actions>
-        <ul class="uxg-avatar-list" dense>
-          <li><img src="https://randomuser.me/api/portraits/men/36.jpg" class="uxg-avatar" /></li>
-          <li>
-            <div class="uxg-avatar"></div>
-          </li>
-          <li><img src="https://randomuser.me/api/portraits/women/37.jpg" class="uxg-avatar" /></li>
-          <li class="uxg-avatar-number">+6</li>
-        </ul>
-        <span class="fill-remaining-space"></span>
-        <button dense mat-icon-button [matMenuTriggerFor]="menu">
-          <mat-icon>more_vert</mat-icon>
-        </button>
-        <mat-menu #menu="matMenu" overlapTrigger="true">
-          <button mat-menu-item>
-            <mat-icon>dialpad</mat-icon>
-            <span>Redial</span>
-          </button>
-          <button mat-menu-item disabled>
-            <mat-icon>voicemail</mat-icon>
-            <span>Check voicemail</span>
-          </button>
-          <button mat-menu-item>
-            <mat-icon>notifications_off</mat-icon>
-            <span>Disable alerts</span>
-          </button>
-        </mat-menu>
-      </mat-card-actions>
-    </mat-card>
-  </div>
-
-  <div class="example-row card-product-test">
-    <mat-card class="uxg-card-product" large>
-      <span class="uxg-h1 uxg-card-product-name">PRO</span>
-    </mat-card>
-    <mat-card class="uxg-card-product">
-      <span class="uxg-h3 uxg-card-product-name">PRO</span>
-    </mat-card>
-    <mat-card class="uxg-card-product" dense>
-      <span class="uxg-h4 uxg-card-product-name">PRO</span>
-    </mat-card>
-    <mat-card class="uxg-card-product" extra-dense>
-      <span class="uxg-h5 uxg-card-product-name">PRO</span>
-    </mat-card>
-  </div>
-
-  <div class="example-row card-solution-test">
-    <mat-card class="uxg-card-solution" large>
-      <span class="uxg-h1 uxg-card-solution-name">SOL</span>
-    </mat-card>
-    <mat-card class="uxg-card-solution">
-      <span class="uxg-h3 uxg-card-solution-name">SOL</span>
-    </mat-card>
-    <mat-card class="uxg-card-solution" dense>
-      <span class="uxg-h4 uxg-card-solution-name">SOL</span>
-    </mat-card>
-    <mat-card class="uxg-card-solution" extra-dense>
-      <span class="uxg-h5 uxg-card-solution-name">SOL</span>
-    </mat-card>
-  </div>
-</div>
-
-<div class="block-test">
-  <h3 class="uxg-h3">Chips</h3>
+  <h4 class="uxg-h4">Chips</h4>
   <div class="example-row chip-states-test">
     <mat-chip-listbox>
       <mat-chip>Simple</mat-chip>
@@ -445,7 +352,7 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Tabs</h3>
+  <h4 class="uxg-h4">Tabs</h4>
   <h5>Standard Tabs</h5>
   <mat-tab-group class="uxg-tabs-v2">
     <mat-tab label="Tab A"> {{ tabText }} </mat-tab>
@@ -477,12 +384,12 @@
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Link</h3>
+  <h4 class="uxg-h4">Link</h4>
   <div class="link-test">This is <a class="uxg-link" href="">uxg-link</a></div>
 </div>
 
 <div class="block-test">
-  <h3 class="uxg-h3">Slide Toggle</h3>
+  <h4 class="uxg-h4">Slide Toggle</h4>
   <div class="example-row slide-toggle-states-test">
     <mat-slide-toggle>Default</mat-slide-toggle>
     <mat-slide-toggle checked="true">Accent</mat-slide-toggle>
@@ -491,7 +398,7 @@
 </div>
 
 <div>
-  <h3 class="uxg-h3">Inputs</h3>
+  <h4 class="uxg-h4">Inputs</h4>
   <h5 class="uxg-h5">Input</h5>
   <div class="example-row">
     <mat-form-field floatLabel="never" appearance="outline">
@@ -510,6 +417,30 @@
   </div>
   <div class="example-row">
     <mat-form-field floatLabel="never" class="example-full-width" appearance="outline">
+      <mat-icon color="primary" matPrefix>search</mat-icon>
+      <mat-label>Search...</mat-label>
+      <input type="search" matInput />
+    </mat-form-field>
+  </div>
+  <br />
+
+  <div class="example-row">
+    <mat-form-field floatLabel="never" appearance="fill">
+      <mat-icon color="primary" matPrefix>favorite</mat-icon>
+      <mat-label>Label</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-icon color="primary" matSuffix>favorite</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="example-row">
+    <mat-form-field floatLabel="never" appearance="fill">
+      <mat-label>Label</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-hint>Helper text</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="example-row">
+    <mat-form-field floatLabel="never" class="example-full-width" appearance="fill">
       <mat-icon color="primary" matPrefix>search</mat-icon>
       <mat-label>Search...</mat-label>
       <input type="search" matInput />
@@ -570,7 +501,6 @@
       <mat-hint>Helper text</mat-hint>
     </mat-form-field>
   </div>
-  <br />
 
   <form class="example-row">
     <mat-form-field dense floatLabel="never" class="example-full-width" appearance="outline">
@@ -598,10 +528,69 @@
       <span matSuffix>.00</span>
     </mat-form-field>
   </div>
-  <br />
 
   <div class="example-row">
     <mat-form-field #ff2 dense appearance="outline">
+      <mat-icon matPrefix dense>lock_outlined</mat-icon>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required />
+      <mat-icon matSuffix dense>error_outlined</mat-icon>
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+  </div>
+  <br />
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>This is label</mat-label>
+      <input matInput value="this is value" />
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-icon color="primary" matPrefix dense>search</mat-icon>
+      <mat-label>This is label</mat-label>
+      <input matInput value="this is value" />
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>Label</mat-label>
+      <input matInput />
+      <mat-hint>Helper text</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <form class="example-row">
+    <mat-form-field dense floatLabel="never" class="example-full-width" appearance="fill">
+      <mat-icon color="primary" matPrefix dense>search</mat-icon>
+      <mat-label>Search...</mat-label>
+      <input type="search" matInput />
+    </mat-form-field>
+  </form>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon dense>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" value="0" class="example-right-align" />
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field #ff2 dense appearance="fill">
       <mat-icon matPrefix dense>lock_outlined</mat-icon>
       <mat-label>Enter your email</mat-label>
       <input matInput placeholder="pat@example.com" [formControl]="email" required />
@@ -662,7 +651,7 @@
 
 <div>
   <div>
-    <h3 class="uxg-h3">Expansion</h3>
+    <h4 class="uxg-h4">Expansion</h4>
     <h5 class="uxg-h5">Expansion filter</h5>
     <div class="example-row">
       <mat-expansion-panel class="uxg-expansion-filter">

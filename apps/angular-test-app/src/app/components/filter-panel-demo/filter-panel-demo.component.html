@@ -47,14 +47,7 @@
             <h5 class="uxg-h5">Group Tags</h5>
             <button mat-button (click)="demoGroupFilterTags.clearSelection()" color="accent" dense>Clear all</button>
           </div>
-          <uxg-filter-tags
-            standard
-            [appearance]="'outline'"
-            [data]="sampleGroupTags"
-            [groupTags]="true"
-            (changes)="updateGroupFilterTags($event)"
-            #demoGroupFilterTags
-          >
+          <uxg-filter-tags [data]="sampleGroupTags" [groupTags]="true" (changes)="updateGroupFilterTags($event)" #demoGroupFilterTags>
           </uxg-filter-tags>
         </div>
 
@@ -64,7 +57,6 @@
             <button mat-button (click)="demoMultiselectGroupTags.clearSelection()" color="accent" dense>Clear all</button>
           </div>
           <uxg-filter-tags
-            standard
             [data]="sampleMixTags"
             [groupTags]="true"
             [multiple]="true"

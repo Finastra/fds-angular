@@ -1,36 +1,39 @@
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme' as fds;
 
 :host {
   display: block;
-
+  overflow: hidden;
   width: 100%;
-  height: inherit;
-  line-height: 10px;
+  height: 15px;
 
-  margin-top: fds.$uxg-spacing-1;
-  margin-bottom: fds.$uxg-spacing-1;
-
-  user-select: none;
-  pointer-events: none;
+  @include fds.margin(1, top, bottom);
 
   &[animated] {
-    position: relative;
-
-    background-size: 800px 104px;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-name: shimmer;
-    animation-timing-function: linear;
+    &::before {
+      display: inline-block;
+      content: '';
+      opacity: 0.1;
+      width: 150%;
+      height: 300%;
+      animation-duration: 1.3s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: shine;
+      animation-timing-function: linear;
+      @media (prefers-reduced-motion: reduce) {
+        display: none;
+        animation: none;
+      }
+    }
   }
-}
 
-@keyframes shimmer {
-  0% {
-    background-position: -468px 0;
-  }
+  @keyframes shine {
+    0% {
+      margin-left: -150%;
+    }
 
-  100% {
-    background-position: 468px 0;
+    100% {
+      margin-left: 150%;
+    }
   }
 }

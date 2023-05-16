@@ -1,9 +1,8 @@
-import { Component, OnInit, ComponentFactory, Input, ViewChild, ViewContainerRef, ComponentRef, ViewEncapsulation } from '@angular/core';
+import { Component, ComponentFactory, ComponentRef, Input, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'uxg-component-repeater',
-  templateUrl: './component-repeater.component.html',
-  styleUrls: ['./component-repeater.component.scss'],
+  template: '<ng-container #componentHolder></ng-container>',
   encapsulation: ViewEncapsulation.None,
   standalone: true
 })
