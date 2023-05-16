@@ -15,9 +15,6 @@
 @use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
 @include fds.uxg-core();
-@include banner.color();
-
-@include wizard.typography();
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);
@@ -30,7 +27,7 @@
   // @include vector-map.theme($theme);
   // @include chart.theme($theme);
   @include wizard.theme($theme);
-  // @include banner.theme($theme);
+  @include banner.theme($theme);
   @include repeater.theme($theme);
   // @include changelog.theme($theme);
   @include video-thumbnail.theme($theme);
@@ -41,9 +38,10 @@
 @include app-theme(fds.$light-theme);
 
 @mixin app-typography() {
-  @include filter-group.typography($config: null);
-  @include filter-tags.typography($config: null);
-  @include filter-tree.typography($config: null);
+  @include filter-group.typography();
+  @include filter-tags.typography();
+  @include filter-tree.typography();
+  @include wizard.typography();
 }
 
 @include app-typography();
