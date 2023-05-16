@@ -1,39 +1,35 @@
-@use 'sass:map';
-@use '@angular/material' as mat;
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as fds;
+@use '@finastra/fds-theme/typography' as typo;
 
-@mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $foreground: map.get($theme, foreground);
-  $filter-tags-background-color: fds.get-color-from-palette($primary, default, 0.12);
+@mixin theme($theme: null) {
   $filter-tags-option-height: 32px;
 
   uxg-filter-tags {
     .filter-tags-container {
       .chip-list {
         .search-icon {
-          color: fds.get-color-from-palette($primary);
+          @include fds.color(primary);
         }
       }
     }
   }
 
-  .mat-autocomplete-panel {
-    .mat-option {
+  .mat-mdc-autocomplete-panel {
+    .mat-mdc-option {
       // Todo: create dense version of mat-option
       height: $filter-tags-option-height;
     }
 
     .custom-group-option {
       .mat-checkbox-label {
-        color: fds.get-color-from-palette($foreground, secondary-text);
+        @include fds.color(secondary);
       }
     }
 
     .selected-option-highlight,
     .search-term-highlight,
     .selected-option-highlight.mat-selected {
-      background-color: $filter-tags-background-color !important;
+      background-color: var(--fds-surface-selected) !important;
     }
 
     .mat-checkbox-inner-container:hover .mat-checkbox-persistent-ripple {
@@ -44,21 +40,21 @@
       &.mat-checkbox-checked,
       &.mat-checkbox-indeterminate {
         .mat-checkbox-label {
-          color: fds.get-color-from-palette($primary, default);
+          @include fds.color(primary);
         }
       }
     }
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
   .mat-autocomplete-panel {
     .mat-option {
-      @include mat.typography-level($config, body-2);
+      @include typo.typography(body-2);
 
       .custom-group-option {
         .mat-checkbox-label {
-          @include mat.typography-level($config, subtitle-2);
+          @include typo.typography(subtitle-2);
         }
       }
     }
@@ -66,7 +62,7 @@
     .selected-option-highlight,
     .search-term-highlight,
     .selected-option-highlight.mat-selected {
-      @include mat.typography-level($config, subtitle-2);
+      @include typo.typography(subtitle-2);
     }
   }
 }

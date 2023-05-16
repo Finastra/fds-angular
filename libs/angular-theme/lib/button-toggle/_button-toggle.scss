@@ -1,6 +1,6 @@
 @use 'sass:math';
 @use '../core/style/spacing' as *;
-@use '../icon/icon-base' as *;
+@use '../icon/icon' as *;
 
 $button-toggle-margin: $uxg-spacing-2;
 $button-toggle-icon-dense: 18px;
@@ -86,7 +86,7 @@ $button-toggle-radius-v: $uxg-spacing-3;
   }
 
   .mat-button-toggle-label-content {
-    line-height: $filtering-button-toggle-height;
+    line-height: $filtering-button-toggle-height !important;
     padding: 0 math.div(($filtering-button-toggle-height - $uxg-spacing-4), 2);
 
     span {

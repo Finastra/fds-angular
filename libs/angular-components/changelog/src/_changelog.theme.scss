@@ -1,21 +1,9 @@
-// @use 'sass:map';
-// @use '@angular/material' as mat;
 // @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 @use '@finastra/fds-theme/color' as color;
 @use '@angular/material' as mat;
-@use '@finastra/fds-theme/typography/mixins' as typography;
+@use '@finastra/fds-theme/typography' as typo;
 
 @mixin theme($theme: null) {
-  // $primary: map.get($theme, primary);
-  // $secondary: map.get($theme, accent);
-  // $error: map.get($theme, error);
-  // $success: map.get($theme, success);
-  // $foreground: map.get($theme, foreground);
-  // $background: map.get($theme, background);
-  // $elevation-color: map.get($foreground, elevation);
-  // $foreground: map.get($theme, foreground);
-  // $labels_background_opacity: 0.03;
-  // $divider: color.get-color-from-palette($foreground, divider, 0.07);
 
   uxg-changelog {
     .title {
@@ -157,12 +145,6 @@
 
       .release-detail::before,
       .last-release::before {
-        // color: map.get($background, default);
-        // border: 8px solid map.get($primary, default);
-        // background-color: map.get($primary, default);
-        // @include color.color($background);
-        // TODO:
-        // @include color.color(background);
         @include color.property(border, primary);
         border-style: solid;
         border-width: 8px;
@@ -185,42 +167,42 @@
   uxg-changelog {
     .title {
       .creator {
-        @include typography.typography(h2);
+        @include typo.typography(headline-2);
       }
 
       span {
-        @include typography.typography(h2);
+        @include typo.typography(headline-2);
       }
     }
 
     .date {
-      @include typography.typography(uxg-subtitle-1);
+      @include typo.typography(subtitle-1);
       white-space: nowrap;
       margin: 0;
     }
 
     .version-id {
-      @include typography.typography(uxg-subtitle-1);
+      @include typo.typography(subtitle-1);
       margin-bottom: 0;
     }
 
     .category {
-      @include typography.typography(uxg-h4);
+      @include typo.typography(headline-4);
     }
 
     // @include flex-layout.layout-bp(xs) {
     //   .title {
     //     .creator {
-    //       @include typography.typography-level($config, h3);
+    //       @include typo.typography(headline-3);
     //     }
 
     //     span {
-    //       @include typography.typography-level($config, h3);
+    //       @include typo.typography(headline-3);
     //     }
     //   }
 
     //   .category {
-    //     @include typography.typography-level($config, h5);
+    //     @include typo.typography(headline-5);
     //   }
     // }
   }

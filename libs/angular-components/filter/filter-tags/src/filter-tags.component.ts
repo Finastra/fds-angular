@@ -1,4 +1,5 @@
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
+import { AsyncPipe, NgClass, NgFor, NgIf, NgTemplateOutlet, SlicePipe } from '@angular/common';
 import {
   AfterViewInit,
   Attribute,
@@ -17,22 +18,21 @@ import {
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocomplete,
+  MatAutocompleteModule,
   MatAutocompleteSelectedEvent,
-  MatAutocompleteTrigger,
-  MatAutocompleteModule
+  MatAutocompleteTrigger
 } from '@angular/material/autocomplete';
 import { MatCheckboxChange, MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChip, MatChipInputEvent, MatChipsModule } from '@angular/material/chips';
+import { MatOptionModule } from '@angular/material/core';
 import { MatFormFieldAppearance, MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { uniqBy } from 'lodash-es';
 import { Observable, Subscription } from 'rxjs';
 import { delay, map, startWith } from 'rxjs/operators';
 import { HighlightPipe } from './highlight.pipe';
-import { MatOptionModule } from '@angular/material/core';
-import { MatInputModule } from '@angular/material/input';
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatIconModule } from '@angular/material/icon';
-import { NgFor, NgIf, NgTemplateOutlet, NgClass, AsyncPipe, SlicePipe } from '@angular/common';
 
 export interface Tag {
   label: string;
@@ -105,7 +105,7 @@ export class FilterTagsComponent implements OnInit, AfterViewInit, OnDestroy {
   @Input() multiple = false;
   @Input() selectableGroups = true;
   @Input() displayMax = 5;
-  @Input() appearance: MatFormFieldAppearance = 'fill';
+  @Input() appearance: MatFormFieldAppearance = 'outline';
 
   @Output() changes = new EventEmitter<UXGFilterChanges>();
   @Output() focused = new EventEmitter<boolean>();

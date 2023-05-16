@@ -422,6 +422,30 @@
       <input type="search" matInput />
     </mat-form-field>
   </div>
+  <br />
+
+  <div class="example-row">
+    <mat-form-field floatLabel="never" appearance="fill">
+      <mat-icon color="primary" matPrefix>favorite</mat-icon>
+      <mat-label>Label</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-icon color="primary" matSuffix>favorite</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="example-row">
+    <mat-form-field floatLabel="never" appearance="fill">
+      <mat-label>Label</mat-label>
+      <input matInput placeholder="Placeholder" />
+      <mat-hint>Helper text</mat-hint>
+    </mat-form-field>
+  </div>
+  <div class="example-row">
+    <mat-form-field floatLabel="never" class="example-full-width" appearance="fill">
+      <mat-icon color="primary" matPrefix>search</mat-icon>
+      <mat-label>Search...</mat-label>
+      <input type="search" matInput />
+    </mat-form-field>
+  </div>
 
   <h5 class="uxg-h5">Input With Icon Button</h5>
   <div class="example-row" dense>
@@ -477,7 +501,6 @@
       <mat-hint>Helper text</mat-hint>
     </mat-form-field>
   </div>
-  <br />
 
   <form class="example-row">
     <mat-form-field dense floatLabel="never" class="example-full-width" appearance="outline">
@@ -505,10 +528,69 @@
       <span matSuffix>.00</span>
     </mat-form-field>
   </div>
-  <br />
 
   <div class="example-row">
     <mat-form-field #ff2 dense appearance="outline">
+      <mat-icon matPrefix dense>lock_outlined</mat-icon>
+      <mat-label>Enter your email</mat-label>
+      <input matInput placeholder="pat@example.com" [formControl]="email" required />
+      <mat-icon matSuffix dense>error_outlined</mat-icon>
+      <mat-error *ngIf="email.invalid">{{ getErrorMessage() }}</mat-error>
+    </mat-form-field>
+  </div>
+  <br />
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>This is label</mat-label>
+      <input matInput value="this is value" />
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-icon color="primary" matPrefix dense>search</mat-icon>
+      <mat-label>This is label</mat-label>
+      <input matInput value="this is value" />
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>Label</mat-label>
+      <input matInput />
+      <mat-hint>Helper text</mat-hint>
+    </mat-form-field>
+  </div>
+
+  <form class="example-row">
+    <mat-form-field dense floatLabel="never" class="example-full-width" appearance="fill">
+      <mat-icon color="primary" matPrefix dense>search</mat-icon>
+      <mat-label>Search...</mat-label>
+      <input type="search" matInput />
+    </mat-form-field>
+  </form>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>Enter your password</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" />
+      <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+        <mat-icon dense>{{ hide ? 'visibility_off' : 'visibility' }}</mat-icon>
+      </button>
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field dense appearance="fill">
+      <mat-label>Amount</mat-label>
+      <input matInput type="number" value="0" class="example-right-align" />
+      <span matPrefix>$&nbsp;</span>
+      <span matSuffix>.00</span>
+    </mat-form-field>
+  </div>
+
+  <div class="example-row">
+    <mat-form-field #ff2 dense appearance="fill">
       <mat-icon matPrefix dense>lock_outlined</mat-icon>
       <mat-label>Enter your email</mat-label>
       <input matInput placeholder="pat@example.com" [formControl]="email" required />
