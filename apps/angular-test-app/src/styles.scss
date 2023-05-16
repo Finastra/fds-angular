@@ -1,5 +1,7 @@
 @use 'angular-theme' as fds;
 @use 'angular-theme/base';
+
+@use 'angular-components/banner/src/banner.theme' as banner;
 @use 'angular-components/toaster/src/toaster.theme' as toaster;
 @use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
 @use 'angular-components/video-thumbnail/src/video-thumbnail.theme' as video-thumbnail;
@@ -11,6 +13,7 @@
 @use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
 @include fds.uxg-core();
+@include banner.color();
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);
