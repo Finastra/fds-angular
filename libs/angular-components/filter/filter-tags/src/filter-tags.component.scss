@@ -19,7 +19,7 @@ uxg-filter-tags {
   white-space: pre-line;
 }
 
-.mat-autocomplete-panel {
+.mat-mdc-autocomplete-panel {
   .custom-option,
   .custom-group-option {
     position: absolute;
@@ -44,7 +44,7 @@ uxg-filter-tags {
     }
   }
 
-  .mat-optgroup.multiple .mat-optgroup-label {
-    height: fds.$uxg-spacing-0;
+  .mat-mdc-optgroup.multiple .mat-mdc-optgroup-label {
+    min-height: fds.$uxg-spacing-0;
   }
 }

@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components/global-nav';
 
 @Component({
@@ -11,11 +13,11 @@ import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components
     class: 'ffdc-global-nav-demo'
   },
   standalone: true,
-  imports: [GlobalNavComponent, MatButtonModule, MatIconModule]
+  imports: [GlobalNavComponent, MatButtonModule, MatIconModule, MatMenuModule, MatDividerModule]
 })
 export class GlobalNavDemoComponent {
   appName = 'Global Nav Demo';
-  shortName = 'gbd';
+  shortName = 'gnd';
 
   demoAppList: NavigationNode[] = [
     {

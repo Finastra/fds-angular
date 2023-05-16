@@ -14,14 +14,7 @@ const voidState = style({
 
 @Component({
   selector: 'uxg-toaster-container',
-  template: `
-    <uxg-toaster
-      class="flex-row justify-start align-stretch"
-      [@fadeIn]="fadeIn"
-      *ngFor="let toast of content"
-      [toast]="toast"
-    ></uxg-toaster>
-  `,
+  template: ` <uxg-toaster [@fadeIn]="fadeIn" *ngFor="let toast of content" [toast]="toast"></uxg-toaster> `,
   animations: [trigger('fadeIn', [transition(':enter', [voidState, animate(100)]), transition(':leave', [animate(100, voidState)])])],
   standalone: true,
   imports: [NgFor, ToasterComponent]

@@ -1,7 +1,7 @@
-@use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme' as fds;
 
 .uxg-banner {
-  margin: fds.$uxg-spacing-2;
+  @include fds.margin(2);
   display: flex;
   flex-direction: row;
   align-items: stretch;
@@ -9,8 +9,7 @@
     display: block;
     border-right-style: solid;
     border-right-width: 1px;
-    margin-top: fds.$uxg-spacing-3;
-    margin-bottom: fds.$uxg-spacing-3;
+    @include fds.margin(3, top, bottom);
   }
   .uxg-banner-item {
     min-width: 120px;
@@ -18,11 +17,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-left: fds.$uxg-spacing-2;
-    margin-right: fds.$uxg-spacing-2;
-    margin-top: fds.$uxg-spacing-2;
-    margin-bottom: fds.$uxg-spacing-2;
+    @include fds.margin(2);
+
+    .uxg-banner-item-label {
+      @include fds.typography(subtitle-1);
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 72px;
+    }
+
+    .uxg-banner-item--small-label {
+      @include fds.typography(subtitle-1);
+      font-weight: bold;
+      line-height: 36px;
+    }
+
+    .uxg-banner-item-name {
+      @include fds.typography(subtitle-2);
+    }
+
+    .uxg-banner-item--small-name {
+      @include fds.typography(subtitle-4);
+    }
   }
+
   &.uxg-banner-small {
     .uxg-banner-spliter {
       margin-top: 0;

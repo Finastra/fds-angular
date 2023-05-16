@@ -9,7 +9,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ToasterModule } from '@finastra/angular-components/toaster';
 import { VideoThumbnailDemoComponent } from './video-thumbnail.component';
 
 describe('VideoThumbnailDemoComponent', () => {
@@ -19,7 +18,6 @@ describe('VideoThumbnailDemoComponent', () => {
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       imports: [
-        ToasterModule,
         CommonModule,
         NoopAnimationsModule,
         MatSelectModule,

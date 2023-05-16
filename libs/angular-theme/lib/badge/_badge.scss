@@ -18,7 +18,8 @@ $side-badge-min-width-large: 14px;
 }
 
 .uxg-side-badge {
-  vertical-align: baseline;
+  display: flex;
+  align-items: center;
 
   &.mat-badge-small.mat-badge-after span.mat-badge-content {
     @include uxg-side-badge-base();
