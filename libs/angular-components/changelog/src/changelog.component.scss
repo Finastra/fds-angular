@@ -193,9 +193,9 @@ uxg-changelog {
       left: calc(#{-$bullet-center} - 6px);
     }
 
-    // .layout-column {
-    //   @include changelog-layout('sm');
-    // }
+    .layout-column {
+      @include changelog-layout('sm');
+    }
   }
 
   // @include flex-layout.layout-bp(sm) {

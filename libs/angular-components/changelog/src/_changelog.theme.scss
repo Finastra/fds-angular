@@ -5,6 +5,8 @@
 
 @mixin theme($theme: null) {
 
+  // $primary: fds.get-color-from-token(primary, null, $theme);
+
   uxg-changelog {
     .title {
       height: 250px;
@@ -66,8 +68,8 @@
     }
 
     .change-detail:not(.last-change) {
-      @include color.property(border-bottom, foreground);
-      opacity: 0.07;
+      @include color.property(border-color, outline);
+
       border-bottom-width: 1px;
       border-style: solid;
     }
@@ -77,14 +79,10 @@
       .last-release,
       .first-release {
         border-radius: 6px;
-        // @include mat.elevation(4, $elevation-color, 0.6);
-        // @include color.property(background-color, card);
         @include color.color(on-surface);
         @include color.background(surface);
         @include mat.elevation(4);
-        @include color.color(elevation);
-        // @include color.background(foreground);
-        // opacity: 0.6;
+        @include color.color(elevation); //idk
       }
 
       .change {
@@ -93,29 +91,23 @@
           @include color.property(border, primary);
           border-width: 1px;
           border-style: solid;
-          // @include color.background(primary);
-          // opacity: 0.03;
+          @include color.background(#B4A6EA)
         }
         .update {
           @include color.color(success);
           @include color.property(border, success);
           border-width: 1px;
           border-style: solid;
-          // @include color.background(success);
-          // opacity: 0.03;
+          @include color.background(surface-success);
         }
         .bugfix {
           @include color.color(error);
           @include color.property(border, error);
           border-width: 1px;
           border-style: solid;
-          // @include color.background(error);
-          // opacity: 0.03;
+          @include color.background(surface-error);
         }
         .deprecated {
-          // color: color.get-color-from-palette($foreground, text, 0.8);
-          // border: 1px solid color.get-color-from-palette($foreground, text, 0.8);
-          // background-color: color.get-color-from-palette(color.$mat-grey, 400, $labels_background_opacity);
           @include color.color(foreground);
           opacity: 0.8;
 
@@ -124,8 +116,7 @@
           border-width: 1px;
           border-style: solid;
           
-          // @include color.background(on-surface);
-          // opacity: 0.03;
+          @include color.background(#E5E5E5);
         }
       }
 
