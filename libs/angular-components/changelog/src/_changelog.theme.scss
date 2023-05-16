@@ -5,8 +5,6 @@
 
 @mixin theme($theme: null) {
 
-  // $primary: fds.get-color-from-token(primary, null, $theme);
-
   uxg-changelog {
     .title {
       height: 250px;

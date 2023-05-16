@@ -157,7 +157,7 @@ uxg-changelog {
       position: absolute;
       width: $bullet-size;
       height: $bullet-size;
-      top: 32px;
+      top: -(4px);
       left: calc(#{-$bullet-center} - #{$bullet-size});
       border-radius: 50%;
       z-index: 1;
@@ -169,7 +169,7 @@ uxg-changelog {
       position: absolute;
       width: 0;
       height: 0;
-      top: 32px;
+      top: -(4px);
       left: calc(#{-$bullet-center} - 13px);
       border-radius: 50%;
       z-index: 1;
@@ -179,7 +179,7 @@ uxg-changelog {
       content: '';
       position: absolute;
       width: 2px;
-      top: 32px;
+      top: -(4px);
       bottom: -60px;
       left: calc(#{-$bullet-center} - 6px);
     }
@@ -188,7 +188,7 @@ uxg-changelog {
       content: '';
       position: absolute;
       width: 2px;
-      top: 32px;
+      top: -(4px);
       bottom: -60px;
       left: calc(#{-$bullet-center} - 6px);
     }
