@@ -26,7 +26,7 @@
       line-height: 72px;
     }
 
-    .uxg-banner-item--smal-label {
+    .uxg-banner-item--small-label {
       @include fds.typography(subtitle-1);
       font-weight: bold;
       line-height: 36px;
@@ -36,7 +36,7 @@
       @include fds.typography(subtitle-2);
     }
 
-    .uxg-banner-item--smal-name {
+    .uxg-banner-item--small-name {
       @include fds.typography(subtitle-4);
     }
   }
