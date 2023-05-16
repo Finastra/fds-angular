@@ -41,7 +41,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'filter-panel', component: FilterPanelDemoComponent, data: { title: 'Filter', migrated: true } },
       { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search' } },
       { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover', migrated: true } },
-      { path: 'table', component: TableDemoComponent, data: { title: 'Table' } },
+      { path: 'table', component: TableDemoComponent, data: { title: 'Table', migrated: true } },
       { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater', migrated: true } },
       { path: 'skeleton', component: SkeletonDemoComponent, data: { title: 'Skeleton', migrated: true } },
       //     { path: 'vector-map', component: VectorMapDemoComponent, data: { title: 'Vector Map' } },
@@ -55,7 +55,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
         component: UserProfileMenuDemoComponentComponent,
         data: { title: 'User Profile Menu', migrated: true }
       },
-      { path: 'banner', component: BannerDemoComponent, data: { title: 'Banner' } },
+      { path: 'banner', component: BannerDemoComponent, data: { title: 'Banner', migrated: true } },
       { path: 'search-input', component: SearchInputDemoComponent, data: { title: 'Search Input' } },
       { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog' } },
       { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb', migrated: true } },
