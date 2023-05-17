@@ -8,11 +8,6 @@ $button-radius-large: 24px;
 $button-height-dense: 30px;
 $button-height-large: 44px;
 
-// $button-padding-dense-x: $uxg-spacing-3;
-// $button-padding-dense-y: 6px;
-// $button-padding-large-x: $uxg-spacing-4;
-// $button-padding-large-y: 10px;
-
 $button-icon-size-dense: 14px;
 $button-icon-size-base: 18px;
 $button-icon-size-large: $uxg-spacing-4;
@@ -32,31 +27,17 @@ $mat-icon-button-size-dense: 30px;
       padding-bottom: 2px;
     }
   }
-
-  &.mat-mdc-icon-button {
-    // .mat-button-wrapper {
-    display: flex;
-    align-self: center;
-    margin: auto;
-    // }
-  }
 }
 
 a,
 button {
   @include button-base($button-radius-base, $button-icon-size-base);
-  // padding: $uxg-spacing-2 $uxg-spacing-3;
 
   &.mat-mdc-icon-button {
     display: inline-flex;
     align-content: center;
     justify-content: center;
     flex-wrap: wrap;
-
-    // .mat-button-wrapper, .mat-mdc-button-touch-target {
-    width: $button-icon-size-large;
-    height: $button-icon-size-large;
-    // }
 
     &:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
       opacity: 0.04;
@@ -69,17 +50,11 @@ a[dense],
 *[dense] button {
   &.mdc-button.mat-mdc-button-base {
     @include button-base($button-radius-dense, $button-icon-size-dense);
-    // padding: $button-padding-dense-y $button-padding-dense-x;
     height: $button-height-dense;
   }
   &.mat-mdc-icon-button.mat-mdc-button-base {
     @include icon-size($mat-icon-button-size-dense);
     padding: 0;
-
-    // .mat-button-wrapper, .mat-mdc-button-touch-target {
-    width: $button-icon-size-base;
-    height: $button-icon-size-base;
-    // }
 
     .mat-icon {
       @include icon-size($button-icon-size-base);
@@ -92,7 +67,6 @@ a[large],
 *[large] button {
   &.mdc-button.mat-mdc-button-base {
     @include button-base($button-radius-large, $button-icon-size-large);
-    // padding: $button-padding-large-y $button-padding-large-x;
     height: $button-height-large;
   }
 }

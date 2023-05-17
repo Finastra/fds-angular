@@ -1,4 +1,3 @@
-// @use '@angular/material' as mat;
 @use '@finastra/fds-theme/color' as color;
 @use '@finastra/fds-theme/typography' as typography;
 @use '../core/theming/color-utility' as utility;
@@ -54,67 +53,29 @@
         background-color: var(--fds-success);
       }
     }
+  }
 
-    // .mat-flat-button,
-    // .mat-raised-button,
-    // .mat-fab,
-    // .mat-mini-fab {
-    //   &.mat-primary,
-    //   &.mat-accent
-    //     {
-    //     & .mat-ripple-element {
-    //       // since the use of CSS variables,
-    //       // opacity is already set on rgba background-color.
-    //       // see #288
-    //       opacity: 0.1;
-    //     }
-    //   }
+  .mat-mdc-button-base.mat-mdc-icon-button {
+    &.mat-neutral,
+    &.mat-gradient {
+      .mat-mdc-button-ripple {
+        @include color.color(primary);
+      }
+    }
 
-    //   &.cdk-keyboard-focused {
-    //     &.mat-primary .mdc-button__ripple::before {
-    //       background: palette.get-color-from-palette($primary, default-contrast);
-    //       opacity: 0.24;
-    //     }
+    &.mat-neutral {
+      .mat-icon {
+        @include color.color(on-background);
+      }
+    }
 
-    //     &.mat-accent .mdc-button__ripple::before {
-    //       background: palette.get-color-from-palette($accent, default-contrast);
-    //       opacity: 0.24;
-    //     }
-
-    //     &.mat-gradient .mdc-button__ripple::before {
-    //       background: palette.get-color-from-palette($primary, default-contrast);
-    //       opacity: 0.24;
-    //     }
-
-    //     &.mat-success .mdc-button__ripple::before {
-    //       background: palette.get-color-from-palette($success, default-contrast);
-    //       opacity: 0.24;
-    //     }
-    //   }
-    // }
-
-    // .mat-icon-button {
-    //   &.mat-neutral,
-    //   &.mat-gradient {
-    //     .mat-button-ripple {
-    //       color: palette.get-color-from-palette($primary, default);
-    //     }
-    //   }
-
-    //   &.mat-neutral {
-    //     .mat-icon {
-    //       color: palette.get-color-from-palette($foreground, text, 0.75);
-    //     }
-    //   }
-
-    //   &.mat-gradient {
-    //     .mat-icon {
-    //       background: palette.get-color-from-palette(palette.$uxg-gradient, vertical);
-    //       background-clip: text;
-    //       -webkit-text-fill-color: transparent;
-    //     }
-    //   }
-    // }
+    &.mat-gradient {
+      .mat-icon {
+        @include color.background(gradient-vertical);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
   }
 
   .mat-mdc-fab.mat-gradient {
