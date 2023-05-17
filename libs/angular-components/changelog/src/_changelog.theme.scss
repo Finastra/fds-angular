@@ -1,7 +1,7 @@
-// @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 @use '@finastra/fds-theme/color' as color;
 @use '@angular/material' as mat;
 @use '@finastra/fds-theme/typography' as typo;
+@use '@finastra/angular-theme' as fds;
 
 @mixin theme($theme: null) {
   uxg-changelog {
@@ -18,7 +18,7 @@
         z-index: 10;
       }
       .creator {
-        background-image: linear-gradient(to right, #694ed6, #c137a2);
+        background-image: linear-gradient(to right, var(--fds-primary), var(--fds-secondary));
 
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
@@ -65,10 +65,7 @@
     }
 
     .change-detail:not(.last-change) {
-      @include color.property(border-color, outline);
-
-      border-bottom-width: 1px;
-      border-style: solid;
+      border-bottom: 1px solid var(--fds-outline);
     }
 
     .changelog-container {
@@ -79,49 +76,35 @@
         @include color.color(on-surface);
         @include color.background(surface);
         @include mat.elevation(4);
-        @include color.color(elevation); //idk
+        @include color.color(elevation);
       }
 
       .change {
         .new {
           @include color.color(primary);
-          @include color.property(border, primary);
-          border-width: 1px;
-          border-style: solid;
-          @include color.background(#b4a6ea);
+          border: 1px solid var(--fds-primary);
+          background-color: fds.get-color-from-token(primary, 0.03);
         }
         .update {
           @include color.color(success);
-          @include color.property(border, success);
-          border-width: 1px;
-          border-style: solid;
+          border: 1px solid var(--fds-success);
           @include color.background(surface-success);
         }
         .bugfix {
           @include color.color(error);
-          @include color.property(border, error);
-          border-width: 1px;
-          border-style: solid;
+          border: 1px solid var(--fds-error);
           @include color.background(surface-error);
         }
         .deprecated {
-          @include color.color(foreground);
-          opacity: 0.8;
-
-          @include color.property(border, foreground);
-          opacity: 0.8;
-          border-width: 1px;
-          border-style: solid;
-
-          @include color.background(#e5e5e5);
+          color: fds.get-color-from-token(on-surface, 0.8);
+          border: 1px solid var(--fds-on-surface-medium);
+          background-color: fds.get-color-from-token(surface, 0.03);
         }
       }
 
       .release-detail {
         &::after {
-          @include color.property(border-left, primary);
-          border-left-width: 2px;
-          border-left-style: dotted;
+          border-left: 2px dotted var(--fds-primary);
         }
       }
 
@@ -133,19 +116,13 @@
 
       .release-detail::before,
       .last-release::before {
-        @include color.property(border, primary);
-        border-style: solid;
-        border-width: 8px;
-
+        border: 8px solid var(--fds-primary);
         @include color.background(primary);
       }
 
       .first-release::before {
         @include color.background(surface);
-
-        @include color.property(border, primary);
-        border-style: solid;
-        border-width: 5px;
+        border: 5px solid var(--fds-primary);
       }
     }
   }
@@ -178,20 +155,20 @@
       @include typo.typography(headline-4);
     }
 
-    // @include flex-layout.layout-bp(xs) {
-    //   .title {
-    //     .creator {
-    //       @include typo.typography(headline-3);
-    //     }
+    @include fds.flex-breakpoint('xs') {
+      .title {
+        .creator {
+          @include typo.typography(headline-3);
+        }
 
-    //     span {
-    //       @include typo.typography(headline-3);
-    //     }
-    //   }
+        span {
+          @include typo.typography(headline-3);
+        }
+      }
 
-    //   .category {
-    //     @include typo.typography(headline-5);
-    //   }
-    // }
+      .category {
+        @include typo.typography(headline-5);
+      }
+    }
   }
 }
