@@ -3,14 +3,14 @@
 @use '../core/theming/color-utility' as utility;
 
 @mixin theme($theme: null) {
-  .mdc-button.mat-mdc-button-base {
+  .mat-mdc-button-base {
     &[mat-stroked-button] {
       &.mat-primary {
         border-color: var(--fds-outline-info);
       }
 
       &.mat-accent {
-        border-color: utility.get-color-from-token(secondary, 0.5);
+        border-color: utility.get-color-from-token(secondary, 0.5, $theme);
       }
 
       &.mat-error {
@@ -27,7 +27,8 @@
       }
     }
 
-    &[mat-flat-button] {
+    &[mat-flat-button],
+    &.mdc-fab {
       &.mat-error {
         background-color: var(--fds-error);
         color: var(--fds-on-error);
@@ -35,6 +36,10 @@
       &.mat-success {
         background-color: var(--fds-success);
         color: var(--fds-on-success);
+      }
+      &.mat-accent {
+        background-color: var(--fds-secondary);
+        color: var(--fds-on-secondary);
       }
     }
 
