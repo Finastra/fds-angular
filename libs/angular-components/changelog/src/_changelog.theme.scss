@@ -4,7 +4,6 @@
 @use '@finastra/fds-theme/typography' as typo;
 
 @mixin theme($theme: null) {
-
   uxg-changelog {
     .title {
       height: 250px;
@@ -19,7 +18,7 @@
         z-index: 10;
       }
       .creator {
-        background-image: linear-gradient(to right, #694ED6, #C137A2);
+        background-image: linear-gradient(to right, #694ed6, #c137a2);
 
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
@@ -89,7 +88,7 @@
           @include color.property(border, primary);
           border-width: 1px;
           border-style: solid;
-          @include color.background(#B4A6EA)
+          @include color.background(#b4a6ea);
         }
         .update {
           @include color.color(success);
@@ -113,8 +112,8 @@
           opacity: 0.8;
           border-width: 1px;
           border-style: solid;
-          
-          @include color.background(#E5E5E5);
+
+          @include color.background(#e5e5e5);
         }
       }
 
