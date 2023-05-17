@@ -63,7 +63,7 @@
       >
         <!-- view cell, display data cell according to the type -->
         <div [ngSwitch]="column.type" class="uxg-table-row-view" [ngClass]="{ 'uxg-cell-hidden': element.uxgTableEdit }">
-          <div *ngSwitchCase="'date'">
+          <div *ngSwitchCase="'date'" class="uxg-table-row-date">
             <mat-icon>date_range</mat-icon>
             {{ element[column.name] }}
           </div>

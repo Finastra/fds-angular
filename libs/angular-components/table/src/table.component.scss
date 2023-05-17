@@ -23,6 +23,7 @@ uxg-table {
         position: relative;
         overflow: hidden;
         box-sizing: border-box;
+
         .uxg-cell-hidden {
           display: none !important;
           width: 0px;
@@ -30,6 +31,16 @@ uxg-table {
         }
         .uxg-table-row-display {
           position: absolute;
+        }
+
+        .uxg-table-row-date {
+          display: flex !important;
+          vertical-align: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          align-items: flex-end;
         }
         .uxg-table-row-edit {
           position: absolute;
@@ -93,7 +104,7 @@ uxg-table {
             flex-direction: row-reverse;
             place-content: center flex-start;
             align-items: center;
-            .mat-mdc-sort-header-arrow {
+            .mat-sort-header-arrow {
               margin-left: 0px;
               margin-right: 6px;
             }
@@ -116,5 +127,9 @@ uxg-table {
         display: none;
       }
     }
+  }
+
+  .mat-mdc-text-field-wrapper {
+    height: 40px;
   }
 }
