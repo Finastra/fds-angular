@@ -7,7 +7,8 @@ $light-theme: mat.define-light-theme(
       primary: mat.define-palette(palette.$primary-light-palette),
       accent: mat.define-palette(palette.$secondary-light-palette)
     ),
-    typography: mat.define-typography-config()
+    typography: mat.define-typography-config(),
+    is-dark: false
   )
 );
 
@@ -17,6 +18,7 @@ $dark-theme: mat.define-dark-theme(
       primary: mat.define-palette(palette.$primary-dark-palette),
       accent: mat.define-palette(palette.$secondary-dark-palette)
     ),
-    typography: mat.define-typography-config()
+    typography: mat.define-typography-config(),
+    is-dark: true
   )
 );

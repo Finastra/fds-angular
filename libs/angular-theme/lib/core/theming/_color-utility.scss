@@ -6,8 +6,6 @@
 @use '@finastra/fds-tokens/dist/scss/light';
 @use '@finastra/fds-tokens/dist/scss/dark';
 
-@use './theming' as theme;
-
 @mixin uxg-color-utility($theme) {
   .uxg-text-primary {
     @include fds.color(primary);
@@ -31,8 +29,8 @@
   }
 }
 
-@function get-color-from-token($token, $opacity: null, $theme: theme.$light-theme) {
-  $tokens: if($theme == theme.$light-theme, light.$tokens, dark.$tokens);
+@function get-color-from-token($token, $opacity: null, $theme) {
+  $tokens: if(map.get($theme, is-dark), dark.$tokens, light.$tokens);
 
   $color: map.get($tokens, $token);
 
