@@ -1,127 +1,87 @@
-// @use 'sass:map';
-@use '@angular/material' as mat;
-// @use '../core/theming/palette' as palette;
 @use '@finastra/fds-theme/color' as color;
 @use '@finastra/fds-theme/typography' as typography;
-@use '@finastra/fds-theme/spacing' as spacing;
+@use '../core/theming/color-utility' as utility;
 
 @mixin theme($theme: null) {
-  // $primary: map.get($theme, primary);
-  // $accent: map.get($theme, accent);
-  // $success: map.get($theme, success);
-  // $error: map.get($theme, error);
-  // $foreground: map.get($theme, foreground);
+  .mat-mdc-button-base {
+    &[mat-stroked-button] {
+      &.mat-primary {
+        border-color: var(--fds-outline-info);
+      }
 
-  // .mat-stroked-button {
-  //   &.mat-primary {
-  //     border-color: palette.get-color-from-palette($primary, default, 0.5);
-  //   }
+      &.mat-accent {
+        border-color: utility.get-color-from-token(secondary, 0.5, $theme);
+      }
 
-  //   &.mat-accent {
-  //     border-color: palette.get-color-from-palette($accent, default, 0.5);
-  //   }
+      &.mat-error {
+        border-color: var(--fds-outline-error);
+      }
 
-  //   &.mat-error {
-  //     border-color: palette.get-color-from-palette($error, default, 0.5);
-  //   }
+      &.mat-success {
+        border-color: var(--fds-outline-success);
+      }
 
-  //   &.mat-success {
-  //     border-color: palette.get-color-from-palette($success, default, 0.5);
-  //   }
+      &[disabled] {
+        background-color: var(--fds-surface-disabled);
+        border-color: var(--fds-on-surface-disabled);
+      }
+    }
 
-  //   &[disabled] {
-  //     background-color: palette.get-color-from-palette($foreground, text, 0.1);
-  //     border-color: palette.get-color-from-palette($foreground, text, 0.25);
-  //   }
-  // }
+    &[mat-flat-button],
+    &.mdc-fab {
+      &.mat-error {
+        background-color: var(--fds-error);
+        color: var(--fds-on-error);
+      }
+      &.mat-success {
+        background-color: var(--fds-success);
+        color: var(--fds-on-success);
+      }
+      &.mat-accent {
+        background-color: var(--fds-secondary);
+        color: var(--fds-on-secondary);
+      }
+    }
 
-  // .mat-flat-button {
-  //   &.mat-error {
-  //     background: palette.get-color-from-palette($error, default);
-  //     color: palette.get-color-from-palette($error, default-contrast);
-  //   }
-  //   &.mat-success {
-  //     background: palette.get-color-from-palette($success, default);
-  //     color: palette.get-color-from-palette($success, default-contrast);
-  //   }
-  // }
+    &.mat-error {
+      color: var(--fds-error);
 
-  // .mat-error {
-  //   color: palette.get-color-from-palette($error, default);
+      .mdc-button__ripple::before {
+        background-color: var(--fds-error);
+      }
+    }
 
-  //   .mat-button-focus-overlay {
-  //     background: palette.get-color-from-palette($error, default);
-  //   }
-  // }
+    &.mat-success {
+      color: var(--fds-success);
 
-  // .mat-success {
-  //   color: palette.get-color-from-palette($success, default);
+      .mdc-button__ripple::before {
+        background-color: var(--fds-success);
+      }
+    }
+  }
 
-  //   .mat-button-focus-overlay {
-  //     background: palette.get-color-from-palette($success, default);
-  //   }
-  // }
+  .mat-mdc-button-base.mat-mdc-icon-button {
+    &.mat-neutral,
+    &.mat-gradient {
+      .mat-mdc-button-ripple {
+        @include color.color(primary);
+      }
+    }
 
-  // .mat-flat-button,
-  // .mat-raised-button,
-  // .mat-fab,
-  // .mat-mini-fab {
-  //   &.mat-primary,
-  //   &.mat-accent
-  //     {
-  //     & .mat-ripple-element {
-  //       // since the use of CSS variables,
-  //       // opacity is already set on rgba background-color.
-  //       // see #288
-  //       opacity: 0.1;
-  //     }
-  //   }
+    &.mat-neutral {
+      .mat-icon {
+        @include color.color(on-background);
+      }
+    }
 
-  //   &.cdk-keyboard-focused {
-  //     &.mat-primary .mat-button-focus-overlay {
-  //       background: palette.get-color-from-palette($primary, default-contrast);
-  //       opacity: 0.24;
-  //     }
-
-  //     &.mat-accent .mat-button-focus-overlay {
-  //       background: palette.get-color-from-palette($accent, default-contrast);
-  //       opacity: 0.24;
-  //     }
-
-  //     &.mat-gradient .mat-button-focus-overlay {
-  //       background: palette.get-color-from-palette($primary, default-contrast);
-  //       opacity: 0.24;
-  //     }
-
-  //     &.mat-success .mat-button-focus-overlay {
-  //       background: palette.get-color-from-palette($success, default-contrast);
-  //       opacity: 0.24;
-  //     }
-  //   }
-  // }
-
-  // .mat-icon-button {
-  //   &.mat-neutral,
-  //   &.mat-gradient {
-  //     .mat-button-ripple {
-  //       color: palette.get-color-from-palette($primary, default);
-  //     }
-  //   }
-
-  //   &.mat-neutral {
-  //     .mat-icon {
-  //       color: palette.get-color-from-palette($foreground, text, 0.75);
-  //     }
-  //   }
-
-  //   &.mat-gradient {
-  //     .mat-icon {
-  //       background: palette.get-color-from-palette(palette.$uxg-gradient, vertical);
-  //       background-clip: text;
-  //       -webkit-text-fill-color: transparent;
-  //     }
-  //   }
-  // }
+    &.mat-gradient {
+      .mat-icon {
+        @include color.background(gradient-vertical);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
 
   .mat-mdc-fab.mat-gradient {
     @include color.background(gradient-vertical);
@@ -134,13 +94,11 @@
   a[dense],
   *[dense] button {
     @include typography.typography('button-3');
-    @include spacing.padding-x(3);
   }
 
   button[large],
   a[large],
   *[large] button {
     @include typography.typography('button-1');
-    @include spacing.padding-x(4);
   }
 }

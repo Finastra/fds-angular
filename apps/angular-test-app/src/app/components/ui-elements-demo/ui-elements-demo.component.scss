@@ -6,6 +6,11 @@
 
 .example-row {
   margin-bottom: $uxg-spacing-4;
+  &.button-fab-test,
+  &.button-fab-mini-test {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .button-default-test,
@@ -16,7 +21,7 @@
   grid-gap: $uxg-spacing-3;
 }
 
-.mat-button-base + .mat-button-base,
+.mat-mdc-button-base + .mat-mdc-button-base,
 .mat-icon + .mat-icon,
 .mat-card + .mat-card,
 .mat-button-toggle-group + .mat-button-toggle-group,
