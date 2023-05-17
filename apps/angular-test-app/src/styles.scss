@@ -5,6 +5,8 @@
 @use 'angular-components/toaster/src/toaster.theme' as toaster;
 @use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
 @use 'angular-components/video-thumbnail/src/video-thumbnail.theme' as video-thumbnail;
+@use 'angular-components/wizard/src/wizard.theme' as wizard;
+@use 'angular-components/cards/account-card/src/account-card.theme' as account-card;
 
 @use './app/components/repeater-demo/repeater-card-example/repeater-card-example.theme' as repeater;
 
@@ -13,7 +15,6 @@
 @use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
 @include fds.uxg-core();
-@include banner.color();
 
 @mixin app-theme($theme) {
   @include fds.uxg-material-theme($theme);
@@ -25,20 +26,22 @@
   // @include global-search.theme($theme);
   // @include vector-map.theme($theme);
   // @include chart.theme($theme);
-  // @include wizard.theme($theme);
-  // @include banner.theme($theme);
+  @include wizard.theme($theme);
+  @include banner.theme($theme);
   @include repeater.theme($theme);
   // @include changelog.theme($theme);
   @include video-thumbnail.theme($theme);
   // @include status-stepper.theme($theme);
+  @include account-card.theme($theme);
 }
 
 @include app-theme(fds.$light-theme);
 
 @mixin app-typography() {
-  @include filter-group.typography($config: null);
-  @include filter-tags.typography($config: null);
-  @include filter-tree.typography($config: null);
+  @include filter-group.typography();
+  @include filter-tags.typography();
+  @include filter-tree.typography();
+  @include wizard.typography();
 }
 
 @include app-typography();

@@ -351,6 +351,12 @@ $fx-media-queries: (
   }
 }
 
+.hide-gt-md {
+  @include flex-breakpoint('gt-md') {
+    display: none !important;
+  }
+}
+
 .fill-remaining-space {
   flex: 1 1 auto;
 }

@@ -45,7 +45,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater', migrated: true } },
       { path: 'skeleton', component: SkeletonDemoComponent, data: { title: 'Skeleton', migrated: true } },
       //     { path: 'vector-map', component: VectorMapDemoComponent, data: { title: 'Vector Map' } },
-      { path: 'wizard', component: WizardDemoComponent, data: { title: 'Wizard' } },
+      { path: 'wizard', component: WizardDemoComponent, data: { title: 'Wizard', migrated: true } },
       { path: 'entity-menu', component: EntityMenuDemoComponent, data: { title: 'Entity Menu', migrated: true } },
       { path: 'global-nav', component: GlobalNavDemoComponent, data: { title: 'Global Nav', migrated: true } },
       { path: 'avatar', component: AvatarDemoComponent, data: { title: 'Avatar', migrated: true } },

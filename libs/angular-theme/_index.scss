@@ -3,6 +3,7 @@
 
 @forward './lib/core/theming/all-theme';
 @forward './lib/core/theming/theming';
+@forward './lib/core/theming/color-utility';
 
 @forward './lib/core/layout/breakpoints';
 @forward './lib/core/layout/flex';
