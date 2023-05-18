@@ -45,3 +45,81 @@ $secondary-dark-palette: (
     700: map.get(dark.$tokens, on-secondary)
   )
 );
+
+// for backwards compatibility
+
+$uxg-charcoal: #000000; //#414141;
+
+$uxg-violet: (
+  50: #f7f6fd,
+  100: #e9e5f9,
+  200: #d9d3f5,
+  300: #b4a6ea,
+  400: #917ee0,
+  500: var(--fds-primary),
+  600: #4538cb,
+  700: #2123c0,
+  800: #141483,
+  900: #060546
+);
+
+$uxg-fuchsia: (
+  50: #fbc9ee,
+  100: #f99ae0,
+  200: #f66cd4,
+  300: #e453bf,
+  400: #d648b2,
+  500: var(--fds-secondary),
+  600: #ac258d,
+  700: #9d1880,
+  800: #910d75,
+  900: #8d0073
+);
+
+$uxg-crimson: (
+  25: #f8bdcf,
+  50: #f17fa2,
+  75: #ea3f74,
+  100: var(--fds-error),
+  100-dark: #9f0030
+);
+
+$uxg-grass: (
+  25: #d4efda,
+  50: #a9e0b7,
+  75: #15d474,
+  100: var(--fds-success),
+  100-dark: #003b1d
+);
+
+$uxg-amber: (
+  25: #ffe1cd,
+  50: #ffc39c,
+  75: #ffa76d,
+  100: #ff8a3d,
+  100-dark: #b2602a
+);
+
+$uxg-gold: (
+  25: #fbebc7,
+  50: #f7d991,
+  75: #f3c65a,
+  100: #f0b323,
+  100-dark: #a87d18
+);
+
+$uxg-lime: (
+  25: #f3f4d3,
+  50: #e8eaa9,
+  75: #dde17f,
+  100: #d2d755,
+  100-dark: #92963b
+);
+
+$uxg-ocean: (
+  25: #d6eff5,
+  50: #ade0eb,
+  75: #84d0e1,
+  100: #5bc1d7,
+  100-dark: #3f8696
+);

@@ -3,9 +3,10 @@
 
 $button-radius-dense: 18px;
 $button-radius-base: 18px;
-$button-radius-large: 21px;
+$button-radius-large: 24px;
 
-$button-padding-large: 20px;
+$button-height-dense: 30px;
+$button-height-large: 44px;
 
 $button-icon-size-dense: 14px;
 $button-icon-size-base: 18px;
@@ -22,16 +23,6 @@ $mat-icon-button-size-dense: 30px;
 
     .mat-icon {
       @include icon-size($icon-size);
-
-      padding-bottom: 2px;
-    }
-  }
-
-  &.mat-icon-button {
-    .mat-button-wrapper {
-      display: flex;
-      align-self: center;
-      margin: auto;
     }
   }
 }
@@ -40,33 +31,32 @@ a,
 button {
   @include button-base($button-radius-base, $button-icon-size-base);
 
-  &.mat-icon-button {
+  &.mat-mdc-icon-button {
     display: inline-flex;
     align-content: center;
     justify-content: center;
-
-    .mat-button-wrapper {
-      width: $button-icon-size-large;
-      height: $button-icon-size-large;
-    }
+    flex-wrap: wrap;
 
     &:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
       opacity: 0.04;
     }
   }
+  .mdc-button__label {
+    display: flex;
+    align-items: center;
+  }
 }
 
 button[dense],
-a[dense] {
-  @include button-base($button-radius-dense, $button-icon-size-dense);
-
-  &.mat-icon-button {
+a[dense],
+*[dense] button {
+  &.mdc-button.mat-mdc-button-base {
+    @include button-base($button-radius-dense, $button-icon-size-dense);
+    height: $button-height-dense;
+  }
+  &.mat-mdc-icon-button.mat-mdc-button-base {
     @include icon-size($mat-icon-button-size-dense);
-
-    .mat-button-wrapper {
-      width: $button-icon-size-base;
-      height: $button-icon-size-base;
-    }
+    padding: 0;
 
     .mat-icon {
       @include icon-size($button-icon-size-base);
@@ -75,8 +65,10 @@ a[dense] {
 }
 
 button[large],
-a[large] {
-  @include button-base($button-radius-large, $button-icon-size-large);
-
-  padding: $uxg-spacing-0 $button-padding-large;
+a[large],
+*[large] button {
+  &.mdc-button.mat-mdc-button-base {
+    @include button-base($button-radius-large, $button-icon-size-large);
+    height: $button-height-large;
+  }
 }

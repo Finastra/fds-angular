@@ -2,7 +2,6 @@
 @use '@finastra/fds-tokens/dist/scss/light';
 @use '@finastra/fds-tokens/dist/scss/dark';
 @use '@finastra/fds-theme/color' as color;
-@use '../core/theming/theming' as theme;
 
 @function str-replace($string, $search, $replace: '') {
   $index: str-index($string, $search);
@@ -15,7 +14,7 @@
 }
 
 @mixin theme($theme) {
-  $fill-color: map.get(if($theme == theme.$light-theme, light.$tokens, dark.$tokens), surface);
+  $fill-color: map.get(if(map.get($theme, is-dark), dark.$tokens, light.$tokens), surface);
 
   $prod-wave: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 320 246'%3E%3Cpath fill='#{$fill-color}' d='M320,0v218.3c-2.8,2.1-5.7,4.2-8.6,6.2c-57.1,39.1-132,15.1-180.5,3.3C114.2,223.8,65.3,206.1,0,194V0H320z'/%3E%3C/svg%3E";
   $prod-wave: str-replace($prod-wave, '#', '%23');
