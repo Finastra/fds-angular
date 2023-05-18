@@ -83,7 +83,7 @@
         .new {
           @include color.color(primary);
           border: 1px solid var(--fds-primary);
-          background-color: fds.get-color-from-token(primary, 0.03);
+          background-color: fds.get-color-from-token(primary, 0.03, $theme);
         }
         .update {
           @include color.color(success);
@@ -96,9 +96,9 @@
           @include color.background(surface-error);
         }
         .deprecated {
-          color: fds.get-color-from-token(on-surface, 0.8);
+          color: fds.get-color-from-token(on-surface, 0.8, $theme);
           border: 1px solid var(--fds-on-surface-medium);
-          background-color: fds.get-color-from-token(surface, 0.03);
+          background-color: fds.get-color-from-token(surface, 0.03, $theme);
         }
       }
 
