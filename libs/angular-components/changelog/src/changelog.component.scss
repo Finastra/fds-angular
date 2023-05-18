@@ -72,7 +72,7 @@ $bullet-size: 20px;
       top: -(fds.$uxg-spacing-4);
       bottom: -44px;
     } @else if $size == 'none' {
-      top: 16px;
+      top: fds.$uxg-spacing-3;
       bottom: -(fds.$uxg-spacing-4);
     } @else {
       top: -35px;
@@ -178,7 +178,7 @@ uxg-changelog {
       content: '';
       position: absolute;
       width: 2px;
-      top: -(4px);
+      top: -(fds.$uxg-spacing-1);
       bottom: -60px;
       left: calc(#{-$bullet-center} - 6px);
     }
@@ -187,7 +187,7 @@ uxg-changelog {
       content: '';
       position: absolute;
       width: 2px;
-      top: -(4px);
+      top: -(fds.$uxg-spacing-1);
       bottom: -60px;
       left: calc(#{-$bullet-center} - 6px);
     }
