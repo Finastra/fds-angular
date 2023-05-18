@@ -1,5 +1,4 @@
 @use '@finastra/angular-theme' as fds;
-@use '@finastra/fds-theme/color' as color;
 
 @mixin theme($theme: null) {
   .uxg-horizontal-status-stepper {

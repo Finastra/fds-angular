@@ -15,7 +15,6 @@
 @use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
 @use 'angular-components/status-steps/status-stepper.theme' as status-stepper;
-@use 'angular-components/status-steps/horizontal-status-stepper.theme' as horizontal-status-stepper;
 @use 'angular-components/status-steps/uxg-status-step.theme' as uxg-status-step;
 
 @include fds.uxg-core();
@@ -36,8 +35,6 @@
   // @include changelog.theme($theme);
   @include video-thumbnail.theme($theme);
   @include status-stepper.theme($theme);
-  @include horizontal-status-stepper.theme($theme);
-  @include uxg-status-step.theme($theme);
   @include account-card.theme($theme);
 }
 
@@ -48,6 +45,7 @@
   @include filter-tags.typography();
   @include filter-tree.typography();
   @include wizard.typography();
+  @include uxg-status-step.typography();
 }
 
 @include app-typography();

@@ -1,5 +1,5 @@
 @use '@finastra/angular-theme' as fds;
-@use '@finastra/fds-theme/color' as color;
+@use '@finastra/fds-theme/typography' as typo;
 
 @mixin theme($theme: null) {
   .uxg-step-label {
@@ -7,6 +7,14 @@
 
     [step-title] {
       color: var(--fds-on-surface);
+    }
+  }
+}
+
+@mixin typography($config: null) {
+  .current {
+    [step-title] {
+      @include typo.typography(subtitle-1);
     }
   }
 }

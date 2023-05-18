@@ -1,5 +1,5 @@
-@use 'uxg-status-step.theme' as uxg-status-step;
-@use 'horizontal-status-stepper.theme' as horizontal-status-stepper;
+@use 'uxg-status-step.theme';
+@use 'horizontal-status-stepper.theme';
 
 @mixin theme($theme: null) {
   @include uxg-status-step.theme($theme);
