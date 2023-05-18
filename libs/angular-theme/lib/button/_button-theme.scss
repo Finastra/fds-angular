@@ -41,6 +41,10 @@
         background-color: var(--fds-secondary);
         color: var(--fds-on-secondary);
       }
+      &[disabled] {
+        background-color: var(--fds-surface-disabled);
+        color: var(--fds-on-surface-disabled);
+      }
     }
 
     &.mdc-button {
