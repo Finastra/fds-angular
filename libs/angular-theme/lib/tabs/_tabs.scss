@@ -1,0 +1,92 @@
+@use '../core/style/spacing' as *;
+
+.uxg-tabs > .mat-mdc-tab-header {
+  $tab-radius: 6px;
+
+  .mdc-tab-indicator {
+    visibility: hidden;
+  }
+
+  .mat-mdc-tab-labels::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 100%;
+    z-index: -1;
+  }
+
+  .mat-mdc-tab {
+    opacity: 1;
+    align-items: flex-end;
+
+    .mdc-tab__content {
+      overflow: hidden;
+    }
+
+    &:not(.mdc-tab--active) {
+      border-bottom: 1px solid;
+
+      .mdc-tab__content {
+        opacity: 0.8;
+        height: 97%;
+      }
+
+      &:focus {
+        .mdc-tab__content {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.mdc-tab--active {
+      padding: 0;
+      margin: 0 $tab-radius;
+      border: 1px solid;
+      border-bottom: 0;
+      border-top-left-radius: $tab-radius;
+      border-top-right-radius: $tab-radius;
+      padding: 0 #{$uxg-spacing-4 - $tab-radius - 1px};
+
+      &::before,
+      &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        top: auto;
+        width: $tab-radius;
+        height: $tab-radius;
+        background: transparent;
+        border: 0 solid;
+        border-bottom: 1px solid;
+      }
+
+      &::after {
+        right: -($tab-radius);
+        // border-left: 1px solid;
+        border-bottom-left-radius: $tab-radius;
+      }
+
+      &::before {
+        margin: 0;
+        left: -($tab-radius);
+        border-right: 1px solid;
+        border-radius: 0;
+        border-bottom-right-radius: $tab-radius;
+      }
+    }
+
+    &:not(.mdc-tab--active, .mdc-tab--active + .mat-mdc-tab):not(:first-child)::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 12px;
+      bottom: 12px;
+      width: 1px;
+      left: 0;
+    }
+  }
+}
