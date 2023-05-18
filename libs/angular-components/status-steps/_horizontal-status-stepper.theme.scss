@@ -10,7 +10,7 @@
     .completed,
     .current {
       .icon-container {
-        color: rgba(var(primary), 0.5);
+        color: var(primary);
         background-color: var(--fds-primary);
       }
     }
