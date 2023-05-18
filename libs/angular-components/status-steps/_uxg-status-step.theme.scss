@@ -1,13 +1,12 @@
-@use 'sass:map';
 @use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as color;
 
-@mixin uxg-status-step-theme($theme) {
-  $foreground: map.get($theme, foreground);
+@mixin theme($theme: null) {
   .uxg-step-label {
-    color: fds.get-color-from-palette($foreground, text, 0.65);
+    color: fds.get-color-from-token(on-surface, 0.65, $theme);
 
     [step-title] {
-      color: fds.get-color-from-palette($foreground, text);
+      color: var(--fds-on-surface);
     }
   }
 }

@@ -1,26 +1,23 @@
-@use 'sass:map';
 @use '@finastra/angular-theme' as fds;
+@use '@finastra/fds-theme/color' as color;
 
-@mixin uxg-horizontal-status-stepper-theme($theme) {
-  $primary: map.get($theme, primary);
-  $foreground: map.get($theme, foreground);
-  $background: map.get($theme, background);
+@mixin theme($theme: null) {
   .uxg-horizontal-status-stepper {
     .icon-container {
-      color: fds.get-color-from-palette($foreground, text);
-      background-color: fds.get-color-from-palette($background, focused-button);
+      color: var(--fds-surface);
+      background-color: var(--fds-on-surface-disabled);
     }
 
     .completed,
     .current {
       .icon-container {
-        color: fds.get-color-from-palette($primary, default-contrast);
-        background-color: fds.get-color-from-palette($primary, default);
+        color: rgba(var(primary), 0.5);
+        background-color: var(--fds-primary);
       }
     }
 
     .horizontal-line {
-      border-color: fds.get-color-from-palette($foreground, divider);
+      color: var(--fds-on-surface-disabled);
     }
   }
 }
