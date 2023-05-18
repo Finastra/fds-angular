@@ -2,6 +2,15 @@
 @use '@finastra/fds-theme/typography' as typo;
 
 @mixin theme($theme: null) {
+  .horizontal-stepper:not(.completed):not(.current) {
+    .uxg-step-label {
+      color: fds.get-color-from-token(on-surface, 0.4, $theme);
+      [step-title] {
+        color: fds.get-color-from-token(on-surface, 0.4, $theme);
+      }
+    }
+  }
+
   .uxg-step-label {
     color: fds.get-color-from-token(on-surface, 0.65, $theme);
 
