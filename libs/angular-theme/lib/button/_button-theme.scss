@@ -4,7 +4,7 @@
 
 @mixin theme($theme: null) {
   .mat-mdc-button-base {
-    &[mat-stroked-button] {
+    &.mdc-button[mat-stroked-button] {
       &.mat-primary {
         border-color: var(--fds-outline-info);
       }
@@ -27,7 +27,7 @@
       }
     }
 
-    &[mat-flat-button],
+    &.mdc-button[mat-flat-button],
     &.mdc-fab {
       &.mat-error {
         background-color: var(--fds-error);
@@ -43,42 +43,44 @@
       }
     }
 
-    &.mat-error {
-      color: var(--fds-error);
+    &.mdc-button {
+      &.mat-error {
+        color: var(--fds-error);
 
-      .mdc-button__ripple::before {
-        background-color: var(--fds-error);
+        .mdc-button__ripple::before {
+          background-color: var(--fds-error);
+        }
+      }
+
+      &.mat-success {
+        color: var(--fds-success);
+
+        .mdc-button__ripple::before {
+          background-color: var(--fds-success);
+        }
       }
     }
 
-    &.mat-success {
-      color: var(--fds-success);
-
-      .mdc-button__ripple::before {
-        background-color: var(--fds-success);
+    &.mat-mdc-icon-button {
+      &.mat-neutral,
+      &.mat-gradient {
+        .mat-mdc-button-ripple {
+          @include color.color(primary);
+        }
       }
-    }
-  }
 
-  .mat-mdc-button-base.mat-mdc-icon-button {
-    &.mat-neutral,
-    &.mat-gradient {
-      .mat-mdc-button-ripple {
-        @include color.color(primary);
+      &.mat-neutral {
+        .mat-icon {
+          @include color.color(on-background);
+        }
       }
-    }
 
-    &.mat-neutral {
-      .mat-icon {
-        @include color.color(on-background);
-      }
-    }
-
-    &.mat-gradient {
-      .mat-icon {
-        @include color.background(gradient-vertical);
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
+      &.mat-gradient {
+        .mat-icon {
+          @include color.background(gradient-vertical);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
     }
   }
