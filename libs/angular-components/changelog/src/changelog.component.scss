@@ -7,14 +7,14 @@ $bullet-size: 20px;
 
 @mixin changelog-layout($size) {
   .version {
-    margin-bottom: 8px;
+    margin-bottom: fds.$uxg-spacing-2;
     position: relative;
     left: $bullet-space;
     display: inline-flex;
     align-items: baseline;
 
     .version-id {
-      margin-right: 8px;
+      margin-right: fds.$uxg-spacing-2;
     }
   }
 
@@ -22,9 +22,9 @@ $bullet-size: 20px;
   .release-detail,
   .last-release {
     @if $size == 'xs' {
-      padding: 8px 16px;
-      margin-right: 8px;
-      width: calc(100% - #{$bullet-space} - #{8px});
+      padding: fds.$uxg-spacing-2 fds.$uxg-spacing-3;
+      margin-right: fds.$uxg-spacing-2;
+      width: calc(100% - #{$bullet-space} - #{fds.$uxg-spacing-2});
     } @else {
       width: calc(100% - #{$bullet-space});
     }
@@ -35,12 +35,12 @@ $bullet-size: 20px;
       .change-type {
         .type {
           margin: 0;
-          margin-left: -(4px);
+          margin-left: -(fds.$uxg-spacing-1);
         }
       }
     }
     .change-detail {
-      margin-top: 8px;
+      margin-top: fds.$uxg-spacing-2;
     }
   }
 
@@ -61,7 +61,7 @@ $bullet-size: 20px;
   .release-detail::before,
   .last-release::before {
     @if $size == 'none' {
-      top: 16px;
+      top: fds.$uxg-spacing-3;
     } @else {
       top: -30px;
     }
@@ -69,11 +69,11 @@ $bullet-size: 20px;
 
   .first-release::after {
     @if $size == 'xs' {
-      top: -(24px);
+      top: -(fds.$uxg-spacing-4);
       bottom: -44px;
     } @else if $size == 'none' {
       top: 16px;
-      bottom: -(24px);
+      bottom: -(fds.$uxg-spacing-4);
     } @else {
       top: -35px;
       bottom: -35px;
@@ -83,10 +83,10 @@ $bullet-size: 20px;
   .release-detail::after {
     bottom: -35px;
     @if $size == 'none' {
-      top: 16px;
+      top: fds.$uxg-spacing-3;
       bottom: -48px;
     } @else {
-      top: -(24px);
+      top: -(fds.$uxg-spacing-4);
     }
   }
 }
@@ -96,14 +96,14 @@ uxg-changelog {
     padding: 3rem 1rem;
 
     .changelog-icon {
-      margin-right: 16px;
+      margin-right: fds.$uxg-spacing-3;
       width: 120px;
       height: 120px;
     }
   }
 
   .changelog-container {
-    margin: 48px;
+    margin: fds.$uxg-spacing-5;
     margin-left: 0;
 
     .version {
@@ -124,28 +124,28 @@ uxg-changelog {
       flex: 1 1 100%;
       cursor: unset;
       height: unset;
-      margin-bottom: 24px;
-      padding: 24px 48px;
-      margin-right: 24px;
+      margin-bottom: fds.$uxg-spacing-4;
+      padding: fds.$uxg-spacing-4 fds.$uxg-spacing-5;
+      margin-right: fds.$uxg-spacing-4;
     }
 
     .category {
-      padding: 8px 0;
+      padding: fds.$uxg-spacing-2 0;
     }
 
     .change {
       .change-detail {
-        margin: 8px 0;
+        margin: fds.$uxg-spacing-2 0;
       }
 
       .change-type {
         min-width: 85px;
 
         .type {
-          margin: 8px 0;
+          margin: fds.$uxg-spacing-2 0;
           text-align: center;
-          padding: 2px 8px;
-          border-radius: 16px;
+          padding: 2px fds.$uxg-spacing-2;
+          border-radius: fds.$uxg-spacing-3;
           display: inline-block;
         }
       }
@@ -156,7 +156,7 @@ uxg-changelog {
       position: absolute;
       width: $bullet-size;
       height: $bullet-size;
-      top: -(4px);
+      top: -(fds.$uxg-spacing-1);
       left: calc(#{-$bullet-center} - #{$bullet-size});
       border-radius: 50%;
       z-index: 1;
@@ -168,7 +168,7 @@ uxg-changelog {
       position: absolute;
       width: 0;
       height: 0;
-      top: -(4px);
+      top: -(fds.$uxg-spacing-1);
       left: calc(#{-$bullet-center} - 13px);
       border-radius: 50%;
       z-index: 1;
