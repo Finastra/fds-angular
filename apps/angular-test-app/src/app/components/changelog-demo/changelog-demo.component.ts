@@ -27,17 +27,19 @@ export class ChangelogDemoComponent implements OnInit {
           {
             category: 'UX',
             description:
-              '<span>Lorem ipit amet, consectetur adipiscing elisum dolor sit ait amet, consectetur adipiscing elimet, consectetur adipiscing elit. </span>',
+              '<span><a href="https://en.wikipedia.org/wiki/Lorem_ipsum" target=”_blank”>Lorem ipsum dolor sit amet</a>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </span>',
             type: 'New'
           },
           {
             category: 'UX',
-            description: '<span>Lorem iit amet, consectetur adipiscing elipsum dolor sit amet, consectetur adipiscing elit. </span>',
+            description:
+              '<span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</span>',
             type: 'Bugfix'
           },
           {
             category: 'Documentation',
-            description: '<span>Lorem ipsum dolor sit amet, consecit amet, consectetur adipiscing elitetur adipiscing elit. </span>',
+            description:
+              '<span>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</span>',
             type: 'Deprecated'
           }
         ]
@@ -52,13 +54,12 @@ export class ChangelogDemoComponent implements OnInit {
         changes: [
           {
             category: 'UX',
-            description: '<span>Lorem ipsum dolor sit amet, consectetur adipiscing eliit amet, consectetur adipiscing elit. </span>',
+            description: '<span>Excepteur sint occaecat cupidatat non proident</span>',
             type: 'Update'
           },
           {
             category: 'Documentation',
-            description:
-              '<span>it amet, consectetur adipiscing eliit amet, consectetur adipiscing eliLorem ipsum dolor sit amet, consectetur adipiscing elit. </span>',
+            description: '<span>sunt in culpa qui officia deserunt mollit anim id est laborum. </span>',
             type: 'New'
           }
         ]
@@ -70,13 +71,14 @@ export class ChangelogDemoComponent implements OnInit {
         changes: [
           {
             category: 'Documentation',
-            description: '<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </span>',
+            description:
+              '<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>',
             type: 'Update'
           },
           {
             category: 'Documentation',
             description:
-              '<span>Lorem ipsum dolor sit ametit amet, consectetur adipiscing eliit amet, consectetur adipiscing eli, consectetur adipiscing elit. </span>',
+              '<span>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>',
             type: 'Bugfix'
           }
         ]

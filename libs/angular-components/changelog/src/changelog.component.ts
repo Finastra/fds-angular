@@ -1,6 +1,6 @@
+import { DatePipe, LowerCasePipe, NgClass, NgFor, NgIf, TitleCasePipe } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 import { ChangeLog } from './changelog.models';
-import { NgIf, NgFor, NgClass, LowerCasePipe, TitleCasePipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'uxg-changelog',

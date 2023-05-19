@@ -57,7 +57,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       },
       { path: 'banner', component: BannerDemoComponent, data: { title: 'Banner' } },
       { path: 'search-input', component: SearchInputDemoComponent, data: { title: 'Search Input' } },
-      { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog' } },
+      { path: 'changelog', component: ChangelogDemoComponent, data: { title: 'Changelog', migrated: true } },
       { path: 'breadcrumb', component: BreadcrumbDemoComponent, data: { title: 'Breadcrumb', migrated: true } },
       { path: 'toaster', component: ToasterDemoComponent, data: { title: 'Toaster', migrated: true } },
       { path: 'video-thumbnail', component: VideoThumbnailDemoComponent, data: { title: 'Video Thumbnail', migrated: true } },
