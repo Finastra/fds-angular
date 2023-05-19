@@ -1,4 +1,3 @@
-@use '@finastra/fds-theme/color' as fds;
 @use '../core/theming/color-utility' as utility;
 
 @mixin toggle-color($handle-color, $track-color) {
