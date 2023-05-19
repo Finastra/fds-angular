@@ -232,9 +232,4 @@ uxg-changelog {
       }
     }
   }
-
-  @include fds.flex-breakpoint('gt-xs') {
-    display: flex;
-    flex-direction: column;
-  }
 }
