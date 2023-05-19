@@ -200,12 +200,14 @@ uxg-changelog {
   @include fds.flex-breakpoint('sm') {
     .changelog-container {
       margin: 24px;
+      display: flex;
       @include changelog-layout('sm');
     }
   }
 
   @include fds.flex-breakpoint('xs') {
     .changelog-container {
+      display: flex;
       margin: 24px 8px;
       @include changelog-layout('xs');
       .version {
@@ -224,6 +226,8 @@ uxg-changelog {
   }
 
   @include fds.flex-breakpoint('lt-md') {
+    display: flex;
+
     .title {
       .creator {
         max-width: 400px;

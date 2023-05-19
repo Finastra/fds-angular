@@ -99,14 +99,12 @@ $fx-media-queries: (
 
 .flex-col-xs {
   @include flex-breakpoint('xs') {
-    display: flex;
     flex-direction: column;
   }
 }
 
 .flex-col-lt-md {
   @include flex-breakpoint('lt-md') {
-    display: flex !important;
     flex-direction: column;
   }
 }
@@ -126,11 +124,6 @@ $fx-media-queries: (
 .flex-row-lt-md {
   @include flex-breakpoint('lt-md') {
     flex-direction: row;
-    display: flex;
-
-    flex: 1 1 100%;
-    box-sizing: border-box;
-    max-width: 9%;
   }
 }
 

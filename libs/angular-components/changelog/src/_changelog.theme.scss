@@ -76,7 +76,7 @@
         @include color.color(on-surface);
         @include color.background(surface);
         @include mat.elevation(4);
-        @include color.color(elevation);
+        @include color.color(--fds-on-surface-medium);
       }
 
       .change {
