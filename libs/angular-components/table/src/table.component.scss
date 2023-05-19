@@ -41,6 +41,9 @@ uxg-table {
           align-content: center;
           justify-content: center;
           align-items: flex-end;
+          mat-icon {
+            margin-right: 4px;
+          }
         }
         .uxg-table-row-edit {
           position: absolute;
