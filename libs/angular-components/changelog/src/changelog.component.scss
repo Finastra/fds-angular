@@ -201,13 +201,13 @@ uxg-changelog {
     .changelog-container {
       margin: 24px;
       display: flex;
+      flex-direction: column;
       @include changelog-layout('sm');
     }
   }
 
   @include fds.flex-breakpoint('xs') {
     .changelog-container {
-      display: flex;
       margin: 24px 8px;
       @include changelog-layout('xs');
       .version {
@@ -226,12 +226,15 @@ uxg-changelog {
   }
 
   @include fds.flex-breakpoint('lt-md') {
-    display: flex;
-
     .title {
       .creator {
         max-width: 400px;
       }
     }
+  }
+
+  @include fds.flex-breakpoint('gt-xs') {
+    display: flex;
+    flex-direction: column;
   }
 }

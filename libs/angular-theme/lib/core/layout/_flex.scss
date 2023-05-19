@@ -135,7 +135,6 @@ $fx-media-queries: (
 
 .flex-row-gt-xs {
   @include flex-breakpoint('gt-xs') {
-    display: flex;
     flex-direction: row;
   }
 }
