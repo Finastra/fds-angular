@@ -1,4 +1,6 @@
 /* stylelint-disable no-invalid-position-at-import-rule */
+@use 'sass:map';
+
 @use '@angular/material' as mat;
 
 @use '@finastra/fds-theme/scheme' as scheme;
@@ -20,15 +22,16 @@
 @use '../../list/list-theme';
 @use '../../menu/menu-theme';
 @use '../../sidenav/sidenav-theme';
-// @use '../../slide-toggle/slide-toggle-theme';
+@use '../../slide-toggle/slide-toggle-theme';
 // @use '../../table/table-theme';
 // @use '../../tabs/tabs-theme';
 @use '../../toolbar/toolbar-theme';
 
 @use './color-utility';
-@use './theming' as theme;
 
 @mixin uxg-core-theme($theme) {
+  $is-dark: map.get($theme, is-dark);
+
   @at-root {
     body {
       @include color.background(background);
@@ -36,11 +39,11 @@
   }
 
   #{if(&, '&', ':root')} {
-    @if $theme == theme.$light-theme {
+    @if $is-dark {
+      @include color.custom-properties(scheme.dark());
+    } @else {
       @include color.custom-properties(scheme.light());
       @include typography.custom-properties();
-    } @else {
-      @include color.custom-properties(scheme.dark());
     }
 
     @include color.color(on-background);
@@ -56,10 +59,12 @@
 }
 
 @mixin uxg-material-theme($theme) {
-  @if $theme == theme.$light-theme {
-    @include mat.all-component-themes($theme);
-  } @else {
+  $is-dark: map.get($theme, is-dark);
+
+  @if $is-dark {
     @include mat.all-component-colors($theme);
+  } @else {
+    @include mat.all-component-themes($theme);
   }
 
   @include uxg-core-theme($theme);
@@ -78,7 +83,7 @@
   @include list-theme.theme($theme);
   @include menu-theme.theme($theme);
   @include sidenav-theme.theme($theme);
-  // @include slide-toggle-theme.theme($theme);
+  @include slide-toggle-theme.theme($theme);
   // @include table-theme.theme($theme);
   // @include tabs-theme.theme($theme);
   @include toolbar-theme.theme($theme);

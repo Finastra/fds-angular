@@ -19,7 +19,7 @@
       >
         <span class="uxg-body-2 node-label">{{ node.label }}</span>
       </mat-checkbox>
-      <button mat-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.label" dense>
+      <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.label" dense>
         <mat-icon class="mat-icon-rtl-mirror">
           {{ treeControl.isExpanded(node) ? 'expand_less' : 'expand_more' }}
         </mat-icon>

@@ -1,22 +1,31 @@
-@use 'sass:map';
-@use '../core/theming/palette';
+@use '../core/theming/color-utility' as utility;
 
-@mixin theme($theme) {
-  $foreground: map.get($theme, foreground);
-  $primary: map.get($theme, primary);
-  $accent: map.get($theme, accent);
+@mixin toggle-color($handle-color, $track-color) {
+  --mdc-switch-selected-handle-color: #{$handle-color};
+  --mdc-switch-selected-hover-handle-color: #{$handle-color};
+  --mdc-switch-selected-pressed-handle-color: #{$handle-color};
+  --mdc-switch-selected-focus-handle-color: #{$handle-color};
 
-  .mat-mdc-slide-toggle.mat-checked {
-    &.mat-mdc-accent .mat-mdc-slide-toggle-bar {
-      background-color: palette.get-color-from-palette($accent, default, 0.54);
-    }
+  --mdc-switch-selected-hover-state-layer-color: #{$handle-color};
 
-    &.mat-mdc-primary .mat-mdc-slide-toggle-bar {
-      background-color: palette.get-color-from-palette($primary, default, 0.54);
-    }
+  --mdc-switch-selected-track-color: #{$track-color};
+  --mdc-switch-selected-hover-track-color: #{$track-color};
+  --mdc-switch-selected-pressed-track-color: #{$track-color};
+  --mdc-switch-selected-focus-track-color: #{$track-color};
+
+  .mdc-switch__handle {
+    border-color: #{$handle-color};
   }
+}
 
-  .mat-mdc-slide-toggle-thumb {
-    border-color: palette.get-color-from-palette($foreground, divider);
+@mixin theme($theme: null) {
+  .mat-mdc-slide-toggle {
+    &.mat-accent {
+      @include toggle-color(var(--fds-secondary), utility.get-color-from-token(secondary, 0.54, $theme));
+    }
+
+    &.mat-primary {
+      @include toggle-color(var(--fds-primary), utility.get-color-from-token(primary, 0.54, $theme));
+    }
   }
 }
