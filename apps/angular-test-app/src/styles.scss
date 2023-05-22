@@ -14,8 +14,8 @@
 @use 'angular-components/filter/filter-tags/src/filter-tags.theme';
 @use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
-@use 'angular-components/status-steps/status-stepper.theme' as status-stepper;
-@use 'angular-components/status-steps/uxg-status-step.theme' as uxg-status-step;
+@use 'angular-components/status-steps/status-stepper.theme';
+@use 'angular-components/status-steps/uxg-status-step.theme';
 
 @include fds.uxg-core();
 
