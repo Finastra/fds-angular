@@ -15,6 +15,9 @@
 @use 'angular-components/filter/filter-tags/src/filter-tags.theme';
 @use 'angular-components/filter/filter-tree/src/filter-tree.theme';
 
+@use 'angular-components/status-steps/status-stepper.theme';
+@use 'angular-components/status-steps/uxg-status-step.theme';
+
 @include fds.uxg-core();
 
 @mixin app-theme($theme) {
@@ -32,7 +35,7 @@
   @include repeater.theme($theme);
   @include changelog.theme($theme);
   @include video-thumbnail.theme($theme);
-  // @include status-stepper.theme($theme);
+  @include status-stepper.theme($theme);
   @include account-card.theme($theme);
 }
 
@@ -43,7 +46,8 @@
   @include filter-tags.typography();
   @include filter-tree.typography();
   @include wizard.typography();
-  @include changelog.typography($config: null);
+  @include uxg-status-step.typography();
+  @include changelog.typography();
 }
 
 @include app-typography();
