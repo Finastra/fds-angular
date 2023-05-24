@@ -1,12 +1,13 @@
 @use 'angular-theme' as fds;
 @use 'angular-theme/base';
 
-@use 'angular-components/banner/src/banner.theme' as banner;
-@use 'angular-components/toaster/src/toaster.theme' as toaster;
+@use 'angular-components/banner/src/banner.theme';
+@use 'angular-components/toaster/src/toaster.theme';
 @use 'angular-components/skeleton-text/src/skeleton-text.theme' as skeleton;
-@use 'angular-components/video-thumbnail/src/video-thumbnail.theme' as video-thumbnail;
-@use 'angular-components/wizard/src/wizard.theme' as wizard;
-@use 'angular-components/cards/account-card/src/account-card.theme' as account-card;
+@use 'angular-components/video-thumbnail/src/video-thumbnail.theme';
+@use 'angular-components/wizard/src/wizard.theme';
+@use 'angular-components/cards/account-card/src/account-card.theme';
+@use 'angular-components/global-search/src/global-search.theme';
 
 @use './app/components/repeater-demo/repeater-card-example/repeater-card-example.theme' as repeater;
 
@@ -26,7 +27,7 @@
   @include filter-tree.theme($theme);
   @include toaster.theme($theme);
   @include skeleton.theme($theme);
-  // @include global-search.theme($theme);
+  @include global-search.theme($theme);
   // @include vector-map.theme($theme);
   // @include chart.theme($theme);
   @include wizard.theme($theme);
@@ -46,6 +47,7 @@
   @include filter-tree.typography();
   @include wizard.typography();
   @include uxg-status-step.typography();
+  @include global-search.typography();
 }
 
 @include app-typography();

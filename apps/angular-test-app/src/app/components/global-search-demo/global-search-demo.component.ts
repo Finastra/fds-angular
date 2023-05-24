@@ -9,7 +9,6 @@ import { ClientSideSearchService } from './client-side-search.service';
 @Component({
   selector: 'ffdc-global-search-demo',
   templateUrl: './global-search-demo.component.html',
-  styleUrls: ['./global-search-demo.component.scss'],
   standalone: true,
   imports: [UxgGlobalSearch, MatButtonModule, MatIconModule, MatCardModule, MatSnackBarModule]
 })

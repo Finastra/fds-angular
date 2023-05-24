@@ -357,16 +357,12 @@ $fx-media-queries: (
   }
 }
 
-.fill-remaining-space {
-  flex: 1 1 auto;
+.hide-lt-lg {
+  @include flex-breakpoint('lt-lg') {
+    display: none !important;
+  }
 }
 
-// mixins
-
-@mixin flex-size-classes($values: 20 33 66 80) {
-  @each $value in $values {
-    *.flex-#{$value} {
-      flex: 1 1 $value * 1%;
-    }
-  }
+.fill-remaining-space {
+  flex: 1 1 auto;
 }
