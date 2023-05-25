@@ -83,10 +83,11 @@
       content: '';
       display: block;
       position: absolute;
-      top: 12px;
-      bottom: 12px;
+      top: 5px;
+      bottom: 5px;
       width: 1px;
       left: 0;
+      border-width: 1px;
     }
   }
 }
