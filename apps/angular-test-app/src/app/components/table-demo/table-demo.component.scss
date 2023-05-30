@@ -14,6 +14,11 @@ ffdc-table-demo {
   }
 
   .config-block {
+    padding-left: 8px;
+    > div {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
     div {
       margin-bottom: 5px;
       .mat-mdc-slide-toggle {
@@ -27,11 +32,10 @@ ffdc-table-demo {
   .set-selection-area {
     margin-left: 24px;
   }
-  .selection-area {
-    margin-left: 24px;
-  }
+
   .interaction-information {
     margin-left: 24px;
+    width: 40%;
   }
 }
 

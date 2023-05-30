@@ -1,6 +1,7 @@
 import { NgFor, NgIf } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
 import { MatOptionModule } from '@angular/material/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { PageEvent } from '@angular/material/paginator';
@@ -199,6 +200,7 @@ const CUSTOM_PAGING: UxgPage = {
     MatSlideToggleModule,
     NgIf,
     MatRadioModule,
+    MatButtonModule,
     FormsModule,
     MatFormFieldModule,
     MatSelectModule,
