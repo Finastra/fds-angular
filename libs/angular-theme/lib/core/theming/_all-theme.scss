@@ -41,9 +41,7 @@
   #{if(&, '&', ':root')} {
     @if $is-dark {
       @include color.custom-properties(scheme.dark());
-    }
-
-    @else {
+    } @else {
       @include color.custom-properties(scheme.light());
       @include typography.custom-properties();
     }
@@ -65,9 +63,7 @@
 
   @if $is-dark {
     @include mat.all-component-colors($theme);
-  }
-
-  @else {
+  } @else {
     @include mat.all-component-themes($theme);
   }
 
