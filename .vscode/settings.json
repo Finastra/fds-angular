@@ -1,4 +1,5 @@
 {
+  "editor.formatOnSave": true,
   "debug.node.autoAttach": "on",
   "[typescript]": {
     "editor.codeActionsOnSave": {

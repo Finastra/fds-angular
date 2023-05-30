@@ -1,28 +1,25 @@
-@use 'sass:map';
 @use '@angular/material' as mat;
-@use '../core/theming/palette';
+@use '@finastra/fds-theme/color' as fds;
 
-@mixin uxg-tabs-bgcolor($color-name, $color) {
-  $bg-color: palette.get-color-from-palette($color, $color-name);
+@mixin uxg-tabs-bgcolor() {
+  $bg-color: var(--fds-background);
 
-  &[activeTabBgColor='#{$color-name}'] {
-    & > .mat-tab-body-wrapper {
+  &[activeTabBgColor='background'] {
+    & > .mat-mdc-tab-body-wrapper {
       background-color: $bg-color;
     }
 
-    & > .mat-tab-header {
-      .mat-tab-label {
-        &.mat-tab-label-active {
-          .mat-tab-label-content {
-            background-color: $bg-color;
+    & > .mat-mdc-tab-header {
+      .mat-mdc-tab {
+        &.mdc-tab--active {
+          background-color: $bg-color;
 
-            &::before {
-              box-shadow: 2px 2px 0 0 $bg-color;
-            }
+          &::before {
+            box-shadow: 2px 2px 0 0 $bg-color;
+          }
 
-            &::after {
-              box-shadow: -2px 2px 0 0 $bg-color;
-            }
+          &::after {
+            box-shadow: -2px 2px 0 0 $bg-color;
           }
         }
       }
@@ -31,83 +28,82 @@
 }
 
 @mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $foreground: map.get($theme, foreground);
-  $background: map.get($theme, background);
-
-  $border-color: palette.get-color-from-palette($primary, 400);
-  $default-bg: palette.get-color-from-palette($background, card);
+  $border-color: var(--fds-primary);
+  $default-bg: var(--fds-surface);
 
   .uxg-tabs {
-    & > .mat-tab-header {
+    & > .mat-mdc-tab-header {
       border-bottom: 0;
 
-      .mat-tab-labels::after {
+      .mat-mdc-tab-labels::after {
         background: $border-color;
       }
 
-      .mat-tab-label {
-        &:not(.mat-tab-label-active) {
+      .mat-mdc-tab {
+        &:not(.mdc-tab--active) {
           border-color: $border-color;
-        }
-
-        &.mat-tab-label-active {
-          color: palette.get-color-from-palette($primary, default);
-
-          .mat-tab-label-content {
-            @include mat.elevation(4);
-            border-color: $border-color;
-            background-color: $default-bg;
-
-            &::after,
-            &::before {
-              border-color: $border-color;
-            }
-
-            &::before {
-              box-shadow: 2px 2px 0px 0px $default-bg;
-            }
-
-            &::after {
-              box-shadow: -2px 2px 0px 0px $default-bg;
-            }
+          .mdc-tab__text-label {
+            @include fds.color(on-background);
           }
         }
 
-        &::before {
-          background: palette.get-color-from-palette($foreground, divider);
+        &.mat-mdc-tab-disabled {
+          pointer-events: none;
+          .mdc-tab__text-label {
+            @include fds.color(on-surface-disabled);
+          }
         }
 
-        &::after {
-          background: $border-color;
+        &.mdc-tab--active {
+          @include fds.color(primary);
+          @include mat.elevation(4);
+          border-color: $border-color;
+          background-color: $default-bg;
+
+          &::after,
+          &::before {
+            border-color: $border-color;
+          }
+
+          &::before {
+            box-shadow: 2px 2px 0px 0px $default-bg;
+          }
+
+          &::after {
+            box-shadow: -2px 2px 0px 0px $default-bg;
+          }
+        }
+
+        &:not(.mdc-tab--active)::before {
+          @include fds.background(surface-disabled);
         }
       }
     }
 
-    & > .mat-tab-body-wrapper {
+    & > .mat-mdc-tab-body-wrapper {
       background-color: $default-bg;
     }
 
-    &.inactive-tabs-on-dark > .mat-tab-header {
-      .mat-tab-label {
-        &:not(.mat-tab-label-active) {
+    &.inactive-tabs-on-dark > .mat-mdc-tab-header {
+      .mat-mdc-tab {
+        &:not(.mdc-tab--active) .mdc-tab__text-label {
           color: white;
         }
 
-        &.mat-tab-disabled {
+        &.mat-mdc-tab-disabled .mdc-tab__text-label {
           color: rgba(white, 0.4);
         }
 
-        &::before {
+        &:not(.mdc-tab--active)::before {
           background: rgba(white, 0.6);
         }
       }
-      .mat-tab-header-pagination-chevron {
+      .mat-mdc-tab-header-pagination-chevron {
         opacity: 0.6;
         border-color: rgba(white, 0.6);
       }
     }
 
-    @include uxg-tabs-bgcolor('background', $background);
+    @include uxg-tabs-bgcolor();
   }
 }
