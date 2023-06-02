@@ -63,7 +63,7 @@ $bullet-size: 20px;
     @if $size == 'none' {
       top: fds.$uxg-spacing-3;
     } @else {
-      top: -30px;
+      top: -55px;
     }
   }
 
@@ -86,7 +86,7 @@ $bullet-size: 20px;
       top: fds.$uxg-spacing-3;
       bottom: -48px;
     } @else {
-      top: -(fds.$uxg-spacing-4);
+      top: -(fds.$uxg-spacing-5);
     }
   }
 }
