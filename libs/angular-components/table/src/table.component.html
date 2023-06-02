@@ -45,9 +45,9 @@
         (cdkDragStarted)="columnDragStarted($event, columnIndex)"
         [cdkDragDisabled]="!columnDragEnable"
         [ngClass]="{
-          left: column.align === 'left',
-          center: column.align === 'center',
-          right: column.align === 'right'
+          'uxg-table-cell-left': column.align === 'left',
+          'uxg-table-cell-center': column.align === 'center',
+          'uxg-table-cell-right': column.align === 'right'
         }"
       >
         {{ column.displayName ? column.displayName : column.name }}
@@ -56,14 +56,14 @@
         mat-cell
         *matCellDef="let element"
         [ngClass]="{
-          left: column.align === 'left',
-          center: column.align === 'center',
-          right: column.align === 'right'
+          'uxg-table-cell-left': column.align === 'left',
+          'uxg-table-cell-center': column.align === 'center',
+          'uxg-table-cell-right': column.align === 'right'
         }"
       >
         <!-- view cell, display data cell according to the type -->
         <div [ngSwitch]="column.type" class="uxg-table-row-view" [ngClass]="{ 'uxg-cell-hidden': element.uxgTableEdit }">
-          <div *ngSwitchCase="'date'">
+          <div *ngSwitchCase="'date'" class="uxg-table-row-date">
             <mat-icon>date_range</mat-icon>
             {{ element[column.name] }}
           </div>
@@ -110,9 +110,9 @@
         mat-footer-cell
         *matFooterCellDef
         [ngClass]="{
-          left: column.align === 'left',
-          center: column.align === 'center',
-          right: column.align === 'right'
+          'uxg-table-cell-left': column.align === 'left',
+          'uxg-table-cell-center': column.align === 'center',
+          'uxg-table-cell-right': column.align === 'right'
         }"
       >
         {{ getTotalRowCell(column) }}

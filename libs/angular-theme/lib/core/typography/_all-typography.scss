@@ -8,7 +8,7 @@
 @use '../../chips/chips-theme';
 @use '../../form-field/form-field-theme';
 @use '../../list/list-theme';
-// @use '../../table/table-theme';
+@use '../../table/table-theme';
 
 @mixin uxg-material-typography($config: null) {
   @include uxg-typography.uxg-base-typography();
@@ -22,5 +22,5 @@
   @include chips-theme.typography($config);
   @include form-field-theme.typography($config);
   @include list-theme.typography($config);
-  // @include table-theme.typography($config);
+  @include table-theme.typography($config);
 }
