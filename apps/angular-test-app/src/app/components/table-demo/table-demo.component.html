@@ -28,7 +28,7 @@
   </div>
 
   <div class="flex-row justify-start align-start config-block">
-    <div class="flex-col justify-start align-start">
+    <div class="flex-col justify-start align-start selection-area">
       <h4>Customized options</h4>
       <div class="flex-row">
         <div class="flex-col justify-between align-start">
@@ -56,7 +56,7 @@
         <mat-radio-button [value]="'end'">end</mat-radio-button>
       </mat-radio-group>
     </div>
-    <div class="flex-col justify-start align-start lection-area">
+    <div class="flex-col justify-start align-start lection-area selection-area">
       <h5>Select Mode</h5>
       <mat-radio-group class="flex-col" [(ngModel)]="singleSelect">
         <mat-radio-button [value]="true">single select</mat-radio-button>
@@ -542,7 +542,9 @@
 </ng-template>
 
 <ng-template #tableCellAction let-element="element" let-column="column" let-emiter="emiter">
-  <button (click)="$event.stopPropagation(); emiter.emit({ column: column, element: element })">click</button>
+  <button mat-stroked-button color="primary" (click)="$event.stopPropagation(); emiter.emit({ column: column, element: element })">
+    click
+  </button>
 </ng-template>
 
 <mat-drawer-container class="table-container">

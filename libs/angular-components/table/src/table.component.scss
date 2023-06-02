@@ -15,7 +15,7 @@ uxg-table {
     overflow: auto;
   }
 
-  .mat-table {
+  .mat-mdc-table {
     width: 100%;
 
     tr {
@@ -23,6 +23,7 @@ uxg-table {
         position: relative;
         overflow: hidden;
         box-sizing: border-box;
+
         .uxg-cell-hidden {
           display: none !important;
           width: 0px;
@@ -30,6 +31,19 @@ uxg-table {
         }
         .uxg-table-row-display {
           position: absolute;
+        }
+
+        .uxg-table-row-date {
+          display: flex !important;
+          vertical-align: center;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          align-items: flex-end;
+          mat-icon {
+            margin-right: 4px;
+          }
         }
         .uxg-table-row-edit {
           position: absolute;
@@ -43,7 +57,7 @@ uxg-table {
           height: 32px;
           &.uxg-table-row-edit {
             input {
-              width: 100%;
+              width: 90%;
               height: 24px;
             }
           }
@@ -53,25 +67,25 @@ uxg-table {
           text-align: center;
         }
 
-        &.left {
+        &.uxg-table-cell-left {
           text-align: left;
         }
-        &.right {
+        &.uxg-table-cell-right {
           text-align: right;
         }
-        &.center {
+        &.uxg-table-cell-center {
           text-align: center;
         }
 
-        &.right div {
+        &.uxg-table-cell-right div {
           float: right;
           display: block;
         }
-        &.left div {
+        &.uxg-table-cell-left div {
           float: left;
           display: block;
         }
-        &.center div {
+        &.uxg-table-cell-center div {
           float: center;
           display: block;
         }
@@ -88,7 +102,7 @@ uxg-table {
           &.uxg-table-action-column-header {
             text-align: center;
           }
-          &.right div {
+          &.uxg-table-cell-right div {
             display: flex;
             flex-direction: row-reverse;
             place-content: center flex-start;
@@ -98,12 +112,12 @@ uxg-table {
               margin-right: 6px;
             }
           }
-          &.left div {
+          &.uxg-table-cell-left div {
             display: flex;
             place-content: center flex-start;
             align-items: center;
           }
-          &.center div {
+          &.uxg-table-cell-center div {
             display: flex;
             place-content: center;
             align-items: center;
@@ -116,5 +130,9 @@ uxg-table {
         display: none;
       }
     }
+  }
+
+  .mat-mdc-text-field-wrapper {
+    height: 40px;
   }
 }
