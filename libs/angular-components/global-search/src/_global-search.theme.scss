@@ -26,7 +26,13 @@
 
     .uxg-global-search-input-area {
       .uxg-global-search-input {
-        .mat-form-field-label {
+        .mat-mdc-form-field-focus-overlay {
+          background: fds.get-color-from-token(surface, 0.95, $theme);
+        }
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+          background: fds.get-color-from-token(surface, 0.95, $theme);
+        }
+        .mat-mdc-form-field-label {
           @include color.color(on-surface);
         }
       }
@@ -46,7 +52,7 @@
 
         font-feature-settings: 'liga' 0, 'clig' 0;
 
-        .mat-form-field-label {
+        .mat-mdc-form-field-label {
           @include typography.typography(headline-2);
 
           @include fds.flex-breakpoint('xs') {
@@ -54,7 +60,7 @@
           }
         }
 
-        .mat-input-element {
+        .mat-mdc-input-element {
           @include fds.flex-breakpoint('xs') {
             @include typography.typography(headline-4);
           }
@@ -98,7 +104,7 @@
         }
       }
 
-      .mat-checkbox-label {
+      .mat-mdc-checkbox-label {
         @include fds.flex-breakpoint('xs') {
           @include typography.typography(body-2);
         }

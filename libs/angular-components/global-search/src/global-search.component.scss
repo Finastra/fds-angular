@@ -36,6 +36,7 @@ $close-button-size-small: 32px;
 
       .uxg-global-search-icon {
         height: 99px;
+        width: 40px;
         display: flex;
         align-items: center;
         margin-right: fds.$uxg-spacing-3;
@@ -45,12 +46,20 @@ $close-button-size-small: 32px;
         }
       }
 
-      .mat-form-field-infix {
+      .mat-mdc-form-field-flex {
+        display: inline-flex;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        flex-direction: row;
+      }
+
+      .mat-mdc-form-field-infix {
         @include fds.flex-breakpoint('xs') {
           padding-bottom: 0;
         }
 
-        .mat-form-field-label-wrapper {
+        .mat-mdc-form-field-label-wrapper {
           @include fds.flex-breakpoint('xs') {
             left: fds.$uxg-spacing-1;
             top: 0.2em;
@@ -58,7 +67,7 @@ $close-button-size-small: 32px;
         }
       }
 
-      .mat-input-element {
+      .mat-mdc-input-element {
         @include fds.flex-breakpoint('xs') {
           height: 50px;
           padding: 1.5rem 0.2rem;
@@ -81,7 +90,8 @@ $close-button-size-small: 32px;
           height: $close-button-size-small;
         }
 
-        .mat-button-wrapper {
+        // .mat-mdc-button-wrapper {
+        .mat-mdc-button-base {
           width: $close-button-size;
           height: $close-button-size;
 
@@ -90,7 +100,7 @@ $close-button-size-small: 32px;
             height: $close-button-size-small;
           }
 
-          .mat-icon {
+          .mat-mdc-icon {
             width: $close-button-size;
             height: $close-button-size;
             line-height: $close-button-size;
