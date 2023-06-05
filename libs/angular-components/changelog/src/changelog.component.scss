@@ -1,7 +1,5 @@
 @use 'sass:math';
-
 @use '@finastra/angular-theme' as fds;
-// @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 
 $bullet-space: 8%;
 $bullet-center: math.div($bullet-space, 2);
@@ -65,7 +63,7 @@ $bullet-size: 20px;
     @if $size == 'none' {
       top: fds.$uxg-spacing-3;
     } @else {
-      top: -30px;
+      top: -55px;
     }
   }
 
@@ -88,7 +86,7 @@ $bullet-size: 20px;
       top: fds.$uxg-spacing-3;
       bottom: -48px;
     } @else {
-      top: -(fds.$uxg-spacing-4);
+      top: -(fds.$uxg-spacing-5);
     }
   }
 }
@@ -158,7 +156,7 @@ uxg-changelog {
       position: absolute;
       width: $bullet-size;
       height: $bullet-size;
-      top: 32px;
+      top: -(fds.$uxg-spacing-1);
       left: calc(#{-$bullet-center} - #{$bullet-size});
       border-radius: 50%;
       z-index: 1;
@@ -170,7 +168,7 @@ uxg-changelog {
       position: absolute;
       width: 0;
       height: 0;
-      top: 32px;
+      top: -(fds.$uxg-spacing-1);
       left: calc(#{-$bullet-center} - 13px);
       border-radius: 50%;
       z-index: 1;
@@ -180,7 +178,7 @@ uxg-changelog {
       content: '';
       position: absolute;
       width: 2px;
-      top: 32px;
+      top: -(fds.$uxg-spacing-1);
       bottom: -60px;
       left: calc(#{-$bullet-center} - 6px);
     }
@@ -189,7 +187,7 @@ uxg-changelog {
       content: '';
       position: absolute;
       width: 2px;
-      top: 32px;
+      top: -(fds.$uxg-spacing-1);
       bottom: -60px;
       left: calc(#{-$bullet-center} - 6px);
     }
@@ -199,37 +197,39 @@ uxg-changelog {
     }
   }
 
-  // @include flex-layout.layout-bp(sm) {
-  //   .changelog-container {
-  //     margin: fds.$uxg-spacing-4;
-  //     @include changelog-layout('sm');
-  //   }
-  // }
+  @include fds.flex-breakpoint('sm') {
+    .changelog-container {
+      margin: 24px;
+      display: flex;
+      flex-direction: column;
+      @include changelog-layout('sm');
+    }
+  }
 
-  // @include flex-layout.layout-bp(xs) {
-  //   .changelog-container {
-  //     margin: fds.$uxg-spacing-4 fds.$uxg-spacing-2;
-  //     @include changelog-layout('xs');
-  //     .version  {
-  //       margin-top: 0;
-  //     }
-  //   }
+  @include fds.flex-breakpoint('xs') {
+    .changelog-container {
+      margin: 24px 8px;
+      @include changelog-layout('xs');
+      .version {
+        margin-top: 0;
+      }
+    }
 
-  //   .title {
-  //     padding: 2rem 1rem;
+    .title {
+      padding: 2rem 1rem;
 
-  //     .changelog-icon {
-  //       width: 90px;
-  //       height: 90px;
-  //     }
-  //   }
-  // }
+      .changelog-icon {
+        width: 90px;
+        height: 90px;
+      }
+    }
+  }
 
-  // @include flex-layout.layout-bp(lt-md) {
-  //   .title {
-  //     .creator {
-  //       max-width: 400px;
-  //     }
-  //   }
-  // }
+  @include fds.flex-breakpoint('lt-md') {
+    .title {
+      .creator {
+        max-width: 400px;
+      }
+    }
+  }
 }

@@ -1,20 +1,9 @@
-@use 'sass:map';
+@use '@finastra/fds-theme/color' as color;
 @use '@angular/material' as mat;
+@use '@finastra/fds-theme/typography' as typo;
 @use '@finastra/angular-theme' as fds;
-// @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
 
-@mixin theme($theme) {
-  $primary: map.get($theme, primary);
-  $secondary: map.get($theme, accent);
-  $error: map.get($theme, error);
-  $success: map.get($theme, success);
-  $foreground: map.get($theme, foreground);
-  $background: map.get($theme, background);
-  $elevation-color: map.get($foreground, elevation);
-  $foreground: map.get($theme, foreground);
-  $labels_background_opacity: 0.03;
-  $divider: fds.get-color-from-palette($foreground, divider, 0.07);
-
+@mixin theme($theme: null) {
   uxg-changelog {
     .title {
       height: 250px;
@@ -29,11 +18,8 @@
         z-index: 10;
       }
       .creator {
-        background-image: linear-gradient(
-          to right,
-          fds.get-color-from-palette($primary, default),
-          fds.get-color-from-palette($secondary, default)
-        );
+        background-image: linear-gradient(to right, var(--fds-primary), var(--fds-secondary));
+
         -webkit-text-fill-color: transparent;
         -webkit-background-clip: text;
         -webkit-box-decoration-break: clone;
@@ -47,7 +33,7 @@
     }
 
     .category {
-      color: fds.get-color-from-palette($primary, default);
+      @include color.color(primary);
     }
 
     .title:before {
@@ -71,15 +57,15 @@
     }
 
     a {
-      color: map.get($primary, default);
+      @include color.color(primary);
       text-decoration: none;
       &:hover {
-        color: map.get($secondary, default);
+        @include color.color(secondary);
       }
     }
 
     .change-detail:not(.last-change) {
-      border-bottom: 1px solid $divider;
+      border-bottom: 1px solid var(--fds-outline);
     }
 
     .changelog-container {
@@ -87,101 +73,102 @@
       .last-release,
       .first-release {
         border-radius: 6px;
-        background-color: fds.get-color-from-palette($background, card);
-        @include mat.elevation(4, $elevation-color, 0.6);
+        @include color.color(on-surface);
+        @include color.background(surface);
+        @include mat.elevation(4);
+        @include color.color(--fds-on-surface-medium);
       }
 
       .change {
         .new {
-          color: map.get($primary, default);
-          border: 1px solid map.get($primary, default);
-          background-color: fds.get-color-from-palette($primary, default, $labels_background_opacity);
+          @include color.color(primary);
+          border: 1px solid var(--fds-primary);
+          background-color: fds.get-color-from-token(primary, 0.03, $theme);
         }
         .update {
-          color: map.get($success, default);
-          border: 1px solid map.get($success, default);
-          background-color: fds.get-color-from-palette($success, default, $labels_background_opacity);
+          @include color.color(success);
+          border: 1px solid var(--fds-success);
+          @include color.background(surface-success);
         }
         .bugfix {
-          color: map.get($error, default);
-          border: 1px solid map.get($error, default);
-          background-color: fds.get-color-from-palette($error, default, $labels_background_opacity);
+          @include color.color(error);
+          border: 1px solid var(--fds-error);
+          @include color.background(surface-error);
         }
         .deprecated {
-          color: fds.get-color-from-palette($foreground, text, 0.8);
-          border: 1px solid fds.get-color-from-palette($foreground, text, 0.8);
-          background-color: fds.get-color-from-palette(fds.$mat-grey, 400, $labels_background_opacity);
+          color: fds.get-color-from-token(on-surface, 0.8, $theme);
+          border: 1px solid var(--fds-on-surface-medium);
+          background-color: fds.get-color-from-token(surface, 0.03, $theme);
         }
       }
 
       .release-detail {
         &::after {
-          border-left: 2px dotted map.get($primary, default);
+          border-left: 2px dotted var(--fds-primary);
         }
       }
 
       .first-release {
         &::after {
-          background-color: map.get($primary, default);
+          @include color.background(primary);
         }
       }
 
       .release-detail::before,
       .last-release::before {
-        color: map.get($background, default);
-        border: 8px solid map.get($primary, default);
-        background-color: map.get($primary, default);
+        border: 8px solid var(--fds-primary);
+        @include color.background(primary);
       }
 
       .first-release::before {
-        background-color: map.get($background, card);
-        border: 5px solid map.get($primary, default);
+        @include color.background(surface);
+        border: 5px solid var(--fds-primary);
       }
     }
   }
 }
 
-@mixin typography($config) {
+@mixin typography($config: null) {
   uxg-changelog {
     .title {
       .creator {
-        @include mat.typography-level($config, h2);
+        @include typo.typography(headline-2);
       }
 
       span {
-        @include mat.typography-level($config, h2);
+        @include typo.typography(headline-2);
       }
     }
 
     .date {
-      @include mat.typography-level($config, subtitle-1);
+      @include typo.typography(subtitle-1);
       white-space: nowrap;
       margin: 0;
     }
 
     .version-id {
-      @include mat.typography-level($config, subtitle-1);
+      @include typo.typography(subtitle-1);
       margin-bottom: 0;
     }
 
     .category {
-      @include mat.typography-level($config, h4);
+      @include typo.typography(headline-4);
     }
 
-    // @include flex-layout.layout-bp(xs) {
-    //   .title {
-    //     .creator {
-    //       @include mat.typography-level($config, h3);
-    //     }
+    @include fds.flex-breakpoint('xs') {
+      .title {
+        .creator {
+          @include typo.typography(headline-3);
+        }
 
-    //     span {
-    //       @include mat.typography-level($config, h3);
-    //     }
-    //   }
+        span {
+          @include typo.typography(headline-3);
+        }
+      }
 
-    //   .category {
-    //     @include mat.typography-level($config, h5);
-    //   }
-    // }
+      .category {
+        @include typo.typography(headline-5);
+      }
+    }
   }
 }

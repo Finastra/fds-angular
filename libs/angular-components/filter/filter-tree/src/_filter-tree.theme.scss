@@ -2,12 +2,15 @@
 @use '@finastra/fds-theme/typography' as typo;
 
 @mixin theme($theme: null) {
-  mat-checkbox {
-    &.mat-mdc-checkbox-checked,
-    &[ng-reflect-indeterminate='true'] {
-      .node-label {
-        @include fds.color(primary);
-        font-weight: 300;
+  .mat-tree {
+    @include fds.background(surface);
+    mat-checkbox {
+      &.mat-mdc-checkbox-checked,
+      &[ng-reflect-indeterminate='true'] {
+        .node-label {
+          @include fds.color(primary);
+          font-weight: 300;
+        }
       }
     }
   }
