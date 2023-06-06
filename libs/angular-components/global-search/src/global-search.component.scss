@@ -3,13 +3,13 @@
 $close-button-size: 48px;
 $close-button-size-small: 32px;
 
-.uxg-global-search-overlay-pane {
+.uxg-global-search-overlay-panel {
   width: 100%;
 
   uxg-global-search-overlay {
     .uxg-global-search-input-area {
       flex: 1 1 100%;
-      max-height: 30%;
+      max-height: 50%;
 
       @include fds.flex-breakpoint('lt-lg') {
         max-height: 20%;
@@ -24,32 +24,33 @@ $close-button-size-small: 32px;
 
       .uxg-global-search-input {
         width: 50%;
-        height: 200px;
+        height: 130px;
 
         @include fds.flex-breakpoint('lt-lg') {
           width: 65%;
         }
         @include fds.flex-breakpoint('xs') {
           width: 80%;
+          height: 100px;
         }
       }
 
       .uxg-global-search-icon {
-        height: 99px;
-        width: 40px;
+        height: 100px;
+        width: 45px;
         display: flex;
         align-items: center;
         margin-right: fds.$uxg-spacing-3;
 
         @include fds.flex-breakpoint('xs') {
           height: 50px;
+          width: 15px;
         }
       }
 
       .mat-mdc-form-field-flex {
         display: inline-flex;
         align-items: center;
-        box-sizing: border-box;
         width: 100%;
         flex-direction: row;
       }
@@ -81,26 +82,28 @@ $close-button-size-small: 32px;
 
       button {
         float: right;
+        display: grid;
         margin: fds.$uxg-spacing-2;
         width: $close-button-size;
         height: $close-button-size;
 
         @include fds.flex-breakpoint('xs') {
-          width: $close-button-size-small;
-          height: $close-button-size-small;
+          width: $close-button-size-small !important;
+          height: $close-button-size-small !important;
+          font-size: $close-button-size-small !important;
         }
 
-        // .mat-mdc-button-wrapper {
-        .mat-mdc-button-base {
+        .mdc-icon-button__ripple::before {
           width: $close-button-size;
           height: $close-button-size;
 
           @include fds.flex-breakpoint('xs') {
-            width: $close-button-size-small;
-            height: $close-button-size-small;
+            width: $close-button-size-small !important;
+            height: $close-button-size-small !important;
+            font-size: $close-button-size-small !important;
           }
 
-          .mat-mdc-icon {
+          .mat-icon {
             width: $close-button-size;
             height: $close-button-size;
             line-height: $close-button-size;
