@@ -30,7 +30,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
     title: 'Theme',
     routes: [
       { path: 'foundations', component: FoundationsDemoComponent, data: { title: 'Foundations', migrated: true } },
-      { path: 'ui-elements', component: UiElementsDemoComponent, data: { title: 'UI Elements' } },
+      { path: 'ui-elements', component: UiElementsDemoComponent, data: { title: 'UI Elements', migrated: true } },
       { path: 'theme-builder', component: ThemeBuilderComponent, data: { title: 'Theme Builder' } }
     ]
   },
@@ -39,7 +39,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
     routes: [
       //     { path: 'chart', component: ChartDemoComponent, data: { title: 'Chart' } },
       { path: 'filter-panel', component: FilterPanelDemoComponent, data: { title: 'Filter', migrated: true } },
-      { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search' } },
+      { path: 'global-search', component: GlobalSearchDemoComponent, data: { title: 'Global Search', migrated: true } },
       { path: 'popover', component: PopoverDemoComponent, data: { title: 'Popover', migrated: true } },
       { path: 'table', component: TableDemoComponent, data: { title: 'Table', migrated: true } },
       { path: 'repeater', component: RepeaterDemoComponent, data: { title: 'Repeater', migrated: true } },
