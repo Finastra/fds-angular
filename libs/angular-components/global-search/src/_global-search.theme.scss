@@ -40,6 +40,10 @@
 
     .uxg-global-search-close-overlay-button {
       opacity: 0.75;
+      .mat-mdc-icon-button {
+        @include color.color(on-surface);
+        opacity: 0.75;
+      }
     }
   }
 }
