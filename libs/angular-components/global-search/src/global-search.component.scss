@@ -189,6 +189,21 @@ $close-button-icon-small-size: 32px;
             .uxg-global-search-result-item {
               cursor: pointer;
               margin: fds.$uxg-spacing-2 fds.$uxg-spacing-3 fds.$uxg-spacing-2 0;
+
+              mat-card {
+                height: 75px;
+
+                .mat-mdc-card-header {
+                  padding: 10px 5px 0;
+                }
+
+                .mat-mdc-card-title {
+                  padding-bottom: 0;
+                }
+                .mat-mdc-card-subtitle {
+                  padding-bottom: 20px;
+                }
+              }
             }
           }
         }

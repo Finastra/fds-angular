@@ -31,8 +31,10 @@
 <ng-template #tmpl let-result>
   <div>
     <mat-card class="mat-elevation-z3" dense>
-      <mat-card-title>{{ result.nickname }}</mat-card-title>
-      <mat-card-subtitle>{{ result.balances[0].amount }} {{ result.accountType }}</mat-card-subtitle>
+      <mat-card-header>
+        <mat-card-title>{{ result.nickname }}</mat-card-title>
+        <mat-card-subtitle>{{ result.balances[0].amount }} {{ result.accountType }}</mat-card-subtitle>
+      </mat-card-header>
     </mat-card>
   </div>
 </ng-template>
