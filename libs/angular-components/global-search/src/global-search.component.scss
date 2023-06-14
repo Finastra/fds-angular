@@ -1,8 +1,8 @@
 @use '@finastra/angular-theme' as fds;
 
 $close-button-size: 48px;
-$close-button-size-small: 32px;
 $close-button-icon-size: 48px;
+$close-button-size-small: 32px;
 $close-button-icon-small-size: 32px;
 
 .uxg-global-search-overlay-panel {
@@ -88,8 +88,6 @@ $close-button-icon-small-size: 32px;
         margin: fds.$uxg-spacing-2;
         width: $close-button-size;
         height: $close-button-size;
-        // color:
-        // @include color.color(on-surface);
 
         & > *[role='img'] {
           width: $close-button-icon-size;
