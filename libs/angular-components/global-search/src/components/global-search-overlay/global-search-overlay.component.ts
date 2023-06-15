@@ -1,4 +1,5 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
+import { AsyncPipe, NgClass, NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -11,19 +12,18 @@ import {
   ViewChild,
   ViewEncapsulation
 } from '@angular/core';
-import { fromEvent, Observable, ReplaySubject } from 'rxjs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { Observable, ReplaySubject, fromEvent } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { ResultGroup } from '../../global-search.model';
 import { SearchConfig } from './global-search-overlay-config';
 import { SearchOverlayRef } from './global-search-overlay-ref';
 import { SEARCH_CONFIG } from './global-search-overlay-token';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatDividerModule } from '@angular/material/divider';
-import { NgIf, NgTemplateOutlet, NgFor, AsyncPipe } from '@angular/common';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatButtonModule } from '@angular/material/button';
 
 const ANIMATION_TIMINGS = '300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
 @Component({
@@ -49,7 +49,8 @@ const ANIMATION_TIMINGS = '300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
     NgFor,
     MatDividerModule,
     MatCheckboxModule,
-    AsyncPipe
+    AsyncPipe,
+    NgClass
   ]
 })
 export class GlobalSearchOverlayComponent implements AfterViewInit {

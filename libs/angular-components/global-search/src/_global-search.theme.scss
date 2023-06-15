@@ -1,18 +1,16 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 @use '@finastra/angular-theme' as fds;
-// @use '@angular/flex-layout/core/sass/layout-bp' as flex-layout;
+@use '@finastra/fds-theme/color';
+@use '@finastra/fds-theme/typography';
 
-@mixin uxg-global-search-colors($theme) {
-  $foreground: map.get($theme, foreground);
-  $background: map.get($theme, background);
-
+@mixin theme($theme) {
   .uxg-global-search-overlay-backdrop {
-    background: fds.get-color-from-palette($background, dialog, 0.95);
+    background: fds.get-color-from-token(surface, 0.95, $theme);
   }
 
   .uxg-global-search-overlay {
-    color: fds.get-color-from-palette($foreground, text);
+    @include color.color(on-surface);
 
     .uxg-global-search-results-area {
       .uxg-global-search-result-group-header {
@@ -28,98 +26,99 @@
 
     .uxg-global-search-input-area {
       .uxg-global-search-input {
-        .mat-form-field-label {
-          color: fds.get-color-from-palette($foreground, text);
+        .mat-mdc-form-field-focus-overlay {
+          background: fds.get-color-from-token(surface, 0.1, $theme);
+        }
+        .mdc-text-field--filled:not(.mdc-text-field--disabled) {
+          background: fds.get-color-from-token(surface, 0.1, $theme);
+        }
+        .mat-mdc-form-field-label {
+          @include color.color(on-surface);
         }
       }
     }
 
     .uxg-global-search-close-overlay-button {
       opacity: 0.75;
+      .mat-mdc-icon-button {
+        @include color.color(on-surface);
+        opacity: 0.75;
+      }
     }
   }
 }
 
 @mixin typography($config: null) {
-  @if $config==null {
-    $config: uxg-typography-config();
-  }
-
   uxg-global-search-overlay {
     .uxg-global-search-input-area {
       .uxg-global-search-input {
-        @include mat.typography-level($config, h2);
+        @include typography.typography(headline-2);
+
         font-feature-settings: 'liga' 0, 'clig' 0;
 
-        .mat-form-field-label {
-          @include mat.typography-level($config, h2);
+        .mat-mdc-form-field-label {
+          @include typography.typography(headline-2);
 
-          // @include flex-layout.layout-bp(xs) {
-          //   @include mat.typography-level($config, h4);
-          // }
+          @include fds.flex-breakpoint('xs') {
+            @include typography.typography(headline-4);
+          }
         }
 
-        // .mat-input-element {
-        //   @include flex-layout.layout-bp(xs) {
-        //     @include mat.typography-level($config, h4);
-        //   }
-        // }
+        .mat-mdc-input-element {
+          @include fds.flex-breakpoint('xs') {
+            @include typography.typography(headline-4);
+          }
+        }
       }
 
       .uxg-global-search-icon {
-        font-size: mat.font-size($config, h1);
+        font-size: 60px;
         opacity: 0.75;
 
-        // @include flex-layout.layout-bp(xs) {
-        //   font-size: mat.font-size($config, h3);
-        // }
+        @include fds.flex-breakpoint('xs') {
+          font-size: var(--fds-headline-3-font-size);
+        }
       }
     }
 
     .uxg-global-search-results-area {
       .uxg-global-search-result-group-header {
         .uxg-h4 {
-          // @include flex-layout.layout-bp(xs) {
-          //   @include mat.typography-level($config, h5);
-          // }
+          @include fds.flex-breakpoint('xs') {
+            @include typography.typography(headline-5);
+          }
         }
 
         .uxg-global-search-result-group-counter {
-          @include mat.typography-level($config, display-6);
-
-          // @include flex-layout.layout-bp(xs) {
-          //   @include mat.typography-level($config, subtitle-1);
-          // }
+          @include fds.flex-breakpoint('xs') {
+            @include typography.typography(subtitle-1);
+          }
         }
       }
     }
 
     .uxg-global-search-results-filter {
-      @include mat.typography-level($config, body-1);
+      @include typography.typography(body-1);
 
-      // .uxg-h5 {
-      //   @include flex-layout.layout-bp(xs) {
-      //     @include mat.typography-level($config, h6);
-      //   }
-      // }
+      .uxg-h5 {
+        @include fds.flex-breakpoint('xs') {
+          @include typography.typography(headline-6);
+        }
+      }
 
-      // .mat-checkbox-label {
-      //   @include flex-layout.layout-bp(xs) {
-      //     @include mat.typography-level($config, body-2);
-      //   }
-      // }
+      .mat-mdc-checkbox-label {
+        @include fds.flex-breakpoint('xs') {
+          @include typography.typography(body-2);
+        }
+      }
     }
 
     .uxg-global-search-results-counter {
-      @include mat.typography-level($config, body-1);
+      @include typography.typography(body-1);
 
-      // @include flex-layout.layout-bp(xs) {
-      //   @include mat.typography-level($config, body-2);
-      // }
+      @include fds.flex-breakpoint('xs') {
+        @include typography.typography(body-2);
+      }
     }
   }
-}
-
-@mixin theme($theme) {
-  @include uxg-global-search-colors($theme);
 }

@@ -19,7 +19,7 @@ export class GlobalSearchOverlayService {
       scrollStrategy: this.overlay.scrollStrategies.block(),
       hasBackdrop: true,
       backdropClass: 'uxg-global-search-overlay-backdrop',
-      panelClass: 'uxg-global-search-overlay-pane'
+      panelClass: 'uxg-global-search-overlay-panel'
     });
 
     const searchOverlayRef = new SearchOverlayRef(overlayRef);
