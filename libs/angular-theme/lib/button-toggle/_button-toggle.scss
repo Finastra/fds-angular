@@ -36,6 +36,12 @@ $button-toggle-radius-v: $uxg-spacing-3;
   .mat-button-toggle {
     flex: 1;
 
+    &.mat-button-toggle-checked {
+      .mat-button-toggle-button {
+        padding: revert;
+      }
+    }
+
     .mat-button-toggle-button {
       border: 1px solid;
     }
