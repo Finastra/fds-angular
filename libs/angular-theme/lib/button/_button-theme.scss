@@ -99,7 +99,7 @@
   button[dense],
   a[dense],
   *[dense] button {
-    @include typography.typography('button-3');
+    @include typography.typography('button-2');
   }
 
   button[large],
