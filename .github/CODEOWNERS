@@ -7,7 +7,7 @@
 # Repository management
 
 /scripts/ @bcldvd @ttalbot
-/tools/generators/angular-component @rbordeanu
+/tools/generators/angular-component
 /tools/generators/web-component @bcldvd @dorsaffrigui
 
 # Themes and style files
