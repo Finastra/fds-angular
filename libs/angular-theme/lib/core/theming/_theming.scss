@@ -1,5 +1,6 @@
 @use '@angular/material' as mat;
 @use './palette';
+@use '../typography/typography' as typo;
 
 $light-theme: mat.define-light-theme(
   (
@@ -7,7 +8,7 @@ $light-theme: mat.define-light-theme(
       primary: mat.define-palette(palette.$primary-light-palette),
       accent: mat.define-palette(palette.$secondary-light-palette)
     ),
-    typography: mat.define-typography-config(),
+    typography: typo.$typography-config,
     is-dark: false
   )
 );
@@ -18,7 +19,7 @@ $dark-theme: mat.define-dark-theme(
       primary: mat.define-palette(palette.$primary-dark-palette),
       accent: mat.define-palette(palette.$secondary-dark-palette)
     ),
-    typography: mat.define-typography-config(),
+    typography: typo.$typography-config,
     is-dark: true
   )
 );
