@@ -1,6 +1,6 @@
 ![](./.github/assets/banner_home.png)
 
-Welcome to the [Finastra design system](https://design.fusionfabric.cloud/) repository. You will find here all the assets and ressources to **build Angular applications quickly and consistently**. It will also help you easily applying **Finastra branding and UX best practices**.
+Welcome to the Finastra Design System repository. You will find here all the assets and ressources to **build Angular applications quickly and consistently**. It will also help you easily applying **Finastra branding and UX best practices**.
 
 If you are looking for a modern, framework agnostic version of the Finastra design system check our [web components implementation](https://github.com/Finastra/finastra-design-system).
 
