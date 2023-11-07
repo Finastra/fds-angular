@@ -156,41 +156,41 @@ $typography-config: mat.define-typography-config(
     font-size: 72px;
     line-height: 108px;
     font-weight: 300;
-    font-family: map.get(fds-variables.$properties,'body-1', 'font-family');
+    font-family: map.get(fds-variables.$properties, 'body-1', 'font-family');
   }
 
   .uxg-display-2 {
     font-size: 60px;
     line-height: 90px;
     font-weight: 300;
-    font-family: map.get(fds-variables.$properties,'body-1', 'font-family');
+    font-family: map.get(fds-variables.$properties, 'body-1', 'font-family');
   }
 
   .uxg-display-3 {
     font-size: 48px;
     line-height: 72px;
     font-weight: 300;
-    font-family: map.get(fds-variables.$properties,'body-1', 'font-family');
+    font-family: map.get(fds-variables.$properties, 'body-1', 'font-family');
   }
 
   .uxg-display-4 {
     font-size: 44px;
     line-height: 66px;
     font-weight: 300;
-    font-family: map.get(fds-variables.$properties,'body-1', 'font-family');
+    font-family: map.get(fds-variables.$properties, 'body-1', 'font-family');
   }
 
   .uxg-display-5 {
     font-size: 28px;
     line-height: 42px;
     font-weight: 300;
-    font-family: map.get(fds-variables.$properties,'body-1', 'font-family');
+    font-family: map.get(fds-variables.$properties, 'body-1', 'font-family');
   }
 
   .uxg-display-6 {
     font-size: 20px;
     line-height: 30px;
     font-weight: 300;
-    font-family: map.get(fds-variables.$properties,'body-1', 'font-family');
+    font-family: map.get(fds-variables.$properties, 'body-1', 'font-family');
   }
 }
