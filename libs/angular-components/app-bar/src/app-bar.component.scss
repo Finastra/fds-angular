@@ -1,10 +1,10 @@
-@use "@finastra/fds-theme" as fds;
+@use '@finastra/fds-theme' as fds;
 
 .app-bar {
   display: block;
   .bar {
-    @include fds.padding(3,right,left);
-    @include fds.padding(1,top,bottom);
+    @include fds.padding(3, right, left);
+    @include fds.padding(1, top, bottom);
     @include fds.background(surface);
     @include fds.elevation(4);
     min-height: 56px;
@@ -12,7 +12,7 @@
     right: 0px;
     top: 0px;
     display: flex;
-  
+
     .top-bar {
       display: flex;
       flex-direction: row;
@@ -22,8 +22,8 @@
     .app-name {
       @include fds.typography(headline-6);
       @include fds.color(on-background);
-      @include fds.padding(3,right,left);
-      @include fds.padding(1,top);
+      @include fds.padding(3, right, left);
+      @include fds.padding(1, top);
     }
 
     .app-bar-content {
@@ -31,37 +31,33 @@
       flex-direction: row;
       align-items: center;
       margin-left: auto;
-      
     }
   }
 
   fds-logo:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
 
-  slot[name="navigationIcon"]{
-    @include fds.padding(2,right);
+  slot[name='navigationIcon'] {
+    @include fds.padding(2, right);
     @include fds.color(primary);
   }
 
-  slot[name="actions"]::slotted(*) {
+  slot[name='actions']::slotted(*) {
     @include fds.color(primary);
   }
 }
 
-
 .mat-icon {
-  @include fds.padding(2,right);
+  @include fds.padding(2, right);
   @include fds.color(primary);
 }
 
-
 @import 'angular-theme/lib/core/style/spacing';
-
 
 .uxg-logo {
   display: block;
-  margin-left: 0px !important; 
+  margin-left: 0px !important;
   height: auto;
   margin-top: -13px;
 }

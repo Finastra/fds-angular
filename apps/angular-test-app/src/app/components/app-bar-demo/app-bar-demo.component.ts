@@ -4,18 +4,12 @@ import { AppBarComponent } from '@finastra/angular-components/app-bar';
 import { Breadcrumb, UxgBreadcrumbComponent } from '@finastra/angular-components/breadcrumb';
 import { UserProfile, UxgUserProfileMenuComponent } from '@finastra/angular-components/user-profile-menu';
 
-
 @Component({
   selector: 'ffdc-app-bar-demo',
   templateUrl: './app-bar-demo.component.html',
   styleUrls: ['./app-bar-demo.component.scss'],
   standalone: true,
-  imports: [
-    AppBarComponent,
-    MatIconModule,
-    UxgUserProfileMenuComponent,
-    UxgBreadcrumbComponent,
-  ]
+  imports: [AppBarComponent, MatIconModule, UxgUserProfileMenuComponent, UxgBreadcrumbComponent]
 })
 export class AppBarDemoComponent {
   constructor() {}
