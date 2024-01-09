@@ -22,6 +22,7 @@
     "paths": {
       "@env/*": ["apps/angular-test-app/src/environments/*"],
       "@finastra/angular-components": ["libs/angular-components"],
+      "@finastra/angular-components/app-bar": ["libs/angular-components/app-bar"],
       "@finastra/angular-components/avatar": ["libs/angular-components/avatar"],
       "@finastra/angular-components/banner": ["libs/angular-components/banner"],
       "@finastra/angular-components/breadcrumb": ["libs/angular-components/breadcrumb"],

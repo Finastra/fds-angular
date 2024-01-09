@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 
+import { AppBarDemoComponent } from './components/app-bar-demo/app-bar-demo.component';
 import { AvatarDemoComponent } from './components/avatar-demo/avatar-demo.component';
 import { BannerDemoComponent } from './components/banner-demo/banner-demo.component';
 import { BreadcrumbDemoComponent } from './components/breadcrumb-demo/breadcrumb-demo.component';
@@ -49,6 +50,7 @@ export const nestedRoutes: { title: string; routes: Routes }[] = [
       { path: 'entity-menu', component: EntityMenuDemoComponent, data: { title: 'Entity Menu', migrated: true } },
       { path: 'global-nav', component: GlobalNavDemoComponent, data: { title: 'Global Nav', migrated: true } },
       { path: 'avatar', component: AvatarDemoComponent, data: { title: 'Avatar', migrated: true } },
+      { path: 'app-bar', component: AppBarDemoComponent, data: { title: 'AppBar', migrated: true } },
       { path: 'expandable-table', component: ExpandableTableDemoComponent, data: { title: 'Expandable Table' } },
       {
         path: 'user-profile-menu',

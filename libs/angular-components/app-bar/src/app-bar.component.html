@@ -1,0 +1,15 @@
+<div class="app-bar">
+  <mat-toolbar class="bar uxg-toolbar uxg-toolbar-elevated">
+    <div class="top-bar">
+      <ng-content name="navigationIcon" select="[slot=navigationIcon]"></ng-content>
+      <div class="example-row logo-link-test">
+        <a [href]="logoRedirectUri" aria-label="Go to Finastra website" class="uxg-logo uxg-logo-link"> FINASTRA </a>
+      </div>
+      <span class="app-name">{{appName}}</span>
+      <ng-content name="content" select="[slot=content]" class="bar-block"></ng-content>
+    </div>
+    <div class="app-bar-content">
+      <ng-content name="actions" select="[slot=actions]" class="bar-block"></ng-content>
+    </div>
+  </mat-toolbar>
+</div>
