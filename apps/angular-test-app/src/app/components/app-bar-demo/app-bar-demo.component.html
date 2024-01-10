@@ -30,3 +30,20 @@
     </ng-template>
   </uxg-user-profile-menu>
 </app-bar>
+
+<app-bar class="example-row" [appName]="appName">
+  <mat-icon class="uxg-nav-header-button" aria-label="Menu button" slot="navigationIcon">menu</mat-icon>
+  <uxg-breadcrumb [breadcrumbs]="defaultBreadcrumbsWithoutMenu" slot="content"></uxg-breadcrumb>
+  <mat-icon class="uxg-nav-header-button" slot="actions">notifications</mat-icon>
+  <mat-icon class="uxg-nav-header-button" slot="actions">info</mat-icon>
+  <mat-icon class="uxg-nav-header-button" class="app-content" slot="actions">more_vert</mat-icon>
+  <uxg-user-profile-menu dense class="uxg-profile" slot="actions" color="primary" [user]="user0" headerType="hero">
+    <ng-template uxgUserProfilePanelActions>
+      <button mat-flat-button color="primary" dense>
+        <mat-icon>exit_to_app</mat-icon>
+        Logout
+      </button>
+      <button mat-button color="primary" dense>View profile</button>
+    </ng-template>
+  </uxg-user-profile-menu>
+</app-bar>

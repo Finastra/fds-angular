@@ -5,7 +5,7 @@
       <div class="example-row logo-link-test">
         <a [href]="logoRedirectUri" aria-label="Go to Finastra website" class="uxg-logo uxg-logo-link"> FINASTRA </a>
       </div>
-      <span class="app-name">{{ appName }}</span>
+      <span class="app-name" *ngIf="appName.length > 0">{{ appName }}</span>
       <ng-content name="content" select="[slot=content]" class="bar-block"></ng-content>
     </div>
     <div class="app-bar-content">

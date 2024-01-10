@@ -1,3 +1,4 @@
+import { NgIf } from '@angular/common';
 import { Component, Input, ViewEncapsulation } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -7,7 +8,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   styleUrls: ['./app-bar.component.scss'],
   encapsulation: ViewEncapsulation.None,
   standalone: true,
-  imports: [MatToolbarModule]
+  imports: [MatToolbarModule, NgIf]
 })
 export class AppBarComponent {
   //Application's name

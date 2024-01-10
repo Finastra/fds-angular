@@ -3,7 +3,7 @@
 
 $avatar-size: $uxg-spacing-5;
 $avatar-size-large: $uxg-spacing-6;
-$avatar-size-dense: $uxg-spacing-4;
+$avatar-size-dense: 20px;
 
 @mixin uxg-avatar-size($size) {
   height: $size;
