@@ -1,5 +1,6 @@
 @use '@finastra/fds-theme/color' as fds;
 @use '@finastra/fds-theme/typography' as typo;
+@use '../../../../angular-theme/mixins' as *;
 
 @mixin theme($theme: null) {
   $filter-tags-option-height: 32px;
@@ -10,6 +11,18 @@
         .search-icon {
           @include fds.color(primary);
         }
+      }
+    }
+
+    .mat-mdc-text-field-wrapper.mdc-text-field--outlined .mdc-notched-outline--upgraded .mdc-floating-label--float-above {
+      @include media(xs, sm) {
+        left: 0;
+      }
+    }
+
+    .mdc-text-field--outlined .mdc-floating-label {
+      @include media(xs, sm) {
+        left: 40px;
       }
     }
   }

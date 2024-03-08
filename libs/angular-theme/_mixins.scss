@@ -1,0 +1,11 @@
+@use '@finastra/angular-theme' as fds;
+
+//  mixin to print out media queries (based on map keys passed)
+// keys: xs,sm,md,lg,xl
+@mixin media($keys...) {
+  @each $key in $keys {
+    @media #{map-get(fds.$fx-media-queries, $key)} {
+      @content;
+    }
+  }
+}
