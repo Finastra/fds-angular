@@ -48,3 +48,5 @@ libs/angular-theme/prebuilt-theme
 # build
 **/coverage
 **/tsc-out
+
+.nx
