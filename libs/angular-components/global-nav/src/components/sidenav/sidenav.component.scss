@@ -1,3 +1,6 @@
+$purple-light-color: #ede9fa;
+$purple-gray-color: #f5f5f5;
+
 :host {
   display: flex;
   flex-direction: column;
@@ -19,7 +22,34 @@
     }
   }
 
-  mat-nav-list:last-child {
-    margin-bottom: 30px;
+  mat-nav-list {
+    &:last-child {
+      margin-bottom: 30px;
+    }
+    .mat-mdc-list-item-interactive::after {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      position: absolute;
+      content: '';
+      opacity: 0;
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .mat-mdc-list-item-interactive::before {
+      visibility: hidden;
+    }
+
+    .uxg-list-item-selected.mat-mdc-list-item-interactive::after {
+      background: $purple-light-color;
+      opacity: 1;
+    }
+
+    .mat-mdc-list-item:hover.mat-mdc-list-item-interactive::after {
+      background: $purple-gray-color;
+      opacity: 1;
+    }
   }
 }

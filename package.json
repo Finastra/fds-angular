@@ -25,6 +25,7 @@
     "build:devkit": "tsc -p ./tools/devkit/tsconfig.devkit.json && cpx -v \"./tools/devkit/**/*.json\" dist/tools/devkit",
     "build:theme": "nx build angular-theme --prod",
     "build:scripts": "tsc --project scripts/tsconfig.json",
+    "pack:components": "nx run angular-components:build && cd dist/libs/angular-components && npm pack",
     "changelog:components": "cd libs/angular-components && npx standard-version",
     "changelog:theme": "cd libs/angular-theme && npx standard-version",
     "clean": "rimraf dist coverage junit.xml",

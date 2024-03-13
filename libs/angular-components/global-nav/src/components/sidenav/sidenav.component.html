@@ -7,15 +7,18 @@
 
 <mat-nav-list class="uxg-nav-list-main uxg-nav-list">
   <div matSubheader>Applications</div>
-  <a
-    mat-list-item
-    (click)="onClick(node)"
-    [ngClass]="{ 'uxg-list-item-selected': isActive(node.path) }"
-    *ngFor="let node of navigationNodes"
-  >
-    <mat-icon matListItemIcon>{{ node.icon }}</mat-icon>
-    <p matListItemTitle>{{ node.title }}</p>
-  </a>
+  <ng-container *ngFor="let node of navigationNodes">
+    <a
+      mat-list-item
+      (click)="onClick(node)"
+      [routerLink]="node.path"
+      routerLinkActive="uxg-list-item-selected"
+      [routerLinkActiveOptions]="{ exact: node.path === '' }"
+    >
+      <mat-icon matListItemIcon>{{ node.icon }}</mat-icon>
+      <p matListItemTitle>{{ node.title }}</p>
+    </a>
+  </ng-container>
 </mat-nav-list>
 
 <mat-nav-list class="uxg-link-list">
