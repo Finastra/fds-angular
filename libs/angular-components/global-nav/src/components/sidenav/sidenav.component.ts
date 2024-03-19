@@ -1,18 +1,29 @@
-import { Component, OnInit, OnChanges, Input, Output, Inject, forwardRef, ChangeDetectorRef, SimpleChanges } from '@angular/core';
-import { MatSidenav } from '@angular/material/sidenav';
-import { NavigationNode } from '../../services/navigation.model';
-import { EventEmitter } from '@angular/core';
-import { MatIconModule } from '@angular/material/icon';
-import { NgFor, NgClass, UpperCasePipe } from '@angular/common';
-import { MatListModule } from '@angular/material/list';
+import { NgClass, NgFor, UpperCasePipe } from '@angular/common';
+import {
+  ChangeDetectorRef,
+  Component,
+  EventEmitter,
+  Inject,
+  Input,
+  OnChanges,
+  OnInit,
+  Output,
+  SimpleChanges,
+  forwardRef
+} from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatSidenav } from '@angular/material/sidenav';
+import { RouterModule } from '@angular/router';
+import { NavigationNode } from '../../services/navigation.model';
 
 @Component({
   selector: 'uxg-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
   standalone: true,
-  imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe]
+  imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe, RouterModule]
 })
 export class SidenavComponent implements OnInit, OnChanges {
   @Input() appName!: string;
@@ -58,10 +69,5 @@ export class SidenavComponent implements OnInit, OnChanges {
   onClick(node: NavigationNode) {
     this.nodeChosen.emit(node);
     this._host.close();
-  }
-
-  isActive(path?: string) {
-    if (path === undefined) return false;
-    if (this.activeRoute) return this.activeRoute.includes(path);
   }
 }
