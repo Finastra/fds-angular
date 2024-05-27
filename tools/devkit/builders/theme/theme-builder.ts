@@ -1,10 +1,10 @@
-import { BuilderOutput, createBuilder, BuilderContext } from '@angular-devkit/architect';
-import { renderSync } from 'sass';
-import { writeFile, ensureFileSync, mkdirp, remove } from 'fs-extra';
-import { join } from 'path';
-import { sync as globby } from 'globby';
+import { BuilderContext, BuilderOutput, createBuilder } from '@angular-devkit/architect';
 import autoprefixer from 'autoprefixer';
+import { ensureFileSync, mkdirp, remove, writeFile } from 'fs-extra';
+import { join } from 'path';
 import postcss from 'postcss';
+import { renderSync } from 'sass';
+import glob from 'tiny-glob';
 import { Schema } from './schema';
 
 async function themeBuilder(options: Schema, context: BuilderContext): Promise<BuilderOutput> {
@@ -21,7 +21,7 @@ async function themeBuilder(options: Schema, context: BuilderContext): Promise<B
     await mkdirp(dest);
 
     // compile prebuilt
-    const prebuiltThemes = globby(join(src, 'prebuilt-theme', '*.scss'));
+    const prebuiltThemes = await glob(join(src, 'prebuilt-theme', '*.scss'));
     for (const theme of prebuiltThemes) {
       const outFile = theme.replace(join(src, 'prebuilt-theme'), dest).replace('.scss', '.css');
       logger.info(`Compiling "${theme}" to "${outFile}"...`);

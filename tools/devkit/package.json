@@ -5,9 +5,11 @@
   "main": "index.js",
   "builders": "./builders.json",
   "devDependencies": {
-    "@angular-devkit/architect": "0.1300.4",
-    "@angular-devkit/build-angular": "13.0.4",
-    "@angular-devkit/core": "13.0.4",
-    "@angular-devkit/schematics": "13.0.4"
+    "@angular-devkit/architect": "^0.1703.8",
+    "@angular-devkit/build-angular": "^17.3.8",
+    "@angular-devkit/core": "^17.3.8",
+    "@angular-devkit/schematics": "^17.3.8",
+    "globby": "11.0.4",
+    "typescript": "5.4.5"
   }
 }

@@ -18,6 +18,7 @@
 *.sublime-workspace
 .angular
 # IDE - VSCode
+.vscode
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -44,6 +45,7 @@ finastra-design-system.iml
 Thumbs.db
 
 libs/angular-theme/prebuilt-theme
+libs/angular-components/dist
 
 # build
 **/coverage

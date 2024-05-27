@@ -1,13 +1,7 @@
 <h2>Expandable Table</h2>
 <div class="demonstration">
-  <uxg-expandable-table
-    [dataSource]="dataSource"
-    [columns]="columns"
-    [groupByKey]="groupByKey"
-    [selectable]="selectable"
-    (selectionChange)="onSelectionChange($event)"
-    [subtitle]="'Optional subtitle'"
-  >
+  <uxg-expandable-table [dataSource]="dataSource" [columns]="columns" [groupByKey]="groupByKey"
+    [selectable]="selectable" (selectionChange)="onSelectionChange($event)" [subtitle]="'Optional subtitle'">
     <ng-template #expandableTableSubtitleTemplate let-row="row" let-subtitle="subtitle">
       {{ subtitle }}
     </ng-template>
@@ -20,12 +14,8 @@
     </ng-template>
 
     <ng-template #expandableHeaderButtonsTemplate let-row="row" let-emiter="emiter">
-      <button
-        mat-icon-button
-        title="Optional Header Button"
-        (click)="emiter.emit(row); $event.stopPropagation()"
-        class="optional-header-button"
-      >
+      <button mat-icon-button title="Optional Header Button" (click)="emiter.emit(row); $event.stopPropagation()"
+        class="optional-header-button">
         <mat-icon>description</mat-icon>
       </button>
     </ng-template>
@@ -157,7 +147,7 @@
         <pre>
         <code contenteditable spellcheck="false">
           &lt;ng-template #expandableTableSubtitleTemplate let-row="row" let-subtitle="subtitle"&gt;
-              <span>{{</span>row <span>}} {{</span>subtitle <span>}}</span>
+              <span>&#123;&#123;</span>row <span>&#125;&#125; &#123;&#123;</span>subtitle <span>&#125;&#125;</span>
             cell template here
           &lt;/ng-template &gt;
       </code>

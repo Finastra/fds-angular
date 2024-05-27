@@ -126,7 +126,7 @@
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         data:Array&lt;any&gt;[]
       </td>
       <td>
@@ -136,84 +136,84 @@
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         columns:Array&lt;UxgColumn&gt;[]
       </td>
       <td>An array of column definiations.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         columnsToDisplay:Array&lt;string&gt;[]
       </td>
       <td>An array of column name which indicate which column should be visable in table.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         totalData:any
       </td>
       <td>This total input enable user customize the total cell.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         stickyHeader:boolean
       </td>
       <td>If stick the header or not. Default <code>true</code></td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         stickyFooter:boolean
       </td>
       <td>If stick the footer or not. Defalut <code>false</code></td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         showTotalRows:boolean
       </td>
       <td>If total row should be visiable or not. Default <code>false</code></td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         showTableHeader: boolean
       </td>
       <td>If you want to show table headers, Default <code>true</code>.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         sort: UxgSort
       </td>
       <td>If to set the sort options of the table.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         columnDragEnable:boolean
       </td>
       <td>Enable column drag drop or not. Default <code>false</code></td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         selectedKeys:number[]
       </td>
       <td>The default selected rows index.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         singleSelect:boolean
       </td>
       <td>If table enable single select or not.</td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         multiSelect:boolean
       </td>
       <td>
@@ -223,66 +223,66 @@
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         pageEnable:boolean
       </td>
       <td>If enable paging for the table or not. Default <code>false</code></td>
     </tr>
     <tr>
       <td>
-        @Input()<br />
+        &#64;Input()<br />
         paging: UxgPage
       </td>
       <td>When pageEnable to table, if needed, user can pass customized paging to table component.</td>
     </tr>
     <tr>
-      <td>@Output()<br />selectChanged: EventEmitter&lt;UxgTableSelectEvent&gt;</td>
+      <td>&#64;Output()<br />selectChanged: EventEmitter&lt;UxgTableSelectEvent&gt;</td>
       <td>Event emitted when the selection of table changed.</td>
     </tr>
     <tr>
-      <td>@Output()<br />multiSelectSingleRowClicked: EventEmitter&lt;UxgTableSelectEvent&gt;</td>
+      <td>&#64;Output()<br />multiSelectSingleRowClicked: EventEmitter&lt;UxgTableSelectEvent&gt;</td>
       <td>Event emitted when you are in multi-select mode but you click on one row not check the checkbox.</td>
     </tr>
     <tr>
-      <td>@Output()<br />sortChanged: EventEmitter&lt;UxgSort&gt;</td>
+      <td>&#64;Output()<br />sortChanged: EventEmitter&lt;UxgSort&gt;</td>
       <td>If customized sort needed, you can use this output to do it.</td>
     </tr>
     <tr>
-      <td>@Output()<br />pageChanged: EventEmitter&lt;PageEvent&gt;</td>
+      <td>&#64;Output()<br />pageChanged: EventEmitter&lt;PageEvent&gt;</td>
       <td>If customized paging needed, you can use this ouput to do it.</td>
     </tr>
     <tr>
-      <td>@Input()<br />enableEdit</td>
+      <td>&#64;Input()<br />enableEdit</td>
       <td>If you want to enable edit a row on the table, if yes, one new column will be added by default</td>
     </tr>
     <tr>
-      <td>@Input()<br />enableDelete</td>
+      <td>&#64;Input()<br />enableDelete</td>
       <td>If you want to enable delete a row on the table, if yes, one new column will be added by default</td>
     </tr>
     <tr>
-      <td>@Input()<br />enableSend</td>
+      <td>&#64;Input()<br />enableSend</td>
       <td>
         If you want to apply a customized event to row that is not the same with click on the row. you can enable this configuraiton and
         then use the output <code>rowSendEvent</code> to customized your own actions
       </td>
     </tr>
     <tr>
-      <td>@Input()<br />actionColumnPosition: UxgActionColumnPosition</td>
+      <td>&#64;Input()<br />actionColumnPosition: UxgActionColumnPosition</td>
       <td>
         by default action columnn located at end of the table(UxgActionColumnPosition.end), if you want to change it you can set it to
         'UxgActionColumnPosition.start'
       </td>
     </tr>
     <tr>
-      <td>@Output()<br />rowRemoved : EventEmitter&lt;any&gt;</td>
+      <td>&#64;Output()<br />rowRemoved : EventEmitter&lt;any&gt;</td>
       <td>Emit the removed row, when you enable delete and click on the delete icon</td>
     </tr>
     <tr>
-      <td>@Output()<br />rowUpdated : EventEmitter&lt;any&gt;</td>
+      <td>&#64;Output()<br />rowUpdated : EventEmitter&lt;any&gt;</td>
       <td>Emit the edited row, when you enable edit and click on the confirm icon</td>
     </tr>
     <tr>
-      <td>@Output()<br />rowSend : EventEmitter&lt;any&gt;</td>
+      <td>&#64;Output()<br />rowSend : EventEmitter&lt;any&gt;</td>
       <td>Emit the current row data, when you enableSend and click on the send icon</td>
     </tr>
   </tbody>
@@ -526,7 +526,7 @@
 <pre>
     <code contenteditable spellcheck="false">
       &lt; ng-template #tableCellTypedCurrency let-element="element" let-column="column" &gt;
-          <span>{{</span>element[column.name].amount <span>}} {{</span>element[column.name].currency <span>}}</span>
+          <span>&#123;&#123;</span>element[column.name].amount <span>&#125;&#125; &#123;&#123;</span>element[column.name].currency <span>&#125;&#125;</span>
         cell template here 
       &lt;/ng-template &gt;
   </code>

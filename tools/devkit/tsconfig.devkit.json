@@ -5,5 +5,7 @@
     "strict": false,
     "noImplicitAny": false
   },
-  "include": ["**/*.ts"]
+  "include": [
+    "**/*.ts"
+  ]
 }

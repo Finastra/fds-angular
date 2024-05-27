@@ -21,8 +21,8 @@ async function themeLinter(options: Schema, context: BuilderContext): Promise<Bu
   });
   context.reportProgress(1, 1);
 
-  if (result.output) {
-    logger.info(result.output);
+  if (result.report) {
+    logger.info(result.report);
   }
 
   if (!result.errored && printInfo) {
