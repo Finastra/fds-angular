@@ -3,7 +3,9 @@
   "compilerOptions": {
     "outDir": "../../dist/tools/",
     "strict": false,
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "moduleResolution": "NodeNext",
+    "module": "NodeNext"
   },
   "include": [
     "**/*.ts"

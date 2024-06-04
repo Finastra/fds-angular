@@ -1,11 +1,10 @@
 import { BuilderContext, BuilderOutput, createBuilder } from '@angular-devkit/architect';
 import autoprefixer from 'autoprefixer';
-import { ensureFileSync, mkdirp, remove, writeFile } from 'fs-extra';
-import { join } from 'path';
+import { ensureFileSync, mkdirp, remove, writeFileSync } from 'fs-extra';
 import postcss from 'postcss';
-import { renderSync } from 'sass';
-import glob from 'tiny-glob';
+import { compile } from 'sass';
 import { Schema } from './schema';
+const path = require('path');
 
 async function themeBuilder(options: Schema, context: BuilderContext): Promise<BuilderOutput> {
   const logger = context.logger;
@@ -20,22 +19,16 @@ async function themeBuilder(options: Schema, context: BuilderContext): Promise<B
     await remove(dest);
     await mkdirp(dest);
 
-    // compile prebuilt
-    const prebuiltThemes = await glob(join(src, 'prebuilt-theme', '*.scss'));
+    const prebuiltThemes = await import('globby').then(({ globbySync }) => globbySync(path.posix.join(src, '*.scss')));
+
     for (const theme of prebuiltThemes) {
-      const outFile = theme.replace(join(src, 'prebuilt-theme'), dest).replace('.scss', '.css');
+      const filename = theme.split('/')?.pop();
+      const outFile = path.posix.join(dest, filename).replace('.scss', '.css');
       logger.info(`Compiling "${theme}" to "${outFile}"...`);
 
-      const result = renderSync({
-        file: theme,
-        outFile: outFile,
-        outputStyle: options.outputStyle || 'expanded',
-        sourceMap: true,
-        sourceMapRoot: dest,
-        sourceMapEmbed: true,
-        includePaths: ['./node_modules']
-      });
-      const finalCss = await postcss([autoprefixer]).process(result.css, {
+      const compileResult = compile(theme, { sourceMap: true, verbose: true, loadPaths: ['./node_modules'], style: options.outputStyle ?? 'expanded' });
+
+      const finalCss = await postcss([autoprefixer]).process(compileResult.css, {
         from: theme,
         to: outFile,
         map: {
@@ -44,9 +37,9 @@ async function themeBuilder(options: Schema, context: BuilderContext): Promise<B
       });
 
       ensureFileSync(outFile);
-      await writeFile(outFile, finalCss.css);
+      await writeFileSync(outFile, finalCss.css);
       if (options.sourceMap === true) {
-        await writeFile(outFile.replace('.css', '.map'), finalCss.map.toString());
+        await writeFileSync(outFile.replace('.css', '.map'), finalCss.map.toString());
       }
     }
 
