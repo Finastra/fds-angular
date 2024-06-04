@@ -22,7 +22,7 @@ const PALETTE_SIZE = 16;
   selector: 'uxg-image-avatar, [uxg-image-avatar], [uxgImageAvatar]',
   standalone: true
 })
-export class UxgImageAvatar { }
+export class UxgImageAvatar {}
 
 @Component({
   selector: 'uxg-avatar',
@@ -59,7 +59,7 @@ export class AvatarComponent implements OnInit {
 
   md5 = new Md5();
 
-  constructor() { }
+  constructor() {}
 
   getCode(str: string) {
     const charCodes = str

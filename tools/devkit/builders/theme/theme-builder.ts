@@ -26,7 +26,12 @@ async function themeBuilder(options: Schema, context: BuilderContext): Promise<B
       const outFile = path.posix.join(dest, filename).replace('.scss', '.css');
       logger.info(`Compiling "${theme}" to "${outFile}"...`);
 
-      const compileResult = compile(theme, { sourceMap: true, verbose: true, loadPaths: ['./node_modules'], style: options.outputStyle ?? 'expanded' });
+      const compileResult = compile(theme, {
+        sourceMap: true,
+        verbose: true,
+        loadPaths: ['./node_modules'],
+        style: options.outputStyle ?? 'expanded'
+      });
 
       const finalCss = await postcss([autoprefixer]).process(compileResult.css, {
         from: theme,
