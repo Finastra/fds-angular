@@ -4,6 +4,12 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-theme/",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@finastra/angular:theme": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "build": {
       "executor": "./dist/tools/devkit:theme-builder",
@@ -25,11 +31,5 @@
         "project": "libs/angular-theme"
       }
     }
-  },
-  "generators": {
-    "@finastra/angular:theme": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

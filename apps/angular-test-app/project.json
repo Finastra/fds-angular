@@ -2,13 +2,14 @@
   "name": "test",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
+  "sourceRoot": "apps/angular-test-app/src",
+  "prefix": "finastra",
+  "tags": [],
   "generators": {
     "@nrwl/workspace:component": {
       "style": "scss"
     }
   },
-  "sourceRoot": "apps/angular-test-app/src",
-  "prefix": "finastra",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -141,6 +142,5 @@
       },
       "outputs": ["{workspaceRoot}/coverage/apps/angular-test-app"]
     }
-  },
-  "tags": []
+  }
 }

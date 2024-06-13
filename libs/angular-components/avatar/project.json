@@ -4,6 +4,12 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/avatar/src",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -19,11 +25,5 @@
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/avatar"]
     }
-  },
-  "generators": {
-    "@nrwl/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

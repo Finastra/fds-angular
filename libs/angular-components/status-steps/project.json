@@ -4,6 +4,7 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/status-steps/src",
   "prefix": "finastra",
+  "tags": [],
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -19,6 +20,5 @@
         "passWithNoTests": true
       }
     }
-  },
-  "tags": []
+  }
 }
