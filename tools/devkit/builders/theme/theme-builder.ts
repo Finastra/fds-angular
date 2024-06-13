@@ -19,7 +19,11 @@ async function themeBuilder(options: Schema, context: BuilderContext): Promise<B
     await remove(dest);
     await mkdirp(dest);
 
-    const prebuiltThemes = await import('globby').then(({ globbySync }) => globbySync(path.posix.join(src, '*.scss')));
+    const prebuiltThemes = await import('globby').then(({ globbySync, convertPathToPattern }) => {
+      const rootPath = path.posix.join(src, '*.scss');
+      const pattern = convertPathToPattern(rootPath);
+      return globbySync(pattern);
+    });
 
     for (const theme of prebuiltThemes) {
       const filename = theme.split('/')?.pop();
