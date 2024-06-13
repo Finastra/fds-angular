@@ -21,11 +21,8 @@ async function testCoverage() {
   const paths = await import('globby').then(({ globbySync, convertPathToPattern }) => {
     const rootPath = path.resolve(process.cwd(), 'coverage', 'libs');
     const pattern = convertPathToPattern(rootPath);
-    return globbySync(
-      [pattern, '!**/node_modules'],
-      { expandDirectories: { files: ['coverage-final.json'] } }
-    )
-  })
+    return globbySync([pattern, '!**/node_modules'], { expandDirectories: { files: ['coverage-final.json'] } });
+  });
 
   paths.forEach((path) => {
     const coverage = require(path);
