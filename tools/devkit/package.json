@@ -9,7 +9,6 @@
     "@angular-devkit/build-angular": "17.3.8",
     "@angular-devkit/core": "17.3.8",
     "@angular-devkit/schematics": "17.3.8",
-    "globby": "11.0.4",
     "typescript": "5.4.5"
   }
 }
