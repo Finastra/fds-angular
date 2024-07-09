@@ -12,8 +12,8 @@
 
 .filter-panel-side {
   width: auto !important;
-  min-width: 352px;
-  max-width: 352px;
+  min-width: 370px;
+  max-width: 370px;
 }
 
 .filter-panel-side-header {
@@ -26,6 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+
   h3 {
     margin-top: 0px;
   }
@@ -67,12 +68,15 @@
 .documentation {
   width: 50%;
   border-collapse: collapse;
+
   tr {
     font-family: Roboto, sans-serif;
     border-bottom: 1px solid #e6ecf1;
+
     td {
       padding: 8px;
     }
+
     &.header {
       color: #9daab6;
       font-size: 16px;
