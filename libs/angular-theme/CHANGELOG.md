@@ -4,10 +4,9 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [4.2.0](https://github.com/finastra/finastra-design-system/compare/v4.1.0...v4.2.0) (2024-07-09)
 
-
 ### Features
 
-* update angular to version 17 ([e46fd44](https://github.com/finastra/finastra-design-system/commit/e46fd44f9ec036ba0b119c74ded0ab9553ab7346))
+- update angular to version 17 ([e46fd44](https://github.com/finastra/finastra-design-system/commit/e46fd44f9ec036ba0b119c74ded0ab9553ab7346))
 
 ### [4.1.1](https://github.com/finastra/finastra-design-system/compare/v4.1.0...v4.1.1) (2024-03-19)
 
