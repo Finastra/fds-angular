@@ -4,6 +4,12 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/search-input",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -11,11 +17,5 @@
         "lintFilePatterns": ["libs/angular-components/search-input/src/**/*.ts", "libs/angular-components/search-input/src/**/*.html"]
       }
     }
-  },
-  "generators": {
-    "@nrwl/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

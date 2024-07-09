@@ -4,6 +4,12 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/core",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -18,11 +24,5 @@
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/core"]
     }
-  },
-  "generators": {
-    "@nrwl/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

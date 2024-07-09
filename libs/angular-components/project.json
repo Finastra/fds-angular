@@ -4,9 +4,15 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "build": {
-      "executor": "@angular-devkit/build-angular:ng-packagr",
+      "executor": "@nrwl/angular:package",
       "options": {
         "project": "libs/angular-components/ng-package.json"
       },
@@ -29,11 +35,5 @@
         "exclude": ["**/node_modules/**", "!libs/angular-components/**/*"]
       }
     }
-  },
-  "generators": {
-    "@nrwl/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

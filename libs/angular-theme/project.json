@@ -4,11 +4,17 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-theme/",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@finastra/angular:theme": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "build": {
       "executor": "./dist/tools/devkit:theme-builder",
       "options": {
-        "inputPath": "libs/angular-theme/lib/",
+        "inputPath": "libs/angular-theme/lib/prebuilt-theme",
         "outputPath": "libs/angular-theme/prebuilt-theme",
         "assets": ["libs/angular-theme/lib", "libs/angular-theme/assets", "libs/angular-theme/*.scss"],
         "sourceMap": true
@@ -25,11 +31,5 @@
         "project": "libs/angular-theme"
       }
     }
-  },
-  "generators": {
-    "@finastra/angular:theme": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

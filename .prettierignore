@@ -5,3 +5,5 @@
 .history
 dist
 coverage
+
+/.nx/cache

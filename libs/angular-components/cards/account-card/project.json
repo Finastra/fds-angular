@@ -4,6 +4,12 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/cards/account-card",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -21,11 +27,5 @@
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/cards/account-card"]
     }
-  },
-  "generators": {
-    "@nrwl/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

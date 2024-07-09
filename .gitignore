@@ -44,6 +44,7 @@ finastra-design-system.iml
 Thumbs.db
 
 libs/angular-theme/prebuilt-theme
+libs/angular-components/dist
 
 # build
 **/coverage

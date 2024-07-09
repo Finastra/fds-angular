@@ -4,6 +4,12 @@
   "projectType": "library",
   "sourceRoot": "libs/angular-components/filter/filter-tree",
   "prefix": "finastra",
+  "tags": [],
+  "generators": {
+    "@nrwl/angular:component": {
+      "styleext": "scss"
+    }
+  },
   "targets": {
     "lint": {
       "executor": "@nrwl/linter:eslint",
@@ -21,11 +27,5 @@
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-tree"]
     }
-  },
-  "generators": {
-    "@nrwl/angular:component": {
-      "styleext": "scss"
-    }
-  },
-  "tags": []
+  }
 }

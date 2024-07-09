@@ -3,9 +3,7 @@
  * https://github.com/facebook/jest/issues/2418#issuecomment-423806659
  */
 const path = require('path');
-const globby = require('globby');
 
-const rootPath = path.resolve(process.cwd(), 'coverage');
 const libCoverage = require('istanbul-lib-coverage');
 const { createReporter } = require('istanbul-api');
 
@@ -19,7 +17,13 @@ const normalizeJestCoverage = (obj) => {
   return result;
 };
 
-globby([`${rootPath}`, '!**/node_modules'], { expandDirectories: { files: ['coverage-final.json'] } }).then((paths) => {
+async function testCoverage() {
+  const paths = await import('globby').then(({ globbySync, convertPathToPattern }) => {
+    const rootPath = path.resolve(process.cwd(), 'coverage', 'libs');
+    const pattern = convertPathToPattern(rootPath);
+    return globbySync([pattern, '!**/node_modules'], { expandDirectories: { files: ['coverage-final.json'] } });
+  });
+
   paths.forEach((path) => {
     const coverage = require(path);
     map.merge(normalizeJestCoverage(coverage));
@@ -28,4 +32,6 @@ globby([`${rootPath}`, '!**/node_modules'], { expandDirectories: { files: ['cove
   const reporter = createReporter();
   reporter.addAll(['cobertura', 'lcov', 'text']);
   reporter.write(map);
-});
+}
+
+testCoverage();
