@@ -25,6 +25,7 @@
     &.uxg-nav-list-level {
       .mat-mdc-list-item {
         border-left-color: transparent;
+        border-radius: unset;
 
         &:hover {
           @include color.property(border-color, outline-info);
