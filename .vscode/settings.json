@@ -3,7 +3,7 @@
   "debug.node.autoAttach": "on",
   "[typescript]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "workbench.colorCustomizations": {
