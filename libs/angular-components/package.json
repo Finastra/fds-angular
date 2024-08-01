@@ -7,10 +7,10 @@
     "directory": "libs/angular-components"
   },
   "peerDependencies": {
-    "@angular/common": "17.3.9",
-    "@angular/core": "17.3.9",
-    "@angular/forms": "17.3.9",
-    "@angular/cdk": "17.3.9"
+    "@angular/common": "^17.3.9",
+    "@angular/core": "^17.3.9",
+    "@angular/forms": "^17.3.9",
+    "@angular/cdk": "^17.3.9"
   },
   "dependencies": {
     "@finastra/angular-theme": "4.2.3"
