@@ -1,6 +1,6 @@
 {
   "name": "@finastra/angular-components",
-  "version": "4.2.2",
+  "version": "4.2.3",
   "repository": {
     "type": "git",
     "url": "https://github.com/finastra/finastra-design-system.git",
@@ -13,6 +13,6 @@
     "@angular/cdk": "17.3.9"
   },
   "dependencies": {
-    "@finastra/angular-theme": "4.2.2"
+    "@finastra/angular-theme": "4.2.3"
   }
 }
