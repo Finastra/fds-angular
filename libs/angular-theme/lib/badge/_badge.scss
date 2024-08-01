@@ -6,7 +6,7 @@ $side-badge-radius-large: 14px;
 $side-badge-min-width-large: 14px;
 
 @mixin uxg-side-badge-base() {
-  position: relative;
+  position: initial;
   border-style: solid;
   border-width: $side-badge-border-width;
   height: unset !important;
