@@ -197,7 +197,7 @@
 <div class="block-test">
   <h4 class="uxg-h4">Button toggle</h4>
   <div class="example-row toggle-filter-test">
-    <mat-button-toggle-group class="uxg-filtering-toggle-group" value="public">
+    <mat-button-toggle-group class="uxg-filtering-toggle-group" value="public" [hideSingleSelectionIndicator]="true">
       <mat-button-toggle value="public">
         <mat-icon>public</mat-icon>
         <span>Public</span>
@@ -214,7 +214,7 @@
   </div>
 
   <div class="example-row toggle-dense-test">
-    <mat-button-toggle-group dense value="inner">
+    <mat-button-toggle-group dense value="inner" [hideSingleSelectionIndicator]="true">
       <mat-button-toggle value="left" disabled>
         <mat-icon>border_left</mat-icon>
       </mat-button-toggle>
@@ -226,7 +226,7 @@
       </mat-button-toggle>
     </mat-button-toggle-group>
 
-    <mat-button-toggle-group dense #group="matButtonToggleGroup" value="trend">
+    <mat-button-toggle-group dense #group="matButtonToggleGroup" value="trend" [hideSingleSelectionIndicator]="true">
       <mat-button-toggle value="trend">
         <mat-icon>timeline</mat-icon>
         Trend
@@ -239,12 +239,12 @@
   </div>
 
   <div class="example-row toggle-group-test">
-    <mat-button-toggle-group value="bold">
+    <mat-button-toggle-group value="bold" [hideSingleSelectionIndicator]="true">
       <mat-button-toggle value="bold">Bold</mat-button-toggle>
       <mat-button-toggle value="italic">Italic</mat-button-toggle>
       <mat-button-toggle value="underline" disabled>Underline</mat-button-toggle>
     </mat-button-toggle-group>
-    <mat-button-toggle-group value="chat">
+    <mat-button-toggle-group value="chat" [hideSingleSelectionIndicator]="true">
       <mat-button-toggle value="phone">
         <mat-icon>phone</mat-icon>
       </mat-button-toggle>
