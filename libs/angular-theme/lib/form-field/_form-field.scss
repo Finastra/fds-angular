@@ -3,10 +3,7 @@
 $mat-form-field-subscript-margin-top: 2px;
 
 $infix-padding-top-dense: 18px;
-$infix-padding-bottom-dense: 4px;
-
-// $infix-top-no-label: -0.35em;
-// $infix-padding-bottom-no-label: 0.469em;
+$infix-padding-bottom-dense: 12px;
 
 $mat-icon-button-dense-size: 40px;
 
@@ -48,7 +45,7 @@ $mat-icon-button-dense-size: 40px;
 
   .mat-mdc-form-field-icon-prefix.mat-mdc-form-field-icon-prefix,
   .mat-mdc-form-field-icon-suffix.mat-mdc-form-field-icon-suffix {
-    top: -0.1em;
+    top: 2px;
   }
 
   .mat-form-field-outline {
