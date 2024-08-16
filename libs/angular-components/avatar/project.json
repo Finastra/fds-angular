@@ -14,16 +14,22 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/angular-components/avatar/src/**/*.ts", "libs/angular-components/avatar/src/**/*.html"]
+        "lintFilePatterns": [
+          "libs/angular-components/avatar/src/**/*.ts",
+          "libs/angular-components/avatar/src/**/*.html"
+        ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
         "jestConfig": "libs/angular-components/avatar/jest.config.ts",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "tsConfig": "libs/angular-components/avatar/tsconfig.spec.json"
       },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/avatar"]
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/angular-components/avatar"
+      ]
     }
   }
 }

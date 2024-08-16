@@ -23,9 +23,12 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/filter/filter-group/jest.config.ts"
+        "jestConfig": "libs/angular-components/filter/filter-group/jest.config.ts",
+        "tsConfig": "libs/angular-components/filter/filter-group/tsconfig.spec.json"
       },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-group"]
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/angular-components/filter/filter-group"
+      ]
     }
   }
 }

@@ -23,9 +23,12 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/expandable-table/jest.config.ts"
+        "jestConfig": "libs/angular-components/expandable-table/jest.config.ts",
+        "tsConfig": "libs/angular-components/expandable-table/tsconfig.spec.json"
       },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/expandable-table"]
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/angular-components/expandable-table"
+      ]
     }
   }
 }
