@@ -118,6 +118,7 @@
     "dotenv": "16.4.5",
     "elasticlunr": "git://github.com/weixsong/elasticlunr.js.git#f773890392760e0b3c68f0e65dbacb396dff297f",
     "es-abstract": "1.23.3",
+    "esbuild": "~0.23.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^9.0.0",
     "fs-extra": "^11.2.0",
