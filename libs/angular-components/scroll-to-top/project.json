@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/scroll-to-top/src/**/*.ts",
-          "libs/angular-components/scroll-to-top/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/scroll-to-top/src/**/*.ts", "libs/angular-components/scroll-to-top/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/scroll-to-top/jest.config.ts",
         "tsConfig": "libs/angular-components/scroll-to-top/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/scroll-to-top"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/scroll-to-top"]
     }
   }
 }

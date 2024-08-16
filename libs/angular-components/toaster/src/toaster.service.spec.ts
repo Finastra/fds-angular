@@ -16,8 +16,8 @@ describe('ToasterService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-    imports: [NoopAnimationsModule],
-    providers: [
+      imports: [NoopAnimationsModule],
+      providers: [
         { provide: TOASTER_CONFIG, useValue: new InjectionToken<ToasterConfig>('Default toaster config') },
         ToasterContainerRegistry,
         Overlay,
@@ -25,8 +25,8 @@ describe('ToasterService', () => {
         MatIconRegistry,
         provideHttpClient(withInterceptorsFromDi()),
         provideHttpClientTesting()
-    ]
-})
+      ]
+    })
       .overrideModule(BrowserDynamicTestingModule, {
         set: {
           entryComponents: [ToasterContainerComponent]

@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/popover/src/**/*.ts",
-          "libs/angular-components/popover/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/popover/src/**/*.ts", "libs/angular-components/popover/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/popover/jest.config.ts",
         "tsConfig": "libs/angular-components/popover/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/popover"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/popover"]
     }
   }
 }

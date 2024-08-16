@@ -26,9 +26,7 @@
         "jestConfig": "libs/angular-components/filter/filter-tree/jest.config.ts",
         "tsConfig": "libs/angular-components/filter/filter-tree/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/filter/filter-tree"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-tree"]
     }
   }
 }

@@ -26,9 +26,7 @@
         "jestConfig": "libs/angular-components/cards/account-card/jest.config.ts",
         "tsConfig": "libs/angular-components/cards/account-card/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/cards/account-card"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/cards/account-card"]
     }
   }
 }

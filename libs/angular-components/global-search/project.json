@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/global-search/src/**/*.ts",
-          "libs/angular-components/global-search/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/global-search/src/**/*.ts", "libs/angular-components/global-search/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/global-search/jest.config.ts",
         "tsConfig": "libs/angular-components/global-search/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/global-search"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/global-search"]
     }
   }
 }

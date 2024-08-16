@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/avatar/src/**/*.ts",
-          "libs/angular-components/avatar/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/avatar/src/**/*.ts", "libs/angular-components/avatar/src/**/*.html"]
       }
     },
     "test": {
@@ -27,9 +24,7 @@
         "passWithNoTests": true,
         "tsConfig": "libs/angular-components/avatar/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/avatar"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/avatar"]
     }
   }
 }

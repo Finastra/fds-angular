@@ -26,9 +26,7 @@
         "jestConfig": "libs/angular-components/filter/multiselect-tags/jest.config.ts",
         "tsConfig": "libs/angular-components/filter/multiselect-tags/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/filter/multiselect-tags"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/multiselect-tags"]
     }
   }
 }

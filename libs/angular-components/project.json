@@ -32,14 +32,8 @@
       "options": {
         "linter": "eslint",
         "config": "libs/angular-components/.eslintrc.json",
-        "tsConfig": [
-          "libs/angular-components/tsconfig.lib.json",
-          "libs/angular-components/tsconfig.spec.json"
-        ],
-        "exclude": [
-          "**/node_modules/**",
-          "!libs/angular-components/**/*"
-        ]
+        "tsConfig": ["libs/angular-components/tsconfig.lib.json", "libs/angular-components/tsconfig.spec.json"],
+        "exclude": ["**/node_modules/**", "!libs/angular-components/**/*"]
       }
     }
   }

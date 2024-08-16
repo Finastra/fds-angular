@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/breadcrumb/src/**/*.ts",
-          "libs/angular-components/breadcrumb/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/breadcrumb/src/**/*.ts", "libs/angular-components/breadcrumb/src/**/*.html"]
       }
     }
   }

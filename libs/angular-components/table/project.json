@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/table/src/**/*.ts",
-          "libs/angular-components/table/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/table/src/**/*.ts", "libs/angular-components/table/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/table/jest.config.ts",
         "tsConfig": "libs/angular-components/table/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/table"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/table"]
     }
   }
 }
