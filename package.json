@@ -180,5 +180,8 @@
     "@finastra/fds-theme": "^1.8.1",
     "@finastra/fds-tokens": "^1.8.1",
     "@material/elevation": "^14.0.0"
+  },
+  "overrides": {
+    "piscina": "4.5.1"
   }
 }
