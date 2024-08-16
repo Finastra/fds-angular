@@ -14,7 +14,8 @@
     "build": {
       "executor": "@nrwl/angular:package",
       "options": {
-        "project": "libs/angular-components/ng-package.json"
+        "project": "libs/angular-components/ng-package.json",
+        "tsConfig": "libs/angular-components/tsconfig.lib.json"
       },
       "configurations": {
         "production": {
@@ -31,8 +32,14 @@
       "options": {
         "linter": "eslint",
         "config": "libs/angular-components/.eslintrc.json",
-        "tsConfig": ["libs/angular-components/tsconfig.lib.json", "libs/angular-components/tsconfig.spec.json"],
-        "exclude": ["**/node_modules/**", "!libs/angular-components/**/*"]
+        "tsConfig": [
+          "libs/angular-components/tsconfig.lib.json",
+          "libs/angular-components/tsconfig.spec.json"
+        ],
+        "exclude": [
+          "**/node_modules/**",
+          "!libs/angular-components/**/*"
+        ]
       }
     }
   }
