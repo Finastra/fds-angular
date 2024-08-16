@@ -168,12 +168,12 @@
     "zone.js": "0.14.10"
   },
   "engines": {
-    "node": "^18",
-    "npm": "^9"
+    "node": "^20.11.0",
+    "npm": "^10"
   },
   "volta": {
-    "node": "18.10.0",
-    "npm": "9.5.0"
+    "node": "20.16.0",
+    "npm": "10.8.2"
   },
   "dependencies": {
     "@finastra/fds-theme": "^1.8.1",

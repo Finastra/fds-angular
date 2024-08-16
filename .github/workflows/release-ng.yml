@@ -1,10 +1,10 @@
 on:
   pull_request:
     branches:
-      - 'main'
+      - "main"
     types: [closed]
     paths:
-      - 'libs/angular-components/CHANGELOG.md'
+      - "libs/angular-components/CHANGELOG.md"
 
 name: Create Angular release
 
@@ -15,10 +15,10 @@ jobs:
 
     steps:
       - uses: actions/checkout@v3
-      - name: Use Node.js 18.x
+      - name: Use Node.js 20.x
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
       - name: Get npm cache directory
         id: npm-cache-dir
         run: |
@@ -60,18 +60,18 @@ jobs:
       - name: Upload Angular Theme Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: 'angular-theme'
-          path: './libs/angular-theme'
+          name: "angular-theme"
+          path: "./libs/angular-theme"
       - name: Upload Angular Components Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: 'angular-components'
-          path: './dist/libs/angular-components'
+          name: "angular-components"
+          path: "./dist/libs/angular-components"
       - name: Upload Angular Test App Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: 'angular-app'
-          path: './dist/apps/angular-test-app'
+          name: "angular-app"
+          path: "./dist/apps/angular-test-app"
 
   release:
     needs: build
@@ -97,12 +97,12 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: 'angular-theme'
-          path: './libs/angular-theme'
+          name: "angular-theme"
+          path: "./libs/angular-theme"
       - uses: actions/download-artifact@v3
         with:
-          name: 'angular-components'
-          path: './dist/libs/angular-components'
+          name: "angular-components"
+          path: "./dist/libs/angular-components"
       - name: Publish Angular Components
         uses: JS-DevTools/npm-publish@v1
         with:
@@ -123,16 +123,16 @@ jobs:
     steps:
       - uses: actions/download-artifact@v3
         with:
-          name: 'angular-app'
-          path: './dist/apps/angular-test-app'
+          name: "angular-app"
+          path: "./dist/apps/angular-test-app"
       - name: Deploy angular app to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
-          publish-dir: './dist/apps/angular-test-app'
+          publish-dir: "./dist/apps/angular-test-app"
           production-branch: main
           production-deploy: true
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: 'Deploy from GitHub Actions'
+          deploy-message: "Deploy from GitHub Actions"
           github-deployment-environment: angular-release
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
