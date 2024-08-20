@@ -1,9 +1,10 @@
-const name = 'breadcrumb';
-const suiteName = 'BreadcrumbModule';
+const name = 'changelog';
+const suiteName = 'ChangelogModule';
 
-module.exports = {
-  name,
-  preset: '../../../jest.config.js',
+export default {
+  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
+
+  preset: '../../../jest.preset.js',
   coverageDirectory: `../../../coverage/libs/${name}`,
   reporters: [
     'default',
@@ -18,5 +19,6 @@ module.exports = {
         ancestorSeparator: ' › '
       }
     ]
-  ]
+  ],
+  displayName: name
 };

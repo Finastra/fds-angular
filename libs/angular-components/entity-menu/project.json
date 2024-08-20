@@ -20,7 +20,8 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/entity-menu/jest.config.ts"
+        "jestConfig": "libs/angular-components/entity-menu/jest.config.ts",
+        "tsConfig": "libs/angular-components/entity-menu/tsconfig.spec.json"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/entity-menu"]
     }

@@ -14,7 +14,8 @@
     "build": {
       "executor": "@nrwl/angular:package",
       "options": {
-        "project": "libs/angular-components/ng-package.json"
+        "project": "libs/angular-components/ng-package.json",
+        "tsConfig": "libs/angular-components/tsconfig.lib.json"
       },
       "configurations": {
         "production": {

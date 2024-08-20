@@ -17,7 +17,8 @@
         "inputPath": "libs/angular-theme/lib/prebuilt-theme",
         "outputPath": "libs/angular-theme/prebuilt-theme",
         "assets": ["libs/angular-theme/lib", "libs/angular-theme/assets", "libs/angular-theme/*.scss"],
-        "sourceMap": true
+        "sourceMap": true,
+        "tsConfig": "libs/angular-theme/tsconfig.lib.json"
       },
       "configurations": {
         "production": {

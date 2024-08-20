@@ -3,70 +3,70 @@
 @use 'sass:map';
 @use '@angular/material' as mat;
 
-$typography-config: mat.define-typography-config(
+$typography-config: mat.m2-define-typography-config(
   $font-family: fds-variables.$font-family,
   $headline-1:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'headline-1', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'headline-1', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'headline-1', 'font-weight')
     ),
   $headline-2:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'headline-2', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'headline-2', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'headline-2', 'font-weight')
     ),
   $headline-3:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'headline-3', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'headline-3', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'headline-3', 'font-weight')
     ),
   $headline-4:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'headline-4', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'headline-4', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'headline-4', 'font-weight')
     ),
   $headline-5:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'headline-5', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'headline-5', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'headline-5', 'font-weight')
     ),
   $headline-6:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'headline-6', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'headline-6', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'headline-6', 'font-weight')
     ),
   $subtitle-1:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'subtitle-1', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'subtitle-1', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'subtitle-1', 'font-weight')
     ),
   $subtitle-2:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'subtitle-2', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'subtitle-2', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'subtitle-2', 'font-weight')
     ),
   $body-1:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'body-1', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'body-1', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'body-1', 'font-weight')
     ),
   $body-2:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'body-2', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'body-2', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'body-2', 'font-weight')
     ),
   $caption:
-    mat.define-typography-level(
+    mat.m2-define-typography-level(
       $font-family: map.get(fds-variables.$properties, 'caption', 'font-family'),
       $font-size: map.get(fds-variables.$properties, 'caption', 'font-size'),
       $font-weight: map.get(fds-variables.$properties, 'caption', 'font-weight')

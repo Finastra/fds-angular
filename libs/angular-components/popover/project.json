@@ -20,7 +20,8 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/popover/jest.config.ts"
+        "jestConfig": "libs/angular-components/popover/jest.config.ts",
+        "tsConfig": "libs/angular-components/popover/tsconfig.spec.json"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/popover"]
     }

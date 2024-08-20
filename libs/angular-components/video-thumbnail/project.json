@@ -20,7 +20,8 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/video-thumbnail/jest.config.ts"
+        "jestConfig": "libs/angular-components/video-thumbnail/jest.config.ts",
+        "tsConfig": "libs/angular-components/video-thumbnail/tsconfig.spec.json"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/video-thumbnail"]
     }

@@ -13,6 +13,6 @@
     "@finastra/fds-theme": "1.8.1"
   },
   "peerDependencies": {
-    "@angular/material": "^17.3.9"
+    "@angular/material": "^18.2.0"
   }
 }

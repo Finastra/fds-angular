@@ -16,6 +16,15 @@
       "options": {
         "lintFilePatterns": ["libs/angular-components/search-input/src/**/*.ts", "libs/angular-components/search-input/src/**/*.html"]
       }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "options": {
+        "jestConfig": "libs/angular-components/search-input/jest.config.ts",
+        "passWithNoTests": true,
+        "tsConfig": "libs/angular-components/search-input/tsconfig.spec.json"
+      },
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/search-input"]
     }
   }
 }
