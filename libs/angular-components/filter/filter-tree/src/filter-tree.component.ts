@@ -174,10 +174,7 @@ export class FilterTreeComponent implements OnChanges {
   }
 
   hasChild = (_: number, node: TreeNode) => {
-    if (!node.children || !node.children.length) {
-      return false;
-    }
-    return !node.children.some((child) => child.label === '');
+    return node.children?.length && !node.children.some(child => child.label === '' || child.label === undefined);
   };
 
   expandStart(node: TreeNode, el: HTMLElement) {
