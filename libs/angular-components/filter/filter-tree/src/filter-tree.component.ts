@@ -2,11 +2,11 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { SelectionModel } from '@angular/cdk/collections';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { Component, ElementRef, EventEmitter, Input, OnChanges, Output, SimpleChange, SimpleChanges } from '@angular/core';
-import { MatTreeNestedDataSource, MatTreeModule } from '@angular/material/tree';
-import { Subscription } from 'rxjs';
-import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTreeModule, MatTreeNestedDataSource } from '@angular/material/tree';
+import { Subscription } from 'rxjs';
 
 export interface TreeNode {
   label: string;
@@ -173,7 +173,9 @@ export class FilterTreeComponent implements OnChanges {
     return this.checkListSelection.isSelected(this.getRootNode(node));
   }
 
-  hasChild = (_: number, node: TreeNode) => node.children && node.children.length;
+  hasChild = (_: number, node: TreeNode) => {
+    return node.children?.length && !node.children.some((child) => child.label === '' || child.label === undefined);
+  };
 
   expandStart(node: TreeNode, el: HTMLElement) {
     if (this.treeControl.isExpanded(node)) {

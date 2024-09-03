@@ -32,7 +32,20 @@ export const sampleFilterTree: TreeNode[] = [
     ]
   },
   {
-    label: 'Financial Toolbox'
+    label: 'Financial Toolbox - empty label for children',
+    children: [
+      {
+        label: ''
+      }
+    ]
+  },
+  {
+    label: 'Financial Toolbox - one children',
+    children: [
+      {
+        label: '123'
+      }
+    ]
   },
   {
     label: 'Lending',
