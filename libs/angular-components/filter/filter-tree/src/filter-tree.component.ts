@@ -177,7 +177,7 @@ export class FilterTreeComponent implements OnChanges {
     if (!node.children || !node.children.length) {
       return false;
     }
-    return !node.children.some(child => child.label === '');
+    return !node.children.some((child) => child.label === '');
   };
 
   expandStart(node: TreeNode, el: HTMLElement) {
