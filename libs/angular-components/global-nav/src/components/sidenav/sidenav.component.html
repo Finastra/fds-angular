@@ -6,7 +6,6 @@
 </div>
 
 <mat-nav-list class="uxg-nav-list-main uxg-nav-list">
-  <div matSubheader>Applications</div>
   <ng-container *ngFor="let node of navigationNodes">
     <a
       mat-list-item
@@ -15,6 +14,7 @@
       routerLinkActive="uxg-list-item-selected"
       [routerLinkActiveOptions]="{ exact: node.path === '' }"
     >
+      <div matSubheader>Applications</div>
       <mat-icon matListItemIcon>{{ node.icon }}</mat-icon>
       <p matListItemTitle>{{ node.title }}</p>
     </a>
