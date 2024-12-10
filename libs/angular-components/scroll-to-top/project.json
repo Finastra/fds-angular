@@ -20,8 +20,7 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/scroll-to-top/jest.config.ts",
-        "tsConfig": "libs/angular-components/scroll-to-top/tsconfig.spec.json"
+        "jestConfig": "libs/angular-components/scroll-to-top/jest.config.ts"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/scroll-to-top"]
     }

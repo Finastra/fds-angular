@@ -23,8 +23,7 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/cards/account-card/jest.config.ts",
-        "tsConfig": "libs/angular-components/cards/account-card/tsconfig.spec.json"
+        "jestConfig": "libs/angular-components/cards/account-card/jest.config.ts"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/cards/account-card"]
     }

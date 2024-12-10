@@ -18,7 +18,6 @@ import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components
 export class GlobalNavDemoComponent {
   appName = 'Global Nav Demo';
   shortName = 'gnd';
-  headerTitle='Applications'
 
   demoAppList: NavigationNode[] = [
     {

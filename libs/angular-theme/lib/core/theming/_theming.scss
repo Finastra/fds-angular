@@ -2,22 +2,22 @@
 @use './palette';
 @use '../typography/typography' as typo;
 
-$light-theme: mat.m2-define-light-theme(
+$light-theme: mat.define-light-theme(
   (
     color: (
-      primary: mat.m2-define-palette(palette.$primary-light-palette),
-      accent: mat.m2-define-palette(palette.$secondary-light-palette)
+      primary: mat.define-palette(palette.$primary-light-palette),
+      accent: mat.define-palette(palette.$secondary-light-palette)
     ),
     typography: typo.$typography-config,
     is-dark: false
   )
 );
 
-$dark-theme: mat.m2-define-dark-theme(
+$dark-theme: mat.define-dark-theme(
   (
     color: (
-      primary: mat.m2-define-palette(palette.$primary-dark-palette),
-      accent: mat.m2-define-palette(palette.$secondary-dark-palette)
+      primary: mat.define-palette(palette.$primary-dark-palette),
+      accent: mat.define-palette(palette.$secondary-dark-palette)
     ),
     typography: typo.$typography-config,
     is-dark: true

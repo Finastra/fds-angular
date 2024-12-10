@@ -20,8 +20,7 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/table/jest.config.ts",
-        "tsConfig": "libs/angular-components/table/tsconfig.spec.json"
+        "jestConfig": "libs/angular-components/table/jest.config.ts"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/table"]
     }

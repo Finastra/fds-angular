@@ -30,7 +30,6 @@ export class SidenavComponent implements OnInit, OnChanges {
   @Input() shortName!: string;
   @Input() navigationNodes!: NavigationNode[];
   @Input() activeRoute!: string;
-  @Input() headerTitle!: string;
 
   @Output() logout = new EventEmitter<void>();
   @Output() nodeChosen = new EventEmitter<NavigationNode>();

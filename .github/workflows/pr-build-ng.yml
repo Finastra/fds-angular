@@ -9,10 +9,10 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Use Node.js 20.x
+      - name: Use Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
       - name: Get npm cache directory
         id: npm-cache-dir
         run: |
@@ -67,6 +67,7 @@ jobs:
         with:
           name: 'angular-components'
           path: './dist/libs/angular-components'
+        # Deploy
       - name: Deploy angular-test-app to Netlify
         uses: nwtgck/actions-netlify@v1.1
         with:

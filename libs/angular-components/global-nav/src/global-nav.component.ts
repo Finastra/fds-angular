@@ -27,7 +27,6 @@ export class GlobalNavComponent implements OnInit, OnDestroy {
   @Input() brandIcon: string | undefined;
   @Input() appContent!: TemplateRef<any>;
   @Input() navbarAction!: TemplateRef<any>;
-  @Input() headerTitle!: string;
 
   @Output() menuClick = new EventEmitter<void>();
   @Output() brandAction = new EventEmitter<any>();
