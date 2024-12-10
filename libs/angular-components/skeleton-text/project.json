@@ -20,7 +20,8 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/skeleton-text/jest.config.ts"
+        "jestConfig": "libs/angular-components/skeleton-text/jest.config.ts",
+        "tsConfig": "libs/angular-components/skeleton-text/tsconfig.spec.json"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/skeleton-text"]
     }

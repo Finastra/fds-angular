@@ -20,7 +20,8 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/global-search/jest.config.ts"
+        "jestConfig": "libs/angular-components/global-search/jest.config.ts",
+        "tsConfig": "libs/angular-components/global-search/tsconfig.spec.json"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/global-search"]
     }

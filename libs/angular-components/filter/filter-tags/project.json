@@ -23,7 +23,8 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/filter/filter-tags/jest.config.ts"
+        "jestConfig": "libs/angular-components/filter/filter-tags/jest.config.ts",
+        "tsConfig": "libs/angular-components/filter/filter-tags/tsconfig.spec.json"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-tags"]
     }

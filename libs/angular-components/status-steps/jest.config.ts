@@ -21,5 +21,5 @@ export default {
       }
     ]
   ],
-  displayName: 'status-steps'
+  displayName: name
 };

@@ -53,13 +53,13 @@
 }
 
 @mixin typography($config: null) {
-  $mat-typo-config: mat.define-typography-config();
+  $mat-typo-config: mat.m2-define-typography-config();
 
   .mat-button-toggle-group {
     .mat-button-toggle {
       .mat-button-toggle-label-content {
         @include typo.typography(subtitle-2);
-        line-height: mat.line-height($mat-typo-config, button);
+        line-height: mat.m2-line-height($mat-typo-config, button);
       }
     }
 
