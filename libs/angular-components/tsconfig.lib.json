@@ -7,10 +7,6 @@
     "target": "ES2022",
     "useDefineForClassFields": false
   },
-  "include": [
-    "**/*.ts"
-  ],
-  "exclude": [
-    "**/*.spec.ts"
-  ]
+  "include": ["**/*.ts"],
+  "exclude": ["**/*.spec.ts"]
 }
