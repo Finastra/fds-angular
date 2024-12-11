@@ -15,16 +15,9 @@
       "executor": "@angular-devkit/build-angular:browser",
       "options": {
         "stylePreprocessorOptions": {
-          "includePaths": [
-            "./libs/",
-            "node_modules"
-          ]
+          "includePaths": ["./libs/", "node_modules"]
         },
-        "allowedCommonJsDependencies": [
-          "elasticlunr",
-          "ts-md5/dist/md5",
-          "smoothscroll-polyfill"
-        ],
+        "allowedCommonJsDependencies": ["elasticlunr", "ts-md5/dist/md5", "smoothscroll-polyfill"],
         "outputPath": "dist/apps/angular-test-app",
         "index": "apps/angular-test-app/src/index.html",
         "main": "apps/angular-test-app/src/main.ts",
@@ -70,10 +63,7 @@
             "output": "/fds-theme/"
           }
         ],
-        "styles": [
-          "apps/angular-test-app/src/styles.scss",
-          "apps/angular-test-app/src/assets/fonts.css"
-        ],
+        "styles": ["apps/angular-test-app/src/styles.scss", "apps/angular-test-app/src/assets/fonts.css"],
         "scripts": [
           {
             "input": "node_modules/plotly.js/dist/plotly.js",
@@ -120,9 +110,7 @@
           ]
         }
       },
-      "outputs": [
-        "{options.outputPath}"
-      ]
+      "outputs": ["{options.outputPath}"]
     },
     "serve": {
       "executor": "@angular-devkit/build-angular:dev-server",
@@ -144,10 +132,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "apps/angular-test-app/src/**/*.ts",
-          "apps/angular-test-app/src/**/*.html"
-        ]
+        "lintFilePatterns": ["apps/angular-test-app/src/**/*.ts", "apps/angular-test-app/src/**/*.html"]
       }
     },
     "test": {
@@ -155,9 +140,7 @@
       "options": {
         "jestConfig": "apps/angular-test-app/jest.config.ts"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/apps/angular-test-app"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/apps/angular-test-app"]
     }
   }
 }

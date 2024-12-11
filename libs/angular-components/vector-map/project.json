@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/vector-map/src/**/*.ts",
-          "libs/angular-components/vector-map/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/vector-map/src/**/*.ts", "libs/angular-components/vector-map/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/vector-map/jest.config.ts",
         "tsConfig": "libs/angular-components/vector-map/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/vector-map"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/vector-map"]
     }
   }
 }

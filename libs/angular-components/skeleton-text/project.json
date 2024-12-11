@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/skeleton-text/src/**/*.ts",
-          "libs/angular-components/skeleton-text/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/skeleton-text/src/**/*.ts", "libs/angular-components/skeleton-text/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/skeleton-text/jest.config.ts",
         "tsConfig": "libs/angular-components/skeleton-text/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/skeleton-text"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/skeleton-text"]
     }
   }
 }

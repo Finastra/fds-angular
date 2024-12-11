@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/search-input/src/**/*.ts",
-          "libs/angular-components/search-input/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/search-input/src/**/*.ts", "libs/angular-components/search-input/src/**/*.html"]
       }
     },
     "test": {
@@ -27,9 +24,7 @@
         "passWithNoTests": true,
         "tsConfig": "libs/angular-components/search-input/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/search-input"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/search-input"]
     }
   }
 }

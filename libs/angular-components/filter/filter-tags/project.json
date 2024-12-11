@@ -26,9 +26,7 @@
         "jestConfig": "libs/angular-components/filter/filter-tags/jest.config.ts",
         "tsConfig": "libs/angular-components/filter/filter-tags/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/filter/filter-tags"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-tags"]
     }
   }
 }

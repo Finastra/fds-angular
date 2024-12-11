@@ -14,10 +14,7 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/banner/src/**/*.ts",
-          "libs/angular-components/banner/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/banner/src/**/*.ts", "libs/angular-components/banner/src/**/*.html"]
       }
     },
     "test": {
@@ -26,9 +23,7 @@
         "jestConfig": "libs/angular-components/banner/jest.config.ts",
         "tsConfig": "libs/angular-components/banner/tsconfig.spec.json"
       },
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/banner"
-      ]
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/banner"]
     }
   }
 }

@@ -9,17 +9,12 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": [
-          "libs/angular-components/status-steps/src/**/*.ts",
-          "libs/angular-components/status-steps/src/**/*.html"
-        ]
+        "lintFilePatterns": ["libs/angular-components/status-steps/src/**/*.ts", "libs/angular-components/status-steps/src/**/*.html"]
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/libs/angular-components/status-steps"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/status-steps"],
       "options": {
         "jestConfig": "libs/angular-components/status-steps/jest.config.ts",
         "passWithNoTests": true,
