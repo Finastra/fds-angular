@@ -53,7 +53,7 @@ export function addToNgJson(options: NgJsonOptions): Rule {
             }
           },
           test: {
-            builder: '@nrwl/jest:jest',
+            builder: '@nx/jest:jest',
             options: {
               jestConfig: `libs/angular-components/${options.projectName}/jest.config.js`
             }

@@ -14,17 +14,22 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/angular-components/changelog/src/**/*.ts", "libs/angular-components/changelog/src/**/*.html"]
+        "lintFilePatterns": [
+          "libs/angular-components/changelog/src/**/*.ts",
+          "libs/angular-components/changelog/src/**/*.html"
+        ]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "libs/angular-components/changelog/jest.config.ts",
         "passWithNoTests": true,
         "tsConfig": "libs/angular-components/changelog/tsconfig.spec.json"
       },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/changelog"]
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/angular-components/changelog"
+      ]
     }
   }
 }

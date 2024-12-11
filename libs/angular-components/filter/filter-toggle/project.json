@@ -21,12 +21,14 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "libs/angular-components/filter/filter-toggle/jest.config.ts",
         "tsConfig": "libs/angular-components/filter/filter-toggle/tsconfig.spec.json"
       },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/filter/filter-toggle"]
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/angular-components/filter/filter-toggle"
+      ]
     }
   }
 }

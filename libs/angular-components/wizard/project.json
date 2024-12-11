@@ -14,16 +14,21 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/angular-components/wizard/src/**/*.ts", "libs/angular-components/wizard/src/**/*.html"]
+        "lintFilePatterns": [
+          "libs/angular-components/wizard/src/**/*.ts",
+          "libs/angular-components/wizard/src/**/*.html"
+        ]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "libs/angular-components/wizard/jest.config.ts",
         "tsConfig": "libs/angular-components/wizard/tsconfig.spec.json"
       },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/wizard"]
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/angular-components/wizard"
+      ]
     }
   }
 }
