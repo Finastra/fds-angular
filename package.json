@@ -1,6 +1,6 @@
 {
   "name": "@finastra/fds-angular",
-  "version": "5.0.2",
+  "version": "6.0.0",
   "private": true,
   "repository": {
     "type": "git",
@@ -41,7 +41,7 @@
     "ng": "nx",
     "nx": "nx",
     "prerelease": "node scripts/pre-angular-release.js",
-    "release": "npx standard-version -an",
+    "release": "npx standard-version --release-as 6.0.0 -an",
     "start": "nx serve",
     "pretest": "rimraf ./coverage ./testresults",
     "test": "jest",
