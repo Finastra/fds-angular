@@ -4,10 +4,10 @@ import { ColorSketchModule } from 'ngx-color/sketch';
 import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
-    selector: 'ffdc-theme-builder-demo',
-    templateUrl: './theme-builder-demo.component.html',
-    styleUrls: ['./theme-builder-demo.component.scss'],
-    imports: [MatMenuModule, ColorSketchModule]
+  selector: 'ffdc-theme-builder-demo',
+  templateUrl: './theme-builder-demo.component.html',
+  styleUrls: ['./theme-builder-demo.component.scss'],
+  imports: [MatMenuModule, ColorSketchModule]
 })
 export class ThemeBuilderComponent {
   colorShift = 150;

@@ -17,15 +17,15 @@ import { UxgUserProfilePanelContentDirective } from './user-profile-panel-conten
 import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-details.directive';
 import { UxgUserProfilePanelComponent } from './user-profile-panel.component';
 @Component({
-    selector: 'uxg-user-profile-menu',
-    templateUrl: './user-profile-menu.component.html',
-    styleUrls: ['./user-profile-menu.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    host: {
-        class: 'uxg-user-profile-menu'
-    },
-    imports: [AvatarComponent, MatMenuModule, UxgUserProfilePanelComponent]
+  selector: 'uxg-user-profile-menu',
+  templateUrl: './user-profile-menu.component.html',
+  styleUrls: ['./user-profile-menu.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    class: 'uxg-user-profile-menu'
+  },
+  imports: [AvatarComponent, MatMenuModule, UxgUserProfilePanelComponent]
 })
 export class UxgUserProfileMenuComponent {
   @Input() user!: UserProfile;

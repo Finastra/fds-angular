@@ -24,30 +24,30 @@ import isEqual from 'lodash-es/isEqual';
 import { UxgActionColumnPosition, UxgColumn, UxgColumnType, UxgDefaultPaging, UxgPage, UxgSort, UxgTableSelectEvent } from './table.models';
 
 @Component({
-    selector: 'uxg-table',
-    templateUrl: './table.component.html',
-    styleUrls: ['./table.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    imports: [
-        MatTableModule,
-        MatSortModule,
-        CdkDropListGroup,
-        NgIf,
-        MatCheckboxModule,
-        NgFor,
-        CdkDropList,
-        CdkDrag,
-        NgClass,
-        NgSwitch,
-        NgSwitchCase,
-        MatIconModule,
-        NgTemplateOutlet,
-        NgSwitchDefault,
-        MatInputModule,
-        FormsModule,
-        MatButtonModule,
-        MatPaginatorModule
-    ]
+  selector: 'uxg-table',
+  templateUrl: './table.component.html',
+  styleUrls: ['./table.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  imports: [
+    MatTableModule,
+    MatSortModule,
+    CdkDropListGroup,
+    NgIf,
+    MatCheckboxModule,
+    NgFor,
+    CdkDropList,
+    CdkDrag,
+    NgClass,
+    NgSwitch,
+    NgSwitchCase,
+    MatIconModule,
+    NgTemplateOutlet,
+    NgSwitchDefault,
+    MatInputModule,
+    FormsModule,
+    MatButtonModule,
+    MatPaginatorModule
+  ]
 })
 export class TableComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild(MatTable, { static: true }) table!: MatTable<any>;

@@ -11,11 +11,11 @@ export interface EntityMenuItemWEvent {
 }
 
 @Component({
-    selector: 'uxg-entity-menu',
-    templateUrl: './entity-menu.component.html',
-    styleUrls: ['./entity-menu.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    imports: [MatButtonModule, MatMenuModule, MatIconModule, NgClass, NgFor, MatCardModule]
+  selector: 'uxg-entity-menu',
+  templateUrl: './entity-menu.component.html',
+  styleUrls: ['./entity-menu.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  imports: [MatButtonModule, MatMenuModule, MatIconModule, NgClass, NgFor, MatCardModule]
 })
 export class EntityMenuComponent implements OnInit, OnChanges {
   items: any[] = [];

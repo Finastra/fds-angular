@@ -47,29 +47,29 @@ interface UXGFilterChanges {
 }
 
 @Component({
-    selector: 'uxg-filter-tags',
-    templateUrl: './filter-tags.component.html',
-    styleUrls: ['./filter-tags.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    imports: [
-        MatChipsModule,
-        NgFor,
-        NgIf,
-        MatIconModule,
-        MatTooltipModule,
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        MatAutocompleteModule,
-        ReactiveFormsModule,
-        MatOptionModule,
-        MatCheckboxModule,
-        NgTemplateOutlet,
-        NgClass,
-        AsyncPipe,
-        SlicePipe,
-        HighlightPipe
-    ]
+  selector: 'uxg-filter-tags',
+  templateUrl: './filter-tags.component.html',
+  styleUrls: ['./filter-tags.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  imports: [
+    MatChipsModule,
+    NgFor,
+    NgIf,
+    MatIconModule,
+    MatTooltipModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatAutocompleteModule,
+    ReactiveFormsModule,
+    MatOptionModule,
+    MatCheckboxModule,
+    NgTemplateOutlet,
+    NgClass,
+    AsyncPipe,
+    SlicePipe,
+    HighlightPipe
+  ]
 })
 export class FilterTagsComponent implements OnInit, AfterViewInit, OnDestroy {
   visible = true;
@@ -114,7 +114,10 @@ export class FilterTagsComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatAutocompleteTrigger, { static: true }) trigger!: MatAutocompleteTrigger;
   @ViewChildren(MatChip) chipList!: QueryList<MatChip>;
 
-  constructor(private hostElement: ElementRef, @Attribute('standard') public standard: any) {
+  constructor(
+    private hostElement: ElementRef,
+    @Attribute('standard') public standard: any
+  ) {
     this.hostElement.nativeElement.__component = this;
     this.data = [];
   }

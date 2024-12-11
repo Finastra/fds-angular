@@ -15,10 +15,10 @@ interface UXGMultiSelectFilterChanges {
 }
 
 @Component({
-    selector: 'uxg-multiselect-tags',
-    templateUrl: './multiselect-tags.component.html',
-    styleUrls: ['./multiselect-tags.component.scss'],
-    imports: [MatChipsModule, NgFor, NgIf, MatIconModule]
+  selector: 'uxg-multiselect-tags',
+  templateUrl: './multiselect-tags.component.html',
+  styleUrls: ['./multiselect-tags.component.scss'],
+  imports: [MatChipsModule, NgFor, NgIf, MatIconModule]
 })
 export class MultiselectTagsComponent {
   private _data: MultiselectTag[] = [];

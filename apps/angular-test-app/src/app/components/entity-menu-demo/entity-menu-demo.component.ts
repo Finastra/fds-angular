@@ -100,21 +100,21 @@ const PR_COLUMNS: any[] = [
 ];
 
 @Component({
-    selector: 'ffdc-entity-menu-demo',
-    templateUrl: './entity-menu-demo.component.html',
-    styleUrls: ['./entity-menu-demo.component.scss'],
-    imports: [
-        MatExpansionModule,
-        MatFormFieldModule,
-        MatSelectModule,
-        FormsModule,
-        NgFor,
-        MatOptionModule,
-        MatCheckboxModule,
-        NgIf,
-        EntityMenuComponent,
-        EntityMenuActionsComponent
-    ]
+  selector: 'ffdc-entity-menu-demo',
+  templateUrl: './entity-menu-demo.component.html',
+  styleUrls: ['./entity-menu-demo.component.scss'],
+  imports: [
+    MatExpansionModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    FormsModule,
+    NgFor,
+    MatOptionModule,
+    MatCheckboxModule,
+    NgIf,
+    EntityMenuComponent,
+    EntityMenuActionsComponent
+  ]
 })
 export class EntityMenuDemoComponent implements OnInit {
   length = 2;

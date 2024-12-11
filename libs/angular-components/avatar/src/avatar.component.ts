@@ -25,12 +25,12 @@ const PALETTE_SIZE = 16;
 export class UxgImageAvatar {}
 
 @Component({
-    selector: 'uxg-avatar',
-    templateUrl: './avatar.component.html',
-    styleUrls: ['./avatar.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgClass, NgTemplateOutlet, NgIf, InitialsPipe]
+  selector: 'uxg-avatar',
+  templateUrl: './avatar.component.html',
+  styleUrls: ['./avatar.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgClass, NgTemplateOutlet, NgIf, InitialsPipe]
 })
 export class AvatarComponent implements OnInit {
   @Input() name: string | undefined;

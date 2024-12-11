@@ -19,11 +19,11 @@ export interface DataModel {
 }
 
 @Component({
-    selector: 'ffdc-repeater-card-chart-example',
-    templateUrl: './repeater-card-chart-example.component.html',
-    styleUrls: ['./repeater-card-chart-example.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    imports: [MatCardModule, NgClass, NgIf, MatIconModule]
+  selector: 'ffdc-repeater-card-chart-example',
+  templateUrl: './repeater-card-chart-example.component.html',
+  styleUrls: ['./repeater-card-chart-example.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  imports: [MatCardModule, NgClass, NgIf, MatIconModule]
 })
 export class RepeaterCardChartExampleComponent implements OnInit {
   @ViewChild('chart', { static: true })
@@ -101,9 +101,12 @@ export class RepeaterCardChartExampleComponent implements OnInit {
       .transition()
       .duration(2000);
 
-    setInterval(() => {
-      this.updateData();
-    }, this.randomIntFromIntervalInt(1000, 5000));
+    setInterval(
+      () => {
+        this.updateData();
+      },
+      this.randomIntFromIntervalInt(1000, 5000)
+    );
   }
 
   updateData() {

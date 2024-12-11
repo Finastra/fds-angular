@@ -22,16 +22,16 @@ import { WizardNavigationService } from './services/wizard-navigation.service';
 import { UxgWizardPageComponent } from './wizard-page/wizard-page.component';
 
 @Component({
-    selector: 'uxg-wizard',
-    providers: [WizardNavigationService, PageCollectionService, ButtonHubService],
-    templateUrl: './wizard.component.html',
-    styleUrls: ['./wizard.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    host: {
-        '[class.uxg-wizard]': 'true'
-    },
-    animations: [wizardAnimation()],
-    imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle, AsyncPipe]
+  selector: 'uxg-wizard',
+  providers: [WizardNavigationService, PageCollectionService, ButtonHubService],
+  templateUrl: './wizard.component.html',
+  styleUrls: ['./wizard.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  host: {
+    '[class.uxg-wizard]': 'true'
+  },
+  animations: [wizardAnimation()],
+  imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle, AsyncPipe]
 })
 export class UxgWizardComponent implements OnDestroy, AfterContentInit {
   @ContentChildren(UxgWizardPageComponent) pages!: QueryList<UxgWizardPageComponent>;

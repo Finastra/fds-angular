@@ -7,14 +7,17 @@ import { UxgGlobalSearch } from '@finastra/angular-components/global-search';
 import { ClientSideSearchService } from './client-side-search.service';
 
 @Component({
-    selector: 'ffdc-global-search-demo',
-    templateUrl: './global-search-demo.component.html',
-    imports: [UxgGlobalSearch, MatButtonModule, MatIconModule, MatCardModule, MatSnackBarModule]
+  selector: 'ffdc-global-search-demo',
+  templateUrl: './global-search-demo.component.html',
+  imports: [UxgGlobalSearch, MatButtonModule, MatIconModule, MatCardModule, MatSnackBarModule]
 })
 export class GlobalSearchDemoComponent implements OnInit {
   results: any[] = [];
 
-  constructor(private snackBar: MatSnackBar, public searchService: ClientSideSearchService) {}
+  constructor(
+    private snackBar: MatSnackBar,
+    public searchService: ClientSideSearchService
+  ) {}
 
   ngOnInit() {
     const documents = [

@@ -37,23 +37,23 @@ export interface SavedFilter {
 }
 
 @Component({
-    selector: 'uxg-filter-group',
-    templateUrl: './filter-group.component.html',
-    styleUrls: ['./filter-group.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [
-        MatExpansionModule,
-        ClickOutsideDirective,
-        NgFor,
-        NgIf,
-        MatBadgeModule,
-        MatDividerModule,
-        MatButtonModule,
-        MatIconModule,
-        MatChipsModule,
-        MatDialogModule
-    ]
+  selector: 'uxg-filter-group',
+  templateUrl: './filter-group.component.html',
+  styleUrls: ['./filter-group.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [
+    MatExpansionModule,
+    ClickOutsideDirective,
+    NgFor,
+    NgIf,
+    MatBadgeModule,
+    MatDividerModule,
+    MatButtonModule,
+    MatIconModule,
+    MatChipsModule,
+    MatDialogModule
+  ]
 })
 export class FilterGroupComponent implements AfterViewInit, OnDestroy {
   @Output() changes = new EventEmitter<UXGFilterChanges<any>>();
@@ -75,7 +75,10 @@ export class FilterGroupComponent implements AfterViewInit, OnDestroy {
   isActive = false;
   headerHeight = '40px';
 
-  constructor(public dialog: MatDialog, private cd: ChangeDetectorRef) {}
+  constructor(
+    public dialog: MatDialog,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngAfterViewInit() {
     this.filterInstances.forEach((filterInstance) => {

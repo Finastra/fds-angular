@@ -12,18 +12,18 @@ enum ShowStatus {
   hide = 'hide'
 }
 @Component({
-    selector: 'uxg-scroll-to-top',
-    templateUrl: './scroll-to-top.component.html',
-    styleUrls: ['./scroll-to-top.component.scss'],
-    animations: [
-        trigger('scrollAnimation', [
-            state('show', style({ opacity: 1, transform: 'scale(1)' })),
-            state('hide', style({ opacity: 0, transform: 'scale(0)' })),
-            transition('show => hide', animate('350ms ease-out')),
-            transition('hide => show', animate('350ms ease-in'))
-        ])
-    ],
-    imports: [NgTemplateOutlet, MatButtonModule, MatIconModule, AsyncPipe]
+  selector: 'uxg-scroll-to-top',
+  templateUrl: './scroll-to-top.component.html',
+  styleUrls: ['./scroll-to-top.component.scss'],
+  animations: [
+    trigger('scrollAnimation', [
+      state('show', style({ opacity: 1, transform: 'scale(1)' })),
+      state('hide', style({ opacity: 0, transform: 'scale(0)' })),
+      transition('show => hide', animate('350ms ease-out')),
+      transition('hide => show', animate('350ms ease-in'))
+    ])
+  ],
+  imports: [NgTemplateOutlet, MatButtonModule, MatIconModule, AsyncPipe]
 })
 export class ScrollToTopComponent implements AfterViewInit, OnDestroy {
   @Input() customTemplate?: TemplateRef<any>;

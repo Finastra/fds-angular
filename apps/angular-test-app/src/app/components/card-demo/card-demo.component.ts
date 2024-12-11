@@ -172,23 +172,23 @@ const DATA_2 = [
 ];
 
 @Component({
-    selector: 'ffdc-card-demo',
-    templateUrl: './card-demo.component.html',
-    styleUrls: ['./card-demo.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    imports: [
-        AsyncPipe,
-        NgIf,
-        NgFor,
-        AccountCardComponent,
-        AccountCardSkeletonComponent,
-        MatCardModule,
-        MatDividerModule,
-        MatMenuModule,
-        CurrencyPipe,
-        MatIconModule,
-        MatButtonModule
-    ]
+  selector: 'ffdc-card-demo',
+  templateUrl: './card-demo.component.html',
+  styleUrls: ['./card-demo.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  imports: [
+    AsyncPipe,
+    NgIf,
+    NgFor,
+    AccountCardComponent,
+    AccountCardSkeletonComponent,
+    MatCardModule,
+    MatDividerModule,
+    MatMenuModule,
+    CurrencyPipe,
+    MatIconModule,
+    MatButtonModule
+  ]
 })
 export class CardDemoComponent implements OnInit {
   accounts: Account[] = [

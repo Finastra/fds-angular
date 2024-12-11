@@ -4,10 +4,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { NgIf } from '@angular/common';
 
 @Component({
-    selector: 'uxg-toaster',
-    templateUrl: './toaster.component.html',
-    styleUrls: ['./toaster.component.scss'],
-    imports: [NgIf, MatIconModule]
+  selector: 'uxg-toaster',
+  templateUrl: './toaster.component.html',
+  styleUrls: ['./toaster.component.scss'],
+  imports: [NgIf, MatIconModule]
 })
 export class ToasterComponent {
   @Input()

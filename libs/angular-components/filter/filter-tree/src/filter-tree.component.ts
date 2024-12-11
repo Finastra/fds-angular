@@ -20,25 +20,31 @@ interface UXGFilterChanges {
 }
 
 @Component({
-    selector: 'uxg-filter-tree',
-    templateUrl: './filter-tree.component.html',
-    styleUrls: ['./filter-tree.component.scss'],
-    animations: [
-        trigger('slideInOut', [
-            state('in', style({
-                overflow: 'hidden',
-                height: '*'
-            })),
-            state('out', style({
-                opacity: '0',
-                overflow: 'hidden',
-                height: '0'
-            })),
-            transition('in => out', animate('250ms ease-out')),
-            transition('out => in', animate('250ms ease-in'))
-        ])
-    ],
-    imports: [MatTreeModule, MatCheckboxModule, MatButtonModule, MatIconModule]
+  selector: 'uxg-filter-tree',
+  templateUrl: './filter-tree.component.html',
+  styleUrls: ['./filter-tree.component.scss'],
+  animations: [
+    trigger('slideInOut', [
+      state(
+        'in',
+        style({
+          overflow: 'hidden',
+          height: '*'
+        })
+      ),
+      state(
+        'out',
+        style({
+          opacity: '0',
+          overflow: 'hidden',
+          height: '0'
+        })
+      ),
+      transition('in => out', animate('250ms ease-out')),
+      transition('out => in', animate('250ms ease-in'))
+    ])
+  ],
+  imports: [MatTreeModule, MatCheckboxModule, MatButtonModule, MatIconModule]
 })
 export class FilterTreeComponent implements OnChanges {
   public treeControl = new NestedTreeControl<TreeNode>((node) => node.children);

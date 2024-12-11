@@ -6,18 +6,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components/global-nav';
 
 @Component({
-    selector: 'ffdc-global-nav-demo',
-    templateUrl: './global-nav-demo.component.html',
-    styleUrls: ['./global-nav-demo.component.scss'],
-    host: {
-        class: 'ffdc-global-nav-demo'
-    },
-    imports: [GlobalNavComponent, MatButtonModule, MatIconModule, MatMenuModule, MatDividerModule]
+  selector: 'ffdc-global-nav-demo',
+  templateUrl: './global-nav-demo.component.html',
+  styleUrls: ['./global-nav-demo.component.scss'],
+  host: {
+    class: 'ffdc-global-nav-demo'
+  },
+  imports: [GlobalNavComponent, MatButtonModule, MatIconModule, MatMenuModule, MatDividerModule]
 })
 export class GlobalNavDemoComponent {
   appName = 'Global Nav Demo';
   shortName = 'gnd';
-  headerTitle='Applications'
+  headerTitle = 'Applications';
 
   demoAppList: NavigationNode[] = [
     {

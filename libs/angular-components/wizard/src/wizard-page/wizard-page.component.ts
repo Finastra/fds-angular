@@ -7,17 +7,17 @@ import { UxgWizardPageTitleComponent } from './wizard-page-title.directive';
 import { NgIf } from '@angular/common';
 
 @Component({
-    selector: 'uxg-wizard-page',
-    template: '<ng-content *ngIf="current"></ng-content>',
-    host: {
-        '[id]': 'id',
-        role: 'tabpanel',
-        '[attr.aria-hidden]': '!current',
-        '[class.active]': 'current',
-        '[class.no-title]': '!showTitle',
-        '[class.uxg-wizard-page]': 'true'
-    },
-    imports: [NgIf]
+  selector: 'uxg-wizard-page',
+  template: '<ng-content *ngIf="current"></ng-content>',
+  host: {
+    '[id]': 'id',
+    role: 'tabpanel',
+    '[attr.aria-hidden]': '!current',
+    '[class.active]': 'current',
+    '[class.no-title]': '!showTitle',
+    '[class.uxg-wizard-page]': 'true'
+  },
+  imports: [NgIf]
 })
 export class UxgWizardPageComponent {
   @Output('uxgWizardPageOnLoad') load: EventEmitter<string> = new EventEmitter();

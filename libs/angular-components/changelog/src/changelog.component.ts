@@ -3,12 +3,12 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 import { ChangeLog } from './changelog.models';
 
 @Component({
-    selector: 'uxg-changelog',
-    templateUrl: './changelog.component.html',
-    styleUrls: ['./changelog.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgIf, NgFor, NgClass, LowerCasePipe, TitleCasePipe, DatePipe]
+  selector: 'uxg-changelog',
+  templateUrl: './changelog.component.html',
+  styleUrls: ['./changelog.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgIf, NgFor, NgClass, LowerCasePipe, TitleCasePipe, DatePipe]
 })
 export class UXGChangelogComponent {
   @Input() changelog!: ChangeLog;

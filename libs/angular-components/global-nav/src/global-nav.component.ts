@@ -9,13 +9,13 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { NavigationNode } from './services/navigation.model';
 
 @Component({
-    selector: 'uxg-global-nav',
-    templateUrl: './global-nav.component.html',
-    styleUrls: ['./global-nav.component.scss'],
-    host: {
-        class: 'uxg-global-nav'
-    },
-    imports: [MatSidenavModule, SidenavComponent, NavbarComponent, NgTemplateOutlet]
+  selector: 'uxg-global-nav',
+  templateUrl: './global-nav.component.html',
+  styleUrls: ['./global-nav.component.scss'],
+  host: {
+    class: 'uxg-global-nav'
+  },
+  imports: [MatSidenavModule, SidenavComponent, NavbarComponent, NgTemplateOutlet]
 })
 export class GlobalNavComponent implements OnInit, OnDestroy {
   @Input() appName!: string;

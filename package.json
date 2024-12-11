@@ -48,7 +48,7 @@
     "test:cov": "nx run-many --target=test --all --parallel --maxWorkers=1",
     "pretest:cov": "rimraf ./coverage ./testresults",
     "posttest:cov": "node ./scripts/jest-join-coverage.js",
-    "update": "nx migrate --run-migrations",
+    "update": "nx migrate latest",
     "update:check": "nx update",
     "add": "npm install --package-lock-only --no-package-lock --prefix",
     "postadd": "npm install"

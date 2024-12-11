@@ -3,8 +3,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ClickOutsideDirective } from './click-outside.directive';
 
 @Component({
-    template: '<div (uxgClickOutside)="count()"></div>',
-    imports: [ClickOutsideDirective]
+  template: '<div (uxgClickOutside)="count()"></div>',
+  imports: [ClickOutsideDirective]
 })
 class WrapperComponent {
   @ViewChild(ClickOutsideDirective) clickOutside!: ClickOutsideDirective;

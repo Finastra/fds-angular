@@ -13,24 +13,24 @@ import { MultiselectTagsComponent } from '@finastra/angular-components/filter/mu
 import { sampleFilterTags, sampleFilterTree, sampleGroupTags, sampleTimeline, sampleToggleBtn } from './filter-panel-demo.sample-data';
 
 @Component({
-    selector: 'ffdc-filter-panel-demo',
-    templateUrl: './filter-panel-demo.component.html',
-    styleUrls: ['./filter-panel-demo.component.scss'],
-    imports: [
-        MatTabsModule,
-        MatSidenavModule,
-        MatButtonModule,
-        MatIconModule,
-        FilterToggleComponent,
-        FilterTagsComponent,
-        MultiselectTagsComponent,
-        NgIf,
-        FilterTreeComponent,
-        MatBadgeModule,
-        FilterGroupComponent,
-        UxgFilter,
-        JsonPipe
-    ]
+  selector: 'ffdc-filter-panel-demo',
+  templateUrl: './filter-panel-demo.component.html',
+  styleUrls: ['./filter-panel-demo.component.scss'],
+  imports: [
+    MatTabsModule,
+    MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
+    FilterToggleComponent,
+    FilterTagsComponent,
+    MultiselectTagsComponent,
+    NgIf,
+    FilterTreeComponent,
+    MatBadgeModule,
+    FilterGroupComponent,
+    UxgFilter,
+    JsonPipe
+  ]
 })
 export class FilterPanelDemoComponent implements OnInit {
   sampleDataTree: TreeNode[] = [];

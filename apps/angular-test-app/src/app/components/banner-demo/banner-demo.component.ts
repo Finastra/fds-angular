@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Banner, BannerComponent } from '@finastra/angular-components/banner';
 @Component({
-    selector: 'ffdc-banner-demo',
-    templateUrl: './banner-demo.component.html',
-    styleUrls: ['./banner-demo.component.scss'],
-    imports: [BannerComponent]
+  selector: 'ffdc-banner-demo',
+  templateUrl: './banner-demo.component.html',
+  styleUrls: ['./banner-demo.component.scss'],
+  imports: [BannerComponent]
 })
 export class BannerDemoComponent implements OnInit {
   exampleBannerData: Banner[] = [];

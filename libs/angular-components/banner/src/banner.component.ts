@@ -11,16 +11,16 @@ interface BannerItem {
 }
 
 @Component({
-    selector: 'uxg-banner',
-    templateUrl: './banner.component.html',
-    styleUrls: ['./banner.component.scss'],
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.Default,
-    host: {
-        class: 'uxg-banner',
-        '[class.uxg-banner-small]': 'small'
-    },
-    imports: [NgFor, NgClass, MatTooltipModule]
+  selector: 'uxg-banner',
+  templateUrl: './banner.component.html',
+  styleUrls: ['./banner.component.scss'],
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.Default,
+  host: {
+    class: 'uxg-banner',
+    '[class.uxg-banner-small]': 'small'
+  },
+  imports: [NgFor, NgClass, MatTooltipModule]
 })
 export class BannerComponent {
   private _bannerData: Banner[] = [];

@@ -30,20 +30,20 @@ export const COLUMNS = [
 export const GROUP_BY_KEY = 'apiGroup';
 
 @Component({
-    selector: 'ffdc-expandable-table-demo',
-    templateUrl: './expandable-table-demo.component.html',
-    styleUrls: ['./expandable-table-demo.component.scss'],
-    imports: [
-        ExpandableTableComponent,
-        MatButtonModule,
-        MatIconModule,
-        MatSlideToggleModule,
-        FormsModule,
-        MatSelectModule,
-        NgFor,
-        MatOptionModule,
-        NgIf
-    ]
+  selector: 'ffdc-expandable-table-demo',
+  templateUrl: './expandable-table-demo.component.html',
+  styleUrls: ['./expandable-table-demo.component.scss'],
+  imports: [
+    ExpandableTableComponent,
+    MatButtonModule,
+    MatIconModule,
+    MatSlideToggleModule,
+    FormsModule,
+    MatSelectModule,
+    NgFor,
+    MatOptionModule,
+    NgIf
+  ]
 })
 export class ExpandableTableDemoComponent {
   @ViewChild(ExpandableTableComponent, { static: true }) table!: ExpandableTableComponent;

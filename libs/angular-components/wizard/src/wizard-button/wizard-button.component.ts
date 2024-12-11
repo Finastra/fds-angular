@@ -7,15 +7,15 @@ import { NgSwitch, NgSwitchDefault, NgTemplateOutlet, NgSwitchCase } from '@angu
 export type UxgWizardButtonType = 'cancel' | 'previous' | 'next' | 'done' | 'custom';
 
 @Component({
-    selector: 'uxg-wizard-button',
-    templateUrl: './wizard-button.component.html',
-    host: {
-        '[class.uxg-wizard-button]': 'true',
-        '[class.auto-margin]': 'isCancel || isCustom',
-        '[attr.aria-hidden]': 'isHidden',
-        '[attr.type]': 'type'
-    },
-    imports: [NgSwitch, NgSwitchDefault, MatButtonModule, NgTemplateOutlet, NgSwitchCase]
+  selector: 'uxg-wizard-button',
+  templateUrl: './wizard-button.component.html',
+  host: {
+    '[class.uxg-wizard-button]': 'true',
+    '[class.auto-margin]': 'isCancel || isCustom',
+    '[attr.aria-hidden]': 'isHidden',
+    '[attr.type]': 'type'
+  },
+  imports: [NgSwitch, NgSwitchDefault, MatButtonModule, NgTemplateOutlet, NgSwitchCase]
 })
 export class UxgWizardButtonComponent {
   @Input() public type!: UxgWizardButtonType;
@@ -28,7 +28,10 @@ export class UxgWizardButtonComponent {
 
   @Output('uxgWizardButtonClicked') wasClicked = new EventEmitter<string>(false);
 
-  constructor(public navService: WizardNavigationService, public buttonService: ButtonHubService) {}
+  constructor(
+    public navService: WizardNavigationService,
+    public buttonService: ButtonHubService
+  ) {}
 
   private checkDefaultType(value: UxgWizardButtonType, type: string) {
     return value === type;

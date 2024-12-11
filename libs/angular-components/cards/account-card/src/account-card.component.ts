@@ -6,10 +6,10 @@ import { MatIconModule } from '@angular/material/icon';
 import { SkeletonTextComponent } from '@finastra/angular-components/skeleton-text';
 
 @Component({
-    selector: 'uxg-account-card',
-    templateUrl: './account-card.component.html',
-    styleUrls: ['./account-card.component.scss'],
-    imports: [MatCardModule, NgClass, NgIf, MatIconModule, MatDividerModule, CurrencyPipe]
+  selector: 'uxg-account-card',
+  templateUrl: './account-card.component.html',
+  styleUrls: ['./account-card.component.scss'],
+  imports: [MatCardModule, NgClass, NgIf, MatIconModule, MatDividerModule, CurrencyPipe]
 })
 export class AccountCardComponent implements OnInit, OnDestroy {
   @Input() name?: string;
@@ -38,9 +38,9 @@ export class AccountCardComponent implements OnInit, OnDestroy {
 
 // Skeleton
 @Component({
-    selector: 'uxg-account-card-skeleton',
-    templateUrl: './account-card.skeleton.html',
-    styleUrls: ['./account-card.component.scss'],
-    imports: [MatCardModule, MatIconModule, SkeletonTextComponent, MatDividerModule]
+  selector: 'uxg-account-card-skeleton',
+  templateUrl: './account-card.skeleton.html',
+  styleUrls: ['./account-card.component.scss'],
+  imports: [MatCardModule, MatIconModule, SkeletonTextComponent, MatDividerModule]
 })
 export class AccountCardSkeletonComponent {}

@@ -38,10 +38,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgIf, NgFor, NgStyle, AsyncPipe } from '@angular/common';
 
 @Component({
-    selector: 'uxg-vector-map',
-    templateUrl: './vector-map.component.html',
-    styleUrls: ['./vector-map.component.scss'],
-    imports: [NgIf, PlotlySharedModule, MatFormFieldModule, MatSelectModule, NgFor, MatOptionModule, NgStyle, MatTooltipModule, AsyncPipe]
+  selector: 'uxg-vector-map',
+  templateUrl: './vector-map.component.html',
+  styleUrls: ['./vector-map.component.scss'],
+  imports: [NgIf, PlotlySharedModule, MatFormFieldModule, MatSelectModule, NgFor, MatOptionModule, NgStyle, MatTooltipModule, AsyncPipe]
 })
 export class VectorMapComponent implements OnInit, OnDestroy, OnChanges {
   @ViewChild(PlotlyComponent, { static: false }) plot!: PlotlyComponent;
@@ -72,7 +72,10 @@ export class VectorMapComponent implements OnInit, OnDestroy, OnChanges {
 
   plotlyReady$: Observable<any>;
 
-  constructor(public paletteService: PaletteService, public lazyLoadScriptService: LazyloadScriptService) {
+  constructor(
+    public paletteService: PaletteService,
+    public lazyLoadScriptService: LazyloadScriptService
+  ) {
     this.click = new EventEmitter<Partial<VectorMapCountry>>();
     this.plotlyReady$ = lazyLoadScriptService.load('plotly.js', 'Plotly');
   }

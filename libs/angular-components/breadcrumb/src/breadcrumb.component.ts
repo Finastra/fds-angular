@@ -11,14 +11,14 @@ import { Subject, combineLatest } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 import { Breadcrumb } from './breadcrumb';
 @Component({
-    selector: 'uxg-breadcrumb',
-    templateUrl: './breadcrumb.component.html',
-    host: {
-        class: 'uxg-breadcrumb'
-    },
-    encapsulation: ViewEncapsulation.None,
-    changeDetection: ChangeDetectionStrategy.OnPush,
-    imports: [NgIf, MatIconModule, NgFor, NgTemplateOutlet, MatButtonModule, MatMenuModule, MatListModule, RouterLink, NgClass]
+  selector: 'uxg-breadcrumb',
+  templateUrl: './breadcrumb.component.html',
+  host: {
+    class: 'uxg-breadcrumb'
+  },
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [NgIf, MatIconModule, NgFor, NgTemplateOutlet, MatButtonModule, MatMenuModule, MatListModule, RouterLink, NgClass]
 })
 export class UxgBreadcrumbComponent implements OnDestroy {
   private breadcrumbs$ = new Subject<Breadcrumb[]>();
