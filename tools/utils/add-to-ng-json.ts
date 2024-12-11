@@ -60,7 +60,7 @@ export function addToNgJson(options: NgJsonOptions): Rule {
           }
         },
         schematics: {
-          '@nrwl/angular:component': {
+          '@nx/angular:component': {
             styleext: 'scss'
           }
         }

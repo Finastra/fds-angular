@@ -6,7 +6,7 @@
   "prefix": "finastra",
   "tags": [],
   "generators": {
-    "@nrwl/angular:component": {
+    "@nx/angular:component": {
       "styleext": "scss"
     }
   },
