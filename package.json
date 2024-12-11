@@ -41,7 +41,7 @@
     "ng": "nx",
     "nx": "nx",
     "prerelease": "node scripts/pre-angular-release.js",
-    "release": "npx standard-version --release-as 6.0.0 -an",
+    "release": "npx standard-version -an",
     "start": "nx serve",
     "pretest": "rimraf ./coverage ./testresults",
     "test": "jest",
