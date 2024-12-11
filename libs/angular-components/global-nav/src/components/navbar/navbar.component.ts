@@ -7,14 +7,13 @@ import { Breadcrumb, UxgBreadcrumbComponent } from '@finastra/angular-components
 import { NavigationNode } from '../../services/navigation.model';
 
 @Component({
-  selector: 'uxg-navbar',
-  templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
-  host: {
-    class: 'uxg-navbar'
-  },
-  standalone: true,
-  imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
+    selector: 'uxg-navbar',
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./navbar.component.scss'],
+    host: {
+        class: 'uxg-navbar'
+    },
+    imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
 })
 export class NavbarComponent implements OnInit, OnDestroy, OnChanges {
   breadcrumbs: Breadcrumb[] = [];

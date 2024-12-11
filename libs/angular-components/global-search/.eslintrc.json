@@ -9,7 +9,8 @@
       },
       "rules": {
         "@angular-eslint/component-class-suffix": "off",
-        "@typescript-eslint/no-non-null-asserted-optional-chain": "off"
+        "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
+        "@angular-eslint/prefer-standalone": "off"
       }
     },
     {

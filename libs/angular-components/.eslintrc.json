@@ -12,7 +12,8 @@
         "no-useless-escape": "off",
         "@angular-eslint/component-class-suffix": "off",
         "@typescript-eslint/no-non-null-asserted-optional-chain": "off",
-        "prefer-const": "off"
+        "prefer-const": "off",
+        "@angular-eslint/prefer-standalone": "off"
       }
     },
     {

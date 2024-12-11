@@ -3,11 +3,10 @@ import { MatMenuTrigger, MenuPositionX, MenuPositionY, MatMenuModule } from '@an
 import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
-  selector: 'uxg-popover',
-  templateUrl: './popover.component.html',
-  styleUrls: ['./popover.component.scss'],
-  standalone: true,
-  imports: [MatMenuModule, NgTemplateOutlet]
+    selector: 'uxg-popover',
+    templateUrl: './popover.component.html',
+    styleUrls: ['./popover.component.scss'],
+    imports: [MatMenuModule, NgTemplateOutlet]
 })
 export class PopoverComponent {
   @Input() xPosition: MenuPositionX = 'after';

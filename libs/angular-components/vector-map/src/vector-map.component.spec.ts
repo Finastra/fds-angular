@@ -16,10 +16,11 @@ import { VectorMapCountry, VectorMapDataSource } from './vector-map.models';
 // Created PlotlyDemoComponent because of issues when Testing with the
 // PlotlyComponent
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'plotly-plot',
-  template: '{{ data }}',
-  styles: ['']
+    // eslint-disable-next-line @angular-eslint/component-selector
+    selector: 'plotly-plot',
+    template: '{{ data }}',
+    styles: [''],
+    standalone: false
 })
 class PlotlyComponent {
   @Input() data: [] = [];

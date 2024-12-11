@@ -6,7 +6,8 @@
       "files": ["*.ts"],
       "rules": {
         "@typescript-eslint/no-var-requires": "off",
-        "no-var": "off"
+        "no-var": "off",
+        "@angular-eslint/prefer-standalone": "off"
       }
     },
     {

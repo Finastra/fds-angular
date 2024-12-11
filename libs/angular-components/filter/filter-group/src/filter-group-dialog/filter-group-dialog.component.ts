@@ -11,11 +11,10 @@ export interface FilterGroupDialogData {
 }
 
 @Component({
-  selector: 'uxg-filter-group-dialog',
-  templateUrl: 'filter-group-dialog.component.html',
-  styleUrls: ['filter-group-dialog.component.scss'],
-  standalone: true,
-  imports: [MatDialogModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, NgIf, MatButtonModule]
+    selector: 'uxg-filter-group-dialog',
+    templateUrl: 'filter-group-dialog.component.html',
+    styleUrls: ['filter-group-dialog.component.scss'],
+    imports: [MatDialogModule, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule, NgIf, MatButtonModule]
 })
 export class FilterGroupDialogComponent implements OnInit {
   filterName!: FormControl;

@@ -335,24 +335,23 @@ const TEMPLATES_DATA: any[] = [
 ];
 
 @Component({
-  selector: 'ffdc-repeater-demo',
-  templateUrl: './repeater-demo.component.html',
-  styleUrls: ['./repeater-demo.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  encapsulation: ViewEncapsulation.None,
-  standalone: true,
-  imports: [
-    RepeaterComponent,
-    MatExpansionModule,
-    MatRadioModule,
-    FormsModule,
-    MatSelectModule,
-    NgFor,
-    MatOptionModule,
-    ReactiveFormsModule,
-    FieldMatcherComponent,
-    NgIf
-  ]
+    selector: 'ffdc-repeater-demo',
+    templateUrl: './repeater-demo.component.html',
+    styleUrls: ['./repeater-demo.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    encapsulation: ViewEncapsulation.None,
+    imports: [
+        RepeaterComponent,
+        MatExpansionModule,
+        MatRadioModule,
+        FormsModule,
+        MatSelectModule,
+        NgFor,
+        MatOptionModule,
+        ReactiveFormsModule,
+        FieldMatcherComponent,
+        NgIf
+    ]
 })
 export class RepeaterDemoComponent implements OnInit, OnDestroy {
   dataSource = ELEMENT_DATA; //data

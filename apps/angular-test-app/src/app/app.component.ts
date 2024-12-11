@@ -15,25 +15,24 @@ import { nestedRoutes } from './nested-routes';
 const darkThemeLSName = 'darkTheme';
 
 @Component({
-  selector: 'ffdc-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  standalone: true,
-  imports: [
-    RouterLink,
-    RouterLinkActive,
-    RouterOutlet,
-    MatCardModule,
-    MatSidenavModule,
-    MatSlideToggleModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatListModule,
-    MatButtonModule,
-    NgFor,
-    NgIf,
-    ScrollToTopComponent
-  ]
+    selector: 'ffdc-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    imports: [
+        RouterLink,
+        RouterLinkActive,
+        RouterOutlet,
+        MatCardModule,
+        MatSidenavModule,
+        MatSlideToggleModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatListModule,
+        MatButtonModule,
+        NgFor,
+        NgIf,
+        ScrollToTopComponent
+    ]
 })
 export class AppComponent implements OnInit {
   title = '';

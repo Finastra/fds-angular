@@ -19,11 +19,10 @@ import { RouterModule } from '@angular/router';
 import { NavigationNode } from '../../services/navigation.model';
 
 @Component({
-  selector: 'uxg-sidenav',
-  templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss'],
-  standalone: true,
-  imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe, RouterModule]
+    selector: 'uxg-sidenav',
+    templateUrl: './sidenav.component.html',
+    styleUrls: ['./sidenav.component.scss'],
+    imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe, RouterModule]
 })
 export class SidenavComponent implements OnInit, OnChanges {
   @Input() appName!: string;

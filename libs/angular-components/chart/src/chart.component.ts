@@ -27,13 +27,12 @@ import { LegendComponent } from './directives/legend.component';
 import { TraceComponent } from './directives/trace.component';
 
 @Component({
-  selector: 'uxg-chart',
-  templateUrl: './chart.component.html',
-  styleUrls: ['./chart.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [NgIf, PlotlySharedModule, AsyncPipe]
+    selector: 'uxg-chart',
+    templateUrl: './chart.component.html',
+    styleUrls: ['./chart.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [NgIf, PlotlySharedModule, AsyncPipe]
 })
 export class ChartComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit {
   @ViewChild(PlotlyComponent, { static: false }) plot!: PlotlyComponent;

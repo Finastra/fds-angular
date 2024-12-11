@@ -5,8 +5,8 @@ import { GroupTracesComponent } from './groupTrace.component';
 import { TraceComponent } from './trace.component';
 
 @Component({
-  selector: 'uxg-test-container-component',
-  template: `
+    selector: 'uxg-test-container-component',
+    template: `
     <uxg-group-traces #grpTrace [columnPosition]="columnPosition" [rowPosition]="rowPosition">
       <uxg-trace
         *ngFor="let trace of traces"
@@ -18,8 +18,7 @@ import { TraceComponent } from './trace.component';
       ></uxg-trace>
     </uxg-group-traces>
   `,
-  standalone: true,
-  imports: [GroupTracesComponent, TraceComponent]
+    imports: [GroupTracesComponent, TraceComponent]
 })
 class TestContainerComponent implements AfterViewInit {
   @ViewChild('grpTrace', { static: false }) groupeTrace!: GroupTracesComponent;

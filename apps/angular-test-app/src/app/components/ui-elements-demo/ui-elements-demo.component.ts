@@ -18,30 +18,29 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 
 @Component({
-  selector: 'ffdc-ui-elements-demo',
-  templateUrl: './ui-elements-demo.component.html',
-  styleUrls: ['./ui-elements-demo.component.scss'],
-  standalone: true,
-  imports: [
-    MatBadgeModule,
-    MatButtonModule,
-    MatIconModule,
-    RouterLink,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatMenuModule,
-    MatChipsModule,
-    MatTabsModule,
-    MatSlideToggleModule,
-    MatFormFieldModule,
-    MatInputModule,
-    FormsModule,
-    ReactiveFormsModule,
-    NgIf,
-    MatSelectModule,
-    MatOptionModule,
-    MatExpansionModule
-  ]
+    selector: 'ffdc-ui-elements-demo',
+    templateUrl: './ui-elements-demo.component.html',
+    styleUrls: ['./ui-elements-demo.component.scss'],
+    imports: [
+        MatBadgeModule,
+        MatButtonModule,
+        MatIconModule,
+        RouterLink,
+        MatButtonToggleModule,
+        MatCardModule,
+        MatMenuModule,
+        MatChipsModule,
+        MatTabsModule,
+        MatSlideToggleModule,
+        MatFormFieldModule,
+        MatInputModule,
+        FormsModule,
+        ReactiveFormsModule,
+        NgIf,
+        MatSelectModule,
+        MatOptionModule,
+        MatExpansionModule
+    ]
 })
 export class UiElementsDemoComponent {
   email = new FormControl('', [Validators.required, Validators.email]);

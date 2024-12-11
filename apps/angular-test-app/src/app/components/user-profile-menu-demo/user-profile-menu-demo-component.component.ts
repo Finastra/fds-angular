@@ -10,21 +10,20 @@ import {
   UxgUserProfilePanelDetailsDirective
 } from '@finastra/angular-components/user-profile-menu';
 @Component({
-  selector: 'uxg-user-profile-menu-demo',
-  templateUrl: './user-profile-menu-demo-component.component.html',
-  styleUrls: ['./user-profile-menu-demo-component.component.scss'],
-  encapsulation: ViewEncapsulation.None,
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
-  imports: [
-    UxgUserProfileMenuComponent,
-    UxgUserProfilePanelActionsDirective,
-    MatButtonModule,
-    MatIconModule,
-    UxgUserProfilePanelDetailsDirective,
-    UxgUserProfilePanelContentDirective,
-    MatMenuModule
-  ]
+    selector: 'uxg-user-profile-menu-demo',
+    templateUrl: './user-profile-menu-demo-component.component.html',
+    styleUrls: ['./user-profile-menu-demo-component.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        UxgUserProfileMenuComponent,
+        UxgUserProfilePanelActionsDirective,
+        MatButtonModule,
+        MatIconModule,
+        UxgUserProfilePanelDetailsDirective,
+        UxgUserProfilePanelContentDirective,
+        MatMenuModule
+    ]
 })
 export class UserProfileMenuDemoComponentComponent implements OnInit {
   vinh: UserProfile = {

@@ -41,5 +41,6 @@
     "production": ["default"]
   },
   "parallel": 1,
-  "defaultBase": "main"
+  "defaultBase": "main",
+  "useLegacyCache": true
 }

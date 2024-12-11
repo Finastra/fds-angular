@@ -48,7 +48,7 @@
     "test:cov": "nx run-many --target=test --all --parallel --maxWorkers=1",
     "pretest:cov": "rimraf ./coverage ./testresults",
     "posttest:cov": "node ./scripts/jest-join-coverage.js",
-    "update": "nx migrate latest",
+    "update": "nx migrate --run-migrations",
     "update:check": "nx update",
     "add": "npm install --package-lock-only --no-package-lock --prefix",
     "postadd": "npm install"
@@ -77,7 +77,7 @@
     "@angular/animations": "^19.0.3",
     "@angular/cdk": "^19.0.3",
     "@angular/cdk-experimental": "^19.0.3",
-    "@angular/cli": "^19.0.3",
+    "@angular/cli": "~19.0.0",
     "@angular/common": "^19.0.3",
     "@angular/compiler": "^19.0.3",
     "@angular/compiler-cli": "^19.0.3",

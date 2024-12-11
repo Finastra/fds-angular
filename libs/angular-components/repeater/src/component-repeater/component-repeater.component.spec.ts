@@ -6,8 +6,9 @@ import { By } from '@angular/platform-browser';
 import { ComponentRepeaterComponent } from './component-repeater.component';
 
 @Component({
-  selector: 'uxg-mock-card',
-  template: '<p>Mock Card Component</p>'
+    selector: 'uxg-mock-card',
+    template: '<p>Mock Card Component</p>',
+    standalone: false
 })
 class MockCardComponent {}
 
