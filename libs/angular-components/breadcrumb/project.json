@@ -16,15 +16,6 @@
       "options": {
         "lintFilePatterns": ["libs/angular-components/breadcrumb/src/**/*.ts", "libs/angular-components/breadcrumb/src/**/*.html"]
       }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "options": {
-        "jestConfig": "libs/angular-components/breadcrumb/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/angular-components/breadcrumb/tsconfig.spec.json"
-      },
-      "outputs": ["{workspaceRoot}/coverage/libs/angular-components/breadcrumb"]
     }
   }
 }

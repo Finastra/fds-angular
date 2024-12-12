@@ -20,8 +20,7 @@
     "test": {
       "executor": "@nrwl/jest:jest",
       "options": {
-        "jestConfig": "libs/angular-components/repeater/jest.config.ts",
-        "tsConfig": "libs/angular-components/repeater/tsconfig.spec.json"
+        "jestConfig": "libs/angular-components/repeater/jest.config.ts"
       },
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/repeater"]
     }

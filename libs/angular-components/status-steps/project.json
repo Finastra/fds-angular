@@ -17,8 +17,7 @@
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/status-steps"],
       "options": {
         "jestConfig": "libs/angular-components/status-steps/jest.config.ts",
-        "passWithNoTests": true,
-        "tsConfig": "libs/angular-components/status-steps/tsconfig.spec.json"
+        "passWithNoTests": true
       }
     }
   }

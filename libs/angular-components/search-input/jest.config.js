@@ -1,10 +1,9 @@
 const name = 'search-input';
 const suiteName = 'UxgSearchInputModule';
 
-export default {
-  setupFilesAfterEnv: ['<rootDir>/test-setup.ts'],
-
-  preset: '../../../jest.preset.js',
+module.exports = {
+  name,
+  preset: '../../../jest.config.js',
   coverageDirectory: `../../../coverage/libs/${name}`,
   reporters: [
     'default',
@@ -19,6 +18,5 @@ export default {
         ancestorSeparator: ' › '
       }
     ]
-  ],
-  displayName: name
+  ]
 };
