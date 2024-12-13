@@ -21,7 +21,6 @@ import { MatBadgeModule } from '@angular/material/badge';
   selector: 'ffdc-ui-elements-demo',
   templateUrl: './ui-elements-demo.component.html',
   styleUrls: ['./ui-elements-demo.component.scss'],
-  standalone: true,
   imports: [
     MatBadgeModule,
     MatButtonModule,

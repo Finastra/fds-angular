@@ -25,7 +25,6 @@ import { UxgUserProfilePanelComponent } from './user-profile-panel.component';
   host: {
     class: 'uxg-user-profile-menu'
   },
-  standalone: true,
   imports: [AvatarComponent, MatMenuModule, UxgUserProfilePanelComponent]
 })
 export class UxgUserProfileMenuComponent {

@@ -103,7 +103,6 @@ const PR_COLUMNS: any[] = [
   selector: 'ffdc-entity-menu-demo',
   templateUrl: './entity-menu-demo.component.html',
   styleUrls: ['./entity-menu-demo.component.scss'],
-  standalone: true,
   imports: [
     MatExpansionModule,
     MatFormFieldModule,

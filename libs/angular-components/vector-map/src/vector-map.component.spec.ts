@@ -19,7 +19,8 @@ import { VectorMapCountry, VectorMapDataSource } from './vector-map.models';
   // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'plotly-plot',
   template: '{{ data }}',
-  styles: ['']
+  styles: [''],
+  standalone: false
 })
 class PlotlyComponent {
   @Input() data: [] = [];

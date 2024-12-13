@@ -13,7 +13,6 @@ import { Video, VideoThumbnailComponent, VideoWEvent } from '@finastra/angular-c
   styleUrls: ['./video-thumbnail.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [MatFormFieldModule, MatSelectModule, MatOptionModule, MatInputModule, FormsModule, MatDialogModule, VideoThumbnailComponent]
 })
 export class VideoThumbnailDemoComponent {
@@ -48,7 +47,6 @@ export class VideoThumbnailDemoComponent {
       <li>ctrlKey : {{ video.$event.ctrlKey }}</li>
     </ul>
   `,
-  standalone: true,
   imports: [JsonPipe]
 })
 export class VideoDialogComponent {

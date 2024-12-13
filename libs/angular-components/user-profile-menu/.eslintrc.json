@@ -7,7 +7,9 @@
       "parserOptions": {
         "project": ["libs/angular-components/user-profile-menu/tsconfig.*?.json"]
       },
-      "rules": {}
+      "rules": {
+        "@angular-eslint/prefer-standalone": "off"
+      }
     },
     {
       "files": ["*.html"],

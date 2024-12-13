@@ -6,7 +6,7 @@
   "prefix": "finastra",
   "tags": [],
   "generators": {
-    "@nrwl/angular:component": {
+    "@nx/angular:component": {
       "styleext": "scss"
     }
   },
@@ -21,7 +21,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "libs/angular-components/user-profile-menu/jest.config.ts",
         "tsConfig": "libs/angular-components/user-profile-menu/tsconfig.spec.json"

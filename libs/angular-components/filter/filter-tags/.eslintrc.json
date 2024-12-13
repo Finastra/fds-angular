@@ -8,7 +8,8 @@
         "project": ["libs/angular-components/filter/filter-tags/tsconfig.*?.json"]
       },
       "rules": {
-        "no-useless-escape": "off"
+        "no-useless-escape": "off",
+        "@angular-eslint/prefer-standalone": "off"
       }
     },
     {

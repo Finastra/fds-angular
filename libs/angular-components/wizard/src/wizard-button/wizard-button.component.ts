@@ -15,7 +15,6 @@ export type UxgWizardButtonType = 'cancel' | 'previous' | 'next' | 'done' | 'cus
     '[attr.aria-hidden]': 'isHidden',
     '[attr.type]': 'type'
   },
-  standalone: true,
   imports: [NgSwitch, NgSwitchDefault, MatButtonModule, NgTemplateOutlet, NgSwitchCase]
 })
 export class UxgWizardButtonComponent {
@@ -29,7 +28,10 @@ export class UxgWizardButtonComponent {
 
   @Output('uxgWizardButtonClicked') wasClicked = new EventEmitter<string>(false);
 
-  constructor(public navService: WizardNavigationService, public buttonService: ButtonHubService) {}
+  constructor(
+    public navService: WizardNavigationService,
+    public buttonService: ButtonHubService
+  ) {}
 
   private checkDefaultType(value: UxgWizardButtonType, type: string) {
     return value === type;

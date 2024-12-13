@@ -17,7 +17,6 @@ import { NgIf } from '@angular/common';
     '[class.no-title]': '!showTitle',
     '[class.uxg-wizard-page]': 'true'
   },
-  standalone: true,
   imports: [NgIf]
 })
 export class UxgWizardPageComponent {

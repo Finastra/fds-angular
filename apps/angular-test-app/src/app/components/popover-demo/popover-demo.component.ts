@@ -7,7 +7,6 @@ import { PopoverComponent } from '@finastra/angular-components/popover';
   templateUrl: './popover-demo.component.html',
   styleUrls: ['./popover-demo.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [PopoverComponent, MatButtonModule]
 })
 export class PopoverDemoComponent implements OnInit {

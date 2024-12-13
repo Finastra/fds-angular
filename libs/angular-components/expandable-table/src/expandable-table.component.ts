@@ -42,7 +42,6 @@ import reject from 'lodash-es/reject';
       transition('expanded <=> collapsed', animate('225ms cubic-bezier(0.4, 0.0, 0.2, 1)'))
     ])
   ],
-  standalone: true,
   imports: [NgIf, MatCheckboxModule, NgClass, MatButtonModule, MatIconModule, MatExpansionModule, NgFor, NgTemplateOutlet, TableComponent]
 })
 export class ExpandableTableComponent implements OnChanges {

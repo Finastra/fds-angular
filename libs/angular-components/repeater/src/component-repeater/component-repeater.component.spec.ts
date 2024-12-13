@@ -7,7 +7,8 @@ import { ComponentRepeaterComponent } from './component-repeater.component';
 
 @Component({
   selector: 'uxg-mock-card',
-  template: '<p>Mock Card Component</p>'
+  template: '<p>Mock Card Component</p>',
+  standalone: false
 })
 class MockCardComponent {}
 

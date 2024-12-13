@@ -176,7 +176,6 @@ const DATA_2 = [
   templateUrl: './card-demo.component.html',
   styleUrls: ['./card-demo.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [
     AsyncPipe,
     NgIf,

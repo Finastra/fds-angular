@@ -4,7 +4,6 @@ import { Banner, BannerComponent } from '@finastra/angular-components/banner';
   selector: 'ffdc-banner-demo',
   templateUrl: './banner-demo.component.html',
   styleUrls: ['./banner-demo.component.scss'],
-  standalone: true,
   imports: [BannerComponent]
 })
 export class BannerDemoComponent implements OnInit {

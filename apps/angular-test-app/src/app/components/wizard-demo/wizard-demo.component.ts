@@ -13,7 +13,6 @@ import {
   selector: 'ffdc-wizard-demo',
   templateUrl: './wizard-demo.component.html',
   styleUrls: ['./wizard-demo.component.scss'],
-  standalone: true,
   imports: [
     UxgWizardComponent,
     UxgWizardTitleComponent,

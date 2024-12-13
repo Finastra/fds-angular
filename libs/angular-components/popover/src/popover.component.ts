@@ -6,7 +6,6 @@ import { NgTemplateOutlet } from '@angular/common';
   selector: 'uxg-popover',
   templateUrl: './popover.component.html',
   styleUrls: ['./popover.component.scss'],
-  standalone: true,
   imports: [MatMenuModule, NgTemplateOutlet]
 })
 export class PopoverComponent {

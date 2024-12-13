@@ -18,7 +18,6 @@ import { TraceComponent } from './trace.component';
       ></uxg-trace>
     </uxg-group-traces>
   `,
-  standalone: true,
   imports: [GroupTracesComponent, TraceComponent]
 })
 class TestContainerComponent implements AfterViewInit {

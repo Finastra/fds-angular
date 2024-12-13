@@ -15,7 +15,6 @@ import { NavigationNode } from './services/navigation.model';
   host: {
     class: 'uxg-global-nav'
   },
-  standalone: true,
   imports: [MatSidenavModule, SidenavComponent, NavbarComponent, NgTemplateOutlet]
 })
 export class GlobalNavComponent implements OnInit, OnDestroy {

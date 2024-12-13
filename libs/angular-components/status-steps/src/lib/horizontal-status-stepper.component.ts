@@ -8,7 +8,6 @@ import { NgFor, NgIf, NgTemplateOutlet } from '@angular/common';
   templateUrl: './horizontal-status-stepper.component.html',
   styleUrls: ['./horizontal-status-stepper.component.scss'],
   host: { class: 'uxg-horizontal-status-stepper' },
-  standalone: true,
   imports: [NgFor, NgIf, MatIconModule, NgTemplateOutlet]
 })
 export class HorizontalStatusStepperComponent implements AfterViewInit {

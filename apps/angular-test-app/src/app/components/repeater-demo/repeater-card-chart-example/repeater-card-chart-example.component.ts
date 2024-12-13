@@ -23,7 +23,6 @@ export interface DataModel {
   templateUrl: './repeater-card-chart-example.component.html',
   styleUrls: ['./repeater-card-chart-example.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [MatCardModule, NgClass, NgIf, MatIconModule]
 })
 export class RepeaterCardChartExampleComponent implements OnInit {
@@ -102,9 +101,12 @@ export class RepeaterCardChartExampleComponent implements OnInit {
       .transition()
       .duration(2000);
 
-    setInterval(() => {
-      this.updateData();
-    }, this.randomIntFromIntervalInt(1000, 5000));
+    setInterval(
+      () => {
+        this.updateData();
+      },
+      this.randomIntFromIntervalInt(1000, 5000)
+    );
   }
 
   updateData() {

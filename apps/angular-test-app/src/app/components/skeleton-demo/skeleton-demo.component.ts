@@ -6,7 +6,6 @@ import { SkeletonTextComponent } from '@finastra/angular-components/skeleton-tex
   selector: 'ffdc-skeleton-demo',
   templateUrl: './skeleton-demo.component.html',
   styleUrls: ['./skeleton-demo.component.scss'],
-  standalone: true,
   imports: [MatCardModule, SkeletonTextComponent]
 })
 export class SkeletonDemoComponent implements OnInit {

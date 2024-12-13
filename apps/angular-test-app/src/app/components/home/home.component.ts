@@ -9,7 +9,6 @@ import { nestedRoutes } from '../../nested-routes';
   selector: 'ffdc-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  standalone: true,
   imports: [NgFor, MatCardModule, RouterLink]
 })
 export class HomeComponent implements OnInit {

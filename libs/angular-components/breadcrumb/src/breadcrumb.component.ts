@@ -18,7 +18,6 @@ import { Breadcrumb } from './breadcrumb';
   },
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgIf, MatIconModule, NgFor, NgTemplateOutlet, MatButtonModule, MatMenuModule, MatListModule, RouterLink, NgClass]
 })
 export class UxgBreadcrumbComponent implements OnDestroy {

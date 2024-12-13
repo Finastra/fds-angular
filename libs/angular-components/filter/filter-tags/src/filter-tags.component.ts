@@ -51,7 +51,6 @@ interface UXGFilterChanges {
   templateUrl: './filter-tags.component.html',
   styleUrls: ['./filter-tags.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [
     MatChipsModule,
     NgFor,
@@ -115,7 +114,10 @@ export class FilterTagsComponent implements OnInit, AfterViewInit, OnDestroy {
   @ViewChild(MatAutocompleteTrigger, { static: true }) trigger!: MatAutocompleteTrigger;
   @ViewChildren(MatChip) chipList!: QueryList<MatChip>;
 
-  constructor(private hostElement: ElementRef, @Attribute('standard') public standard: any) {
+  constructor(
+    private hostElement: ElementRef,
+    @Attribute('standard') public standard: any
+  ) {
     this.hostElement.nativeElement.__component = this;
     this.data = [];
   }

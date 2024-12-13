@@ -31,7 +31,6 @@ import { UxgWizardPageComponent } from './wizard-page/wizard-page.component';
     '[class.uxg-wizard]': 'true'
   },
   animations: [wizardAnimation()],
-  standalone: true,
   imports: [NgIf, MatButtonModule, MatIconModule, NgTemplateOutlet, MatDividerModule, NgFor, NgClass, NgStyle, AsyncPipe]
 })
 export class UxgWizardComponent implements OnDestroy, AfterContentInit {

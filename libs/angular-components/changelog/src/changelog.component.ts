@@ -8,7 +8,6 @@ import { ChangeLog } from './changelog.models';
   styleUrls: ['./changelog.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgIf, NgFor, NgClass, LowerCasePipe, TitleCasePipe, DatePipe]
 })
 export class UXGChangelogComponent {

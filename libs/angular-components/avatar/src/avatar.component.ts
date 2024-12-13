@@ -30,7 +30,6 @@ export class UxgImageAvatar {}
   styleUrls: ['./avatar.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgClass, NgTemplateOutlet, NgIf, InitialsPipe]
 })
 export class AvatarComponent implements OnInit {

@@ -21,7 +21,6 @@ import { CdkVirtualScrollViewport, CdkVirtualForOf } from '@angular/cdk/scrollin
   templateUrl: './repeater.component.html',
   styleUrls: ['./repeater.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [CdkVirtualScrollViewport, ScrollingModule, CdkVirtualForOf, ComponentRepeaterComponent, NgStyle]
 })
 export class RepeaterComponent implements OnInit, OnChanges {

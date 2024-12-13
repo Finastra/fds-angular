@@ -32,7 +32,6 @@ import { TraceComponent } from './directives/trace.component';
   styleUrls: ['./chart.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [NgIf, PlotlySharedModule, AsyncPipe]
 })
 export class ChartComponent implements OnInit, OnDestroy, OnChanges, AfterContentInit {

@@ -13,7 +13,7 @@
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/angular-components/status-steps"],
       "options": {
         "jestConfig": "libs/angular-components/status-steps/jest.config.ts",

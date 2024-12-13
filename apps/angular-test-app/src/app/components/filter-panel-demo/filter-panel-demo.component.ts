@@ -16,7 +16,6 @@ import { sampleFilterTags, sampleFilterTree, sampleGroupTags, sampleTimeline, sa
   selector: 'ffdc-filter-panel-demo',
   templateUrl: './filter-panel-demo.component.html',
   styleUrls: ['./filter-panel-demo.component.scss'],
-  standalone: true,
   imports: [
     MatTabsModule,
     MatSidenavModule,

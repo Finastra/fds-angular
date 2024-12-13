@@ -7,7 +7,6 @@ import { Breadcrumb, UxgBreadcrumbComponent } from '@finastra/angular-components
   templateUrl: './breadcrumb-demo.component.html',
   styleUrls: ['./breadcrumb-demo.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [MatToolbarModule, UxgBreadcrumbComponent]
 })
 export class BreadcrumbDemoComponent implements OnInit {

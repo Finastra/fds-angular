@@ -12,13 +12,12 @@ import { GlobalNavComponent, NavigationNode } from '@finastra/angular-components
   host: {
     class: 'ffdc-global-nav-demo'
   },
-  standalone: true,
   imports: [GlobalNavComponent, MatButtonModule, MatIconModule, MatMenuModule, MatDividerModule]
 })
 export class GlobalNavDemoComponent {
   appName = 'Global Nav Demo';
   shortName = 'gnd';
-  headerTitle='Applications'
+  headerTitle = 'Applications';
 
   demoAppList: NavigationNode[] = [
     {

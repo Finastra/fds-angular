@@ -33,7 +33,6 @@ export const GROUP_BY_KEY = 'apiGroup';
   selector: 'ffdc-expandable-table-demo',
   templateUrl: './expandable-table-demo.component.html',
   styleUrls: ['./expandable-table-demo.component.scss'],
-  standalone: true,
   imports: [
     ExpandableTableComponent,
     MatButtonModule,

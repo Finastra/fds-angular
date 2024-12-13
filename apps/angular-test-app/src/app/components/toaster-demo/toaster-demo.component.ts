@@ -14,7 +14,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
   styleUrls: ['./toaster-demo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [MatFormFieldModule, MatInputModule, FormsModule, MatSelectModule, MatOptionModule, MatCheckboxModule, MatButtonModule]
 })
 export class ToasterDemoComponent {

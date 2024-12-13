@@ -7,7 +7,6 @@ import { MatMenuModule } from '@angular/material/menu';
   selector: 'ffdc-theme-builder-demo',
   templateUrl: './theme-builder-demo.component.html',
   styleUrls: ['./theme-builder-demo.component.scss'],
-  standalone: true,
   imports: [MatMenuModule, ColorSketchModule]
 })
 export class ThemeBuilderComponent {

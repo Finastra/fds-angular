@@ -23,7 +23,6 @@ enum ShowStatus {
       transition('hide => show', animate('350ms ease-in'))
     ])
   ],
-  standalone: true,
   imports: [NgTemplateOutlet, MatButtonModule, MatIconModule, AsyncPipe]
 })
 export class ScrollToTopComponent implements AfterViewInit, OnDestroy {

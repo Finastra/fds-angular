@@ -38,7 +38,6 @@ const ANIMATION_TIMINGS = '300ms cubic-bezier(0.25, 0.8, 0.25, 1)';
       transition('* => *', animate(ANIMATION_TIMINGS))
     ])
   ],
-  standalone: true,
   imports: [
     MatButtonModule,
     MatIconModule,
@@ -91,7 +90,10 @@ export class GlobalSearchOverlayComponent implements AfterViewInit {
 
   private searchDebounce = 300;
 
-  constructor(private readonly ref: SearchOverlayRef, @Inject(SEARCH_CONFIG) private config: SearchConfig) {}
+  constructor(
+    private readonly ref: SearchOverlayRef,
+    @Inject(SEARCH_CONFIG) private config: SearchConfig
+  ) {}
 
   @HostListener('document:keydown.escape', ['$event']) handleKeydown(event: KeyboardEvent) {
     this.closeSearch();

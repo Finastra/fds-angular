@@ -16,7 +16,6 @@ import { NgFor, KeyValuePipe } from '@angular/common';
       multi: true
     }
   ],
-  standalone: true,
   imports: [NgFor, MatFormFieldModule, MatSelectModule, MatOptionModule, KeyValuePipe]
 })
 export class FieldMatcherComponent implements ControlValueAccessor, OnInit, OnDestroy, OnChanges {

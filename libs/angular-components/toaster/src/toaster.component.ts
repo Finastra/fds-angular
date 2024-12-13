@@ -7,7 +7,6 @@ import { NgIf } from '@angular/common';
   selector: 'uxg-toaster',
   templateUrl: './toaster.component.html',
   styleUrls: ['./toaster.component.scss'],
-  standalone: true,
   imports: [NgIf, MatIconModule]
 })
 export class ToasterComponent {

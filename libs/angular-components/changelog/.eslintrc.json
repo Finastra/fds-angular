@@ -8,7 +8,8 @@
         "project": ["libs/angular-components/changelog/tsconfig.*?.json"]
       },
       "rules": {
-        "@typescript-eslint/no-namespace": "off"
+        "@typescript-eslint/no-namespace": "off",
+        "@angular-eslint/prefer-standalone": "off"
       }
     },
     {

@@ -16,7 +16,6 @@ const voidState = style({
   selector: 'uxg-toaster-container',
   template: ` <uxg-toaster [@fadeIn]="fadeIn" *ngFor="let toast of content" [toast]="toast"></uxg-toaster> `,
   animations: [trigger('fadeIn', [transition(':enter', [voidState, animate(100)]), transition(':leave', [animate(100, voidState)])])],
-  standalone: true,
   imports: [NgFor, ToasterComponent]
 })
 export class ToasterContainerComponent implements OnInit, OnDestroy {

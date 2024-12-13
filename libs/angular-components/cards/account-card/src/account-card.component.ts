@@ -9,7 +9,6 @@ import { SkeletonTextComponent } from '@finastra/angular-components/skeleton-tex
   selector: 'uxg-account-card',
   templateUrl: './account-card.component.html',
   styleUrls: ['./account-card.component.scss'],
-  standalone: true,
   imports: [MatCardModule, NgClass, NgIf, MatIconModule, MatDividerModule, CurrencyPipe]
 })
 export class AccountCardComponent implements OnInit, OnDestroy {
@@ -42,7 +41,6 @@ export class AccountCardComponent implements OnInit, OnDestroy {
   selector: 'uxg-account-card-skeleton',
   templateUrl: './account-card.skeleton.html',
   styleUrls: ['./account-card.component.scss'],
-  standalone: true,
   imports: [MatCardModule, MatIconModule, SkeletonTextComponent, MatDividerModule]
 })
 export class AccountCardSkeletonComponent {}

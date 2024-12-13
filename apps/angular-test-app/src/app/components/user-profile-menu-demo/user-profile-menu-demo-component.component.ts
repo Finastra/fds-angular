@@ -15,7 +15,6 @@ import {
   styleUrls: ['./user-profile-menu-demo-component.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [
     UxgUserProfileMenuComponent,
     UxgUserProfilePanelActionsDirective,

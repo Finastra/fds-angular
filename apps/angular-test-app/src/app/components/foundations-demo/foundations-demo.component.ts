@@ -5,7 +5,6 @@ import { MatIconModule } from '@angular/material/icon';
   selector: 'ffdc-foundations-demo',
   templateUrl: './foundations-demo.component.html',
   styleUrls: ['./foundations-demo.component.scss'],
-  standalone: true,
   imports: [MatIconModule]
 })
 export class FoundationsDemoComponent {}

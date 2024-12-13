@@ -11,7 +11,6 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./repeater-card-example.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [MatCardModule, NgClass, MatIconModule, MatButtonModule, MatMenuModule]
 })
 export class RepeaterCardExampleComponent implements OnInit {

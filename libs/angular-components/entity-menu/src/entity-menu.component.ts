@@ -15,7 +15,6 @@ export interface EntityMenuItemWEvent {
   templateUrl: './entity-menu.component.html',
   styleUrls: ['./entity-menu.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [MatButtonModule, MatMenuModule, MatIconModule, NgClass, NgFor, MatCardModule]
 })
 export class EntityMenuComponent implements OnInit, OnChanges {

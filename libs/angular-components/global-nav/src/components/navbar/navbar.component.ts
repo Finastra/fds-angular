@@ -13,7 +13,6 @@ import { NavigationNode } from '../../services/navigation.model';
   host: {
     class: 'uxg-navbar'
   },
-  standalone: true,
   imports: [MatToolbarModule, MatButtonModule, MatIconModule, UxgBreadcrumbComponent, NgTemplateOutlet]
 })
 export class NavbarComponent implements OnInit, OnDestroy, OnChanges {

@@ -6,7 +6,6 @@ import { UxgSearchInputComponent } from '@finastra/angular-components/search-inp
   templateUrl: './search-input-demo.component.html',
   styleUrls: ['./search-input-demo.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [UxgSearchInputComponent]
 })
 export class SearchInputDemoComponent implements OnInit {

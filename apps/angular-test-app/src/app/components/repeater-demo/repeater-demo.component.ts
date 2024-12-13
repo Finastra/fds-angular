@@ -340,7 +340,6 @@ const TEMPLATES_DATA: any[] = [
   styleUrls: ['./repeater-demo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [
     RepeaterComponent,
     MatExpansionModule,

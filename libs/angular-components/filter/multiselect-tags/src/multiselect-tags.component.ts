@@ -18,7 +18,6 @@ interface UXGMultiSelectFilterChanges {
   selector: 'uxg-multiselect-tags',
   templateUrl: './multiselect-tags.component.html',
   styleUrls: ['./multiselect-tags.component.scss'],
-  standalone: true,
   imports: [MatChipsModule, NgFor, NgIf, MatIconModule]
 })
 export class MultiselectTagsComponent {

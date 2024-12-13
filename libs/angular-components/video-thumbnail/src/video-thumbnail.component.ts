@@ -7,7 +7,6 @@ import { NgIf } from '@angular/common';
   selector: 'uxg-video-thumbnail',
   templateUrl: './video-thumbnail.component.html',
   styleUrls: ['./video-thumbnail.component.scss'],
-  standalone: true,
   imports: [NgIf, MatIconModule]
 })
 export class VideoThumbnailComponent {
@@ -15,7 +14,10 @@ export class VideoThumbnailComponent {
 
   @Output() videoClick = new EventEmitter<VideoWEvent>();
 
-  constructor(@Attribute('dense') public dense: any, @Attribute('large') public large: any) {}
+  constructor(
+    @Attribute('dense') public dense: any,
+    @Attribute('large') public large: any
+  ) {}
 
   onVideoClick(video: Video, $event: MouseEvent) {
     this.videoClick.emit({

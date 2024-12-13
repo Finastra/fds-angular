@@ -20,7 +20,6 @@ interface BannerItem {
     class: 'uxg-banner',
     '[class.uxg-banner-small]': 'small'
   },
-  standalone: true,
   imports: [NgFor, NgClass, MatTooltipModule]
 })
 export class BannerComponent {

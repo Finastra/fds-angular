@@ -37,7 +37,6 @@ import { MatIconModule } from '@angular/material/icon';
       transition('hide => show', [animate('0.2s ease-in')])
     ])
   ],
-  standalone: true,
   imports: [MatFormFieldModule, MatIconModule, MatInputModule, MatButtonModule, NgIf]
 })
 export class UxgSearchInputComponent implements OnDestroy {

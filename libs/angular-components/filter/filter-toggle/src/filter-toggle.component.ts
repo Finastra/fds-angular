@@ -19,7 +19,6 @@ interface UXGFilterChanges {
   selector: 'uxg-filter-toggle',
   templateUrl: './filter-toggle.component.html',
   styleUrls: ['./filter-toggle.component.scss'],
-  standalone: true,
   imports: [MatButtonToggleModule, NgClass, NgFor, NgIf, MatIconModule]
 })
 export class FilterToggleComponent implements OnInit {

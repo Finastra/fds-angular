@@ -26,7 +26,6 @@ import { UxgUserProfilePanelDetailsDirective } from './user-profile-panel-detail
     class: 'uxg-user-profile-panel',
     '[class.has-content]': 'hasContent'
   },
-  standalone: true,
   imports: [NgClass, AvatarComponent, NgIf, NgTemplateOutlet, MatDividerModule]
 })
 export class UxgUserProfilePanelComponent implements AfterContentInit {

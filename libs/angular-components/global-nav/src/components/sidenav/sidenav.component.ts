@@ -22,7 +22,6 @@ import { NavigationNode } from '../../services/navigation.model';
   selector: 'uxg-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
-  standalone: true,
   imports: [MatCardModule, MatListModule, NgFor, NgClass, MatIconModule, UpperCasePipe, RouterModule]
 })
 export class SidenavComponent implements OnInit, OnChanges {
@@ -39,7 +38,10 @@ export class SidenavComponent implements OnInit, OnChanges {
 
   iconName!: string;
 
-  constructor(@Inject(forwardRef(() => MatSidenav)) private _host: MatSidenav, private cd: ChangeDetectorRef) {}
+  constructor(
+    @Inject(forwardRef(() => MatSidenav)) private _host: MatSidenav,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     this.iconName = this.shortName && this.shortName.length > 0 ? this.shortName : this.getIconName(this.appName);

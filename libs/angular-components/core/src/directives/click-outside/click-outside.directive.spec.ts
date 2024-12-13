@@ -4,8 +4,7 @@ import { ClickOutsideDirective } from './click-outside.directive';
 
 @Component({
   template: '<div (uxgClickOutside)="count()"></div>',
-  imports: [ClickOutsideDirective],
-  standalone: true
+  imports: [ClickOutsideDirective]
 })
 class WrapperComponent {
   @ViewChild(ClickOutsideDirective) clickOutside!: ClickOutsideDirective;

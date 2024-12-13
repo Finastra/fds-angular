@@ -193,7 +193,6 @@ const CUSTOM_PAGING: UxgPage = {
   styleUrls: ['./table-demo.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [
     MatSidenavModule,
     TableComponent,

@@ -6,7 +6,6 @@ import { ChangeLog, UXGChangelogComponent } from '@finastra/angular-components/c
   templateUrl: './changelog-demo.component.html',
   styleUrls: ['./changelog-demo.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [UXGChangelogComponent]
 })
 export class ChangelogDemoComponent implements OnInit {

@@ -28,7 +28,6 @@ import { UxgActionColumnPosition, UxgColumn, UxgColumnType, UxgDefaultPaging, Ux
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.scss'],
   encapsulation: ViewEncapsulation.None,
-  standalone: true,
   imports: [
     MatTableModule,
     MatSortModule,

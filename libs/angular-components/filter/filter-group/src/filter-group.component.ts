@@ -42,7 +42,6 @@ export interface SavedFilter {
   styleUrls: ['./filter-group.component.scss'],
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
-  standalone: true,
   imports: [
     MatExpansionModule,
     ClickOutsideDirective,
@@ -76,7 +75,10 @@ export class FilterGroupComponent implements AfterViewInit, OnDestroy {
   isActive = false;
   headerHeight = '40px';
 
-  constructor(public dialog: MatDialog, private cd: ChangeDetectorRef) {}
+  constructor(
+    public dialog: MatDialog,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngAfterViewInit() {
     this.filterInstances.forEach((filterInstance) => {

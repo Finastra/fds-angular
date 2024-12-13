@@ -44,7 +44,6 @@ interface UXGFilterChanges {
       transition('out => in', animate('250ms ease-in'))
     ])
   ],
-  standalone: true,
   imports: [MatTreeModule, MatCheckboxModule, MatButtonModule, MatIconModule]
 })
 export class FilterTreeComponent implements OnChanges {
